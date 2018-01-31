@@ -11,13 +11,7 @@
 
 # modules
 import numpy as np
-
-# constants
-BSPW = 43 # dBm
-BSH = 30 # meters
-NSEC = 3
-UEPW = 25 # dBm
-UEH = 1.5 # meters
+import constants as const
 
 # classes
 
@@ -29,12 +23,13 @@ class Coordinate:
 
 class BaseStation:
     ''' Base Station - eNodeB '''
-    def __init__(self, id:str, coord:Coordinate, hight=BSH, power=BSPW, n_sector=3):
+    def __init__(self, id:str, coord:Coordinate, hight=const.BSH, power=const.BSPW, n_sector=const.):
         self.id = id
         self.h = hight
-        self.pw = power
+        self.pwr = power
         self.n_sec = n_sector
         self.coord = coord
+        self.ue_id = []
 
 class UserEquipment:
     ''' Equipment of User '''
@@ -42,7 +37,5 @@ class UserEquipment:
         self.id = id
         self.coord = coord
         self.h = hight
-        self.pw = power
-
-
-
+        self.pwr = power
+        self.bs_id = None
