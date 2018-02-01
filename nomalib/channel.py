@@ -11,6 +11,7 @@
 
 # modules
 import numpy as np
+from logzero import logger
 import nomalib.constants as const
 
 # classes
@@ -33,8 +34,9 @@ class PropagationModel:
             l = 128.1 + 36.7*d_db
         elif (self.env=='rural' and self.fc==900):
             l = 95.5 + 34.1*d_db
-        else: print('ERROR: invalid frequency or environment')
-
+        else:
+			logger.error('Invalid frequency or environment')
+            l = 'None'
         return l
 
 class Shadowing:
