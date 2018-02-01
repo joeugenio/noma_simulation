@@ -39,4 +39,10 @@ class PropagationModel:
 
 class Shadowing:
     ''' Shadowing 2D model '''
-    
+    pass
+
+class Noise:
+    ''' Noise signal '''
+
+class Interference:
+    ''' Interference from others cells '''

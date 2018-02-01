@@ -21,6 +21,26 @@ class Coordinate:
         self.x = x
         self.y = y
 
+class BSAntenna:
+    ''' Base Station Antenna '''
+        def __init__(self, theta_min, bs_gain = const.BSG):
+            self.theta_min = theta_min
+            self.bs_gain = bs_gain
+        
+        ''' Radiation Pattern '''
+        def radiation_pattern(self, theta, theta3db=65, att_max=20):
+            a = 12*(theta/np.radians(theta3db))**2
+            return (-1)*np.min([a,att_max])
+
+class UEAntenna:
+    ''' User Equipment Antenna '''
+        def __init__(self, ue_gain = const.UEG):
+            self.ue_g = ue_gain
+        
+        ''' Radiation Pattern Omni-directional'''
+        def radiation_pattern(self, theta):
+            return 0
+
 class BaseStation:
     ''' Base Station - eNodeB '''
     def __init__(self, id:str, coord:Coordinate, hight=const.BSH, power=const.BSPW, n_sector=const.):
@@ -39,3 +59,7 @@ class UserEquipment:
         self.h = hight
         self.pwr = power
         self.bs_id = None
+    
+    def received_power(self):
+        rx_pwr = tx_pwr-np.max()
+
