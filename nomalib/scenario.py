@@ -12,25 +12,43 @@
 import numpy as np
 from logzero import logger
 from nomalib.utils import Coordinate as Coord
+import nomalib.constants as const
+import nomalib.devices as dev
+
+class Area:
+    ''' Interest area '''
+    def __init__(self, width:int, hight:int):
+        self.w = width
+        self.h = hight
 
 class Grid:
     ''' Hexagonal grid with 19 eNodeBs 
-        Radiu = R, Inter-Site Distance = 3R e Cell Range = 2R'''
+        Radius = R, Inter-Site Distance = 3R e Cell Range = 2R'''
     def __init__(self,r):
+        self.users = []
         self.r = r
-        self.coord = [[Coord(5*r, np.sqrt(3)*r), Coord(8*r, np.sqrt(3)*r), Coord(11*r, np.sqrt(3)*r)],
-                      [Coord(3.5*r, 2.5*np.sqrt(3)*r), Coord(6.5*r, 2.5*np.sqrt(3)*r), Coord(9.5*r, 2.5*np.sqrt(3)*r), Coord(12.5*r, 2.5*np.sqrt(3)*r)],
-                      [Coord(2*r, 4*np.sqrt(3)*r), Coord(5*r, 4*np.sqrt(3)*r), Coord(8*r, 4*np.sqrt(3)*r), Coord(11*r, 4*np.sqrt(3)*r), Coord(14*r, 4*np.sqrt(3)*r)],
-                      [Coord(3.5*r, 5.5*np.sqrt(3)*r), Coord(6.5*r, 5.5*np.sqrt(3)*r), Coord(9.5*r, 5.5*np.sqrt(3)*r), Coord(12.5*r, 5.5*np.sqrt(3)*r)],
-                      [Coord(5*r, 7*np.sqrt(3)*r), Coord(8*r, 7*np.sqrt(3)*r), Coord(11*r, 7*np.sqrt(3)*r)]]
-        # x_ori = self.r*8
-        # y_ori = self.r*7
-        # self.sites = []
-        # for line in self.coord:
-        #     for c in line:
-        #         c.x = c.x - x_ori
-        #         c.y = c.y - y_ori
-        #         self.sites += [Site(r,c)]
+        self.coord = [Coord(5*r, np.sqrt(3)*r), Coord(8*r, np.sqrt(3)*r), Coord(11*r, np.sqrt(3)*r),
+                      Coord(3.5*r, 2.5*np.sqrt(3)*r), Coord(6.5*r, 2.5*np.sqrt(3)*r), Coord(9.5*r, 2.5*np.sqrt(3)*r), Coord(12.5*r, 2.5*np.sqrt(3)*r),
+                      Coord(2*r, 4*np.sqrt(3)*r), Coord(5*r, 4*np.sqrt(3)*r), Coord(8*r, 4*np.sqrt(3)*r), Coord(11*r, 4*np.sqrt(3)*r), Coord(14*r, 4*np.sqrt(3)*r),
+                      Coord(3.5*r, 5.5*np.sqrt(3)*r), Coord(6.5*r, 5.5*np.sqrt(3)*r), Coord(9.5*r, 5.5*np.sqrt(3)*r), Coord(12.5*r, 5.5*np.sqrt(3)*r),
+                      Coord(5*r, 7*np.sqrt(3)*r), Coord(8*r, 7*np.sqrt(3)*r), Coord(11*r, 7*np.sqrt(3)*r)]
+
+        x_ori = self.r*8
+        y_ori = self.r*7
+        for c in self.coord:
+            c.x = c.x-x_ori
+            c.y = c.y-y_ori
+
+    def deploy_users_equipment(self, n_user=const.N_UE):
+        x = np.random.uniform(-self.r*9, self.r*9, n_user)
+        y = np.random.uniform(-self.r*8, self.r*8, n_user)
+
+        for i in range(n_user):
+            self.users += [dev.UserEquipment(id=i, coord=Coord(x[i],y[i]))]
+            
+
+
+
 
 class Area:
     ''' Interest area '''
@@ -98,21 +116,3 @@ class Site:
             return 'in'
         else:
             return 'out'
-
-class Grid:
-    ''' Hexagonal grid with 19 eNodeBs'''
-    def __init__(self,r):
-        self.r = r
-        self.coord = [[Coord(5*r, np.sqrt(3)*r), Coord(8*r, np.sqrt(3)*r), Coord(11*r, np.sqrt(3)*r)],
-                      [Coord(3.5*r, 2.5*np.sqrt(3)*r), Coord(6.5*r, 2.5*np.sqrt(3)*r), Coord(9.5*r, 2.5*np.sqrt(3)*r), Coord(12.5*r, 2.5*np.sqrt(3)*r)],
-                      [Coord(2*r, 4*np.sqrt(3)*r), Coord(5*r, 4*np.sqrt(3)*r), Coord(8*r, 4*np.sqrt(3)*r), Coord(11*r, 4*np.sqrt(3)*r), Coord(14*r, 4*np.sqrt(3)*r)],
-                      [Coord(3.5*r, 5.5*np.sqrt(3)*r), Coord(6.5*r, 5.5*np.sqrt(3)*r), Coord(9.5*r, 5.5*np.sqrt(3)*r), Coord(12.5*r, 5.5*np.sqrt(3)*r)],
-                      [Coord(5*r, 7*np.sqrt(3)*r), Coord(8*r, 7*np.sqrt(3)*r), Coord(11*r, 7*np.sqrt(3)*r)]]
-        x_ori = self.r*8
-        y_ori = self.r*7
-        self.sites = [];
-        for line in self.coord:
-            for c in line:
-#                 c.x = c.x - x_ori
-#                 c.y = c.y - y_ori
-                self.sites += [Site(r,c)]

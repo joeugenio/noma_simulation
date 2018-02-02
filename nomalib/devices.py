@@ -11,34 +11,34 @@
 
 # modules
 import numpy as np
-import constants as const
+import nomalib.constants as const
 from nomalib.utils import Coordinate
 
 # classes
 
 class BSAntenna:
     ''' Base Station Antenna '''
-        def __init__(self, theta_min, bs_gain = const.G_BS):
-            self.theta_min = theta_min
-            self.bs_gain = bs_gain
+    def __init__(self, theta_min, bs_gain = const.G_BS):
+        self.theta_min = theta_min
+        self.bs_gain = bs_gain
         
-        ''' Radiation Pattern '''
-        def radiation_pattern(self, theta, theta3db=65, att_max=20):
-            a = 12*(theta/np.radians(theta3db))**2
-            return (-1)*np.min([a,att_max])
+    ''' Radiation Pattern '''
+    def radiation_pattern(self, theta, theta3db=65, att_max=20):
+        a = 12*(theta/np.radians(theta3db))**2
+        return (-1)*np.min([a,att_max])
 
 class UEAntenna:
     ''' User Equipment Antenna '''
-        def __init__(self, ue_gain = const.G_UE):
-            self.ue_g = ue_gain
-        
-        ''' Radiation Pattern Omni-directional'''
-        def radiation_pattern(self, theta):
-            return 0
+    def __init__(self, ue_gain = const.G_UE):
+        self.ue_g = ue_gain
+    
+    ''' Radiation Pattern Omni-directional'''
+    def radiation_pattern(self, theta):
+        return 0
 
 class BaseStation:
     ''' Base Station - eNodeB '''
-    def __init__(self, id:str, coord:Coordinate, hight=const.H_BS, power=const.PW_BS, n_sector=const.N_SEC):
+    def __init__(self, id:int, coord:Coordinate, hight=const.H_BS, power=const.PW_BS, n_sector=const.N_SEC):
         self.id = id
         self.h = hight
         self.pwr = power
@@ -48,7 +48,7 @@ class BaseStation:
 
 class UserEquipment:
     ''' Equipment of User '''
-    def __init__(self, id:str, coord:Coordinate, hight=H_UE, power=PW_UE):
+    def __init__(self, id:int, coord:Coordinate, hight=const.H_UE, power=const.PW_UE):
         self.id = id
         self.coord = coord
         self.h = hight

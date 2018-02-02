@@ -25,4 +25,5 @@ ENV = 'urban' # urban or rural
 FC = 2e3 # MHz
 MCL = 70 # dB
 
-# Cell Constants
+# Grid Constants
+N_UE = 200

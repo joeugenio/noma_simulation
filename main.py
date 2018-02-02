@@ -25,12 +25,28 @@ loss2 = ch.PropagationModel(env='urban', fc=900)
 loss3 = ch.PropagationModel(env='rural', fc=900)
 loss3 = ch.PropagationModel(env='rural', fc=2000)
 
-logger.info('INFO: Create grid with 19 sites')
-grid = scn.Grid(r=250)
-x = y = np.array([])
 
-for i in grid.coord:
-    for j in i:
-        print(type(j))
-        
-print(grid)
+logger.info('INFO: Creating grid with 19 sites')
+grid = scn.Grid(r=250)
+c = grid.coord
+x = np.zeros(len(c))
+y = np.zeros(len(c))
+for i in range(len(c)):
+    x[i] = c[i].x
+    y[i] = c[i].y
+    # print('X:{} Y:{}'.format(x[i], y[i]))
+
+logger.info('INFO: Deploing users equipments on grid')
+grid.deploy_users_equipment()
+
+u = grid.users
+x_u = np.zeros(len(u))
+y_u = np.zeros(len(u))
+for i in range(len(u)):
+    x_u[i] = u[i].coord.x
+    y_u[i] = u[i].coord.y
+
+
+plt.plot(x,y,'^k', ms=10)
+plt.plot(x_u,y_u,'+r')
+plt.show()
