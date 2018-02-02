@@ -9,19 +9,20 @@
 # Python module for NOMA communications simulations
 # Default simulation scenario values
 
-
 # Base Staion Constants
-BSPW = 43 # dBm
-BSH = 30 # meters
-NSEC = 3 # three sectors
-BSG = 15 # dBi
+PW_BS = 43 # dBm
+H_BS = 30 # meters
+N_SEC = 3 # three sectors
+G_BS = 15 # dBi
 
 # User Equipment Constants
-UEPW = 25 # dBm
-UEH = 1.5 # meters
-UEG = 0 # dBi
+PW_UE = 25 # dBm
+H_UE = 1.5 # meters
+G_UE = 0 # dBi
 
 # Channel Model Constants
 ENV = 'urban' # urban or rural
-FC = 2000 # MHz
+FC = 2e3 # MHz
 MCL = 70 # dB
+
+# Cell Constants

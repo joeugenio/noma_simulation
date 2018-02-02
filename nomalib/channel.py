@@ -25,17 +25,17 @@ class PropagationModel:
     def attenuation(self, d):
         try:
             d_db = np.log10(d)
-        except ZeroDivisionError:
+        except Exception as e:
             d_db = float('-Inf')
-        
+            logger.warn('WARN: %s.',e)
         if (self.env=='urban' and self.fc==900):
             l = 120.9 + 36.7*d_db
-        elif (self.env=='urban' and self.fc==2000):
+        elif (self.env=='urban' and self.fc==2e3):
             l = 128.1 + 36.7*d_db
         elif (self.env=='rural' and self.fc==900):
             l = 95.5 + 34.1*d_db
         else:
-			logger.error('Invalid frequency or environment')
+            logger.error('ERROR: Invalid frequency or environment')
             l = 'None'
         return l
 
@@ -45,6 +45,8 @@ class Shadowing:
 
 class Noise:
     ''' Noise signal '''
+    pass
 
 class Interference:
     ''' Interference from others cells '''
+    pass
