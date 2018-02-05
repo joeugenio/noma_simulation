@@ -24,7 +24,7 @@ class Area:
 class Grid:
     ''' Hexagonal grid with 19 eNodeBs 
         Radius = R, Inter-Site Distance = 3R e Cell Range = 2R'''
-    def __init__(self,r):
+    def __init__(self, r=const.R_CELL):
         self.users = []
         self.r = r
         self.coord = [Coord(5*r, np.sqrt(3)*r), Coord(8*r, np.sqrt(3)*r), Coord(11*r, np.sqrt(3)*r),
@@ -46,16 +46,6 @@ class Grid:
         for i in range(n_user):
             self.users += [dev.UserEquipment(id=i, coord=Coord(x[i],y[i]))]
             
-
-
-
-
-class Area:
-    ''' Interest area '''
-    def __init__(self, width:int, hight:int):
-        self.w = width
-        self.h = hight
-
 class Cell:
     ''' Three hexagonal sectors cell'''
     def __init__(self, r, pos:Coord):

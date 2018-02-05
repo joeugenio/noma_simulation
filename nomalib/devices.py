@@ -42,7 +42,7 @@ class BaseStation:
         self.id = id
         self.h = hight
         self.pwr = power
-        self.n_sec = n_sector
+        self.n_sec = n_sector   
         self.coord = coord
         self.ue_id = []
 

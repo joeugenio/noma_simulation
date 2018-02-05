@@ -10,6 +10,7 @@
 
 import nomalib.channel as ch
 import nomalib.scenario as scn
+import nomalib.utils as utl
 import logzero
 from logzero import logger
 import matplotlib.pyplot as plt
@@ -27,7 +28,7 @@ loss3 = ch.PropagationModel(env='rural', fc=2000)
 
 
 logger.info('INFO: Creating grid with 19 sites')
-grid = scn.Grid(r=250)
+grid = scn.Grid()
 c = grid.coord
 x = np.zeros(len(c))
 y = np.zeros(len(c))
@@ -46,7 +47,15 @@ for i in range(len(u)):
     x_u[i] = u[i].coord.x
     y_u[i] = u[i].coord.y
 
+# plt.plot(x,y,'^k', ms=10)
+# plt.plot(x_u,y_u,'+r')
 
-plt.plot(x,y,'^k', ms=10)
-plt.plot(x_u,y_u,'+r')
+hex = utl.Hexagon(r=250)
+x_h = np.linspace(1,250)
+y_h = []
+for i in x_h:
+    y_h += [hex.f(i)]
+
+plt.plot(x_h,y_h)
+
 plt.show()

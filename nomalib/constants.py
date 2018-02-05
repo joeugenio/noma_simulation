@@ -27,3 +27,5 @@ MCL = 70 # dB
 
 # Grid Constants
 N_UE = 200
+N_SITES = 19
+R_CELL = 250 # Cell Radius
