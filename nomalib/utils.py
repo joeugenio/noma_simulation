@@ -25,11 +25,24 @@ class Hexagon:
         self.r = r
         self.c = center
     
-    def f(self, x):
-        x = x-self.c.x
-        h = 0
-        if (0 <= x < .5*self.r):
-            h = np.sqrt(3)*.5*self.r
-        elif (.5*self.r <= x < self.r):
-            h =np.sqrt(3)*.5*self.r -np.sqrt(3)*x
-        return h
+    def f(self, x_arg):
+        x_size = len(x_arg)
+        y_u = np.zeros(x_size)
+        y_b = np.zeros(x_size)
+        x = np.zeros(x_size)
+        for i in range(x_size):
+            x[i] = x_arg[i]-self.c.x
+            if (0 <= abs(x[i]) < .5*self.r):
+                y_u[i] = self.r*.5*np.sqrt(3)
+            elif (.5*self.r <= abs(x[i]) <= self.r):
+                y_u[i] = (self.r-abs(x[i]))*np.sqrt(3)
+            y_b[i] = (-1)*y_u[i]
+            y_u[i] = y_u[i] + self.c.y
+            y_b[i] = y_b[i] + self.c.y
+        return (y_u,y_b)
+    
+    def f_upper(self, x_arg):
+        return self.f(x_arg)[0]
+    
+    def f_bottom(self, x_arg):
+        return self.f(x_arg)[1]

@@ -18,6 +18,8 @@ TODO:
 
 Dúvidas [pt_BR]
 
+* revisar array e lista
+* usar .size ou len
 * reuso de frequência e interferência
 * ruído térmico e ruído gaussiano
 * sombreamento

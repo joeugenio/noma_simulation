@@ -50,12 +50,9 @@ for i in range(len(u)):
 # plt.plot(x,y,'^k', ms=10)
 # plt.plot(x_u,y_u,'+r')
 
-hex = utl.Hexagon(r=250)
-x_h = np.linspace(1,250)
-y_h = []
-for i in x_h:
-    y_h += [hex.f(i)]
+hex = utl.Hexagon(r=250, center=utl.Coordinate(250,250))
+x_h = np.linspace(0,500,100)
 
-plt.plot(x_h,y_h)
+plt.plot(x_h,hex.f_upper(x_h),'--k',x_h,hex.f_bottom(x_h),'--k')
 
 plt.show()
