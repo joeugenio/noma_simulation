@@ -10,6 +10,7 @@
 # The utils classes are declared here
 
 import numpy as np
+import nomalib.constants as const
 
 # classes
 
@@ -21,28 +22,28 @@ class Coordinate:
 
 class Hexagon:
     ''' Hexagon shape of cell'''
-    def __init__(self,r, center=Coordinate(0,0)):
+    def __init__(self,r=const.R_CELL, center=Coordinate(0,0)):
         self.r = r
         self.c = center
+        self.x_axis = np.linspace(-self.r,self.r,100) + self.c.x
+        self.upper = self.f(self.x_axis,'upper')
+        self.bottom = self.f(self.x_axis,'bottom')
     
-    def f(self, x_arg):
-        x_size = len(x_arg)
-        y_u = np.zeros(x_size)
-        y_b = np.zeros(x_size)
-        x = np.zeros(x_size)
-        for i in range(x_size):
-            x[i] = x_arg[i]-self.c.x
+    def f(self, x_arg='None', bounder='upper'):
+        if (type(x_arg)==type(np.array([]))):
+            pass
+        elif (type(x_arg) == type([])):
+            x_arg = np.array(x_arg)
+        else:
+            x_arg = np.array([x_arg])
+        y = np.zeros(x_arg.size)
+        x = x_arg[:]-self.c.x
+        for i in range(x_arg.size):
             if (0 <= abs(x[i]) < .5*self.r):
-                y_u[i] = self.r*.5*np.sqrt(3)
+                y[i] = self.r*.5*np.sqrt(3)
             elif (.5*self.r <= abs(x[i]) <= self.r):
-                y_u[i] = (self.r-abs(x[i]))*np.sqrt(3)
-            y_b[i] = (-1)*y_u[i]
-            y_u[i] = y_u[i] + self.c.y
-            y_b[i] = y_b[i] + self.c.y
-        return (y_u,y_b)
-    
-    def f_upper(self, x_arg):
-        return self.f(x_arg)[0]
-    
-    def f_bottom(self, x_arg):
-        return self.f(x_arg)[1]
+                y[i] = (self.r-abs(x[i]))*np.sqrt(3)
+        if (bounder == 'bottom'):
+            return (-1)*y + self.c.y
+        elif (bounder == 'upper'):
+            return y + self.c.y

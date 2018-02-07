@@ -11,9 +11,9 @@
 import nomalib.channel as ch
 import nomalib.scenario as scn
 import nomalib.utils as utl
+import nomalib.plots as plt
 import logzero
 from logzero import logger
-import matplotlib.pyplot as plt
 import numpy as np
 
 # create log files
@@ -21,38 +21,13 @@ import numpy as np
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('INFO: NOMA system level simulation starting')
 
-loss1 = ch.PropagationModel()
-loss2 = ch.PropagationModel(env='urban', fc=900)
-loss3 = ch.PropagationModel(env='rural', fc=900)
-loss3 = ch.PropagationModel(env='rural', fc=2000)
-
-
 logger.info('INFO: Creating grid with 19 sites')
-grid = scn.Grid()
-c = grid.coord
-x = np.zeros(len(c))
-y = np.zeros(len(c))
-for i in range(len(c)):
-    x[i] = c[i].x
-    y[i] = c[i].y
-    # print('X:{} Y:{}'.format(x[i], y[i]))
+my_grid = scn.Grid()
 
 logger.info('INFO: Deploing users equipments on grid')
-grid.deploy_users_equipment()
+my_grid.deploy_users_equipment()
+plt.plot_grid(my_grid, True, '--g')
 
-u = grid.users
-x_u = np.zeros(len(u))
-y_u = np.zeros(len(u))
-for i in range(len(u)):
-    x_u[i] = u[i].coord.x
-    y_u[i] = u[i].coord.y
-
-# plt.plot(x,y,'^k', ms=10)
-# plt.plot(x_u,y_u,'+r')
-
-hex = utl.Hexagon(r=250, center=utl.Coordinate(250,250))
-x_h = np.linspace(0,500,100)
-
-plt.plot(x_h,hex.f_upper(x_h),'--k',x_h,hex.f_bottom(x_h),'--k')
-
-plt.show()
+logger.info('INFO: Creating hexagon object')
+my_hex = utl.Hexagon(r=250, center=utl.Coordinate(100,-200))
+# plt.plot_hexagon(my_hex)

@@ -1,3 +1,4 @@
-[I 180206 08:07:39 main:22] INFO: NOMA system level simulation starting
-[I 180206 08:07:39 main:30] INFO: Creating grid with 19 sites
-[I 180206 08:07:39 main:40] INFO: Deploing users equipments on grid
+[I 180206 23:47:53 main:22] INFO: NOMA system level simulation starting
+[I 180206 23:47:53 main:24] INFO: Creating grid with 19 sites
+[I 180206 23:47:53 main:27] INFO: Deploing users equipments on grid
+[I 180206 23:47:58 main:31] INFO: Creating hexagon object
