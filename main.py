@@ -26,7 +26,7 @@ my_grid = scn.Grid()
 
 logger.info('INFO: Deploing users equipments on grid')
 my_grid.deploy_users_equipment()
-plt.plot_grid(my_grid, True, '--g')
+plt.plot_grid(my_grid, sh=True, save=False, sh_hex=False)
 
 logger.info('INFO: Creating hexagon object')
 my_hex = utl.Hexagon(r=250, center=utl.Coordinate(100,-200))

@@ -29,3 +29,8 @@ MCL = 70 # dB
 N_UE = 200
 N_SITES = 19
 R_CELL = 250 # Cell Radius
+
+# Plot Figure Constantes
+FORMAT = 'eps'
+DPI = 300
+IMG_PATH = './output/img/'
