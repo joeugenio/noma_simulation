@@ -9,7 +9,7 @@
 # Python module for NOMA communications simulations
 # The plot functions are declared here
 
-import nomalib.scenario as scn
+import nomalib.devices as dev
 import nomalib.utils as utl
 import nomalib.constants as const
 import numpy as np
@@ -23,29 +23,19 @@ def save_fig(filename, save=False):
     if save:
         plt.savefig(const.IMG_PATH+filename+'.'+const.FORMAT, format=const.FORMAT, dpi=const.DPI)
         plt.clf()
-
+# show figure
 def show_fig(sh=False):
     if sh:
         plt.show()
 
 # plot grid object
-def plot_grid(g:scn.Grid, sh=False, save=False ,sh_hex=False, filename='grid'):
-    c = g.coordinates
-    u = g.users
-    x_c = []
-    y_c = []
-    x_u = []
-    y_u = []
-    for p in c:
-        x_c = np.append(x_c,p.x)
-        y_c = np.append(y_c,p.y)
-    for k in u:
-        x_u = np.append(x_u,k.coord.x)
-        y_u = np.append(y_u,k.coord.y)
-    plt.plot(x_c,y_c,'ow', ms=12)
-    plt.plot(x_u, y_u, '+r', ms=8, label='UE')
+def plot_grid(g, sh=False, save=False ,sh_hex=False, filename='grid'):
+    plot_coordinates(g.coordinates)
+    plot_user_equipments(g.user_equipments)
+    plot_base_stations(g.base_stations)
     if sh_hex:
         plot_hexagon(g.hex)
+	# set figures axis and title
     plt.axis('on')
     plt.grid(False)
     plt.legend(fontsize=12)
@@ -55,8 +45,37 @@ def plot_grid(g:scn.Grid, sh=False, save=False ,sh_hex=False, filename='grid'):
     save_fig(filename, save)
 
 # plot hexagon object
-def plot_hexagon(hex:utl.Hexagon, sh=False, save=False, style='--g', filename='hex'):
+def plot_hexagon(hex:utl.Hexagon, style='--g'):
     plt.plot(hex.x_axis, hex.upper, style, label='edge')
     plt.plot(hex.x_axis, hex.bottom, style)
-    show_fig(sh)
-    save_fig(filename, save)
+
+# plot coordinates
+def plot_coordinates(coord, style='ow', size=12):
+    x = np.array([])
+    y = np.array([])
+    for c in coord:
+        x = np.append(x, c.x)
+        y = np.append(y, c.y)
+    plt.plot(x, y, style, ms=size)
+
+# plot user equipments
+def plot_user_equipments(ue, style='+r', size=8):
+    x = np.array([])
+    y = np.array([])
+    for u in ue:
+        x = np.append(x, u.coord.x)
+        y = np.append(y, u.coord.y)
+    plt.plot(x, y, style, ms=size, label='UE')
+
+# plot base station
+def plot_base_stations(bs, style='3k', size=20):
+    x = np.array([])
+    y = np.array([])
+    for b in bs:
+        x = np.append(x, b.coord.x)
+        y = np.append(y, b.coord.y)
+    plt.plot(x, y, style, ms=size, label='BS')
+
+
+
+    

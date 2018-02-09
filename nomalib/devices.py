@@ -36,6 +36,17 @@ class UEAntenna:
     def radiation_pattern(self, theta):
         return 0
 
+class Cell:
+    ''' Cell (Sector)
+        id = 1 - from -60 to 60
+        id = 3 - from 60 to 180
+        id = 2 - from 180 to 300'''
+    def __init__(self, antenna:BSAntenna, id:int, r=const.R_CELL, bs_id=None):
+        self.ant = antenna
+        self.id = id
+        self.r = r
+        self.bs_id = bs_id
+
 class BaseStation:
     ''' Base Station - eNodeB '''
     def __init__(self, id:int, coord:Coordinate, hight=const.H_BS, power=const.PW_BS, n_sector=const.N_SEC):
@@ -44,7 +55,18 @@ class BaseStation:
         self.pwr = power
         self.n_sec = n_sector   
         self.coord = coord
-        self.ue_id = []
+        self.status = 'off'
+        self.ue_id = np.array([])
+        self.cells = np.array([])
+
+    ''' Start BS and create cells'''
+    def startBS(self):
+        t_start = np.deg2rad(-60)
+        t_step = np.deg2rad(120)
+        for i in range(const.N_SEC):
+            c = Cell((self.id*10+i+1),BSAntenna((t_start+i*t_step)))
+            self.cells = np.append(self.cells, c)
+        self.status = 'on'
 
 class UserEquipment:
     ''' Equipment of User '''
@@ -59,3 +81,10 @@ class UserEquipment:
         rx_pwr = tx_pwr-np.max([path_loss-const.BS_G-const.UE_G, const.MCL])
         return rx_pwr
 
+    def connect(self):
+        pass
+
+# function of module
+def index2id(i):
+    pass
+# l.index

@@ -9,7 +9,7 @@
 # Main Python Script for NOMA communications simulations
 
 import nomalib.channel as ch
-import nomalib.scenario as scn
+import nomalib.network as net
 import nomalib.utils as utl
 import nomalib.plots as plt
 import logzero
@@ -19,15 +19,29 @@ import numpy as np
 # create log files
 # log level DEBUG=10, INFO=20, WARN=30, ERROR=40
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
-logger.info('INFO: NOMA system level simulation starting')
+logger.info('NOMA system level simulation starting')
 
-logger.info('INFO: Creating grid with 19 sites')
-my_grid = scn.Grid()
+logger.info('Creating grid with 19 sites')
+my_grid = net.Grid()
 
-logger.info('INFO: Deploing users equipments on grid')
-my_grid.deploy_users_equipment()
-plt.plot_grid(my_grid, sh=True, save=False, sh_hex=False)
+logger.info('Deploing base stations on grid')
+my_grid.deploy_base_station()
+logger.info('Deploing users equipments on grid')
+my_grid.deploy_user_equipment()
+logger.info('Ploting grid figures')
 
-logger.info('INFO: Creating hexagon object')
-my_hex = utl.Hexagon(r=250, center=utl.Coordinate(100,-200))
-# plt.plot_hexagon(my_hex)
+
+# TESTE
+print(my_grid.base_stations[3].status)
+
+my_grid.base_stations[3].startBS()
+
+print(my_grid.base_stations[3].status)
+
+print(my_grid.base_stations[3].id)
+print(my_grid.base_stations[3].cells[0].id)
+print(my_grid.base_stations[3].cells[0].ant)
+print(my_grid.user_equipments[6].id)
+
+#plt.plot_grid(my_grid, sh=True, save=False, sh_hex=False)
+

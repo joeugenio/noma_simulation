@@ -26,3 +26,8 @@ Dúvidas [pt_BR]
 * snapshot TTI
 * L2S modelo a partir da Lei de Shannon
 * cell and base station model
+
+For Wiki
+* ue_id from 1000 to N_UE_MAX
+* bs_id from 100 to N_BS_MAX
+* cell_id = bs_id*10 + [1,2 or 3]
