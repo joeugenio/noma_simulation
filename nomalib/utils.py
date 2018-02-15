@@ -11,6 +11,7 @@
 
 import numpy as np
 import nomalib.constants as const
+from logzero import logger
 
 # classes
 
@@ -47,3 +48,25 @@ class Hexagon:
             return (-1)*y + self.c.y
         elif (bounder == 'upper'):
             return y + self.c.y
+
+def get_angle(coord:Coordinate, ori:Coordinate):
+    ''' Return angle in rad from x and y coordinate ''' 
+    dx = coord.x-ori.x
+    dy = coord.y-ori.y
+    try:    
+        tg = dy/dx
+    except ZeroDivisionError as e:
+        tg = float('Inf')
+        logger.debug(e)
+    if (dx >= 0 and dy > 0):
+        theta = np.arctan(tg)
+    elif (dx > 0 and dy <= 0):
+        theta = np.deg2rad(360) + np.arctan(tg)
+    else:
+        theta = np.deg2rad(180) + np.arctan(tg)
+    return theta
+def get_distance(coord:Coordinate, ori:Coordinate):
+    ''' Return distance in km from x and y coordinate '''
+    dx = coord.x-ori.x
+    dy = coord.y-ori.y
+    return np.sqrt(dx**2 + dy**2)/1000 

@@ -406,5 +406,3 @@ def cell_measure(r=250):
     ax.text(420,-h-42,'Alcance da Cel.\n         2R', fontsize=12)
     plt.xlabel('Posição x [m]', fontsize=12)
     plt.ylabel('Posição y [m]', fontsize=12)
-
-

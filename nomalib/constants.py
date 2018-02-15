@@ -26,11 +26,11 @@ FC = 2e3 # MHz
 MCL = 70 # dB
 
 # Grid Constants
-N_UE = 200
+N_UE = 500
 N_BS = 19
 R_CELL = 250 # Cell Radius in meters
 
 # Plot Figure Constantes
 FORMAT = 'eps'
-DPI = 300
+DPI = 72
 IMG_PATH = './output/img/'
