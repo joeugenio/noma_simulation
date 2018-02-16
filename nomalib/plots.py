@@ -30,11 +30,12 @@ def show_fig(sh=False):
         plt.show()
 
 # plot grid object
-def plot_grid(g, sh=False, save=False, filename='grid'):
+def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
     # plot_coordinates(g.coordinates)
     plot_user_equipments(g.user_equipments)
     plot_base_stations(g.base_stations)
-    plot_cell_connections(g)
+    if connect:
+        plot_cell_connections(g)
     # plot_hexagon(g.hex, label='edge')
     # plot_all_cells(g)
     # plot_frequency(g)
@@ -226,3 +227,22 @@ def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=51):
         plt.clf()
     else:
         logger.error('BS was not started. Run one start base station method.')
+
+# plot lognormal uncorrelated shadow fading
+def plot_shadow_uncorrelated(n=200, sigma=10, sh=False, save=False, filename='shadow'):
+    map = np.random.normal(0, sigma, (n,n))
+    map = map[::-1][:]
+    axis = [-n/2, n/2, -n/2, n/2]
+    plt.imshow(map, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
+    plt.axis('on')
+    plt.grid(True)
+    plt.tick_params(labelsize=14)
+    plt.xlabel('Posição x [m]', fontsize=14)
+    plt.ylabel('Posição y [m]', fontsize=14)
+    cbar = plt.colorbar()
+    cbar.ax.set_ylabel('[dB]', fontsize=14)
+    cbar.ax.tick_params(labelsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+

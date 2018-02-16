@@ -40,9 +40,11 @@ my_grid.start_all_base_stations()
 logger.info('Connecting UE to nearest BS')
 my_grid.connect_all_to_cell(my_ch)
 
-logger.info('Plotting grid figures')
-plt.plot_grid(my_grid, sh=True, save=False)
+# logger.info('Plotting grid figures')
+# plt.plot_grid(my_grid, sh=True, save=False, connect=False)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.base_stations[9], 1, my_ch, sh=True)
 # plt.plot_bs_attenuation(my_grid.base_stations[9], my_ch, sh=True)
+
+plt.plot_shadow_uncorrelated(sh=True)
