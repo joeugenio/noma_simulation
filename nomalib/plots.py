@@ -188,7 +188,7 @@ def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_a
         cbar.ax.tick_params(labelsize=14)
         save_fig(filename, save)
         show_fig(sh)
-        plt.clf()
+        # plt.clf()
     else:
         logger.error('BS was not started. Run one start base station method.')
 

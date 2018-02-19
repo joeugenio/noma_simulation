@@ -37,11 +37,11 @@ my_grid.deploy_user_equipment()
 logger.info('Starting all base stations')
 my_grid.start_all_base_stations()
 
-logger.info('Connecting UE to nearest BS')
+logger.info('Connecting UE to best BS')
 my_grid.connect_all_to_cell(my_ch)
 
 # logger.info('Plotting grid figures')
-# plt.plot_grid(my_grid, sh=True, save=False, connect=False)
+# plt.plot_grid(my_grid, sh=True, save=False, connect=True)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.base_stations[9], 1, my_ch, sh=True)
