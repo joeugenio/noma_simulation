@@ -47,4 +47,5 @@ my_grid.connect_all_to_cell(my_ch)
 # plt.plot_cell_attenuation(my_grid.base_stations[9], 1, my_ch, sh=True)
 # plt.plot_bs_attenuation(my_grid.base_stations[9], my_ch, sh=True)
 
-plt.plot_shadow_uncorrelated(sh=True)
+logger.info('Plot shadow fading map')
+plt.plot_shadow(my_ch, sh=True)

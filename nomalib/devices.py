@@ -106,7 +106,7 @@ class UserEquipment:
     def received_power(self, cell, ch):
         dist = utl.get_distance(self.coord, cell.coord)
         theta = utl.get_angle(self.coord, cell.coord)
-        att = ch.propagation.attenuation(dist) - const.G_BS - const.G_UE
+        att = ch.path_loss.attenuation(dist) - const.G_BS - const.G_UE
         rx_pwr = cell.pwr - np.maximum(att, const.MCL) + cell.ant.radiation_pattern(theta)
         return rx_pwr
     
@@ -130,13 +130,13 @@ class UserEquipment:
         self.bs_id = bs_id
         self.connected = True
 
-    '''  Calculate distante to bs'''
+    '''  Calculate distante to BS '''
     def distance_to_bs(self, bs):
         dx = abs(self.coord.x-bs.coord.x)
         dy = abs(self.coord.y-bs.coord.y)
         distance = np.sqrt(dx**2 + dy**2)
         return distance
-    
+
     ''' Return id of nearest BS '''
     def nearest_bs(self, all_bs):
         n = all_bs[0]

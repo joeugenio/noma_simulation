@@ -25,6 +25,14 @@ ENV = 'urban' # urban or rural
 FC = 2e3 # MHz
 MCL = 70 # dB
 
+# attenuation map
+PX = 101 # odd number
+
+# Shadow Fading
+SD = 10 # sd [dB]
+M_SH = 0 # mean
+N_SH = 51 # M_SH x M_SH elements
+
 # Grid Constants
 N_UE = 500
 N_BS = 19

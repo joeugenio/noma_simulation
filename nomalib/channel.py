@@ -16,7 +16,7 @@ import nomalib.constants as const
 
 # classes
 
-class PropagationModel:
+class PathLoss:
     ''' Distance dependent propagation model '''
     def __init__(self, env=const.ENV, fc=const.FC):
         self.env = env
@@ -39,8 +39,16 @@ class PropagationModel:
             l = 'None'
         return l
 
-class Shadowing:
+class ShadowFading:
     ''' Shadowing 2D model '''
+    def __init__(self, n=const.N_SH, sigma=const.SD, mean=const.M_SH):
+        self.n = n
+        self.sd = sigma
+        self.m = mean
+        self.shw_map = np.random.normal(self.m, self.sd, (n,n))
+
+class FastFading:
+    ''' Fast Fading model - Rayleigh fading '''
     pass
 
 class Noise:
@@ -51,11 +59,8 @@ class Interference:
     ''' Interference from others cells '''
     pass
 
-class PathLoss:
-    ''' Path loss model '''
-    pass
-
 class Channel:
     ''' Channel model class'''
     def __init__(self, env=const.ENV, fc=const.FC):
-        self.propagation = PropagationModel(env=env, fc=fc)
+        self.path_loss = PathLoss(env=env, fc=fc)
+        self.shadow = ShadowFading()

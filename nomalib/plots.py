@@ -70,16 +70,16 @@ def plot_user_equipments(ue, style='sw', size=3):
     for u in ue:
         x = np.append(x, u.coord.x)
         y = np.append(y, u.coord.y)
-    plt.plot(x, y, style, ms=size, label='UE')
+    plt.plot(x, y, style, ms=size, label='UE', mec='k')
 
 # plot base station
-def plot_base_stations(bs, style='^k', size=10):
+def plot_base_stations(bs, style='^b', size=10):
     x = np.array([])
     y = np.array([])
     for b in bs:
         x = np.append(x, b.coord.x)
         y = np.append(y, b.coord.y)
-    plt.plot(x, y, style, ms=size, label='BS')
+    plt.plot(x, y, style, ms=size, label='BS', mec='k')
 
 # plot one cells
 def plot_cell(bs, cell_id):
@@ -156,7 +156,7 @@ def plot_frequency(grid):
             plt.text(x-50, y-50 ,str(c.ft), fontsize=13)
 
 # plot antenna patter and attenuation for one cells of one BS
-def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_att', px=51):
+def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_att', px=const.PX):
     if bs.started:
         if sector in range(const.N_SEC):
             cell = bs.cells[sector]
@@ -169,7 +169,7 @@ def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_a
         o = Coord(w/2, w/2)
         axis = [-w/2+c.x, w/2+c.x, -w/2+c.y, w/2+c.y]
         im = np.zeros([px, px])
-        att = ch.propagation.attenuation
+        att = ch.path_loss.attenuation
         for x in range(px):
             for y in range(px):
                 p = Coord(x*u, y*u)
@@ -193,15 +193,15 @@ def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_a
         logger.error('BS was not started. Run one start base station method.')
 
 # plot antenna patter and attenuation for 3 cells of one BS
-def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=51):
+def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=const.PX):
     if bs.started:
         w = 4*bs.cells[0].r
         u = w/(px-1)
         c = bs.coord
-        o = Coord(w/2, w/2)        
+        o = Coord(w/2, w/2)
         axis = [-w/2+c.x, w/2+c.x, -w/2+c.y, w/2+c.y]
         im = np.zeros([px, px])
-        att = ch.propagation.attenuation
+        att = ch.path_loss.attenuation
         for c in bs.cells:
             for x in range(px):
                 for y in range(px):
@@ -228,12 +228,13 @@ def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=51):
     else:
         logger.error('BS was not started. Run one start base station method.')
 
-# plot lognormal uncorrelated shadow fading
-def plot_shadow_uncorrelated(n=200, sigma=10, sh=False, save=False, filename='shadow'):
-    map = np.random.normal(0, sigma, (n,n))
-    map = map[::-1][:]
+# plot lognormal shadow fading
+def plot_shadow(ch, sh=False, save=False, filename='shadow'):
+    shw = ch.shadow.shw_map
+    shw = shw[::-1][:]
+    n = shw.shape[0]
     axis = [-n/2, n/2, -n/2, n/2]
-    plt.imshow(map, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
+    plt.imshow(shw, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
     plt.axis('on')
     plt.grid(True)
     plt.tick_params(labelsize=14)
@@ -245,4 +246,3 @@ def plot_shadow_uncorrelated(n=200, sigma=10, sh=False, save=False, filename='sh
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
-

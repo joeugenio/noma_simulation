@@ -1,7 +1,8 @@
-[I 180217 16:07:27 main:23] NOMA system level simulation starting
-[I 180217 16:07:27 main:25] Creating grid with 19 sites
-[I 180217 16:07:27 main:28] Creating channel
-[I 180217 16:07:27 main:31] Deploing base stations on grid
-[I 180217 16:07:27 main:34] Deploing users equipments on grid
-[I 180217 16:07:27 main:37] Starting all base stations
-[I 180217 16:07:27 main:40] Connecting UE to best BS
+[I 180220 14:07:52 main:23] NOMA system level simulation starting
+[I 180220 14:07:52 main:25] Creating grid with 19 sites
+[I 180220 14:07:52 main:28] Creating channel
+[I 180220 14:07:52 main:31] Deploing base stations on grid
+[I 180220 14:07:52 main:34] Deploing users equipments on grid
+[I 180220 14:07:52 main:37] Starting all base stations
+[I 180220 14:07:52 main:40] Connecting UE to best BS
+[I 180220 14:07:53 main:50] Plot shadow fading map
