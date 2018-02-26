@@ -31,7 +31,7 @@ PX = 101 # odd number
 # Shadow Fading
 SD = 10 # sd [dB]
 M_SH = 0 # mean
-N_SH = 51 # M_SH x M_SH elements
+N_SH = 201 # M_SH x M_SH elements
 
 # Grid Constants
 N_UE = 500

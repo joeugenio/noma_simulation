@@ -36,7 +36,7 @@ def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
     plot_base_stations(g.base_stations)
     if connect:
         plot_cell_connections(g)
-    # plot_hexagon(g.hex, label='edge')
+    # plot_hexagon(g.hex, label='edsge')
     # plot_all_cells(g)
     # plot_frequency(g)
 	# set figures axis and title
@@ -230,7 +230,7 @@ def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=cons
 
 # plot lognormal shadow fading
 def plot_shadow(ch, sh=False, save=False, filename='shadow'):
-    shw = ch.shadow.shw_map
+    shw = ch.shadow.shw_map + ch.shadow2.shw_map
     shw = shw[::-1][:]
     n = shw.shape[0]
     axis = [-n/2, n/2, -n/2, n/2]

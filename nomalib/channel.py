@@ -64,3 +64,4 @@ class Channel:
     def __init__(self, env=const.ENV, fc=const.FC):
         self.path_loss = PathLoss(env=env, fc=fc)
         self.shadow = ShadowFading()
+  

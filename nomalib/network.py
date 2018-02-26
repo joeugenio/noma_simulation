@@ -30,15 +30,19 @@ class Grid:
              Coord(-4.5*r, 1.5*self.h), Coord(-1.5*r, 1.5*self.h), Coord(1.5*r, 1.5*self.h), Coord(4.5*r, 1.5*self.h),
              Coord(-3*r, 3*self.h), Coord(0, 3*self.h), Coord(3*r, 3*self.h)])
         self.hex = Hexagon(self.r*8)
-        
 
-    ''' Deploy all user equipments on grid with uniform distribution'''
-    def deploy_user_equipment(self, n_ue=const.N_UE):
+    ''' Deploy all user equipments on hexagon or square grid with uniform distribution'''
+    def deploy_user_equipment(self, region='square', n_ue=const.N_UE):
         coords = np.array([])
-        while (coords.size < n_ue):
-            x = np.random.uniform(-8*self.r, 8*self.r)
-            y = np.random.uniform(-4*self.h, 4*self.h)
-            if (self.hex.f(x,'bottom') < y < self.hex.f(x,'upper')):
+        if region=='hexagon':
+            while (coords.size < n_ue):            
+                x = np.random.uniform(-8*self.r, 8*self.r)
+                y = np.random.uniform(-4*self.h, 4*self.h)
+                if (self.hex.f(x,'bottom') < y < self.hex.f(x,'upper')):
+                    coords = np.append(coords, Coord(x,y))
+        elif region=='square':
+            while (coords.size < n_ue):            
+                x, y = np.random.uniform(-8*self.r, 8*self.r, (2))
                 coords = np.append(coords, Coord(x,y))
         for i in range(n_ue):
             self.user_equipments = np.append(self.user_equipments, dev.UserEquipment(i+1001, coords[i]))

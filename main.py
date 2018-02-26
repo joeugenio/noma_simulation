@@ -32,7 +32,7 @@ logger.info('Deploing base stations on grid')
 my_grid.deploy_base_station()
 
 logger.info('Deploing users equipments on grid')
-my_grid.deploy_user_equipment()
+my_grid.deploy_user_equipment('hexagon')
 
 logger.info('Starting all base stations')
 my_grid.start_all_base_stations()

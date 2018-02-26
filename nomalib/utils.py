@@ -65,6 +65,7 @@ def get_angle(coord:Coordinate, ori:Coordinate):
     else:
         theta = np.deg2rad(180) + np.arctan(tg)
     return theta
+    
 def get_distance(coord:Coordinate, ori:Coordinate):
     ''' Return distance in km from x and y coordinate '''
     dx = coord.x-ori.x
