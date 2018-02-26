@@ -230,7 +230,7 @@ def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=cons
 
 # plot lognormal shadow fading
 def plot_shadow(ch, sh=False, save=False, filename='shadow'):
-    shw = ch.shadow.shw_map + ch.shadow2.shw_map
+    shw = ch.shadow.shw_map
     shw = shw[::-1][:]
     n = shw.shape[0]
     axis = [-n/2, n/2, -n/2, n/2]

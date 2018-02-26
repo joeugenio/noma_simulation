@@ -16,8 +16,7 @@ import nomalib.constants as const
 import nomalib.devices as dev
 
 class Grid:
-    ''' Hexagonal grid with 19 eNodeBs 
-        Radius = R, Inter-Site Distance = 3R e Cell Range = 2R'''
+    ''' Hexagonal grid with 19 Sites '''
     def __init__(self, r=const.R_CELL):
         self.r = r
         self.user_equipments = np.array([])
@@ -105,3 +104,6 @@ class Grid:
             if (ue.id == id):
                 return ue
         return None
+
+class Site:
+    ''' Site with three cells/sectors '''
