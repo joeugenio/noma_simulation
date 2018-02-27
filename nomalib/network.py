@@ -20,11 +20,11 @@ class Cell:
         id = 1 - fc_type = 1 - from -60 to 60
         id = 3 - fc_type = 2 - from 60 to 180
         id = 2 - fc_type = 3 - from 180 to 300 '''
-    def __init__(self, id, bs, antenna, freq_type, r=const.R_CELL):
+    def __init__(self, id, bs, freq_type, r=const.R_CELL):
         self.id = id
         self.bs_id = bs.id
         self.pwr = bs.pwr
-        self.ant = antenna
+        self.ant = bs.antenna
         self.r = r
         self.ft = freq_type
         self.coord = bs.coord        
@@ -37,7 +37,45 @@ class Cell:
 class Site:
     ''' Site with three cells/sectors
         Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
-    def __init__(self, r=R_CELL, )
+    def __init__(self, r=R_CELL, ):
+        pass
+
+    def start_base_station(self):
+        ''' Start BS and create cells '''
+        deg = 360/self.n_sec
+        t_start = np.deg2rad(0)
+        t_step = alpha = np.deg2rad(deg)
+        for i in range(self.n_sec):
+            x = self.coord.x + np.cos(alpha*i)*const.R_CELL
+            y = self.coord.y + np.sin(alpha*i)*const.R_CELL
+            c = Cell(self, (self.id*10+i+1), BSAntenna((t_start+i*t_step)), i, Coord(x, y))
+            self.cells = np.append(self.cells, c)
+        self.status = 'on'
+        self.started = True
+        
+        self.status = 'off'
+        self.started = False
+
+    def start_base_station(self):
+        ''' Start BS and create cells '''
+        deg = 360/self.n_sec
+        t_start = np.deg2rad(0)
+        t_step = np.deg2rad(deg)
+        for i in range(self.n_sec):
+            self.antenna.append(BSAntenna(theta_d=t_start+i*t_step))
+        self.status = 'on'
+        self.started = True
+
+
+    def get_cell(self, cell_id):
+        ''' Return cells from cell_id '''        
+        if self.started:
+            for c in self.cells:
+                if (c.id == cell_id):
+                    return c
+        logger.warn("BS don't started. 'None' type will be returned")
+        return None
+
 
 class Grid:
     ''' Hexagonal grid with 19 Sites '''

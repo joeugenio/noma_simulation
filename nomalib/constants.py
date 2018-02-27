@@ -14,16 +14,21 @@ PW_BS = 43 # dBm
 H_BS = 30 # meters
 G_BS = 15 # dBi
 
+# BS Antenna Constants
+ATT_MAX = 20 # dBm
+T3DB = 65 # degree
+
+# User Equipment Constants
+PW_UE = 25 # dBm
+H_UE = 1.5 # meters
+G_UE = 0 # dBi
+
 # Grid Constants
 N_UE = 500
 N_BS = 19
 N_SEC = 3 # three sectors
 R_CELL = 250 # Cell Radius in meters
 
-# User Equipment Constants
-PW_UE = 25 # dBm
-H_UE = 1.5 # meters
-G_UE = 0 # dBi
 
 # Channel Model Constants
 ENV = 'urban' # urban or rural

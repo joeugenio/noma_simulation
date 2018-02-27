@@ -3,8 +3,8 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 30/01/2018
-# Version: 1.0
+# Last update: 27/02/2018
+# Version: 1.1
 
 # Python module for NOMA communications simulations
 # The devices classes are declared here
@@ -20,12 +20,12 @@ import nomalib.utils as utl
 
 class BSAntenna:
     ''' Base Station Antenna '''
-    def __init__(self, theta_d, bs_gain = const.G_BS):
+    def __init__(self, theta_d=0, gain=const.G_BS):
         self.theta_d = theta_d
-        self.bs_gain = bs_gain
-        
-    ''' Radiation Pattern '''
-    def radiation_pattern(self, theta, theta3db=65, att_max=20):
+        self.gain = gain
+
+    def radiation_pattern(self, theta=0, theta3db=const.T3DB, att_max=const.ATT_MAX):
+        ''' Radiation Pattern '''        
         theta = theta - self.theta_d
         if (abs(theta) > np.pi):
             theta = theta - (theta/abs(theta))*2*np.pi
@@ -34,113 +34,77 @@ class BSAntenna:
 
 class UEAntenna:
     ''' User Equipment Antenna '''
-    def __init__(self, ue_gain = const.G_UE):
-        self.ue_g = ue_gain
-    
-    ''' Radiation Pattern Omni-directional'''
-    def radiation_pattern(self, theta):
-        return 0
+    def __init__(self, gain=const.G_UE):
+        self.gain = gain
 
-class Cell:
-    ''' Cell (Sector)
-        id = 1 - from -60 to 60
-        id = 3 - from 60 to 180
-        id = 2 - from 180 to 300'''
-    def __init__(self, bs, id:int, antenna:BSAntenna, frequency_type, center, r=const.R_CELL):
-        self.ant = antenna
-        self.id = id
-        self.r = r
-        self.ft = frequency_type
-        self.pwr = bs.pwr
-        self.coord = bs.coord        
-        self.center = center
-        self.ue_ids = np.array([])
+    def radiation_pattern(self, theta):
+        ''' Radiation Pattern Omni-directional'''        
+        return 0
 
 class BaseStation:
     ''' Base Station - eNodeB '''
-    def __init__(self, id:int, coord:Coord, hight=const.H_BS, power=const.PW_BS, n_sector=const.N_SEC):
+    def __init__(self, id, coord, hight=const.H_BS, power=const.PW_BS, n_sector=const.N_SEC):
         self.id = id
+        self.coord = coord
         self.h = hight
         self.pwr = power
-        self.n_sec = n_sector   
-        self.coord = coord
-        self.status = 'off'
-        self.started = False
-        self.ue_ids = np.array([])
-        self.cells = np.array([])
-
-    ''' Start BS and create cells '''
-    def start_base_station(self):
-        t_start = np.deg2rad(0)
-        t_step = np.deg2rad(120)
-        alpha = np.deg2rad(120)
-        for i in range(const.N_SEC):
-            x = self.coord.x + np.cos(alpha*i)*const.R_CELL
-            y = self.coord.y + np.sin(alpha*i)*const.R_CELL
-            c = Cell(self, (self.id*10+i+1), BSAntenna((t_start+i*t_step)), i, Coord(x, y))
-            self.cells = np.append(self.cells, c)
-        self.status = 'on'
-        self.started = True
-    
-    ''' Return cells from cell_id '''
-    def get_cell(self, cell_id):
-        if self.started:
-            for c in self.cells:
-                if (c.id == cell_id):
-                    return c
-        logger.warn("BS don't started. 'None' type will be returned")
-        return None
+        self.n_sec = n_sector
+        self.live = False
 
 class UserEquipment:
     ''' Equipment of User '''
-    def __init__(self, id:int, coord:Coord, hight=const.H_UE, power=const.PW_UE):
+    def __init__(self, id, coord, hight=const.H_UE, power=const.PW_UE):
         self.id = id
         self.coord = coord
         self.h = hight
         self.pwr = power
-        self.bs_id = None
         self.cell_id = None
+        self.live = True
+        self.antenna = UEAntenna()
         self.connected = False
     
-    ''' Calculate power received on UE '''
-    def received_power(self, cell, ch):
-        dist = utl.get_distance(self.coord, cell.coord)
-        theta = utl.get_angle(self.coord, cell.coord)
-        att = ch.path_loss.attenuation(dist) - const.G_BS - const.G_UE
-        rx_pwr = cell.pwr - np.maximum(att, const.MCL) + cell.ant.radiation_pattern(theta)
-        return rx_pwr
-    
-    ''' Return id of cell and BS with the best power '''
-    def best_cell(self, all_bs, ch):
-        best_cell = all_bs[0].cells[0]
-        for bs in all_bs:
-            for c in bs.cells:
-                if (self.received_power(c, ch) > self.received_power(best_cell, ch)):
-                    best_cell = c
-        return best_cell.id
-                            
-    ''' Connect UE to BS with bs_id '''
-    def connect_to_cell(self, cell_id):
-        self.cell_id = cell_id
-        self.bs_id = cell_id//10
-        self.connected = True
-
-    ''' Connect UE to BS with bs_id '''
-    def connect_to_bs(self, bs_id):
-        self.bs_id = bs_id
-        self.connected = True
-
-    '''  Calculate distante to BS '''
-    def distance_to_bs(self, bs):
-        dx = abs(self.coord.x-bs.coord.x)
-        dy = abs(self.coord.y-bs.coord.y)
-        distance = np.sqrt(dx**2 + dy**2)
+    def distance_to(self,dev):
+        '''  Calculate distante to any device [km]'''
+        dx = abs(self.coord.x-dev.coord.x)
+        dy = abs(self.coord.y-dev.coord.y)
+        distance = np.sqrt(dx**2 + dy**2)/1000
         return distance
 
-    ''' Return id of nearest BS '''
-    def nearest_bs(self, all_bs):
-        n = all_bs[0]
-        for bs in all_bs:
-            if (self.distance_to_bs(bs) < self.distance_to_bs(n)):
-                n = bs
-        return n.id
+    def angle_from(self, dev):
+        ''' Return angle in rad from device coordinate ''' 
+        dx = self.coord.x-dev.x
+        dy = self.coord.y-dev.y
+        try:    
+            tg = dy/dx
+        except ZeroDivisionError as e:
+            tg = float('Inf')
+            logger.debug(e)
+        if (dx >= 0 and dy > 0):
+            theta = np.arctan(tg)
+        elif (dx > 0 and dy <= 0):
+            theta = np.deg2rad(360) + np.arctan(tg)
+        else:
+            theta = np.deg2rad(180) + np.arctan(tg)
+        return theta
+    
+    def received_power(self, cell, bs, ch):
+        ''' Calculate power received on UE '''        
+        dist = self.distance_to_bs(bs)
+        theta = self.angle_from(bs)
+        att = ch.path_loss.attenuation(dist) - cell.antenna.gain - self.antenna.gain
+        rx_pwr = bs.pwr - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
+        return rx_pwr
+    
+    def best_cell(self, sites):
+        ''' Return id of Cell with the best power '''    
+        best_cell = sites[0].cells[0]
+        for site in sites:
+            for cell in site.cells:
+                if (self.received_power(cell, site.ch) > self.received_power(best_cell, site.ch)):
+                    best_cell = cell
+        return best_cell.id
+     
+    def connect_to_cell(self, cell_id):
+        ''' Connect UE to Cell with cell_id '''        
+        self.cell_id = cell_id
+        self.connected = True
