@@ -12,8 +12,13 @@
 # Base Staion Constants
 PW_BS = 43 # dBm
 H_BS = 30 # meters
-N_SEC = 3 # three sectors
 G_BS = 15 # dBi
+
+# Grid Constants
+N_UE = 500
+N_BS = 19
+N_SEC = 3 # three sectors
+R_CELL = 250 # Cell Radius in meters
 
 # User Equipment Constants
 PW_UE = 25 # dBm
@@ -32,11 +37,6 @@ PX = 101 # odd number
 SD = 10 # sd [dB]
 M_SH = 0 # mean
 N_SH = 201 # M_SH x M_SH elements
-
-# Grid Constants
-N_UE = 500
-N_BS = 19
-R_CELL = 250 # Cell Radius in meters
 
 # Plot Figure Constantes
 FORMAT = 'eps'

@@ -15,6 +15,30 @@ from nomalib.utils import Coordinate as Coord
 import nomalib.constants as const
 import nomalib.devices as dev
 
+class Cell:
+    ''' Hexagon cell with antenna in the corner
+        id = 1 - fc_type = 1 - from -60 to 60
+        id = 3 - fc_type = 2 - from 60 to 180
+        id = 2 - fc_type = 3 - from 180 to 300 '''
+    def __init__(self, id, bs, antenna, freq_type, r=const.R_CELL):
+        self.id = id
+        self.bs_id = bs.id
+        self.pwr = bs.pwr
+        self.ant = antenna
+        self.r = r
+        self.ft = freq_type
+        self.coord = bs.coord        
+        self.center = center
+        self.ue_ids = np.array([])
+        for i in range(const.N_SEC):
+            x = self.coord.x + np.cos(alpha*i)*const.R_CELL
+            y = self.coord.y + np.sin(alpha*i)*const.R_CELL
+
+class Site:
+    ''' Site with three cells/sectors
+        Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
+    def __init__(self, r=R_CELL, )
+
 class Grid:
     ''' Hexagonal grid with 19 Sites '''
     def __init__(self, r=const.R_CELL):
@@ -104,6 +128,3 @@ class Grid:
             if (ue.id == id):
                 return ue
         return None
-
-class Site:
-    ''' Site with three cells/sectors '''
