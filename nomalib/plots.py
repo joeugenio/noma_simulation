@@ -33,12 +33,12 @@ def show_fig(sh=False):
 def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
     # plot_coordinates(g.coordinates)
     plot_user_equipments(g.user_equipments)
-    plot_base_stations(g.base_stations)
+    plot_base_stations(g.sites)
     if connect:
         plot_cell_connections(g)
-    # plot_hexagon(g.hex, label='edsge')
-    # plot_all_cells(g)
-    # plot_frequency(g)
+    plot_hexagon(g.hex, label='edge')
+    plot_all_cells(g)
+    plot_frequency(g)
 	# set figures axis and title
     plt.axis('on')
     plt.grid(False)
@@ -55,7 +55,7 @@ def plot_hexagon(hex:utl.Hexagon, style='--g', lw=0.5, label=None):
     plt.plot(hex.x_axis, hex.bottom, style, lw=lw)
 
 # plot coordinates
-def plot_coordinates(coord, style='ow', size=10):
+def plot_coordinates(coord, style='ok', size=10):
     x = np.array([])
     y = np.array([])
     for c in coord:
@@ -73,35 +73,35 @@ def plot_user_equipments(ue, style='sw', size=3):
     plt.plot(x, y, style, ms=size, label='UE', mec='k')
 
 # plot base station
-def plot_base_stations(bs, style='^b', size=10):
+def plot_base_stations(sites, style='^b', size=10):
     x = np.array([])
     y = np.array([])
-    for b in bs:
-        x = np.append(x, b.coord.x)
-        y = np.append(y, b.coord.y)
+    for s in sites:
+        x = np.append(x, s.bs.coord.x)
+        y = np.append(y, s.bs.coord.y)
     plt.plot(x, y, style, ms=size, label='BS', mec='k')
 
 # plot one cells
-def plot_cell(bs, cell_id):
-    if bs.started:
-        c = bs.get_cell(cell_id)
+def plot_cell(site, cell_id):
+    if site.bs.live:
+        c = site.get_cell(cell_id)
         hex = utl.Hexagon(c.r, c.center)
         plot_hexagon(hex, '--k', lw=0.5)
     else:
-        logger.warn("BS with id= "+str(bs.id)+" don't started.")
+        logger.warn("BS with id= "+str(site.bs.id)+" don't started.")
         
 # plot all cells of one BS
-def plot_cells(bs):
-    if bs.started:
-        for c in bs.cells:
-            plot_cell(bs, c.id)
+def plot_cells(site):
+    if site.bs.live:
+        for c in site.cells:
+            plot_cell(site, c.id)
     else:
-        logger.warn("BS with id = "+str(bs.id)+" don't started.")
+        logger.warn("BS with id = "+str(site.bs.id)+" don't started.")
 
 # plot all cells on gruid
 def plot_all_cells(grid):
-    for bs in grid.base_stations:
-        plot_cells(bs)
+    for site in grid.sites:
+        plot_cells(site)
 
 # show connections from UE view
 def plot_ue_connections(grid):
@@ -148,12 +148,12 @@ def plot_cell_connections(grid):
 # plot frequency reuse scheme
 def plot_frequency(grid):
     colors = 'cmy'
-    for bs in grid.base_stations:
-        for c in bs.cells:
+    for site in grid.sites:
+        for c in site.cells:
             x = c.center.x
             y = c.center.y
-            plt.plot(x, y, 'H'+colors[c.ft], ms=30)
-            plt.text(x-50, y-50 ,str(c.ft), fontsize=13)
+            plt.plot(x, y, 'H'+colors[c.fr], ms=30)
+            plt.text(x-50, y-50 ,str(c.fr), fontsize=13)
 
 # plot antenna patter and attenuation for one cells of one BS
 def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_att', px=const.PX):
