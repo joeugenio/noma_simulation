@@ -14,7 +14,6 @@ import numpy as np
 from logzero import logger
 import nomalib.constants as const
 from nomalib.utils import Coordinate as Coord
-import nomalib.utils as utl
 
 # classes
 
@@ -24,7 +23,7 @@ class BSAntenna:
         self.theta_d = theta_d
         self.gain = gain
 
-    def radiation_pattern(self, theta=0, theta3db=const.T3DB, att_max=const.ATT_MAX):
+    def radiation_pattern(self, theta=0, theta3db=const.THT_3DB, att_max=const.ATT_MAX):
         ''' Radiation Pattern '''        
         theta = theta - self.theta_d
         if (abs(theta) > np.pi):

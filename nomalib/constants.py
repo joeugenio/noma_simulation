@@ -16,7 +16,7 @@ G_BS = 15 # dBi
 
 # BS Antenna Constants
 ATT_MAX = 20 # dBm
-T3DB = 65 # degree
+THT_3DB = 65 # degree
 
 # User Equipment Constants
 PW_UE = 25 # dBm

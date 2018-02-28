@@ -20,26 +20,18 @@ class Cell:
         id = 1 - fc_type = 1 - from -60 to 60
         id = 3 - fc_type = 2 - from 60 to 180
         id = 2 - fc_type = 3 - from 180 to 300 '''
-    def __init__(self, id, bs, freq_type, r=const.R_CELL):
+    def __init__(self, id, r=const.R_CELL):
         self.id = id
-        self.bs_id = bs.id
-        self.pwr = bs.pwr
-        self.ant = bs.antenna
         self.r = r
-        self.ft = freq_type
-        self.coord = bs.coord        
+        self.freq_type = id % 10
         self.center = center
-        self.ue_ids = np.array([])
-        for i in range(const.N_SEC):
-            x = self.coord.x + np.cos(alpha*i)*const.R_CELL
-            y = self.coord.y + np.sin(alpha*i)*const.R_CELL
+        self.ue_ids = []
 
 class Site:
-    ''' Site with three cells/sectors
-        Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
-    def __init__(self, r=R_CELL, ):
-        pass
-
+    ''' Site with Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
+    def __init__(self, id, coord, n_sec=const.N_SEC):
+        self n_sec = n_sec
+        self.bs = dev.BaseStation(id, coord)
     def start_base_station(self):
         ''' Start BS and create cells '''
         deg = 360/self.n_sec
