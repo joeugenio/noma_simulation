@@ -27,8 +27,7 @@ G_UE = 0 # dBi
 N_UE = 500
 N_BS = 19
 N_SEC = 3 # three sectors
-R_CELL = 250 # Cell Radius in meters
-
+R_CELL = 500/3 # Cell Radius in meters
 
 # Channel Model Constants
 ENV = 'urban' # urban or rural
@@ -39,9 +38,10 @@ MCL = 70 # dB
 PX = 101 # odd number
 
 # Shadow Fading
-SD = 10 # sd [dB]
-M_SH = 0 # mean
-N_SH = 201 # M_SH x M_SH elements
+SHW_M = 0
+SHW_STD = 1
+SHW_D = 5
+R_SITE = .5
 
 # Plot Figure Constantes
 FORMAT = 'eps'

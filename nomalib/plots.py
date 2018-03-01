@@ -32,12 +32,12 @@ def show_fig(sh=False):
 # plot grid object
 def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
     # plot_coordinates(g.coordinates)
-    plot_user_equipments(g.user_equipments)
+    # plot_user_equipments(g.user_equipments)
     plot_base_stations(g.sites)
     if connect:
         plot_cell_connections(g)
     # plot_hexagon(g.hex, label='edge')
-    # plot_all_cells(g)
+    plot_all_cells(g)
     # plot_frequency(g)
 	# set figures axis and title
     plt.axis('on')
@@ -232,8 +232,9 @@ def plot_bs_attenuation(site, sh=False, save=False, filename='bs_att', px=const.
 def plot_shadow(ch, sh=False, save=False, filename='shadow'):
     shw = ch.shadow.shw_map
     shw = shw[::-1][:]
-    n = shw.shape[0]
-    axis = [-n/2, n/2, -n/2, n/2]
+    w = ch.shadow.width
+    h = ch.shadow.hight
+    axis = [-w/2, w/2, -h/2, h/2]
     plt.imshow(shw, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
     plt.axis('on')
     plt.grid(False)
@@ -243,14 +244,9 @@ def plot_shadow(ch, sh=False, save=False, filename='shadow'):
     cbar = plt.colorbar()
     cbar.ax.set_ylabel('[dB]', fontsize=14)
     cbar.ax.tick_params(labelsize=14)
+    shw_zoom = shw[:50:, :50:]
+    plt.figure()
+    plt.imshow(shw_zoom, cmap=plt.cm.jet, interpolation='bilinear')
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
-
-def plot_test(cell):
-    theta = np.linspace(-np.pi, np.pi)
-    y = np.array([])
-    for t in theta:
-        y = np.append(y, cell.antenna.radiation_pattern(t))
-    plt.plot(theta,y)
-    plt.show()

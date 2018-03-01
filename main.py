@@ -41,7 +41,7 @@ logger.info('Connecting UE to best BS')
 my_grid.connect_all_ue()
 
 # logger.info('Plotting grid figures')
-# plt.plot_grid(my_grid, sh=True, save=False, connect=True)
+# plt.plot_grid(my_grid, sh=True, save=False, connect=False)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)
@@ -49,3 +49,14 @@ my_grid.connect_all_ue()
 
 logger.info('Plot shadow fading map')
 plt.plot_shadow(my_grid.sites[0].channel, sh=True)
+
+
+# TESTE
+s1 = my_grid.sites[0].channel.shadow.shw_map
+s2 = my_grid.sites[1].channel.shadow.shw_map
+# print('COV', np.cov(s1)/s1.var())
+s1 = s1.reshape(s1.size)
+s2 = s2.reshape(s2.size)
+print('CORR', np.correlate(s1,s2)/s1.size)
+# print('COV', np.cov(s2)/s2.var())
+# print('STD', s1.std(), s2.std()/np.sqrt(.5))

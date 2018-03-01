@@ -13,6 +13,7 @@
 import numpy as np
 from logzero import logger
 import nomalib.constants as const
+from nomalib.utils import Coordinate as Coord
 
 # classes
 
@@ -44,12 +45,34 @@ class Noise:
     pass
 
 class ShadowFading:
-    ''' Shadowing 2D model '''
-    def __init__(self, n=const.N_SH, sigma=const.SD, mean=const.M_SH):
-        self.n = n
-        self.sd = sigma
-        self.m = mean
-        self.shw_map = np.random.normal(self.m, self.sd, (n,n))
+    ''' Shadow fading 2D map with uncorrelated lognormal distribution'''
+    def __init__(self, mean=const.SHW_M, std=const.SHW_STD, den=const.SHW_D, r=const.R_CELL):
+        self.den = d = den
+        self.width = w = 16*r
+        self.hight = h = 8*np.sqrt(3)*r
+        self.c = Coord(w/2, h/2)
+        self.mean = mean
+        self.std = std
+        px_w = int(round(w/d))
+        px_h = int(round(h/d))
+        self.shw_map = np.random.normal(mean, std, (px_h, px_w))
+
+    def inter_site_corr(self, s, corr=const.R_SITE):
+        ''' Shadown fading 2D maps with fix correlation R_SHW '''
+        self.shw_map = np.sqrt(corr)*s.shw_map+(1-np.sqrt(corr))*self.shw_map
+
+    def cross_correlation():
+        pass
+
+# class ShadowGridMap:
+#     ''' Shadow map with inter-site correlated'''
+#     def __init__(self, n=N_BS, r_corr=R_SITE):
+#         self.shw = np.array([])
+#         a0 = ShadowUncorrelated()._map
+#         for i in range(n):
+#             self.shw = np.append(self.shw, ShadowUncorrelated())
+#             self.shw[i]._map = np.sqrt(R_SITE)*a0+ (1-np.sqrt(R_SITE))*self.shw[i]._map       
+#             # self.shw[i] = np.sqrt(R_SITE)*a0+ (1-np.sqrt(R_SITE))*(ShadowUncorrelated()._map)
 
 class FastFading:
     ''' Fast Fading model - Rayleigh fading '''
@@ -65,3 +88,4 @@ class Channel:
         self.path_loss = PathLoss(env=env, fc=fc)
         self.noise  = Noise()
         self.shadow = ShadowFading()
+        # self.shadow.inter_site_corr(shadow_grid)
