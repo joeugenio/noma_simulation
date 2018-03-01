@@ -37,15 +37,15 @@ my_grid.deploy_user_equipment('hexagon')
 logger.info('Starting all base stations')
 my_grid.start_all_base_stations()
 
-# logger.info('Connecting UE to best BS')
-# my_grid.connect_all_to_cell(my_ch)
+logger.info('Connecting UE to best BS')
+my_grid.connect_all_ue()
 
-logger.info('Plotting grid figures')
-plt.plot_grid(my_grid, sh=True, save=False, connect=False)
+# logger.info('Plotting grid figures')
+# plt.plot_grid(my_grid, sh=True, save=False, connect=True)
 
 # logger.info('Plotting attenuation figures')
-# plt.plot_cell_attenuation(my_grid.base_stations[9], 1, my_ch, sh=True)
-# plt.plot_bs_attenuation(my_grid.base_stations[9], my_ch, sh=True)
+# plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)
+# plt.plot_bs_attenuation(my_grid.sites[9], sh=True)
 
-# logger.info('Plot shadow fading map')
-# plt.plot_shadow(my_ch, sh=True)
+logger.info('Plot shadow fading map')
+plt.plot_shadow(my_grid.sites[0].channel, sh=True)

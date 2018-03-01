@@ -23,7 +23,7 @@ class BSAntenna:
         self.theta_d = theta_d
         self.gain = gain
 
-    def radiation_pattern(self, theta=0, theta3db=const.THT_3DB, att_max=const.ATT_MAX):
+    def radiation_pattern(self, theta, theta3db=const.THT_3DB, att_max=const.ATT_MAX):
         ''' Radiation Pattern '''        
         theta = theta - self.theta_d
         if (abs(theta) > np.pi):
@@ -71,8 +71,8 @@ class UserEquipment:
 
     def angle_from(self, dev):
         ''' Return angle in rad from device coordinate ''' 
-        dx = self.coord.x-dev.x
-        dy = self.coord.y-dev.y
+        dx = self.coord.x-dev.coord.x
+        dy = self.coord.y-dev.coord.y
         try:    
             tg = dy/dx
         except ZeroDivisionError as e:
@@ -86,20 +86,26 @@ class UserEquipment:
             theta = np.deg2rad(180) + np.arctan(tg)
         return theta
     
-    def received_power(self, cell, bs, ch):
-        ''' Calculate power received on UE '''        
-        dist = self.distance_to_bs(bs)
+    def received_power(self, site, cell_id):
+        ''' Calculate power received on UE '''
+        cell = site.get_cell(cell_id)
+        bs = site.bs
+        ch = site.channel
+        dist = self.distance_to(bs)
         theta = self.angle_from(bs)
         att = ch.path_loss.attenuation(dist) - cell.antenna.gain - self.antenna.gain
         rx_pwr = bs.pwr - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
+        # print(cell.id, rx_pwr)
         return rx_pwr
     
     def best_cell(self, sites):
-        ''' Return id of Cell with the best power '''    
-        best_cell = sites[0].cells[0]
+        ''' Return id of Cell with the best power '''
+        best_site = sites[0]
+        best_cell = best_site.cells[0]
         for site in sites:
             for cell in site.cells:
-                if (self.received_power(cell, site.ch) > self.received_power(best_cell, site.ch)):
+                if (self.received_power(site, cell.id) > self.received_power(best_site, best_cell.id)):
+                    best_site = site
                     best_cell = cell
         return best_cell.id
      

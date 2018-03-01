@@ -39,6 +39,10 @@ class PathLoss:
             l = 'None'
         return l
 
+class Noise:
+    ''' Noise signal '''
+    pass
+
 class ShadowFading:
     ''' Shadowing 2D model '''
     def __init__(self, n=const.N_SH, sigma=const.SD, mean=const.M_SH):
@@ -51,10 +55,6 @@ class FastFading:
     ''' Fast Fading model - Rayleigh fading '''
     pass
 
-class Noise:
-    ''' Noise signal '''
-    pass
-
 class Interference:
     ''' Interference from others cells '''
     pass
@@ -63,5 +63,5 @@ class Channel:
     ''' Channel model class'''
     def __init__(self, env=const.ENV, fc=const.FC):
         self.path_loss = PathLoss(env=env, fc=fc)
+        self.noise  = Noise()
         self.shadow = ShadowFading()
-  

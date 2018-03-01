@@ -36,9 +36,9 @@ def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
     plot_base_stations(g.sites)
     if connect:
         plot_cell_connections(g)
-    plot_hexagon(g.hex, label='edge')
-    plot_all_cells(g)
-    plot_frequency(g)
+    # plot_hexagon(g.hex, label='edge')
+    # plot_all_cells(g)
+    # plot_frequency(g)
 	# set figures axis and title
     plt.axis('on')
     plt.grid(False)
@@ -133,14 +133,14 @@ def plot_bs_connections(grid):
 def plot_cell_connections(grid):
     colors = 'cmy'
     i = 0
-    for bs in grid.base_stations:
-        for c in bs.cells:
+    for s in grid.sites:
+        for c in s.cells:
             for ue_id in c.ue_ids:
                 ue = grid.get_ue(ue_id)
-                x = [ue.coord.x, c.coord.x]
-                y = [ue.coord.y, c.coord.y]
+                x = [ue.coord.x, s.bs.coord.x]
+                y = [ue.coord.y, s.bs.coord.y]
                 plt.plot(x, y, '-'+colors[i], lw=.8)
-            i = (i+1) if (i < 2) else (0) 
+            i = (i+1) if (i < 2) else (0)
     for ue in grid.user_equipments:
         if not ue.connected:
             logger.warn("UE with id = "+str(ue.id)+" don't connected.")
@@ -156,26 +156,26 @@ def plot_frequency(grid):
             plt.text(x-50, y-50 ,str(c.fr), fontsize=13)
 
 # plot antenna patter and attenuation for one cells of one BS
-def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_att', px=const.PX):
-    if bs.started:
+def plot_cell_attenuation(site, sector, sh=False, save=False, filename='cell_att', px=const.PX):
+    if site.bs.live:
         if sector in range(const.N_SEC):
-            cell = bs.cells[sector]
+            cell = site.cells[sector]
         else:
             logger.warn('Invalid sector index. The fisrt sector will be plotted.')
-            cell = bs.cells[0]
+            cell = site.cells[0]
         w = 4*cell.r
         u = w/(px-1)
-        c = bs.coord
+        c = site.bs.coord
         o = Coord(w/2, w/2)
         axis = [-w/2+c.x, w/2+c.x, -w/2+c.y, w/2+c.y]
         im = np.zeros([px, px])
-        att = ch.path_loss.attenuation
+        att = site.channel.path_loss.attenuation
         for x in range(px):
             for y in range(px):
                 p = Coord(x*u, y*u)
                 theta = utl.get_angle(p, o)
                 dist = utl.get_distance(p, o)
-                im[y][x] = - cell.ant.radiation_pattern(theta) + att(dist)
+                im[y][x] = - cell.antenna.radiation_pattern(theta) + att(dist)
         im = im[::-1][:]
         plt.imshow(im, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
         plt.axis('on')
@@ -193,25 +193,25 @@ def plot_cell_attenuation(bs, sector, ch, sh=False, save=False, filename='cell_a
         logger.error('BS was not started. Run one start base station method.')
 
 # plot antenna patter and attenuation for 3 cells of one BS
-def plot_bs_attenuation(bs, ch, sh=False, save=False, filename='bs_att', px=const.PX):
-    if bs.started:
-        w = 4*bs.cells[0].r
+def plot_bs_attenuation(site, sh=False, save=False, filename='bs_att', px=const.PX):
+    if site.bs.live:
+        w = 4*site.cells[0].r
         u = w/(px-1)
-        c = bs.coord
+        c = site.bs.coord
         o = Coord(w/2, w/2)
         axis = [-w/2+c.x, w/2+c.x, -w/2+c.y, w/2+c.y]
         im = np.zeros([px, px])
-        att = ch.path_loss.attenuation
-        for c in bs.cells:
+        att = site.channel.path_loss.attenuation
+        for c in site.cells:
             for x in range(px):
                 for y in range(px):
                     p = Coord(x*u, y*u)
                     theta = utl.get_angle(p, o)
-                    if (c.ant.theta_d == 0 and theta >= np.deg2rad(300)):
+                    if (c.antenna.theta_d == 0 and theta >= np.deg2rad(300)):
                         theta -= 2*np.pi
                     dist = utl.get_distance(p, o)
-                    if (abs(theta-c.ant.theta_d) < np.deg2rad(60)):
-                        im[y][x] = -c.ant.radiation_pattern(theta) + att(dist)
+                    if (abs(theta-c.antenna.theta_d) < np.deg2rad(60)):
+                        im[y][x] = -c.antenna.radiation_pattern(theta) + att(dist)
         im = im[::-1][:]
         plt.imshow(im, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
         plt.axis('on')
@@ -236,7 +236,7 @@ def plot_shadow(ch, sh=False, save=False, filename='shadow'):
     axis = [-n/2, n/2, -n/2, n/2]
     plt.imshow(shw, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
     plt.axis('on')
-    plt.grid(True)
+    plt.grid(False)
     plt.tick_params(labelsize=14)
     plt.xlabel('Posição x [m]', fontsize=14)
     plt.ylabel('Posição y [m]', fontsize=14)
@@ -246,3 +246,11 @@ def plot_shadow(ch, sh=False, save=False, filename='shadow'):
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
+
+def plot_test(cell):
+    theta = np.linspace(-np.pi, np.pi)
+    y = np.array([])
+    for t in theta:
+        y = np.append(y, cell.antenna.radiation_pattern(t))
+    plt.plot(theta,y)
+    plt.show()

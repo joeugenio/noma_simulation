@@ -14,6 +14,7 @@ from nomalib.utils import Hexagon
 from nomalib.utils import Coordinate as Coord
 import nomalib.constants as const
 import nomalib.devices as dev
+import nomalib.channel as ch
 
 class Cell:
     ''' Hexagon cell with antenna in the corner
@@ -28,7 +29,7 @@ class Cell:
         x = bs.coord.x + np.cos(self.angle*(self.fr))*r
         y = bs.coord.y + np.sin(self.angle*(self.fr))*r
         self.center = Coord(x,y)
-        self.antenna = dev.BSAntenna(self.angle)
+        self.antenna = dev.BSAntenna(self.angle*freq_reuse)
         self.ue_ids = []
 
 class Site:
@@ -36,6 +37,7 @@ class Site:
     def __init__(self, id, coord, n_sec=const.N_SEC):
         self.n_sec = n_sec
         self.bs = dev.BaseStation(id, coord)
+        self.channel = ch.Channel()
         self.cells = []
 
     def start_base_station(self):
@@ -97,18 +99,18 @@ class Grid:
         for s in self.sites:
             s.start_base_station()
   
-    # ''' Connect one UE to cell'''
-    # def connect_ue_to_cell(self, ue_id, ch):
-    #     ue = self.get_ue(ue_id)
-    #     cell_id = ue.best_cell(self.base_stations, ch)
-    #     ue.connect_to_cell(cell_id)
-    #     c = self.get_cell(cell_id)
-    #     c.ue_ids = np.append(c.ue_ids, ue.id)
+    ''' Connect one UE to cell'''
+    def connect_ue_to_best_cell(self, ue_id):
+        ue = self.get_ue(ue_id)
+        cell_id = ue.best_cell(self.sites)
+        ue.connect_to_cell(cell_id)
+        c = self.get_cell(cell_id)
+        c.ue_ids.append(ue.id)
 
-    # ''' Connect all UE's to the best cell '''
-    # def connect_all_to_cell(self, ch):
-    #     for ue in self.user_equipments:
-    #         self.connect_ue_to_cell(ue.id, ch)
+    ''' Connect all UE's to the best cell '''
+    def connect_all_ue(self):
+        for ue in self.user_equipments:
+            self.connect_ue_to_best_cell(ue.id)
 
     ''' Return BS from ID '''
     def get_bs(self, id):
