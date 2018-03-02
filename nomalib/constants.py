@@ -42,7 +42,10 @@ SHW_M = 0
 SHW_STD = 10
 SHW_D = 5
 R_SITE = .5
-SHW_PATH = './dat/'
+DAT_PATH = './dat/'
+# Neighbour map for correlation generation
+NB_MAP = [[11, 5, 10, 6, 12],[7, 1, 2, 3, 8],[9, 4, 13]]
+NB = 13
 
 # Plot Figure Constantes
 FORMAT = 'eps'

@@ -15,6 +15,7 @@ TODO:
 * To write a wiki page with install and run instructions;
 * To write changelog;
 * To make a git page;
+* Generate shadow fading with different neighbours map (center)
 
 Dúvidas [pt_BR]
 

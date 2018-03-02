@@ -61,20 +61,31 @@ class ShadowFading:
         ''' Shadown fading 2D maps with fix correlation R_SHW '''
         self.shw_map = np.sqrt(corr)*s+(1-np.sqrt(corr))*self.shw_map
 
-    def cross_correlation(self):
+    def correlation_generator(self, neighbour=const.NB_MAP, nb=const.NB, save=False):
+        ''' Generate correlation matrix from 12 neighbours distance'''
         # 12 neighbor matrix
-        n = np.array([[11, 5, 10, 6, 12],
-                      [7, 1, 2, 3, 8],
-                      [9, 4, 13]])
-        dist = np.zeros(n.size, n.size)
+        n = np.array(neighbour)
+        dist = np.zeros([nb,nb])
         for i in range(len(n)):
             for j in range(len(n[i])):
+                for p in range(len(n)):
+                    for q in range(len(n[p])):
+                        d = np.sqrt((p-i)**2 + (q-j)**2)
+                        dist[n[i][j]-1][n[p][q]-1] = d
+        if save:
+            np.save(const.DAT_PATH+'dist.npy', dist)
+        
+        return dist 
 
+    def cross_correlation(self):
+        ''' Insert cross correlation on shadow map '''
         pass
+        
+
     
     def save_shadow_map(self, file='shadow.npy'):
         ''' Save numpy array with shadow map to file'''
-        np.save(const.SHW_PATH+file,self.shw_map)
+        np.save(const.DAT_PATH+file,self.shw_map)
 
 class FastFading:
     ''' Fast Fading model - Rayleigh fading '''
