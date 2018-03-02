@@ -39,9 +39,10 @@ PX = 101 # odd number
 
 # Shadow Fading
 SHW_M = 0
-SHW_STD = 1
+SHW_STD = 10
 SHW_D = 5
 R_SITE = .5
+SHW_PATH = './dat/'
 
 # Plot Figure Constantes
 FORMAT = 'eps'

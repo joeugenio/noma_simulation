@@ -55,24 +55,26 @@ class ShadowFading:
         self.std = std
         px_w = int(round(w/d))
         px_h = int(round(h/d))
-        self.shw_map = np.random.normal(mean, std, (px_h, px_w))
+        self.shw_map = np.random.normal(size=(px_h, px_w))
 
     def inter_site_corr(self, s, corr=const.R_SITE):
         ''' Shadown fading 2D maps with fix correlation R_SHW '''
-        self.shw_map = np.sqrt(corr)*s.shw_map+(1-np.sqrt(corr))*self.shw_map
+        self.shw_map = np.sqrt(corr)*s+(1-np.sqrt(corr))*self.shw_map
 
-    def cross_correlation():
+    def cross_correlation(self):
+        # 12 neighbor matrix
+        n = np.array([[11, 5, 10, 6, 12],
+                      [7, 1, 2, 3, 8],
+                      [9, 4, 13]])
+        dist = np.zeros(n.size, n.size)
+        for i in range(len(n)):
+            for j in range(len(n[i])):
+
         pass
-
-# class ShadowGridMap:
-#     ''' Shadow map with inter-site correlated'''
-#     def __init__(self, n=N_BS, r_corr=R_SITE):
-#         self.shw = np.array([])
-#         a0 = ShadowUncorrelated()._map
-#         for i in range(n):
-#             self.shw = np.append(self.shw, ShadowUncorrelated())
-#             self.shw[i]._map = np.sqrt(R_SITE)*a0+ (1-np.sqrt(R_SITE))*self.shw[i]._map       
-#             # self.shw[i] = np.sqrt(R_SITE)*a0+ (1-np.sqrt(R_SITE))*(ShadowUncorrelated()._map)
+    
+    def save_shadow_map(self, file='shadow.npy'):
+        ''' Save numpy array with shadow map to file'''
+        np.save(const.SHW_PATH+file,self.shw_map)
 
 class FastFading:
     ''' Fast Fading model - Rayleigh fading '''
