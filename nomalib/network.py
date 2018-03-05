@@ -10,6 +10,7 @@
 # The scenarios are defined based on 3GPP TR 36.942 v14.0.0
 
 import numpy as np
+from logzero import logger
 from nomalib.utils import Hexagon
 from nomalib.utils import Coordinate as Coord
 import nomalib.constants as const
@@ -37,7 +38,7 @@ class Site:
     def __init__(self, id, coord, n_sec=const.N_SEC):
         self.n_sec = n_sec
         self.bs = dev.BaseStation(id, coord)
-        self.channel = ch.Channel()
+        self.channel = ch.Channel(id)
         self.cells = []
 
     def start_base_station(self):
@@ -83,7 +84,7 @@ class Grid:
                 if (self.hex.f(x,'bottom') < y < self.hex.f(x,'upper')):
                     coords.append(Coord(x,y))
         elif region=='square':
-            while (coords.size < n_ue):            
+            while (len(coords) < n_ue):            
                 x, y = np.random.uniform(-self.width/2, self.width/2, (2))
                 coords.append(Coord(x,y))
         for i in range(n_ue):

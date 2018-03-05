@@ -13,6 +13,7 @@
 PW_BS = 43 # dBm
 H_BS = 30 # meters
 G_BS = 15 # dBi
+BW = 20e6 # Hz
 
 # BS Antenna Constants
 ATT_MAX = 20 # dBm
@@ -31,8 +32,9 @@ R_CELL = 500/3 # Cell Radius in meters
 
 # Channel Model Constants
 ENV = 'urban' # urban or rural
-FC = 2e3 # MHz
+FC = 2e3# MHz
 MCL = 70 # dB
+N_DEN = -174 # dBm/Hz (290 degree K)
 
 # attenuation map
 PX = 101 # odd number
@@ -51,3 +53,4 @@ NB = 13
 FORMAT = 'eps'
 DPI = 72
 IMG_PATH = './output/img/'
+MAP_D = 5

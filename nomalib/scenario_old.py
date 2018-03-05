@@ -141,7 +141,7 @@ class Grid:
                       [Coord(5*r, 7*np.sqrt(3)*r), Coord(8*r, 7*np.sqrt(3)*r), Coord(11*r, 7*np.sqrt(3)*r)]]
         x_ori = self.r*8
         y_ori = self.r*7
-        self.sites = [];
+        self.sites = []
         for line in self.coord:
             for c in line:
 #                 c.x = c.x - x_ori
@@ -241,7 +241,6 @@ def plot_pattern():
 def attenuation(theta, theta3db=65, att_max=20):
     a = 12*(theta/np.radians(theta3db))**2
     return (-1)*np.min([a,att_max])
-
 
 def plot_radiation(M=200, N=200, s = Site(50,Coord(100,100))):
     im = np.zeros([M,N])

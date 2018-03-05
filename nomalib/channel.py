@@ -10,6 +10,8 @@
 # The channel model classes are declared here
 
 # modules
+
+from scipy.constants import k as btz_k
 import numpy as np
 from logzero import logger
 import nomalib.constants as const
@@ -41,11 +43,34 @@ class PathLoss:
         return l
 
 class Noise:
-    ''' Noise signal '''
-    pass
+    ''' Noise floor signal '''
+    def __init__(self, bw=const.BW, d_den=const.N_DEN):
+        
+        print(btz_k)
+
 
 class ShadowFading:
-    ''' Shadow fading 2D map with uncorrelated lognormal distribution'''
+    ''' Shadow fading 2D map with lognormal distribution object'''
+    def __init__(self, file='s1.npy', den=const.SHW_D):
+        self.shw = np.load(const.DAT_PATH+file)
+        self.l, self.c = self.shw.shape
+        self.den = den
+        self.width = w = self.c*den
+        self.hight = h = self.l*den
+        self.center = Coord(w/2, h/2)
+    
+    def get_shw(self, coord):
+        ''' Return shadow level from coordinate '''
+        i = int(round((self.center.y + coord.y)/self.den))
+        i = i if (i >= 0) else 0
+        i = i if (i < self.l) else self.l-1
+        j = int(round((self.center.x + coord.x)/self.den))
+        j = j if (j >= 0) else 0        
+        j = j if (j < self.c) else self.l-1        
+        return self.shw[i][j]
+        
+class ShadowFadingGenerator:
+    ''' Shadow fading 2D map withlognormal distribution generator'''
     def __init__(self, mean=const.SHW_M, std=const.SHW_STD, den=const.SHW_D, r=const.R_CELL):
         self.den = d = den
         self.width = w = 16*r
@@ -132,8 +157,10 @@ class Interference:
 
 class Channel:
     ''' Channel model class'''
-    def __init__(self, env=const.ENV, fc=const.FC):
+    def __init__(self, s_id, env=const.ENV, fc=const.FC):
+        self.s_id = s_id
+        self.env = env
+        self.fc = fc
         self.path_loss = PathLoss(env=env, fc=fc)
+        self.shadow = ShadowFading('s'+str(s_id%100)+'.npy')
         # self.noise  = Noise()
-        # self.shadow = ShadowFading()
-        # self.shadow.inter_site_corr(shadow_grid)

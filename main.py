@@ -38,15 +38,17 @@ logger.info('NOMA system level simulation starting')
 # logger.info('Connecting UE to best BS')
 # my_grid.connect_all_ue()
 
-# ==========================================================================
-
 # logger.info('Plotting grid figures')
-# plt.plot_grid(my_grid, sh=True, save=False, connect=False)
+# plt.plot_grid(my_grid, sh=True, save=False, connect=True)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)
 # plt.plot_bs_attenuation(my_grid.sites[9], sh=True)
 
+# ch.Noise()
+Boltzmann constant in Hz/K
+
+# ==========================================================================
 # s0 = np.load(const.DAT_PATH+'s0.npy')
 # s1 = np.load(const.DAT_PATH+'s1.npy')
 # s2 = np.load(const.DAT_PATH+'s2.npy')
@@ -61,14 +63,14 @@ logger.info('NOMA system level simulation starting')
 # print('CORRELATION:',np.correlate(s0,s1)/(s1.size*s1.std()*s0.std()))
 
 # Run just one time for generate arrays files
-# ch.ShadowFading().shw_ref_generator(save=False)
-# ch.ShadowFading().correlation_map_generator()
+# ch.ShadowFadingGenerator().shw_ref_generator(save=False)
+# ch.ShadowFadingGenerator().correlation_map_generator()
 # for i in range(1,20):
-    # ch.ShadowFading().inter_site_corr(file='s'+str(i)+'.npy', save=False)
+    # ch.ShadowFadingGenerator().inter_site_corr(file='s'+str(i)+'.npy', save=False)
 # for i in range(1,20):
-    # ch.ShadowFading().cross_correlation(file='s'+str(i)+'.npy', save=False)
+    # ch.ShadowFadingGenerator().cross_correlation(file='s'+str(i)+'.npy', save=False)
 
 # logger.info('Plot shadow fading map')
-for i in range(1,20):
-    plt.plot_shadow(input='s'+str(i)+'.npy', sh=True)
-    plt.plot_shadow_zoom(input='s'+str(i)+'.npy', sh=True)
+# for i in range(1,20):
+    # plt.plot_shadow(input='s'+str(i)+'.npy', sh=True)
+    # plt.plot_shadow_zoom(input='s'+str(i)+'.npy', sh=True)

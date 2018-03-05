@@ -53,6 +53,7 @@ def get_angle(coord:Coordinate, ori:Coordinate):
     ''' Return angle in rad from x and y coordinate ''' 
     dx = coord.x-ori.x
     dy = coord.y-ori.y
+    # dx = 0.001 if dx==0 else dx
     try:    
         tg = dy/dx
     except ZeroDivisionError as e:

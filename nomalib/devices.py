@@ -93,9 +93,8 @@ class UserEquipment:
         ch = site.channel
         dist = self.distance_to(bs)
         theta = self.angle_from(bs)
-        att = ch.path_loss.attenuation(dist) - cell.antenna.gain - self.antenna.gain
+        att = ch.path_loss.attenuation(dist) + ch.shadow.get_shw(self.coord) - cell.antenna.gain - self.antenna.gain
         rx_pwr = bs.pwr - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
-        # print(cell.id, rx_pwr)
         return rx_pwr
     
     def best_cell(self, sites):
