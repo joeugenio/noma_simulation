@@ -229,24 +229,45 @@ def plot_bs_attenuation(site, sh=False, save=False, filename='bs_att', px=const.
         logger.error('BS was not started. Run one start base station method.')
 
 # plot lognormal shadow fading
-def plot_shadow(ch, sh=False, save=False, filename='shadow'):
-    shw = ch.shadow.shw_map
+def plot_shadow(r=const.R_CELL, sh=False, input='s1.npy', filename='shadow', save=False):
+    shw = np.load(const.DAT_PATH+input)
     shw = shw[::-1][:]
-    w = ch.shadow.width
-    h = ch.shadow.hight
+    y, x = shw.shape
+    h = y*const.SHW_D
+    w = x*const.SHW_D
     axis = [-w/2, w/2, -h/2, h/2]
     plt.imshow(shw, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
     plt.axis('on')
-    plt.grid(False)
+    plt.grid(True)
     plt.tick_params(labelsize=14)
     plt.xlabel('Posição x [m]', fontsize=14)
     plt.ylabel('Posição y [m]', fontsize=14)
     cbar = plt.colorbar()
     cbar.ax.set_ylabel('[dB]', fontsize=14)
     cbar.ax.tick_params(labelsize=14)
-    shw_zoom = shw[:50:, :50:]
-    plt.figure()
-    plt.imshow(shw_zoom, cmap=plt.cm.jet, interpolation='bilinear')
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_shadow_zoom(r=const.R_CELL, n=50, sh=False, input='s1.npy', filename='shadow', save=False):
+    shw = np.load(const.DAT_PATH+input)
+    shw = shw[::-1][:]
+    y, x = shw.shape
+    h = n*const.SHW_D
+    w = n*const.SHW_D
+    c_y = int(round(y/2))
+    c_x = int(round(x/2))
+    axis = [-w/2, w/2, -h/2, h/2]
+    shw_zoom = shw[c_y-int(n/2):c_y+int(n/2):, c_x-int(n/2):c_x+int(n/2):]
+    plt.imshow(shw_zoom, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
+    plt.axis('on')
+    plt.grid(True)
+    plt.tick_params(labelsize=14)
+    plt.xlabel('Posição x [m]', fontsize=14)
+    plt.ylabel('Posição y [m]', fontsize=14)
+    cbar = plt.colorbar()
+    cbar.ax.set_ylabel('[dB]', fontsize=14)
+    cbar.ax.tick_params(labelsize=14)
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()

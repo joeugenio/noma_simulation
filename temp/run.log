@@ -1,6 +1,1 @@
-[I 180302 15:35:12 main:24] NOMA system level simulation starting
-[I 180302 15:35:12 main:26] Creating grid with 19 sites
-[I 180302 15:35:12 main:32] Deploing base stations on grid
-[I 180302 15:35:12 main:35] Deploing users equipments on grid
-[I 180302 15:35:12 main:38] Starting all base stations
-[I 180302 15:35:12 main:41] Connecting UE to best BS
+[I 180304 23:56:29 main:24] NOMA system level simulation starting

@@ -1,7 +1,3 @@
 ./nomalib/__pycache__/
 __pycache__/
 ./dat/*.npy
-./dat/a.npy
-./dat/a1.npy
-./dat/a2.npy
-./dat/s0.npy

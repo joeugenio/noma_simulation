@@ -57,35 +57,70 @@ class ShadowFading:
         px_h = int(round(h/d))
         self.shw_map = np.random.normal(size=(px_h, px_w))
 
-    def inter_site_corr(self, s, corr=const.R_SITE):
-        ''' Shadown fading 2D maps with fix correlation R_SHW '''
-        self.shw_map = np.sqrt(corr)*s+(1-np.sqrt(corr))*self.shw_map
+    def save_shadow_map(self, file='shadow.npy'):
+        ''' Save numpy array with shadow map to file'''
+        np.save(const.DAT_PATH+file,self.shw_map)
 
-    def correlation_generator(self, neighbour=const.NB_MAP, nb=const.NB, save=False):
+    def shw_ref_generator(self, file='s0.npy', save=False):
+        ''' Generate shadow fading map reference for inte-site correlation '''
+        h, w = self.shw_map.shape
+        s0 = np.random.normal(0,1,(h, w))
+        if save:
+            np.save(const.DAT_PATH+file, s0)
+
+    def inter_site_corr(self, corr=const.R_SITE, file='s.npy' ,save=False):
+        ''' Shadown fading 2D maps with fix correlation R_SHW '''
+        s = np.load(const.DAT_PATH+'s0.npy')
+        shw = np.sqrt(corr)*s+(1-np.sqrt(corr))*self.shw_map
+        self.shw_map = shw/shw.std()
+        if save:
+            np.save(const.DAT_PATH+file, self.shw_map)            
+
+    def correlation_map_generator(self, neighbour=const.NB_MAP, nb=const.NB,save=False):
         ''' Generate correlation matrix from 12 neighbours distance'''
         # 12 neighbor matrix
         n = np.array(neighbour)
         dist = np.zeros([nb,nb])
         for i in range(len(n)):
             for j in range(len(n[i])):
-                for p in range(len(n)):
-                    for q in range(len(n[p])):
-                        d = np.sqrt((p-i)**2 + (q-j)**2)
-                        dist[n[i][j]-1][n[p][q]-1] = d
+                for k in range(len(n)):
+                    for l in range(len(n[k])):
+                        d = np.sqrt((k-i)**2 + (l-j)**2)
+                        dist[n[i][j]-1, n[k][l]-1] = d
+        alpha = 1/20
+        corr = np.exp(-alpha*dist*self.den)
         if save:
-            np.save(const.DAT_PATH+'dist.npy', dist)
-        
-        return dist 
+            np.save(const.DAT_PATH+'corr.npy', corr)
+        return corr
 
-    def cross_correlation(self):
+    def cross_correlation(self, file='sn.npy', save=True):
         ''' Insert cross correlation on shadow map '''
-        pass
-        
-
-    
-    def save_shadow_map(self, file='shadow.npy'):
-        ''' Save numpy array with shadow map to file'''
-        np.save(const.DAT_PATH+file,self.shw_map)
+        shw = np.load(const.DAT_PATH+file)
+        h, w = shw.shape
+        corr = np.load(const.DAT_PATH+'corr.npy')
+        chk = np.linalg.cholesky(corr)
+        k = len(chk)
+        row_chk = chk[-1]
+        chk = chk[:k-1:, :k-1:]
+        chk_inv = np.linalg.inv(chk)
+        for i in range(h):
+            for j in range(w):
+                indexes = [(i-1,j-1), (i-1,j), (i-1,j+1), (i,j-1), (i-2,j-1), (i-2,j+1),
+                            (i-1,j-2), (i-1,j+2), (i,j-2), (i-2,j), (i-2,j-2), (i-2,j+2)]
+                s = []
+                for index in indexes:
+                    m,n = index
+                    if (0<= m < h and 0<= n < w):
+                        s.append(shw[m, n])
+                    else:
+                        s.append(0)
+                s = np.array([s])
+                t = np.dot(chk_inv, s.T)
+                t = np.append(t, shw[i, j]).reshape(k,1)
+                shw[i,j] = np.dot(row_chk, t)
+        shw = shw*(self.std/shw.std())
+        if save:
+            np.save(const.DAT_PATH+file, shw)            
 
 class FastFading:
     ''' Fast Fading model - Rayleigh fading '''
@@ -99,6 +134,6 @@ class Channel:
     ''' Channel model class'''
     def __init__(self, env=const.ENV, fc=const.FC):
         self.path_loss = PathLoss(env=env, fc=fc)
-        self.noise  = Noise()
-        self.shadow = ShadowFading()
+        # self.noise  = Noise()
+        # self.shadow = ShadowFading()
         # self.shadow.inter_site_corr(shadow_grid)

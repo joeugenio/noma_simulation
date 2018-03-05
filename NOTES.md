@@ -16,6 +16,7 @@ TODO:
 * To write changelog;
 * To make a git page;
 * Generate shadow fading with different neighbours map (center)
+* Change Coordinate for tuple
 
 Dúvidas [pt_BR]
 
