@@ -23,20 +23,25 @@ logzero.loglevel(logzero.logging.INFO)
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
-# logger.info('Creating grid with 19 sites')
-# my_grid = net.Grid()
+logger.info('Creating grid with 19 sites')
+my_grid = net.Grid()
 
-# logger.info('Deploing base stations on grid')
-# my_grid.deploy_base_station()
+logger.info('Deploing base stations on grid')
+my_grid.deploy_base_station()
 
-# logger.info('Deploing users equipments on grid')
-# my_grid.deploy_user_equipment('hexagon')
+logger.info('Deploing users equipments on grid')
+my_grid.deploy_user_equipment('hexagon')
 
-# logger.info('Starting all base stations')
-# my_grid.start_all_base_stations()
+logger.info('Starting all base stations')
+my_grid.start_all_base_stations()
 
-# logger.info('Connecting UE to best BS')
-# my_grid.connect_all_ue()
+logger.info('Connecting UE to best BS')
+my_grid.connect_all_ue()
+
+inter = my_grid.user_equipments[0].received_interference(my_grid.sites)
+pwr = my_grid.user_equipments[0].received_power_connected(my_grid.sites)
+print(inter, pwr)
+print(utl.dbm2watts(pwr)/utl.dbm2watts(inter))
 
 # logger.info('Plotting grid figures')
 # plt.plot_grid(my_grid, sh=True, save=False, connect=True)
@@ -44,9 +49,6 @@ logger.info('NOMA system level simulation starting')
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)
 # plt.plot_bs_attenuation(my_grid.sites[9], sh=True)
-
-# ch.Noise()
-Boltzmann constant in Hz/K
 
 # ==========================================================================
 # s0 = np.load(const.DAT_PATH+'s0.npy')

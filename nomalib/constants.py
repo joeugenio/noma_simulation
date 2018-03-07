@@ -23,6 +23,7 @@ THT_3DB = 65 # degree
 PW_UE = 25 # dBm
 H_UE = 1.5 # meters
 G_UE = 0 # dBi
+NF_UE = 9 # dB
 
 # Grid Constants
 N_UE = 500
@@ -35,6 +36,7 @@ ENV = 'urban' # urban or rural
 FC = 2e3# MHz
 MCL = 70 # dB
 N_DEN = -174 # dBm/Hz (290 degree K)
+TEMP = 17 # Celsius]
 
 # attenuation map
 PX = 101 # odd number

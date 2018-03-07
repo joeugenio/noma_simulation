@@ -104,8 +104,8 @@ class Grid:
     def connect_ue_to_best_cell(self, ue_id):
         ue = self.get_ue(ue_id)
         cell_id = ue.best_cell(self.sites)
-        ue.connect_to_cell(cell_id)
         c = self.get_cell(cell_id)
+        ue.connect_to_cell(c)
         c.ue_ids.append(ue.id)
 
     ''' Connect all UE's to the best cell '''

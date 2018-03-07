@@ -53,8 +53,7 @@ def get_angle(coord:Coordinate, ori:Coordinate):
     ''' Return angle in rad from x and y coordinate ''' 
     dx = coord.x-ori.x
     dy = coord.y-ori.y
-    # dx = 0.001 if dx==0 else dx
-    try:    
+    try:
         tg = dy/dx
     except ZeroDivisionError as e:
         tg = float('Inf')
@@ -72,3 +71,11 @@ def get_distance(coord:Coordinate, ori:Coordinate):
     dx = coord.x-ori.x
     dy = coord.y-ori.y
     return np.sqrt(dx**2 + dy**2)/1000 
+
+def dbm2watts(dbm):
+    ''' Convert power to Watts from dBm '''
+    return 10**((dbm-30)/10)
+
+def watts2dbm(watts):
+    ''' Convert power to dBm from Watts '''
+    return 10*np.log10(1e3*watts)

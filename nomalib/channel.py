@@ -11,7 +11,7 @@
 
 # modules
 
-from scipy.constants import k as btz_k
+import scipy.constants as cst
 import numpy as np
 from logzero import logger
 import nomalib.constants as const
@@ -44,9 +44,12 @@ class PathLoss:
 
 class Noise:
     ''' Noise floor signal '''
-    def __init__(self, bw=const.BW, d_den=const.N_DEN):
-        
-        print(btz_k)
+    def __init__(self, bw=const.BW, temp=const.TEMP, noise_figure=const.NF_UE):
+        self.bw = bw
+        self.temp = t = cst.C2K(temp)
+        self.nf = noise_figure
+        self.den = 10*np.log10(t*cst.k*1e3)
+        self.noise_floor = self.den + self.nf + 10*np.log10(bw)
 
 
 class ShadowFading:
@@ -163,4 +166,5 @@ class Channel:
         self.fc = fc
         self.path_loss = PathLoss(env=env, fc=fc)
         self.shadow = ShadowFading('s'+str(s_id%100)+'.npy')
-        # self.noise  = Noise()
+        self.noise  = Noise()
+        # self.fast_fading = FastFading()
