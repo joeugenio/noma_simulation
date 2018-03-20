@@ -9,6 +9,10 @@
 # Python module for NOMA communications simulations
 # Default simulation scenario values
 
+# Simulations Paramters
+TTI = 1e-3 # ms
+T_SNP = 1 # s
+
 # Base Staion Constants
 PW_BS = 43 # dBm
 H_BS = 30 # meters
@@ -37,6 +41,11 @@ FC = 2e3# MHz
 MCL = 70 # dB
 N_DEN = -174 # dBm/Hz (290 degree K)
 TEMP = 17 # Celsius]
+
+# Small-Scale Fading
+FC_H = 2e9 # Hz
+SPD = 5/3.6 # 5 km/h = 1.3889 m/s
+C = 299792458.0
 
 # attenuation map
 PX = 101 # odd number

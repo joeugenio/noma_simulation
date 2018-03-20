@@ -150,9 +150,19 @@ class ShadowFadingGenerator:
         if save:
             np.save(const.DAT_PATH+file, shw)            
 
-class FastFading:
-    ''' Fast Fading model - Rayleigh fading '''
-    pass
+class SmallScaleFading:
+    ''' Flat Rayleigh Channel - Clarke and Gans Model - Smith's Method '''
+    def __init__(self, speed=const.SPD, fc=const.FC_H, time=const.T_SNP, ts=const.TTI):
+        self.spd = speed
+        self.fc = fc
+        self.lambda_s = l = const.C/fc
+        self.fm = fm = speed/l
+        df = 1/time
+        n_hf = round(((2*fm/df) + 1)/2)
+        self.n = n = n_hf*2
+        self.df = df =2*fm/(n-1)
+        self.t = 1/df
+        self.ts = ts
 
 class Interference:
     ''' Interference from others cells '''
