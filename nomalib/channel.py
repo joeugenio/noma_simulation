@@ -152,17 +152,54 @@ class ShadowFadingGenerator:
 
 class SmallScaleFading:
     ''' Flat Rayleigh Channel - Clarke and Gans Model - Smith's Method '''
-    def __init__(self, speed=const.SPD, fc=const.FC_H, time=const.T_SNP, ts=const.TTI):
-        self.spd = speed
+    def __init__(self, speed=const.SPD, fc=const.FC_H):
+        self.speed = speed
         self.fc = fc
-        self.lambda_s = l = const.C/fc
-        self.fm = fm = speed/l
+
+    def generator(self, time=const.T_SNP, ts=const.TTI):   
+        ''' Generate the flat rayleigh fading channel '''
+        # calculate maximum doppler frequency (fm)
+        fm = self.speed/(const.C/self.fc)
+        # estimates the number of points (n) from simulation time
         df = 1/time
-        n_hf = round(((2*fm/df) + 1)/2)
-        self.n = n = n_hf*2
-        self.df = df =2*fm/(n-1)
-        self.t = 1/df
-        self.ts = ts
+        # n even number
+        nh = round(((2*fm/df) + 1)/2)
+        n = nh*2
+        # df = df =2*fm/(n-1)
+        t = 1/df
+        # generates gaussian random array
+        a = np.random.normal(size=nh)
+        b = np.random.normal(size=nh)
+        g = a + 1j*b
+        gc = g.conj()[::-1]
+        g1 = np.concatenate((gc,g),axis=0)
+        # generates gaussian random array
+        a = np.random.normal(size=nh)
+        b = np.random.normal(size=nh)
+        g = a + 1j*b
+        gc = g.conj()[::-1]
+        g2 = np.concatenate((gc,g),axis=0)
+        # generates doppler spectrum
+        f = np.linspace(-fm,fm,n)
+        S=1.5/(np.pi*fm*np.sqrt(1-(f/fm)**2))        
+        # truncates infinite limits
+        S[0]=2*S[1]-S[2]
+        S[-1]=2*S[-2]-S[-3]
+
+        x = g1*np.sqrt(S)
+        xt = abs(np.fft.ifft(x))
+        y = g2*np.sqrt(S)
+        yt = abs(np.fft.ifft(y))
+        r = np.sqrt(abs(xt)**2+abs(yt)**2)
+
+        print(r)
+        import matplotlib.pyplot as plt
+        plt.plot(r,'b*-')
+        plt.xlabel('Time(msecs)')
+        plt.ylabel('Envelope(dB)')
+        plt.grid(True)
+        plt.title('Rayleigh Fading')
+        plt.show()
 
 class Interference:
     ''' Interference from others cells '''

@@ -44,9 +44,7 @@ import numpy as np
 # print(utl.dbm2watts(pwr)/utl.dbm2watts(inter))
 
 ssf = ch.SmallScaleFading()
-print(ssf.n)
-print(ssf.df)
-print(ssf.ts)
+ssf.generator()
 
 # logger.info('Plotting grid figures')
 # plt.plot_grid(my_grid, sh=True, save=False, connect=True)
