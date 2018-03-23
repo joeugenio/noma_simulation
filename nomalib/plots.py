@@ -279,3 +279,27 @@ def plot_shadow_zoom(r=const.R_CELL, n=50, sh=False, input='s1.npy', filename='s
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
+
+def plot_doppler_filter(ssf, sh=False, save=False, filename='doppler_spread'):
+    s = ssf.s
+    f = ssf.f
+    plt.plot(f, s*1e3, 'r')
+    plt.xlabel('Frequency (Hz)',fontsize=14)
+    plt.ylabel('Power (mW)',fontsize=14)
+    plt.title('Power Spectral Density of Doppler Filter')
+    plt.grid(True)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_channel_gain(ssf, sh=False, save=False, filename='ch_gain'):
+    g = ssf.gain
+    t = ssf.t
+    plt.plot(t*1e3, g, 'b')
+    plt.xlabel('Time (ms)',fontsize=14)
+    plt.ylabel('Gain (dB)',fontsize=14)
+    plt.grid(True)
+    plt.title(r'Rayleigh Channel ($DS_{max}=9.27$ Hz)')
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()

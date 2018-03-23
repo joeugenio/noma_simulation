@@ -43,8 +43,12 @@ import numpy as np
 # print(inter, pwr)
 # print(utl.dbm2watts(pwr)/utl.dbm2watts(inter))
 
-ssf = ch.SmallScaleFading()
-ssf.generator()
+# c = ch.Channel(0)
+# logger.info('Plotting  Doppler Filter PSD')
+# plt.plot_doppler_filter(c.ssf, save=True)
+
+# logger.info('Plotting  Rayleigh Channel Gain')
+# plt.plot_channel_gain(c.ssf, save=True)
 
 # logger.info('Plotting grid figures')
 # plt.plot_grid(my_grid, sh=True, save=False, connect=True)

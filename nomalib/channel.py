@@ -152,15 +152,11 @@ class ShadowFadingGenerator:
 
 class SmallScaleFading:
     ''' Flat Rayleigh Channel - Clarke and Gans Model - Smith's Method '''
-    def __init__(self, speed=const.SPD, fc=const.FC_H):
+    def __init__(self, speed=const.SPD, fc=const.FC_H, time=const.T_SNP, ts=const.TTI):
         self.speed = speed
         self.fc = fc
-
-    def generator(self, time=const.T_SNP, ts=const.TTI):   
-        ''' Generate the flat rayleigh fading channel '''
         # calculate maximum doppler frequency (fm)
-        fm = self.speed/(const.C/self.fc)
-        print(fm)
+        fm = speed/(const.C/fc)
         # estimates the number of points (n) from simulation time
         df = 1/time
         nt = time/ts
@@ -183,45 +179,28 @@ class SmallScaleFading:
         g2 = np.concatenate((gc,g),axis=0)
         # generates doppler spectrum
         f = np.linspace(-fm,fm,n)
-        S=1.5/(np.pi*fm*np.sqrt(1-(f/fm)**2))        
+        ft = f.copy()
+        ft[0] = ft[-1] = 0
+        s=1.5/(np.pi*fm*np.sqrt(1-(ft/fm)**2))
         # truncates infinite limits
-        S[0]=2*S[1]-S[2]
-        S[-1]=2*S[-2]-S[-3]
+        s[0]=2*s[1]-s[2]
+        s[-1]=2*s[-2]-s[-3]
         # Doppler filter
-        x = g1*np.sqrt(S)
+        x = g1*np.sqrt(s)
         # complete axis points one point for each TTI slot
         ax = np.zeros(int((nt-n)/2))
         x = np.concatenate((ax, x, ax))
         xt = abs(np.fft.ifft(x))
-        y = g2*np.sqrt(S)
+        y = g2*np.sqrt(s)
         y = np.concatenate((ax, y, ax))
         yt = abs(np.fft.ifft(y))
         r = np.sqrt(abs(xt)**2+abs(yt)**2)
-        r = r/r.std()
-        r_db = 10*np.log10(r/1.0)
-        print(r.var(), r.std())
-        r1 = abs(r)**2
-        print(r1.var(), r1.std())
-        r1_db = 10*np.log10(r1/r1.std())
-        r2_db = 10*np.log10(r1/r.var())
-
-        import matplotlib.pyplot as plt
-        
-        # # plt.figure(1)
-        # # plt.plot(f, S, 'r')
-        # plt.xlabel('Frequency [Hz]')
-        # plt.ylabel('S')
-        # plt.grid(True)
-        # plt.title('Doppler Filter')
-
-        t=np.linspace(0, time, nt)
-        plt.figure(2)
-        plt.plot(t, r_db, 'r', t, r1_db, 'b', t, r2_db, 'g')
-        plt.xlabel('Time [s]')
-        plt.ylabel('Envelope [dB]')
-        plt.grid(True)
-        plt.title('Rayleigh Fading')
-        plt.show()
+        h = r/r.std()
+        pwr_h = abs(h)**2
+        self.gain = 10*np.log10(pwr_h/1.0)
+        self.f = f
+        self.s = s
+        self.t = np.linspace(0, time, nt)
 
 class Interference:
     ''' Interference from others cells '''
@@ -236,4 +215,4 @@ class Channel:
         self.path_loss = PathLoss(env=env, fc=fc)
         self.shadow = ShadowFading('s'+str(s_id%100)+'.npy')
         self.noise  = Noise()
-        # self.fast_fading = FastFading()
+        self.ssf = SmallScaleFading()
