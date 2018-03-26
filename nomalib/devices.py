@@ -13,6 +13,7 @@
 import numpy as np
 from logzero import logger
 import nomalib.constants as const
+import nomalib.channel as ch
 import nomalib.utils as utl
 from nomalib.utils import Coordinate as Coord
 
@@ -58,6 +59,7 @@ class UserEquipment:
         self.coord = coord
         self.h = hight
         self.pwr = power
+        self.fading = ch.TemporalChannel()
         self.cell_id = None
         self.cell_fr = None        
         self.live = True
@@ -75,7 +77,7 @@ class UserEquipment:
         ''' Return angle in rad from device coordinate ''' 
         dx = self.coord.x-dev.coord.x
         dy = self.coord.y-dev.coord.y
-        try:    
+        try:        
             tg = dy/dx
         except ZeroDivisionError as e:
             tg = float('Inf')
@@ -88,7 +90,7 @@ class UserEquipment:
             theta = np.deg2rad(180) + np.arctan(tg)
         return theta
     
-    def received_power(self, site, cell_id):
+    def received_power(self, site, cell_id, tti):
         ''' Calculates power received from BS '''
         cell = site.get_cell(cell_id)
         bs = site.bs
@@ -96,39 +98,39 @@ class UserEquipment:
         dist = self.distance_to(bs)
         theta = self.angle_from(bs)
         att = ch.path_loss.attenuation(dist) + ch.shadow.get_shw(self.coord) - cell.antenna.gain - self.antenna.gain
-        rx_pwr = bs.pwr - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
+        rx_pwr = bs.pwr + self.fading.h.gain[tti] - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
         return rx_pwr
 
-    def received_power_connected(self, sites):
+    def received_power_connected(self, sites, tti):
         ''' Calculates power received from the BS that UE is connected '''
         if (self.connected):
             for site in sites:
                 for cell in site.cells:
                     if (cell.id == self.cell_id):
-                        return self.received_power(site, cell.id)
+                        return self.received_power(site, cell.id, tti)
         else:
             logger.error("UE don't connnected to one BS")
 
-    def received_interference(self, sites):
+    def received_interference(self, sites, tti):
         ''' Calculates received interference from the others BS '''
         rx_inter = 0
         if (self.connected):
             for site in sites:
                 for cell in site.cells:
                     if (self.cell_id != cell.id and self.cell_fr == cell.fr):
-                        rx_watts = utl.dbm2watts(self.received_power(site, cell.id))
+                        rx_watts = utl.dbm2watts(self.received_power(site, cell.id, tti))
                         rx_inter += rx_watts
         else:
             logger.error("UE don't connnected to one BS")
         return utl.watts2dbm(rx_inter)
 
-    def best_cell(self, sites):
+    def best_cell(self, sites, tti):
         ''' Return id of Cell with the best power '''
         best_site = sites[0]
         best_cell = best_site.cells[0]
         for site in sites:
             for cell in site.cells:
-                if (self.received_power(site, cell.id) > self.received_power(best_site, best_cell.id)):
+                if (self.received_power(site, cell.id, tti) > self.received_power(best_site, best_cell.id, tti)):
                     best_site = site
                     best_cell = cell
         return best_cell.id

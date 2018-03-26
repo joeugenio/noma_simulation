@@ -38,7 +38,7 @@ class Site:
     def __init__(self, id, coord, n_sec=const.N_SEC):
         self.n_sec = n_sec
         self.bs = dev.BaseStation(id, coord)
-        self.channel = ch.Channel(id)
+        self.channel = ch.SpatialChannel(id)
         self.cells = []
 
     def start_base_station(self):
@@ -103,7 +103,7 @@ class Grid:
     ''' Connect one UE to cell'''
     def connect_ue_to_best_cell(self, ue_id):
         ue = self.get_ue(ue_id)
-        cell_id = ue.best_cell(self.sites)
+        cell_id = ue.best_cell(self.sites, 0)
         c = self.get_cell(cell_id)
         ue.connect_to_cell(c)
         c.ue_ids.append(ue.id)

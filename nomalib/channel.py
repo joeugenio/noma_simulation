@@ -150,7 +150,7 @@ class ShadowFadingGenerator:
         if save:
             np.save(const.DAT_PATH+file, shw)            
 
-class SmallScaleFading:
+class RayleighChannel:
     ''' Flat Rayleigh Channel - Clarke and Gans Model - Smith's Method '''
     def __init__(self, speed=const.SPD, fc=const.FC_H, time=const.T_SNP, ts=const.TTI):
         self.speed = speed
@@ -202,17 +202,22 @@ class SmallScaleFading:
         self.s = s
         self.t = np.linspace(0, time, nt)
 
-class Interference:
-    ''' Interference from others cells '''
-    pass
-
-class Channel:
+class SpatialChannel:
     ''' Channel model class'''
     def __init__(self, s_id, env=const.ENV, fc=const.FC):
         self.s_id = s_id
         self.env = env
         self.fc = fc
-        self.path_loss = PathLoss(env=env, fc=fc)
         self.shadow = ShadowFading('s'+str(s_id%100)+'.npy')
+        self.path_loss = PathLoss(env=env, fc=fc)
         self.noise  = Noise()
-        self.ssf = SmallScaleFading()
+
+class TemporalChannel:
+    ''' Channel model with temporal'''
+    def __init__(self, model='rayleigh'):
+        self.model = model
+        if (model == 'rayleigh'):
+            h = RayleighChannel()
+        elif (model == 'others_model'):
+            h = None
+        self.h = h

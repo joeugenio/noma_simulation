@@ -12,12 +12,13 @@
 # Simulations Paramters
 TTI = 1e-3 # ms
 T_SNP = 1 # s
+N_SNP = 1e3
 
 # Base Staion Constants
 PW_BS = 43 # dBm
 H_BS = 30 # meters
 G_BS = 15 # dBi
-BW = 20e6 # Hz
+BW = 10e6 # Hz
 
 # BS Antenna Constants
 ATT_MAX = 20 # dBm

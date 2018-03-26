@@ -280,9 +280,9 @@ def plot_shadow_zoom(r=const.R_CELL, n=50, sh=False, input='s1.npy', filename='s
     show_fig(sh)
     plt.clf()
 
-def plot_doppler_filter(ssf, sh=False, save=False, filename='doppler_spread'):
-    s = ssf.s
-    f = ssf.f
+def plot_doppler_filter(h, sh=False, save=False, filename='doppler_spread'):
+    s = h.s
+    f = h.f
     plt.plot(f, s*1e3, 'r')
     plt.xlabel('Frequency (Hz)',fontsize=14)
     plt.ylabel('Power (mW)',fontsize=14)
@@ -292,9 +292,9 @@ def plot_doppler_filter(ssf, sh=False, save=False, filename='doppler_spread'):
     show_fig(sh)
     plt.clf()
 
-def plot_channel_gain(ssf, sh=False, save=False, filename='ch_gain'):
-    g = ssf.gain
-    t = ssf.t
+def plot_channel_gain(h, sh=False, save=False, filename='ch_gain'):
+    g = h.gain
+    t = h.t
     plt.plot(t*1e3, g, 'b')
     plt.xlabel('Time (ms)',fontsize=14)
     plt.ylabel('Gain (dB)',fontsize=14)

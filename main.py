@@ -19,36 +19,38 @@ import numpy as np
 
 # create log files
 # log level: DEBUG=10, INFO=20, WARN=30, ERROR=40
-# logzero.loglevel(logzero.logging.INFO)
-# logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
-# logger.info('NOMA system level simulation starting')
+logzero.loglevel(logzero.logging.INFO)
+logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
+logger.info('NOMA system level simulation starting')
 
-# logger.info('Creating grid with 19 sites')
-# my_grid = net.Grid()
+logger.info('Creating grid with 19 sites')
+my_grid = net.Grid()
 
-# logger.info('Deploing base stations on grid')
-# my_grid.deploy_base_station()
+logger.info('Deploing base stations on grid')
+my_grid.deploy_base_station()
 
-# logger.info('Deploing users equipments on grid')
-# my_grid.deploy_user_equipment('hexagon')
+logger.info('Deploing users equipments on grid')
+my_grid.deploy_user_equipment(region='hexagon')
 
-# logger.info('Starting all base stations')
-# my_grid.start_all_base_stations()
+logger.info('Starting all base stations')
+my_grid.start_all_base_stations()
 
-# logger.info('Connecting UE to best BS')
-# my_grid.connect_all_ue()
+logger.info('Connecting UE to best BS')
+my_grid.connect_all_ue()
 
-# inter = my_grid.user_equipments[0].received_interference(my_grid.sites)
-# pwr = my_grid.user_equipments[0].received_power_connected(my_grid.sites)
+# inter = my_grid.user_equipments[0].received_interference(my_grid.sites,100)
+# pwr = my_grid.user_equipments[0].received_power_connected(my_grid.sites,500)
 # print(inter, pwr)
 # print(utl.dbm2watts(pwr)/utl.dbm2watts(inter))
 
-# c = ch.Channel(0)
+
+
+# c = ch.TemporalChannel()
 # logger.info('Plotting  Doppler Filter PSD')
-# plt.plot_doppler_filter(c.ssf, save=True)
+# plt.plot_doppler_filter(c.h, sh=True)
 
 # logger.info('Plotting  Rayleigh Channel Gain')
-# plt.plot_channel_gain(c.ssf, save=True)
+# plt.plot_channel_gain(c.h, sh=True)
 
 # logger.info('Plotting grid figures')
 # plt.plot_grid(my_grid, sh=True, save=False, connect=True)
