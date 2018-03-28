@@ -23,20 +23,20 @@ logzero.loglevel(logzero.logging.INFO)
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
-logger.info('Creating grid with 19 sites')
-my_grid = net.Grid()
+# logger.info('Creating grid with 19 sites')
+# my_grid = net.Grid()
 
-logger.info('Deploing base stations on grid')
-my_grid.deploy_base_station()
+# logger.info('Deploing base stations on grid')
+# my_grid.deploy_base_station()
 
-logger.info('Deploing users equipments on grid')
-my_grid.deploy_user_equipment(region='hexagon')
+# logger.info('Deploing users equipments on grid')
+# my_grid.deploy_user_equipment(region='hexagon')
 
-logger.info('Starting all base stations')
-my_grid.start_all_base_stations()
+# logger.info('Starting all base stations')
+# my_grid.start_all_base_stations()
 
-logger.info('Connecting UE to best BS')
-my_grid.connect_all_ue()
+# logger.info('Connecting UE to best BS')
+# my_grid.connect_all_ue()
 
 # inter = my_grid.user_equipments[0].received_interference(my_grid.sites,100)
 # pwr = my_grid.user_equipments[0].received_power_connected(my_grid.sites,500)

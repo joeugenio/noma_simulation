@@ -11,7 +11,7 @@
 
 # modules
 
-import scipy.constants as cst
+import scipy.constants as sci
 import numpy as np
 from logzero import logger
 import nomalib.constants as const
@@ -46,9 +46,9 @@ class Noise:
     ''' Noise floor signal '''
     def __init__(self, bw=const.BW, temp=const.TEMP, noise_figure=const.NF_UE):
         self.bw = bw
-        self.temp = t = cst.C2K(temp)
+        self.temp = t = sci.convert_temperature(temp,'C','K')
         self.nf = noise_figure
-        self.den = 10*np.log10(t*cst.k*1e3)
+        self.den = 10*np.log10(t*sci.k*1e3)
         self.noise_floor = self.den + self.nf + 10*np.log10(bw)
 
 

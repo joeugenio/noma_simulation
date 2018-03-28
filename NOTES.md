@@ -17,6 +17,9 @@ TODO:
 * To make a git page;
 * Generate shadow fading with different neighbours map (center)
 * Change Coordinate for tuple
+* keep fix user number per cell (3GPP)
+* connect UE to BS from SNIR
+* traffic model
 
 Dúvidas [pt_BR]
 
