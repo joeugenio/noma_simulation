@@ -1,7 +1,8 @@
-[I 180328 10:49:55 main:24] NOMA system level simulation starting
-[I 180328 10:49:55 main:26] Creating grid with 19 sites
-[I 180328 10:49:55 main:29] Deploing base stations on grid
-[I 180328 10:49:55 main:32] Deploing users equipments on grid
-[I 180328 10:49:55 main:35] Starting all base stations
-[I 180328 10:49:55 main:38] Connecting UE to best BS
-[I 180328 10:49:56 main:52] Plotting  Rayleigh Channel Gain
+[I 180328 20:18:31 main:24] NOMA system level simulation starting
+[I 180328 20:18:31 main:26] Creating grid with 19 sites
+[I 180328 20:18:31 main:29] Deploing base stations on grid
+[I 180328 20:18:31 main:32] Deploing users equipments on grid
+[I 180328 20:18:32 main:35] Starting all base stations
+[I 180328 20:18:32 main:38] Connecting UE to best BS
+[I 180328 20:18:33 main:49] Plotting  Doppler Filter PSD
+[I 180328 20:18:35 main:52] Plotting  Rayleigh Channel Gain

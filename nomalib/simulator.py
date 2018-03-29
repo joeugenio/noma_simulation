@@ -25,16 +25,19 @@ class Simulator:
     def scenario_generator(self):
         ''' Generates mobile communication scenario '''
         logger.info('Creating grid with 19 sites')
-        grid = net.Grid()
+        self.grid = net.Grid()
         logger.info('Deploing base stations on grid')
-        grid.deploy_base_station()
-        logger.info('Deploing users equipments on grid')
-        grid.deploy_user_equipment(region='hexagon')
+        self.grid.deploy_base_station()
         logger.info('Starting all base stations')
-        grid.start_all_base_stations()
-        # logger.info('Connecting UE to best BS')
-        # grid.connect_all_ue()
-    
+        self.grid.start_all_base_stations()
+        
     def run_snapshot(self):
+        logger.info('Deploing users equipments on grid')
+        self.grid.deploy_user_equipment(region='hexagon')
+        logger.info('Connecting UE to best BS')
+        self.grid.connect_all_ue()
         for i in range(self.n_tti):
-            
+    
+    def run(self):
+        for i in range(self.n_snap):
+            self.run_snapshot()

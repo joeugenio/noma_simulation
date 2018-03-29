@@ -124,6 +124,18 @@ class UserEquipment:
             logger.error("UE don't connnected to one BS")
         return utl.watts2dbm(rx_inter)
 
+    def sinr(self, sites, tti):
+        ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR) level '''
+        if (self.connected):
+            r_pwr = self.received_power_connected(sites, tti)
+            i_pwr = self.received_interference(sites, tti)
+            
+            n_pwr = sites
+
+        else:
+            logger.error("UE don't connnected to one BS")
+        return utl.watts2dbm(rx_inter)
+
     def best_cell(self, sites, tti):
         ''' Return id of Cell with the best power '''
         best_site = sites[0]
