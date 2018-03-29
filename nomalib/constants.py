@@ -32,6 +32,7 @@ NF_UE = 9 # dB
 
 # Grid Constants
 N_UE = 500
+N_UE_CELL = 10
 N_BS = 19
 N_SEC = 3 # three sectors
 R_CELL = 500/3 # Cell Radius in meters
@@ -48,7 +49,7 @@ FC_H = 2e9 # Hz
 SPD = 5/3.6 # 5 km/h = 1.3889 m/s
 C = 299792458.0
 
-# attenuation map
+# Attenuation map
 PX = 101 # odd number
 
 # Shadow Fading
