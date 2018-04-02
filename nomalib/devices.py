@@ -90,7 +90,7 @@ class UserEquipment:
             theta = np.deg2rad(180) + np.arctan(tg)
         return theta
     
-    def received_power(self, site, cell_id, tti):
+    def received_power(self, site, cell_id, tti=0):
         ''' Calculates power received from BS '''
         cell = site.get_cell(cell_id)
         bs = site.bs
@@ -100,18 +100,16 @@ class UserEquipment:
         att = ch.path_loss.attenuation(dist) + ch.shadow.get_shw(self.coord) - cell.antenna.gain - self.antenna.gain
         rx_pwr = bs.pwr + self.fading.h.gain[tti] - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
         return rx_pwr
-
-    def received_power_connected(self, sites, tti):
+    
+    def received_power_connected(self, sites, tti=0):
         ''' Calculates power received from the BS that UE is connected '''
         if (self.connected):
-            for site in sites:
-                for cell in site.cells:
-                    if (cell.id == self.cell_id):
-                        return self.received_power(site, cell.id, tti)
+            bs_idx, cell_idx = utl.ids2index(self.cell_id)
+            return self.received_power(sites[bs_idx], self.cell_id, tti)
         else:
             logger.error("UE don't connnected to one BS")
 
-    def received_interference(self, sites, tti):
+    def received_interference(self, sites, tti=0):
         ''' Calculates received interference from the others BS '''
         rx_inter = 0
         if (self.connected):
@@ -124,27 +122,38 @@ class UserEquipment:
             logger.error("UE don't connnected to one BS")
         return utl.watts2dbm(rx_inter)
 
-    def sinr(self, sites, tti):
+    def sinr(self, sites, tti=0):
         ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR) level '''
         if (self.connected):
-            r_pwr = self.received_power_connected(sites, tti)
-            i_pwr = self.received_interference(sites, tti)
-            
-            n_pwr = sites
-
+            r_pwr = utl.dbm2watts(self.received_power_connected(sites, tti=tti))
+            i_pwr = utl.dbm2watts(self.received_interference(sites, tti=tti))
+            for site in sites:
+                if (site.bs.id == utl.get_bs_id(self.cell_id)):
+                    n_pwr = utl.dbm2watts(site.channel.noise.noise_floor)
+            s = r_pwr/(i_pwr+n_pwr)
         else:
             logger.error("UE don't connnected to one BS")
-        return utl.watts2dbm(rx_inter)
+        return (s)
 
-    def best_cell(self, sites, tti):
+    def best_cell(self, sites, tti=0):
         ''' Return id of Cell with the best power '''
-        best_site = sites[0]
-        best_cell = best_site.cells[0]
+        # define initial condition
+        e = False
+        for site in sites:
+            best_site = site
+            for cell in site.cells:
+                if (cell.accept_ue):
+                    best_cell = cell
+                    e = True
+                    break
+            if (e):
+                break
         for site in sites:
             for cell in site.cells:
-                if (self.received_power(site, cell.id, tti) > self.received_power(best_site, best_cell.id, tti)):
-                    best_site = site
-                    best_cell = cell
+                if (cell.accept_ue):
+                    if (self.received_power(site, cell.id, tti) > self.received_power(best_site, best_cell.id, tti)):
+                        best_site = site
+                        best_cell = cell
         return best_cell.id
      
     def connect_to_cell(self, cell):

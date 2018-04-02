@@ -13,9 +13,12 @@ import nomalib.channel as ch
 import nomalib.network as net
 import nomalib.utils as utl
 import nomalib.plots as plt
+import nomalib.simulator as sim
+import nomalib.performance as perf
 import logzero
 from logzero import logger
 import numpy as np
+from pytictoc import TicToc
 
 # create log files
 # log level: DEBUG=10, INFO=20, WARN=30, ERROR=40
@@ -23,37 +26,30 @@ logzero.loglevel(logzero.logging.INFO)
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
-# logger.info('Creating grid with 19 sites')
-# my_grid = net.Grid()
+# create simlation
+# s = sim.Simulator()
+# create scenario
+# s.scenario_generator()
+# run simulator
+# s.run()
 
-# logger.info('Deploing base stations on grid')
-# my_grid.deploy_base_station()
-
-# logger.info('Deploing users equipments on grid')
-# my_grid.deploy_user_equipment(region='hexagon')
-
-# logger.info('Starting all base stations')
-# my_grid.start_all_base_stations()
-
-# logger.info('Connecting UE to best BS')
-# my_grid.connect_all_ue()
-
-# inter = my_grid.user_equipments[0].received_interference(my_grid.sites,100)
-# pwr = my_grid.user_equipments[0].received_power_connected(my_grid.sites,500)
-# print(inter, pwr)
-# print(utl.dbm2watts(pwr)/utl.dbm2watts(inter))
+# logger.info('Plotting Link Level Performance Model')
+# p = perf.Performance()
+# plt.plot_l2s(p, sh=True)
 
 
+# logger.info('Plotting grid scenario')
+# plt.plot_grid(s.grid, sh=True, save=False, connect=True)
 
+# t = TicToc()
+# t.tic()
 # c = ch.TemporalChannel()
+# t.toc()
 # logger.info('Plotting  Doppler Filter PSD')
-# plt.plot_doppler_filter(c.h, sh=True)
+# plt.plot_doppler_filter(c.h[0][0], sh=True)
 
 # logger.info('Plotting  Rayleigh Channel Gain')
-# plt.plot_channel_gain(c.h, sh=True)
-
-# logger.info('Plotting grid figures')
-# plt.plot_grid(my_grid, sh=True, save=False, connect=True)
+# plt.plot_channel_gain(c.h[0][0], sh=True)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)

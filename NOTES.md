@@ -6,9 +6,9 @@ Modules:
 * devices
 * channel
 * network
-* topology
+* ~~topology~~
 * generator
-* configuration
+* ~~configuration~~
 
 TODO:
 
@@ -20,19 +20,19 @@ TODO:
 * keep fix user number per cell (3GPP)
 * connect UE to BS from SNIR
 * traffic model
+* throughput CDF UE
+* throughput sum
+* throughput 5% CDF UE (cell edge)
+* efficiency bps/Hz
+* single scenario - free interference
 
 Dúvidas [pt_BR]
 
+* Implementar simulação single cell, thr pela sinr média temp, ou média da thr temp
 * revisar array e lista
-* usar .size ou len
 * reuso de frequência e interferência
-* ruído térmico e ruído gaussiano
-* sombreamento
-* snapshot TTI
 * L2S modelo a partir da Lei de Shannon
-* cell and base station model
-* ITU-T Typical Urban
-* keep fix user number per cell
+* comparar: número de usuários fixo por células e melhor célula
 
 For Wiki
 * ue_id from 1000 to N_UE_MAX

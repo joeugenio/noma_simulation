@@ -11,8 +11,9 @@
 
 # Simulations Paramters
 TTI = 1e-3 # ms
-T_SNP = 1 # s
-N_SNP = 1e3
+T_SNP = 1000*TTI # s
+N_SNP = 1 # ideal 1e5
+MOD = 'grid' # 'grid','site' (single site) or 'cell' (single cell)
 
 # Base Staion Constants
 PW_BS = 43 # dBm
@@ -31,10 +32,11 @@ G_UE = 0 # dBi
 NF_UE = 9 # dB
 
 # Grid Constants
-N_UE = 500
-N_UE_CELL = 10
+N_UE_CELL = 5
 N_BS = 19
 N_SEC = 3 # three sectors
+N_CELL = N_BS*N_SEC
+N_UE = N_UE_CELL*N_CELL
 R_CELL = 500/3 # Cell Radius in meters
 
 # Channel Model Constants
@@ -67,3 +69,6 @@ FORMAT = 'eps'
 DPI = 72
 IMG_PATH = './output/img/'
 MAP_D = 5
+
+# Performance Constants
+SHN_ATT = 0.75

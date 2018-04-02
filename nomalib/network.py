@@ -32,6 +32,7 @@ class Cell:
         self.center = Coord(x,y)
         self.antenna = dev.BSAntenna(self.angle*freq_reuse)
         self.ue_ids = []
+        self.accept_ue = True
 
 class Site:
     ''' Site with Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
@@ -101,12 +102,14 @@ class Grid:
             s.start_base_station()
   
     ''' Connect one UE to cell'''
-    def connect_ue_to_best_cell(self, ue_id):
+    def connect_ue_to_best_cell(self, ue_id, n_ue_cell=const.N_UE_CELL):
         ue = self.get_ue(ue_id)
-        cell_id = ue.best_cell(self.sites, 0)
+        cell_id = ue.best_cell(self.sites)
         c = self.get_cell(cell_id)
         ue.connect_to_cell(c)
         c.ue_ids.append(ue.id)
+        if (len(c.ue_ids) == n_ue_cell):
+            c.accept_ue = False
 
     ''' Connect all UE's to the best cell '''
     def connect_all_ue(self):

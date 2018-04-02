@@ -79,3 +79,26 @@ def dbm2watts(dbm):
 def watts2dbm(watts):
     ''' Convert power to dBm from Watts '''
     return 10*np.log10(1e3*watts)
+
+def get_bs_id(cell_id):
+    ''' Get site id from cell id '''
+    return int(cell_id/10)
+
+def bsid2index(bs_id):
+    ''' Return bs index from bs_id '''
+    return bs_id - 101
+
+def ids2index(cell_id):
+    ''' Return indexs of bs and cell from cell_id '''
+    bs_id = get_bs_id(cell_id)
+    bs_i = bsid2index(bs_id)
+    return (bs_i, (cell_id % 10) - 1)
+    
+def index2bsid(i):
+    ''' Return bs_id from bs index '''
+    return i + 101
+
+def index2cellid(bs_i,cell_i):
+    ''' Return cell_id from bs index and cell index '''
+    bs_id = index2bsid(bs_i)
+    return (bs_id*10 + 1 + cell_i)

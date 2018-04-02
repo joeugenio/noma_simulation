@@ -156,12 +156,16 @@ class RayleighChannel:
         self.speed = speed
         self.fc = fc
         # calculate maximum doppler frequency (fm)
-        fm = speed/(const.C/fc)
+        fm = speed/(sci.c/fc)
         # estimates the number of points (n) from simulation time
         df = 1/time
         nt = time/ts
         # n even number
         nh = round(((2*fm/df) + 1)/2)
+        if (nh < 5):
+            logger.error('Time is very short, specify a value time greater than 500 ms')
+            logger.warn('See T_SNP in nomalib.constants module')
+            exit()
         n = nh*2
         # df = df =2*fm/(n-1)
         t = 1/df
@@ -214,10 +218,15 @@ class SpatialChannel:
 
 class TemporalChannel:
     ''' Channel model with temporal'''
-    def __init__(self, model='rayleigh'):
+    def __init__(self, model='rayleigh', size=(const.N_UE, const.N_CELL)):
         self.model = model
+        self.size = size
+        self.h = []
         if (model == 'rayleigh'):
-            h = RayleighChannel()
+            for u in range(size[0]):
+                row = []
+                for c in range(size[1]):
+                    row.append(RayleighChannel())
+                self.h.append(row)
         elif (model == 'others_model'):
             h = None
-        self.h = h
