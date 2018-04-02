@@ -59,7 +59,6 @@ class UserEquipment:
         self.coord = coord
         self.h = hight
         self.pwr = power
-        self.fading = ch.TemporalChannel()
         self.cell_id = None
         self.cell_fr = None        
         self.live = True
@@ -90,7 +89,7 @@ class UserEquipment:
             theta = np.deg2rad(180) + np.arctan(tg)
         return theta
     
-    def received_power(self, site, cell_id, tti=0):
+    def received_power(self, site, cell_id):
         ''' Calculates power received from BS '''
         cell = site.get_cell(cell_id)
         bs = site.bs
@@ -98,42 +97,43 @@ class UserEquipment:
         dist = self.distance_to(bs)
         theta = self.angle_from(bs)
         att = ch.path_loss.attenuation(dist) + ch.shadow.get_shw(self.coord) - cell.antenna.gain - self.antenna.gain
-        rx_pwr = bs.pwr + self.fading.h.gain[tti] - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
+        rx_pwr = bs.pwr - np.maximum(att, const.MCL) + cell.antenna.radiation_pattern(theta)
         return rx_pwr
     
-    def received_power_connected(self, sites, tti=0):
+    def received_power_connected(self, sites):
         ''' Calculates power received from the BS that UE is connected '''
         if (self.connected):
             bs_idx, cell_idx = utl.ids2index(self.cell_id)
-            return self.received_power(sites[bs_idx], self.cell_id, tti)
+            return self.received_power(sites[bs_idx], self.cell_id)
         else:
             logger.error("UE don't connnected to one BS")
 
-    def received_interference(self, sites, tti=0):
+    def received_interference(self, sites):
         ''' Calculates received interference from the others BS '''
-        rx_inter = 0
+        rx_inter = []
         if (self.connected):
             for site in sites:
                 for cell in site.cells:
                     if (self.cell_id != cell.id and self.cell_fr == cell.fr):
-                        rx_watts = utl.dbm2watts(self.received_power(site, cell.id, tti))
-                        rx_inter += rx_watts
+                        print(self.distance_to(site.bs))
+                        rx = self.received_power(site, cell.id)
+                        rx_inter.append(rx)
         else:
             logger.error("UE don't connnected to one BS")
-        return utl.watts2dbm(rx_inter)
+        return np.array(rx_inter)
 
-    def sinr(self, sites, tti=0):
-        ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR) level '''
-        if (self.connected):
-            r_pwr = utl.dbm2watts(self.received_power_connected(sites, tti=tti))
-            i_pwr = utl.dbm2watts(self.received_interference(sites, tti=tti))
-            for site in sites:
-                if (site.bs.id == utl.get_bs_id(self.cell_id)):
-                    n_pwr = utl.dbm2watts(site.channel.noise.noise_floor)
-            s = r_pwr/(i_pwr+n_pwr)
-        else:
-            logger.error("UE don't connnected to one BS")
-        return (s)
+    # def sinr(self, sites, tti=0):
+    #     ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR) level '''
+    #     if (self.connected):
+    #         r_pwr = utl.dbm2watts(self.received_power_connected(sites, tti=tti))
+    #         i_pwr = utl.dbm2watts(self.received_interference(sites, tti=tti))
+    #         for site in sites:
+    #             if (site.bs.id == utl.get_bs_id(self.cell_id)):
+    #                 n_pwr = utl.dbm2watts(site.channel.noise.noise_floor)
+    #         s = r_pwr/(i_pwr+n_pwr)
+    #     else:
+    #         logger.error("UE don't connnected to one BS")
+    #     return (s)
 
     def best_cell(self, sites, tti=0):
         ''' Return id of Cell with the best power '''
@@ -151,11 +151,11 @@ class UserEquipment:
         for site in sites:
             for cell in site.cells:
                 if (cell.accept_ue):
-                    if (self.received_power(site, cell.id, tti) > self.received_power(best_site, best_cell.id, tti)):
+                    if (self.received_power(site, cell.id) > self.received_power(best_site, best_cell.id)):
                         best_site = site
                         best_cell = cell
         return best_cell.id
-     
+
     def connect_to_cell(self, cell):
         ''' Connect UE to Cell with cell_id '''        
         self.cell_id = cell.id

@@ -218,7 +218,7 @@ class SpatialChannel:
 
 class TemporalChannel:
     ''' Channel model with temporal'''
-    def __init__(self, model='rayleigh', size=(const.N_UE, const.N_CELL)):
+    def __init__(self, model='rayleigh', size=(const.N_UE, const.N_BS)):
         self.model = model
         self.size = size
         self.h = []

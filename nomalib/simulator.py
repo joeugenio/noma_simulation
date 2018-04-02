@@ -32,6 +32,11 @@ class Simulator:
         self.grid.deploy_base_station()
         logger.info('Starting all base stations')
         self.grid.start_all_base_stations()
+
+        logger.info('Deploing users equipments on grid')
+        self.grid.deploy_user_equipment(region='hexagon')
+        logger.info('Connecting UE to best BS')
+        self.grid.connect_all_ue()
         t.toc()
         
     def run(self):

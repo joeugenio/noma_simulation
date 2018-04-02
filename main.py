@@ -26,13 +26,17 @@ logzero.loglevel(logzero.logging.INFO)
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
-# create simlation
-# s = sim.Simulator()
+# create simulation
+s = sim.Simulator()
 # create scenario
-# s.scenario_generator()
+s.scenario_generator()
 # run simulator
 # s.run()
 
+
+print(s.grid.user_equipments[0].received_power_connected(s.grid.sites))
+print(s.grid.user_equipments[0].received_interference(s.grid.sites))
+print(len(s.grid.user_equipments[0].received_interference(s.grid.sites)))
 # logger.info('Plotting Link Level Performance Model')
 # p = perf.Performance()
 # plt.plot_l2s(p, sh=True)
