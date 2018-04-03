@@ -12,8 +12,9 @@
 # Simulations Paramters
 TTI = 1e-3 # ms
 T_SNP = 1000*TTI # s
-N_SNP = 1 # ideal 1e5
+N_SNP = int(1e3) # ideal 1e5
 MOD = 'grid' # 'grid','site' (single site) or 'cell' (single cell)
+OUT_PATH = './output/dat/'
 
 # Base Staion Constants
 PW_BS = 43 # dBm
@@ -32,7 +33,7 @@ G_UE = 0 # dBi
 NF_UE = 9 # dB
 
 # Grid Constants
-N_UE_CELL = 5
+N_UE_CELL = 2
 N_BS = 19
 N_SEC = 3 # three sectors
 N_CELL = N_BS*N_SEC

@@ -27,16 +27,12 @@ logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
 # create simulation
-s = sim.Simulator()
+s = sim.Simulator(mode='cell')
 # create scenario
 s.scenario_generator()
 # run simulator
-# s.run()
+s.run()
 
-
-print(s.grid.user_equipments[0].received_power_connected(s.grid.sites))
-print(s.grid.user_equipments[0].received_interference(s.grid.sites))
-print(len(s.grid.user_equipments[0].received_interference(s.grid.sites)))
 # logger.info('Plotting Link Level Performance Model')
 # p = perf.Performance()
 # plt.plot_l2s(p, sh=True)
@@ -48,6 +44,7 @@ print(len(s.grid.user_equipments[0].received_interference(s.grid.sites)))
 # t = TicToc()
 # t.tic()
 # c = ch.TemporalChannel()
+
 # t.toc()
 # logger.info('Plotting  Doppler Filter PSD')
 # plt.plot_doppler_filter(c.h[0][0], sh=True)

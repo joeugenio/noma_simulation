@@ -115,25 +115,25 @@ class UserEquipment:
             for site in sites:
                 for cell in site.cells:
                     if (self.cell_id != cell.id and self.cell_fr == cell.fr):
-                        print(self.distance_to(site.bs))
                         rx = self.received_power(site, cell.id)
                         rx_inter.append(rx)
         else:
             logger.error("UE don't connnected to one BS")
-        return np.array(rx_inter)
+        return rx_inter
 
-    # def sinr(self, sites, tti=0):
-    #     ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR) level '''
-    #     if (self.connected):
-    #         r_pwr = utl.dbm2watts(self.received_power_connected(sites, tti=tti))
-    #         i_pwr = utl.dbm2watts(self.received_interference(sites, tti=tti))
-    #         for site in sites:
-    #             if (site.bs.id == utl.get_bs_id(self.cell_id)):
-    #                 n_pwr = utl.dbm2watts(site.channel.noise.noise_floor)
-    #         s = r_pwr/(i_pwr+n_pwr)
-    #     else:
-    #         logger.error("UE don't connnected to one BS")
-    #     return (s)
+    def sinr(self, sites):
+        ''' Calculates Signal-to-Interference-plus-Noise Ratio (SINR).
+            Just with spatial dependence, no time dependence is considered '''
+        if (self.connected):
+            r_pwr = utl.dbm2watts(self.received_power_connected(sites))
+            i_pwr = utl.dbm2watts(self.received_interference(sites))
+            for site in sites:
+                if (site.bs.id == utl.get_bs_id(self.cell_id)):
+                    n_pwr = utl.dbm2watts(site.channel.noise.noise_floor)
+            s = r_pwr/(i_pwr+n_pwr)
+        else:
+            logger.error("UE don't connnected to one BS")
+        return (s)
 
     def best_cell(self, sites, tti=0):
         ''' Return id of Cell with the best power '''
@@ -161,3 +161,9 @@ class UserEquipment:
         self.cell_id = cell.id
         self.cell_fr = cell.fr
         self.connected = True
+    
+    def disconnect_to_cell(self, cell):
+        ''' Disconnect UE to Cell with cell_id '''        
+        self.cell_id = None
+        self.cell_fr = None
+        self.connected = False

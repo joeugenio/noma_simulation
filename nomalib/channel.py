@@ -199,9 +199,8 @@ class RayleighChannel:
         y = np.concatenate((ax, y, ax))
         yt = abs(np.fft.ifft(y))
         r = np.sqrt(abs(xt)**2+abs(yt)**2)
-        h = r/r.std()
-        pwr_h = abs(h)**2
-        self.gain = 10*np.log10(pwr_h/1.0)
+        pwr_h = (abs(r)**2)
+        self.gain = 10*np.log10(pwr_h/pwr_h.std())
         self.f = f
         self.s = s
         self.t = np.linspace(0, time, nt)
@@ -229,4 +228,4 @@ class TemporalChannel:
                     row.append(RayleighChannel())
                 self.h.append(row)
         elif (model == 'others_model'):
-            h = None
+            self.h = None

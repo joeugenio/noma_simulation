@@ -111,10 +111,18 @@ class Grid:
         if (len(c.ue_ids) == n_ue_cell):
             c.accept_ue = False
 
-    ''' Connect all UE's to the best cell '''
+    ''' Connect all UEs to the best cell '''
     def connect_all_ue(self):
         for ue in self.user_equipments:
             self.connect_ue_to_best_cell(ue.id)
+    
+    ''' Disconnect all UEs '''
+    def disconnect_all_ue(self):
+        for site in self.sites:
+            for cell in site.cells:
+                cell.ue_ids = []
+                cell.accept_ue = True
+        self.user_equipments = []
 
     ''' Return BS from ID '''
     def get_bs(self, id):
