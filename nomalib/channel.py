@@ -10,7 +10,6 @@
 # The channel model classes are declared here
 
 # modules
-
 import scipy.constants as sci
 import numpy as np
 from logzero import logger
@@ -18,7 +17,6 @@ import nomalib.constants as const
 from nomalib.utils import Coordinate as Coord
 
 # classes
-
 class PathLoss:
     ''' Distance dependent propagation model '''
     def __init__(self, env=const.ENV, fc=const.FC):
@@ -50,7 +48,6 @@ class Noise:
         self.nf = noise_figure
         self.den = 10*np.log10(t*sci.k*1e3)
         self.noise_floor = self.den + self.nf + 10*np.log10(bw)
-
 
 class ShadowFading:
     ''' Shadow fading 2D map with lognormal distribution object'''
@@ -229,3 +226,14 @@ class TemporalChannel:
                 self.h.append(row)
         elif (model == 'others_model'):
             self.h = None
+
+# method
+def create_shadow_maps(n=const.N_BS):
+    # Run just one time for generate arrays files
+    # Set save=True for save files maps
+    ShadowFadingGenerator().shw_ref_generator(save=False)
+    ShadowFadingGenerator().correlation_map_generator()
+    for i in range(1,n+1):
+        ShadowFadingGenerator().inter_site_corr(file='s'+str(i)+'.npy', save=False)
+    for i in range(1,n+1):
+        ShadowFadingGenerator().cross_correlation(file='s'+str(i)+'.npy', save=False)

@@ -12,7 +12,7 @@ import nomalib.constants as const
 import nomalib.channel as ch
 import nomalib.network as net
 import nomalib.utils as utl
-import nomalib.plots as plt
+# import nomalib.plots as plt
 import nomalib.simulator as sim
 import nomalib.performance as perf
 import logzero
@@ -27,25 +27,81 @@ logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
 # create simulation
-s = sim.Simulator(mode='cell')
+# s = sim.Simulator(mode='cell')
 # create scenario
-s.scenario_generator()
+# s.scenario_generator()
 # run simulator
-s.run()
+# s.run()
 
+# sinr[snaps][sites][cells][ues][ttis]
+p = perf.Performance()
+N_SINR = 100
+sinr = np.load(const.OUT_PATH+'sinr0.npy')
+cdf = np.zeros([2,N_SINR])
+cdf_thr = np.zeros([2,N_SINR])
+cdf_thr2 = np.zeros([2,N_SINR])
+sinr_ax = np.linspace(-40,50,N_SINR)
+thr_ax = np.linspace(0,15,N_SINR)
+thr_ax2 = np.linspace(0,15,N_SINR)
+
+for i in range(len(sinr)):
+    for j in range(len(sinr[i])):
+        for k in range(len(sinr[i][j])):
+            s_ue = [0, 0]
+            t_ue = [0, 0]            
+            for l in range(len(sinr[i][j][k])):
+                s = 0
+                t = 0
+                for m in range(len(sinr[i][j][k][l])):
+                    s += sinr[i][j][k][l][m]
+                    t += p.shannon(10*np.log10(sinr[i][j][k][l][m]), bw=1)
+                s_ue[l] = s/len(sinr[i][j][k][l])
+                t_ue[l] = t/len(sinr[i][j][k][l])
+    for n in range(N_SINR):
+        for l in range(len(sinr[i][j][k])):
+            if (10*np.log10(s_ue[l]) <= sinr_ax[n]):
+                cdf[l][n] += 1
+            sdb = np.array([10*np.log10(s_ue[l])])
+            if (p.shannon(sdb,bw=1) <= thr_ax[n]):
+                cdf_thr[l][n] += 1
+            if (t_ue[l] <= thr_ax[n]):
+                cdf_thr2[l][n] += 1
+cdf = cdf/len(sinr)
+cdf_thr = cdf_thr/len(sinr)
+cdf_thr2 = cdf_thr2/len(sinr)
+
+import matplotlib.pyplot as plt
+plt.plot(sinr_ax, cdf[0], '--b', lw=1, label='UE 1')
+plt.plot(sinr_ax, cdf[1], '--r', lw=1, label='UE 1')
+plt.xlabel('SINR (dB)',fontsize=16)
+# plt.ylabel('Throughput (bits/s/Hz)',fontsize=16)
+plt.ylabel('CDF',fontsize=16)
+plt.grid(True)
+plt.title('User SINR Performance', fontsize=16)
+plt.legend(fontsize=14, loc=2)
+
+plt.figure(2)
+plt.plot(thr_ax, cdf_thr[0], '--b', lw=1, label='UE 1 mean')
+plt.plot(thr_ax, cdf_thr[1], '--r', lw=1, label='UE 1 mean')
+plt.plot(thr_ax2, cdf_thr2[0], '--g', lw=1, label='UE 1')
+plt.plot(thr_ax2, cdf_thr2[1], '--y', lw=1, label='UE 1')
+plt.xlabel('Throughput (bits/s/Hz)',fontsize=16)
+plt.ylabel('CDF',fontsize=16)
+plt.grid(True)
+plt.title('User Throughput Performance', fontsize=16)
+plt.legend(fontsize=14, loc=2)
+
+
+
+plt.show()
 # logger.info('Plotting Link Level Performance Model')
 # p = perf.Performance()
 # plt.plot_l2s(p, sh=True)
 
-
 # logger.info('Plotting grid scenario')
 # plt.plot_grid(s.grid, sh=True, save=False, connect=True)
 
-# t = TicToc()
-# t.tic()
 # c = ch.TemporalChannel()
-
-# t.toc()
 # logger.info('Plotting  Doppler Filter PSD')
 # plt.plot_doppler_filter(c.h[0][0], sh=True)
 
@@ -56,29 +112,7 @@ s.run()
 # plt.plot_cell_attenuation(my_grid.sites[9], 1, sh=True)
 # plt.plot_bs_attenuation(my_grid.sites[9], sh=True)
 
-# ==========================================================================
-# s0 = np.load(const.DAT_PATH+'s0.npy')
-# s1 = np.load(const.DAT_PATH+'s1.npy')
-# s2 = np.load(const.DAT_PATH+'s2.npy')
-
-# print(s2.mean(), s2.std(), s2.var())
-
-# s0 = s0.reshape(s0.size)
-# s1 = s1.reshape(s1.size)
-# s2 = s2.reshape(s2.size)
-
-# print('CORRELATION:',np.correlate(s1,s2)/(s1.size*s1.std()*s2.std()))
-# print('CORRELATION:',np.correlate(s0,s1)/(s1.size*s1.std()*s0.std()))
-
-# Run just one time for generate arrays files
-# ch.ShadowFadingGenerator().shw_ref_generator(save=False)
-# ch.ShadowFadingGenerator().correlation_map_generator()
-# for i in range(1,20):
-    # ch.ShadowFadingGenerator().inter_site_corr(file='s'+str(i)+'.npy', save=False)
-# for i in range(1,20):
-    # ch.ShadowFadingGenerator().cross_correlation(file='s'+str(i)+'.npy', save=False)
-
 # logger.info('Plot shadow fading map')
-# for i in range(1,20):
-    # plt.plot_shadow(input='s'+str(i)+'.npy', sh=True)
-    # plt.plot_shadow_zoom(input='s'+str(i)+'.npy', sh=True)
+# plt.plot_shadow(input='s9.npy', sh=True)
+# # plt.plot_shadow_zoom(input='s9.npy', sh=True)
+# ==========================================================================

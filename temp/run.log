@@ -1,15 +1,1 @@
-[I 180403 07:16:29 main:27] NOMA system level simulation starting
-[I 180403 07:16:29 simulator:83] Creating grid with 19 sites
-[I 180403 07:16:29 simulator:85] Deploing base stations on grid
-[I 180403 07:16:29 simulator:87] Starting all base stations
-[I 180403 07:16:29 simulator:92] Runing simulation
-[I 180403 07:16:29 simulator:99] 0 snapshots completed
-[I 180403 07:17:31 simulator:99] 100 snapshots completed
-[I 180403 07:18:32 simulator:99] 200 snapshots completed
-[I 180403 07:19:34 simulator:99] 300 snapshots completed
-[I 180403 07:20:35 simulator:99] 400 snapshots completed
-[I 180403 07:21:37 simulator:99] 500 snapshots completed
-[I 180403 07:22:39 simulator:99] 600 snapshots completed
-[I 180403 07:23:41 simulator:99] 700 snapshots completed
-[I 180403 07:24:43 simulator:99] 800 snapshots completed
-[I 180403 07:25:46 simulator:99] 900 snapshots completed
+[I 180403 14:25:54 main:27] NOMA system level simulation starting

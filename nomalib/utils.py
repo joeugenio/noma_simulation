@@ -9,6 +9,7 @@
 # Python module for NOMA communications simulations
 # The utils classes are declared here
 
+# import nomalib.channel as ch
 import numpy as np
 import nomalib.constants as const
 from logzero import logger
