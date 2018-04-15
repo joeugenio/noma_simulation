@@ -87,7 +87,7 @@ class Simulator:
         logger.info('Starting all base stations')
         self.grid.start_all_base_stations()
         t.toc()
-        
+       
     def run(self):
         logger.info('Runing simulation')
         t.tic()

@@ -9,10 +9,11 @@
 # Python module for NOMA communications simulations
 # The plot functions are declared here
 
+import nomalib.constants as const
 import nomalib.devices as dev
 import nomalib.utils as utl
+import nomalib.channel as ch
 from nomalib.utils import Coordinate as Coord
-import nomalib.constants as const
 import numpy as np
 import matplotlib.pyplot as plt
 from logzero import logger
@@ -30,14 +31,16 @@ def show_fig(sh=False):
         plt.show()
 
 # plot grid object
-def plot_grid(g, sh=False, save=False, filename='grid',connect=False):
+def plot_grid(g, sh=False, save=False, filename='grid', cells=False, ue=False, connect=False):
     # plot_coordinates(g.coordinates)
-    plot_user_equipments(g.user_equipments)
+    if ue:
+        plot_user_equipments(g.user_equipments)
     plot_base_stations(g.sites)
     if connect:
         plot_cell_connections(g)
     # plot_hexagon(g.hex, label='edge')
-    # plot_all_cells(g)
+    if cells:
+        plot_all_cells(g)
     # plot_frequency(g)
 	# set figures axis and title
     plt.axis('on')
@@ -82,19 +85,19 @@ def plot_base_stations(sites, style='^b', size=10):
     plt.plot(x, y, style, ms=size, label='BS', mec='k')
 
 # plot one cells
-def plot_cell(site, cell_id):
+def plot_cell(site, cell_id, style='--k'):
     if site.bs.live:
         c = site.get_cell(cell_id)
         hex = utl.Hexagon(c.r, c.center)
-        plot_hexagon(hex, '--k', lw=0.5)
+        plot_hexagon(hex, style=style, lw=0.5)
     else:
         logger.warn("BS with id= "+str(site.bs.id)+" don't started.")
         
 # plot all cells of one BS
-def plot_cells(site):
+def plot_cells(site, style='--k'):
     if site.bs.live:
         for c in site.cells:
-            plot_cell(site, c.id)
+            plot_cell(site, c.id, style=style)
     else:
         logger.warn("BS with id = "+str(site.bs.id)+" don't started.")
 
@@ -156,7 +159,7 @@ def plot_frequency(grid):
             plt.text(x-50, y-50 ,str(c.fr), fontsize=13)
 
 # plot antenna patter and attenuation for one cells of one BS
-def plot_cell_attenuation(site, sector, sh=False, save=False, filename='cell_att', den=const.MAP_D):
+def plot_cell_attenuation(site, sector=1, sh=False, save=False, filename='cell_att', den=const.MAP_D, shw_level=1):
     if site.bs.live:
         if sector in range(const.N_SEC):
             cell = site.cells[sector]
@@ -179,7 +182,7 @@ def plot_cell_attenuation(site, sector, sh=False, save=False, filename='cell_att
                 s_p = Coord(p.x-o.x, p.y-o.y)            
                 theta = utl.get_angle(p, o)
                 dist = utl.get_distance(p, o)
-                im[y][x] = - cell.antenna.radiation_pattern(theta) + att(dist) + shw(s_p)
+                im[y][x] = - cell.antenna.radiation_pattern(theta) + att(dist) + shw(s_p)*shw_level
         im = im[::-1][:]
         plt.imshow(im, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
         plt.axis('on')
@@ -192,7 +195,7 @@ def plot_cell_attenuation(site, sector, sh=False, save=False, filename='cell_att
         cbar.ax.tick_params(labelsize=14)
         save_fig(filename, save)
         show_fig(sh)
-        # plt.clf()
+        plt.clf()
     else:
         logger.error('BS was not started. Run one start base station method.')
 
@@ -235,6 +238,39 @@ def plot_bs_attenuation(site, sh=False, save=False, filename='bs_att', den=const
         plt.clf()
     else:
         logger.error('BS was not started. Run one start base station method.')
+
+# plot antenna patter and attenuation for one UE in one Site
+def plot_ue_attenuation(ue, channel, r=const.R_CELL, sh=False, save=False, filename='ue_att', den=const.MAP_D, shw_level=0):
+    w = 16*r
+    h = 8*r*np.sqrt(3)
+    px = int(round(w/den))
+    py = int(round(h/den))
+    c = ue.coord
+    o = Coord(w/2, h/2)
+    axis = [-w/2+c.x, w/2+c.x, -h/2+c.y, h/2+c.y]
+    im = np.zeros([py, px])
+    att = channel.path_loss.attenuation
+    shw = channel.shadow.get_shw
+    for x in range(px):
+        for y in range(py):
+            p = Coord(x*den, y*den)
+            s_p = Coord(p.x-o.x, p.y-o.y)            
+            theta = utl.get_angle(p, o)
+            dist = utl.get_distance(p, o)
+            im[y][x] = - ue.antenna.radiation_pattern(theta) + att(dist) + shw(s_p)*shw_level
+    im = im[::-1][:]
+    plt.imshow(im, cmap=plt.cm.jet, interpolation='bilinear', extent=axis)
+    plt.axis('on')
+    plt.grid(True)
+    plt.tick_params(labelsize=14)
+    plt.xlabel('Posição x [m]', fontsize=14)
+    plt.ylabel('Posição y [m]', fontsize=14)
+    cbar = plt.colorbar()
+    cbar.ax.set_ylabel('[dB]', fontsize=14)
+    cbar.ax.tick_params(labelsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
 
 # plot lognormal shadow fading
 def plot_shadow(r=const.R_CELL, sh=False, input='s1.npy', filename='shadow', save=False):
@@ -317,6 +353,89 @@ def plot_l2s(p, sh=False, save=False, filename='l2s_model'):
     plt.grid(True)
     plt.title('Link Level Performance Model', fontsize=16)
     plt.legend(fontsize=14, loc=2)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_path_loss(d=1, sh=False, save=False, filename='path_loss'):
+    x = np.linspace(0,d,1001)
+    pl1 = ch.PathLoss(env='urban', fc=2e3)
+    pl2 = ch.PathLoss(env='urban', fc=900)
+    pl3 = ch.PathLoss(env='rural', fc=900)
+    l1 = [pl1.attenuation(i) for i in x]
+    l2 = [pl2.attenuation(i) for i in x]
+    l3 = [pl3.attenuation(i) for i in x]
+    ax = x*1000
+    plt.plot(ax, l1, lw=1.5,label='Urbano 2000 MHz')
+    plt.plot(ax, l2, lw=1.5,label='Urbano 900 MHz')
+    plt.plot(ax, l3, lw=1.5,label='Rural 900 MHz')
+    plt.tick_params(labelsize=14)
+    plt.xlabel('Distância [m]', fontsize=14)
+    plt.ylabel('Perda de Percurso [dB]', fontsize=14)
+    plt.xticks(x[::100]*1000)
+    plt.grid(True)
+    plt.legend(fontsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_pattern(antenna, sh=False, save=False, filename='cell_pattern'):
+    theta = np.linspace(-180, 180, 100)
+    r = [antenna.radiation_pattern(np.deg2rad(t)) for t in theta]
+    plt.plot(theta, r, lw = 2)
+    plt.axis([-180, 180, -20, 0])
+    plt.tick_params(labelsize=14)
+    plt.xlabel('Ângulo Horizontal [Graus]', fontsize=14)
+    plt.ylabel('Ganho [dB]',fontsize=14)
+    plt.grid(True)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_polar_pattern(antenna, sh=False, save=False, filename='cell_polar_pattern'):
+    theta = np.linspace(-180, 180, 100)
+    r = [antenna.radiation_pattern(np.deg2rad(t)) for t in theta]
+    ax = plt.subplot(111, projection='polar')
+    ax.plot(np.radians(theta),r, label='Setor 1')
+    ax.plot(np.radians(theta+120),r, label='Setor 2')
+    ax.plot(np.radians(theta-120),r, label='Setor 3')
+    ax.set_rmin(-20)
+    ax.set_rmax(0)
+    ax.set_yticks([-20, -15, -10, -5, 0])
+    ax.tick_params(labelsize=14)
+    ax.grid(True)
+    ax.legend(bbox_to_anchor=(1.33, 0.13),fontsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_measure(grid, sh=False, save=False, filename='measure'):
+    s1 = grid.sites[9]
+    s2 = grid.sites[10]
+    r = s1.cells[0].r
+    c10 = s1.cells[0].center
+    c20 = s2.cells[0].center
+    c11 = s1.cells[1].center
+    c22 = s2.cells[2].center
+    plot_base_stations([s1, s2], style='oc', size=20)
+    plot_cells(s1, style='-k')
+    plot_cells(s2, style='-k')
+    ax = plt.axes()
+    ax.axis([-300, 900, -400, 400])
+    ax.vlines(c10.x-r, c10.y-80, c10.y+80, linestyles='dashed', lw=1)
+    ax.vlines(c20.x-r, c20.y-80, c20.y+80, linestyles='dashed', lw=1)
+    ax.annotate(s='', xy=(c10.x-r, c10.y), xytext=(c20.x-r,c20.y), arrowprops=dict(arrowstyle='<->', lw=1.5))
+    ax.text(c10.x-100,c10.y-25,'Dist. Inter ERB\n      3R', fontsize=12)
+    ax.vlines(c11.x-r, c11.y-80, c11.y+80, linestyles='dashed', lw=1)
+    ax.vlines(c11.x, c11.y-80, c11.y+80, linestyles='dashed', lw=1)
+    ax.annotate(s='', xy=(c11.x-r, c11.y), xytext=(c11.x, c11.y), arrowprops=dict(arrowstyle='<->', lw=1.5))
+    ax.text(c11.x-100, c11.y-25 ,'Raio\n  R', fontsize=12)
+    ax.vlines(c22.x-r, c22.y-80, c22.y+80, linestyles='dashed', lw=1)
+    ax.vlines(c22.x+r, c22.y-80, c22.y+80, linestyles='dashed', lw=1)
+    ax.annotate(s='', xy=(c22.x-r,c22.y), xytext=(c22.x+r, c22.y), arrowprops=dict(arrowstyle='<->', lw=1.5))
+    ax.text(c22.x-100 ,c22.y-25,'Alcance da Cel.\n         2R', fontsize=12)
+    plt.xlabel('Posição x [m]', fontsize=12)
+    plt.ylabel('Posição y [m]', fontsize=12)
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
