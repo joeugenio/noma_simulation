@@ -72,8 +72,8 @@ s.scenario_generator()
 # plt.plot_measure(s.grid, save=True)
 
 # logger.info('Plot shadow fading map')
-# plt.plot_shadow(input='s9.npy', save=True)
-# plt.plot_shadow_zoom(input='s9.npy', save=True)
+# plt.plot_shadow(input='s9.npy', sh=True)
+# plt.plot_shadow_zoom(input='s9.npy', sh=True)
 # ==========================================================================
 
 # sinr[snaps][sites][cells][ues][ttis]
