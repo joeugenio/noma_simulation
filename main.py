@@ -38,17 +38,16 @@ s.scenario_generator()
 # plt.plot_l2s(p, sh=True)
 
 # logger.info('Plotting grid scenario')
-plt.plot_grid(s.grid, save=True, filename='grid_scen', cells=True)
+# plt.plot_grid(s.grid, save=True, filename='grid_scen', cells=True)
 
 # logger.info('Plotting grid scenario')
 # plt.plot_grid(s.grid, sh=True, save=False, connect=True)
 
 # c = ch.TemporalChannel()
 # logger.info('Plotting  Doppler Filter PSD')
-# plt.plot_doppler_filter(c.h[0][0], sh=True)
-
+# plt.plot_doppler_filter(c.h[0][0], save=True)
 # logger.info('Plotting  Rayleigh Channel Gain')
-# plt.plot_channel_gain(c.h[0][0], sh=True)
+# plt.plot_channel_gain(c.h[0][0], save=True)
 
 # logger.info('Plotting attenuation figures')
 # plt.plot_cell_attenuation(s.grid.sites[9], sh=False, save=True)

@@ -1,5 +1,5 @@
-[I 180415 18:48:14 main:27] NOMA system level simulation starting
-[I 180415 18:48:14 simulator:83] Creating grid with 19 sites
-[I 180415 18:48:14 simulator:85] Deploing base stations on grid
-[I 180415 18:48:14 simulator:87] Starting all base stations
-[I 180415 18:48:14 main:75] Plot shadow fading map
+[I 180416 12:58:41 main:27] NOMA system level simulation starting
+[I 180416 12:58:41 simulator:83] Creating grid with 19 sites
+[I 180416 12:58:41 simulator:85] Deploing base stations on grid
+[I 180416 12:58:41 simulator:87] Starting all base stations
+[I 180416 12:58:42 main:50] Plotting  Rayleigh Channel Gain
