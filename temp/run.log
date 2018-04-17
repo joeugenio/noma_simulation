@@ -1,5 +1,4 @@
-[I 180416 16:45:20 main:27] NOMA system level simulation starting
-[I 180416 16:45:20 simulator:83] Creating grid with 19 sites
-[I 180416 16:45:20 simulator:85] Deploing base stations on grid
-[I 180416 16:45:20 simulator:87] Starting all base stations
-[I 180416 16:45:20 main:36] Plotting Link Level Performance Model
+[I 180417 00:53:24 main:27] NOMA system level simulation starting
+[I 180417 00:53:24 simulator:83] Creating grid with 19 sites
+[I 180417 00:53:24 simulator:85] Deploing base stations on grid
+[I 180417 00:53:24 simulator:87] Starting all base stations
