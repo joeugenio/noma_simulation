@@ -35,7 +35,7 @@ s.scenario_generator()
 
 # logger.info('Plotting Link Level Performance Model')
 # p = perf.Performance()
-# plt.plot_l2s(p, sh=True)
+# plt.plot_l2s(p, save=True)
 
 # logger.info('Plotting grid scenario')
 # plt.plot_grid(s.grid, save=True, filename='grid_scen', cells=True)

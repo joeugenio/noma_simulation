@@ -342,7 +342,7 @@ def plot_channel_gain(h, sh=False, save=False, filename='ch_gain'):
     plt.ylabel('Ganho (dB)',fontsize=14)
     plt.grid(True)
     # plt.title(r'Rayleigh Channel ($DS_{max}=9.27$ Hz)')
-    plt.title(r'Canal Rayleigh ($DS_{max}=9.27$ Hz)')
+    # plt.title(r'Canal Rayleigh ($DS_{max}=9.27$ Hz)')
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
