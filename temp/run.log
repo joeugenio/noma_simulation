@@ -1,4 +1,7 @@
-[I 180417 23:20:43 main:27] NOMA system level simulation starting
-[I 180417 23:20:43 simulator:83] Creating grid with 19 sites
-[I 180417 23:20:43 simulator:85] Deploing base stations on grid
-[I 180417 23:20:43 simulator:87] Starting all base stations
+[I 180419 03:16:47 main:27] NOMA system level simulation starting
+[I 180419 03:16:47 simulator:83] Creating grid with 19 sites
+[I 180419 03:16:47 simulator:85] Deploing base stations on grid
+[I 180419 03:16:47 simulator:87] Starting all base stations
+[W 180419 03:16:47 channel:29] Invalid distance (d = 0.0)
+[W 180419 03:16:47 channel:29] Invalid distance (d = 0.0)
+[W 180419 03:16:47 channel:29] Invalid distance (d = 0.0)
