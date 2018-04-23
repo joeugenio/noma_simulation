@@ -82,7 +82,8 @@ def plot_base_stations(sites, style='^b', size=10):
     for s in sites:
         x = np.append(x, s.bs.coord.x)
         y = np.append(y, s.bs.coord.y)
-    plt.plot(x, y, style, ms=size, label='BS', mec='k')
+    # plt.plot(x, y, style, ms=size, label='BS', mec='k')
+    plt.plot(x, y, style, ms=size, label='ERB', mec='k')
 
 # plot one cells
 def plot_cell(site, cell_id, style='--k'):
@@ -91,7 +92,7 @@ def plot_cell(site, cell_id, style='--k'):
         hex = utl.Hexagon(c.r, c.center)
         plot_hexagon(hex, style=style, lw=0.5)
     else:
-        logger.warn("BS with id= "+str(site.bs.id)+" don't started.")
+        logger.warn("BS with ID= "+str(site.bs.id)+" don't started.")
         
 # plot all cells of one BS
 def plot_cells(site, style='--k'):
@@ -352,10 +353,10 @@ def plot_l2s(p, sh=False, save=False, filename='l2s_model'):
     amc = p.amc_lte(sinr)
     shn = p.shannon(sinr, bw=1)
     shn_att = p.shannon_att(sinr, bw=1)
-    plt.plot(sinr, amc,label='AWGN AMC')
-    plt.plot(sinr, shn,label='AWGN Shannon')
+    plt.plot(sinr, amc, '-', lw=1, label='AWGN AMC')
+    plt.plot(sinr, shn, '-.', lw=3, label='AWGN Shannon')
     # plt.plot(sinr, shn_att,'-', label='Truncated '+str(const.SHN_ATT)+'*Shannon')
-    plt.plot(sinr, shn_att,'-', label='Truncado '+str(const.SHN_ATT)+'*Shannon')
+    plt.plot(sinr, shn_att, '--', lw=2, label='Truncado '+str(const.SHN_ATT)+'*Shannon')
     plt.xlabel('SINR (dB)',fontsize=16)
     # plt.ylabel('Throughput (bits/s/Hz)',fontsize=16)
     plt.ylabel('Eficiência Espectral  (bits/s/Hz)',fontsize=16)
@@ -375,13 +376,14 @@ def plot_path_loss(d=1, sh=False, save=False, filename='path_loss'):
     l2 = [pl2.attenuation(i) for i in x]
     l3 = [pl3.attenuation(i) for i in x]
     ax = x*1000
-    plt.plot(ax, l1, lw=1.5,label='Urbano 2000 MHz')
-    plt.plot(ax, l2, lw=1.5,label='Urbano 900 MHz')
-    plt.plot(ax, l3, lw=1.5,label='Rural 900 MHz')
+    # plt.axis([0, 1000, -20, 140])
+    plt.plot(ax, l1, '-b', lw=1.5,label='Urbano 2000 MHz')
+    plt.plot(ax, l2, '--g', lw=2.5,label='Urbano 900 MHz')
+    plt.plot(ax, l3, '-.r', lw=4.5,label='Rural 900 MHz')
     plt.tick_params(labelsize=14)
     plt.xlabel('Distância [m]', fontsize=14)
     plt.ylabel('Perda de Percurso [dB]', fontsize=14)
-    plt.xticks(x[::100]*1000)
+    # plt.xticks(x[::100]*1000)
     plt.grid(True)
     plt.legend(fontsize=14, loc='lower right')
     save_fig(filename, save)
@@ -434,7 +436,7 @@ def plot_measure(grid, sh=False, save=False, filename='measure'):
     ax.vlines(c10.x-r, c10.y-80, c10.y+80, linestyles='dashed', lw=1)
     ax.vlines(c20.x-r, c20.y-80, c20.y+80, linestyles='dashed', lw=1)
     ax.annotate(s='', xy=(c10.x-r, c10.y), xytext=(c20.x-r,c20.y), arrowprops=dict(arrowstyle='<->', color='r', lw=2))
-    ax.text(c10.x-100,c10.y-25,'Dist. Inter ERB\n      3R', fontsize=12)
+    ax.text(c10.x-100,c10.y-25,'Dist. inter-site\n      3R', fontsize=12)
     ax.vlines(c11.x-r, c11.y-80, c11.y+80, linestyles='dashed', lw=1)
     ax.vlines(c11.x, c11.y-80, c11.y+80, linestyles='dashed', lw=1)
     ax.annotate(s='', xy=(c11.x-r, c11.y), xytext=(c11.x, c11.y), arrowprops=dict(arrowstyle='<->', color='r', lw=2))
