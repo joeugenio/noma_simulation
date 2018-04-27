@@ -72,6 +72,7 @@ s.scenario_generator()
 # plt.plot_measure(s.grid, save=True)
 
 # logger.info('Plot shadow fading map')
+# plt.plot_shadow(input='s0.npy', save=True, filename='shadow_uncorr')
 # plt.plot_shadow(input='s9.npy', sh=True)
 # plt.plot_shadow_zoom(input='s9.npy', sh=True)
 # ==========================================================================
