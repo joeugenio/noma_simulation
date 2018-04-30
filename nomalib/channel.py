@@ -42,7 +42,7 @@ class PathLoss:
 
 class Noise:
     ''' Noise floor signal '''
-    def __init__(self, bw=const.BW, temp=const.TEMP, noise_figure=const.NF_UE):
+    def __init__(self, bw=const.SB, temp=const.TEMP, noise_figure=const.NF_UE):
         self.bw = bw
         self.temp = t = sci.convert_temperature(temp,'C','K')
         self.nf = noise_figure
@@ -227,7 +227,7 @@ class TemporalChannel:
         elif (model == 'others_model'):
             self.h = None
 
-# method
+# Channel Module Methods
 def create_shadow_maps(n=const.N_BS):
     # Run just one time for generate arrays files
     # Set save=True for save files maps
