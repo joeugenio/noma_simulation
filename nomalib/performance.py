@@ -80,13 +80,29 @@ class Performance:
         thr = bw*np.log2(1+sinr_lin)
         return thr
     
-    def shannon_trunc(self, sinr_vector, bw=const.SB, r_max = 948*6/1024):
+    def shannon_trunc(self, sinr_vector, bw=const.SB, r_max_norm = 948*6/1024):
+        r_max = r_max_norm*bw        
         sinr_lin = 10**(sinr_vector/10)
         thr = bw*np.log2(1+sinr_lin)
-        thr = np.array([t if t <= r_max else r_max for t in thr])
+        try:
+            thr = np.array([t if t <= r_max else r_max for t in thr])
+        except TypeError:
+            thr = thr if thr <= r_max else r_max            
         return thr
     
-    def shannon_att(self, sinr_vector, att=const.SHN_ATT, bw=const.SB, r_max = 948*6/1024):
+    def shannon_att(self, sinr_vector, att=const.SHN_ATT, bw=const.SB, r_max_norm = 948*6/1024):
+        r_max = r_max_norm*bw
         thr = att*self.shannon(sinr_vector, bw)
-        thr = np.array([t if t <= r_max else r_max for t in thr])
+        try:
+            thr = np.array([t if t <= r_max else r_max for t in thr])
+        except TypeError:
+            thr = thr if thr <= r_max else r_max
+        return thr
+
+    def throughput_oma(self, sinr, beta=1, bw=const.SB, model='shannon_att'):
+        func = {'amc':self.amc_lte,
+                'shannon':self.shannon,
+                'shannon_trunc':self.shannon_trunc,
+                'shannon_att':self.shannon_att}
+        thr = func[model](sinr)
         return thr

@@ -26,6 +26,9 @@ logzero.loglevel(logzero.logging.INFO)
 logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
+p = perf.Performance()
+t = p.shannon_trunc(10)
+print(t)
 # create simulation
 # s = sim.Simulator(mode='cell')
 # create scenario
@@ -35,70 +38,70 @@ logger.info('NOMA system level simulation starting')
 
 # sinr = np.load(const.OUT_PATH+'sinr0.npy')
 # sinr[snaps][sites][cells][ues][ttis]
-p = perf.Performance()
-N_SINR = 100
-sinr = np.load(const.OUT_PATH+'sinr0.npy')
-cdf = np.zeros([2,N_SINR])
-cdf_thr = np.zeros([2,N_SINR])
-cdf_thr2 = np.zeros([2,N_SINR])
-sinr_ax = np.linspace(-40,50,N_SINR)
-thr_ax = np.linspace(0,15,N_SINR)
-thr_ax2 = np.linspace(0,15,N_SINR)
+# p = perf.Performance()
+# N_SINR = 100
+# sinr = np.load(const.OUT_PATH+'sinr0.npy')
+# cdf = np.zeros([2,N_SINR])
+# cdf_thr = np.zeros([2,N_SINR])
+# cdf_thr2 = np.zeros([2,N_SINR])
+# sinr_ax = np.linspace(-40,50,N_SINR)
+# thr_ax = np.linspace(0,15,N_SINR)
+# thr_ax2 = np.linspace(0,15,N_SINR)
 
-for i in range(len(sinr)):
-    for j in range(len(sinr[i])):
-        for k in range(len(sinr[i][j])):
-            s_ue = [0, 0]
-            t_ue = [0, 0]            
-            for l in range(len(sinr[i][j][k])):
-                s = 0
-                t = 0
-                for m in range(len(sinr[i][j][k][l])):
-                    s += sinr[i][j][k][l][m]
-                    t += p.shannon(10*np.log10(sinr[i][j][k][l][m]), bw=1)
-                s_ue[l] = s/len(sinr[i][j][k][l])
-                t_ue[l] = t/len(sinr[i][j][k][l])
-    for n in range(N_SINR):
-        for l in range(len(sinr[i][j][k])):
-            if (10*np.log10(s_ue[l]) <= sinr_ax[n]):
-                cdf[l][n] += 1
-            sdb = np.array([10*np.log10(s_ue[l])])
-            if (p.shannon(sdb,bw=1) <= thr_ax[n]):
-                cdf_thr[l][n] += 1
-            if (t_ue[l] <= thr_ax[n]):
-                cdf_thr2[l][n] += 1
-cdf = cdf/len(sinr)
-cdf_thr = cdf_thr/len(sinr)
-cdf_thr2 = cdf_thr2/len(sinr)
+# for i in range(len(sinr)):
+#     for j in range(len(sinr[i])):
+#         for k in range(len(sinr[i][j])):
+#             s_ue = [0, 0]
+#             t_ue = [0, 0]            
+#             for l in range(len(sinr[i][j][k])):
+#                 s = 0
+#                 t = 0
+#                 for m in range(len(sinr[i][j][k][l])):
+#                     s += sinr[i][j][k][l][m]
+#                     t += p.shannon(10*np.log10(sinr[i][j][k][l][m]), bw=1)
+#                 s_ue[l] = s/len(sinr[i][j][k][l])
+#                 t_ue[l] = t/len(sinr[i][j][k][l])
+#     for n in range(N_SINR):
+#         for l in range(len(sinr[i][j][k])):
+#             if (10*np.log10(s_ue[l]) <= sinr_ax[n]):
+#                 cdf[l][n] += 1
+#             sdb = np.array([10*np.log10(s_ue[l])])
+#             if (p.shannon(sdb,bw=1) <= thr_ax[n]):
+#                 cdf_thr[l][n] += 1
+#             if (t_ue[l] <= thr_ax[n]):
+#                 cdf_thr2[l][n] += 1
+# cdf = cdf/len(sinr)
+# cdf_thr = cdf_thr/len(sinr)
+# cdf_thr2 = cdf_thr2/len(sinr)
 
-import matplotlib.pyplot as plt
-plt.plot(sinr_ax, cdf[0], '--b', lw=1, label='UE 1')
-plt.plot(sinr_ax, cdf[1], '--r', lw=1, label='UE 1')
-plt.xlabel('SINR (dB)',fontsize=16)
-# plt.ylabel('Throughput (bits/s/Hz)',fontsize=16)
-plt.ylabel('CDF',fontsize=16)
-plt.grid(True)
-plt.title('User SINR Performance', fontsize=16)
-plt.legend(fontsize=14, loc=2)
+# import matplotlib.pyplot as plt
+# plt.plot(sinr_ax, cdf[0], '--b', lw=1, label='UE 1')
+# plt.plot(sinr_ax, cdf[1], '--r', lw=1, label='UE 1')
+# plt.xlabel('SINR (dB)',fontsize=16)
+# # plt.ylabel('Throughput (bits/s/Hz)',fontsize=16)
+# plt.ylabel('CDF',fontsize=16)
+# plt.grid(True)
+# plt.title('User SINR Performance', fontsize=16)
+# plt.legend(fontsize=14, loc=2)
 
-plt.figure(2)
-plt.plot(thr_ax, cdf_thr[0], '--b', lw=1, label='UE 1 mean')
-plt.plot(thr_ax, cdf_thr[1], '--r', lw=1, label='UE 1 mean')
-plt.plot(thr_ax2, cdf_thr2[0], '--g', lw=1, label='UE 1')
-plt.plot(thr_ax2, cdf_thr2[1], '--y', lw=1, label='UE 1')
-plt.xlabel('Throughput (bits/s/Hz)',fontsize=16)
-plt.ylabel('CDF',fontsize=16)
-plt.grid(True)
-plt.title('User Throughput Performance', fontsize=16)
-plt.legend(fontsize=14, loc=2)
-plt.show()
+# plt.figure(2)
+# plt.plot(thr_ax, cdf_thr[0], '--b', lw=1, label='UE 1 mean')
+# plt.plot(thr_ax, cdf_thr[1], '--r', lw=1, label='UE 1 mean')
+# plt.plot(thr_ax2, cdf_thr2[0], '--g', lw=1, label='UE 1')
+# plt.plot(thr_ax2, cdf_thr2[1], '--y', lw=1, label='UE 1')
+# plt.xlabel('Throughput (bits/s/Hz)',fontsize=16)
+# plt.ylabel('CDF',fontsize=16)
+# plt.grid(True)
+# plt.title('User Throughput Performance', fontsize=16)
+# plt.legend(fontsize=14, loc=2)
+# plt.show()
 
 # ==========================================================================
 # PLOT AREA
 # ==========================================================================
 # logger.info('Plotting Link Level Performance Model')
 # p = perf.Performance()
-# plt.plot_l2s(p, save=True)
+# plt.plot_l2s(p, sh=True)
 
 # logger.info('Plotting grid scenario')
 # plt.plot_grid(s.grid, save=True, filename='grid_scen', cells=True)

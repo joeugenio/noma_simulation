@@ -21,7 +21,8 @@ PW_BS = 43 # dBm
 H_BS = 30 # meters
 G_BS = 15 # dBi
 BW = 10e6 # Hz
-SB = 1 # subband
+N_SB = 10e6
+SB = BW/N_SB # subband
 
 # BS Antenna Constants
 ATT_MAX = 20 # dBm
