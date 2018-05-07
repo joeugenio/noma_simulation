@@ -19,7 +19,7 @@ logzero.logfile('./temp/run.log', mode='w', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
 # create simulation
-s = sim.Simulator(n_snap=1e3, n_ue_cell=4)
+s = sim.Simulator(n_snap=1000, n_ue_cell=4)
 # create scenario
 s.scenario_generator()
 # run simulator

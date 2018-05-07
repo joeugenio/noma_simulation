@@ -143,7 +143,7 @@ def throughput_noma(pair, bw_sb=1, model='shannon_att'):
     return thr
 
 class Probability:
-    def __init__(self, max=60e6, len_arg=3, size=100):
+    def __init__(self, max=70e6, len_arg=3, size=100):
         self.size = size
         self.max = max
         self.thr = np.linspace(0, max, size)
