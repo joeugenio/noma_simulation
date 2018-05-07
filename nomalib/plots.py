@@ -13,6 +13,7 @@ import nomalib.constants as const
 import nomalib.devices as dev
 import nomalib.utils as utl
 import nomalib.channel as ch
+import nomalib.performance as perf
 from nomalib.utils import Coordinate as Coord
 import numpy as np
 import matplotlib.pyplot as plt
@@ -334,7 +335,7 @@ def plot_doppler_filter(h, sh=False, save=False, filename='doppler_spread'):
     plt.clf()
 
 def plot_channel_gain(h, sh=False, save=False, filename='ch_gain'):
-    g = h.gain
+    g = h.gain_db
     t = h.t
     plt.plot(t*1e3, g, 'b')
     # plt.xlabel('Time (ms)',fontsize=14)
@@ -348,11 +349,11 @@ def plot_channel_gain(h, sh=False, save=False, filename='ch_gain'):
     show_fig(sh)
     plt.clf()
 
-def plot_l2s(p, sh=False, save=False, filename='l2s_model'):
+def plot_l2s(sh=False, save=False, filename='l2s_model'):
     sinr = np.linspace(-10, 30)
-    amc = p.amc_lte(sinr)
-    shn = p.shannon(sinr, bw=1)
-    shn_att = p.shannon_att(sinr, bw=1)
+    amc = perf.amc_lte(sinr)
+    shn = perf.shannon(sinr, bw=1)
+    shn_att = perf.shannon_att(sinr, bw=1)
     plt.plot(sinr, amc, '-', lw=1, label='AWGN AMC')
     plt.plot(sinr, shn, '-.', lw=3, label='AWGN Shannon')
     # plt.plot(sinr, shn_att,'-', label='Truncated '+str(const.SHN_ATT)+'*Shannon')
@@ -450,3 +451,27 @@ def plot_measure(grid, sh=False, save=False, filename='measure'):
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
+
+# CDF curves
+#==================================
+# import matplotlib.pyplot as plt
+# plt.plot(sinr_ax, cdf[0], '--b', lw=1, label='UE 1')
+# plt.plot(sinr_ax, cdf[1], '--r', lw=1, label='UE 1')
+# plt.xlabel('SINR (dB)',fontsize=16)
+# # plt.ylabel('Throughput (bits/s/Hz)',fontsize=16)
+# plt.ylabel('CDF',fontsize=16)
+# plt.grid(True)
+# plt.title('User SINR Performance', fontsize=16)
+# plt.legend(fontsize=14, loc=2)
+
+# plt.figure(2)
+# plt.plot(thr_ax, cdf_thr[0], '--b', lw=1, label='UE 1 mean')
+# plt.plot(thr_ax, cdf_thr[1], '--r', lw=1, label='UE 1 mean')
+# plt.plot(thr_ax2, cdf_thr2[0], '--g', lw=1, label='UE 1')
+# plt.plot(thr_ax2, cdf_thr2[1], '--y', lw=1, label='UE 1')
+# plt.xlabel('Throughput (bits/s/Hz)',fontsize=16)
+# plt.ylabel('CDF',fontsize=16)
+# plt.grid(True)
+# plt.title('User Throughput Performance', fontsize=16)
+# plt.legend(fontsize=14, loc=2)
+# plt.show()

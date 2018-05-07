@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 28/02/2018
+# Last update: 07/05/2018
 # Version: 1.1
 
 # Python classes for NOMA communications simulations
@@ -31,15 +31,30 @@ class Cell:
         y = bs.coord.y + np.sin(self.angle*(self.fr))*r
         self.center = Coord(x,y)
         self.antenna = dev.BSAntenna(self.angle*freq_reuse)
+        self.pwr_max = bs.pwr_max
         self.ue_ids = []
+        self.pwr = None
+        self.n_sb = None
+        self.bw_sb = None
+        self.n_ma_ue = None
         self.accept_ue = True
+    
+    def resource_reserve(self, n_ma_ue=const.N_MA_UE, bw=const.BW):
+        ''' Set resources values from number of user connected
+            Power and band width are equally distributed among subbands '''
+        n_ues = len(self.ue_ids)
+        self.n_ma_ue = n_ma_ue
+        self.n_sb = int(np.ceil(n_ues/n_ma_ue))
+        self.bw_sb = bw/self.n_sb
+        self.pwr = self.pwr_max - 10*np.log10(self.n_sb)
 
 class Site:
     ''' Site with Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
     def __init__(self, id, coord, n_sec=const.N_SEC):
         self.n_sec = n_sec
         self.bs = dev.BaseStation(id, coord)
-        self.channel = ch.SpatialChannel(id)
+        self.channel = ch.LargeScaleEffect(id)
+        self.noise = ch.Noise()        
         self.cells = []
 
     def start_base_station(self):
@@ -75,7 +90,7 @@ class Grid:
              Coord(-3*r, 3*h_cell), Coord(0, 3*h_cell), Coord(3*r, 3*h_cell)]
         self.hex = Hexagon(r=self.width/2)
 
-    def deploy_user_equipment(self, region='square', n_ue=const.N_UE):
+    def deploy_user_equipments(self, region='circle', n_ue=const.N_UE):
         ''' Deploy all user equipments on hexagon or square grid with uniform distribution'''
         coords = []
         if region=='hexagon':
@@ -88,6 +103,11 @@ class Grid:
             while (len(coords) < n_ue):            
                 x, y = np.random.uniform(-self.width/2, self.width/2, (2))
                 coords.append(Coord(x,y))
+        elif region=='circle':
+            while (len(coords) < n_ue):            
+                x, y = np.random.uniform(-self.width/2, self.width/2, (2))
+                if ((x**2 + y**2) <= (self.width/2)**2):
+                    coords.append(Coord(x,y))
         for i in range(n_ue):
             self.user_equipments.append(dev.UserEquipment(i+1001, coords[i]))
 
@@ -112,9 +132,9 @@ class Grid:
             c.accept_ue = False
 
     ''' Connect all UEs to the best cell '''
-    def connect_all_ue(self):
+    def connect_all_ue(self, n_ue=const.N_UE_CELL):
         for ue in self.user_equipments:
-            self.connect_ue_to_best_cell(ue.id)
+            self.connect_ue_to_best_cell(ue.id, n_ue_cell=n_ue)
     
     ''' Disconnect all UEs '''
     def disconnect_all_ue(self):
@@ -122,7 +142,16 @@ class Grid:
             for cell in site.cells:
                 cell.ue_ids = []
                 cell.accept_ue = True
+
+    ''' Remove all UEs '''
+    def remove_all_ue(self):
         self.user_equipments = []
+    
+    def resource_reserve_all(self):
+        ''' Reserver subbands and power for all cells'''
+        for site in self.sites:
+            for cell in site.cells:
+                cell.resource_reserve()
 
     ''' Return BS from ID '''
     def get_bs(self, id):

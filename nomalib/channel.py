@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 30/01/2018
+# Last update: 07/05/2018
 # Version: 1.0
 
 # Python module for NOMA communications simulations
@@ -41,13 +41,12 @@ class PathLoss:
         return l
 
 class Noise:
-    ''' Noise floor signal '''
-    def __init__(self, bw=const.SB, temp=const.TEMP, noise_figure=const.NF_UE):
-        self.bw = bw
+    ''' Noise floor power per subband'''
+    def __init__(self, bw=const.BW, temp=const.TEMP, noise_figure=const.NF_UE):
         self.temp = t = sci.convert_temperature(temp,'C','K')
         self.nf = noise_figure
         self.den = 10*np.log10(t*sci.k*1e3)
-        self.noise_floor = self.den + self.nf + 10*np.log10(bw)
+        self.floor = self.den + self.nf + 10*np.log10(bw)
 
 class ShadowFading:
     ''' Shadow fading 2D map with lognormal distribution object'''
@@ -197,12 +196,13 @@ class RayleighChannel:
         yt = abs(np.fft.ifft(y))
         r = np.sqrt(abs(xt)**2+abs(yt)**2)
         pwr_h = (abs(r)**2)
-        self.gain = 10*np.log10(pwr_h/pwr_h.std())
+        self.gain = pwr_h/pwr_h.std()
+        self.gain_db = 10*np.log10(self.gain)
         self.f = f
         self.s = s
         self.t = np.linspace(0, time, nt)
 
-class SpatialChannel:
+class LargeScaleEffect:
     ''' Channel model class'''
     def __init__(self, s_id, env=const.ENV, fc=const.FC):
         self.s_id = s_id
@@ -210,20 +210,16 @@ class SpatialChannel:
         self.fc = fc
         self.shadow = ShadowFading('s'+str(s_id%100)+'.npy')
         self.path_loss = PathLoss(env=env, fc=fc)
-        self.noise  = Noise()
 
-class TemporalChannel:
-    ''' Channel model with temporal'''
-    def __init__(self, model='rayleigh', size=(const.N_UE, const.N_BS)):
+class SmallScaleEffect:
+    ''' Channel model with temporal gain matrix'''
+    def __init__(self, model='rayleigh', size=const.N_BS):
         self.model = model
-        self.size = size
+        self.n_sites = size
         self.h = []
         if (model == 'rayleigh'):
-            for u in range(size[0]):
-                row = []
-                for c in range(size[1]):
-                    row.append(RayleighChannel())
-                self.h.append(row)
+            for i in range(size):
+                self.h.append(RayleighChannel())
         elif (model == 'others_model'):
             self.h = None
 

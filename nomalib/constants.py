@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 30/01/2018
+# Last update: 07/05/2018
 # Version: 1.0
 
 # Python module for NOMA communications simulations
@@ -12,24 +12,21 @@
 # Simulations Paramters
 TTI = 1e-3 # ms
 T_SNP = 1000*TTI # s
-N_SNP = int(1e3) # ideal 1e5
-MOD = 'grid' # 'grid','site' (single site) or 'cell' (single cell)
+N_SNP = int(1e4) # ideal 1e5
 OUT_PATH = './output/dat/'
 
 # Base Staion Constants
-PW_BS = 43 # dBm
 H_BS = 30 # meters
 G_BS = 15 # dBi
 BW = 10e6 # Hz
-N_SB = 10e6
-SB = BW/N_SB # subband
+PW_BS_MAX = 46 # dBm
 
 # BS Antenna Constants
 ATT_MAX = 20 # dBm
 THT_3DB = 65 # degree
 
 # User Equipment Constants
-PW_UE = 25 # dBm
+PW_UE_MAX = 25 # dBm
 H_UE = 1.5 # meters
 G_UE = 0 # dBi
 NF_UE = 9 # dB
@@ -41,6 +38,7 @@ N_SEC = 3 # three sectors
 N_CELL = N_BS*N_SEC
 N_UE = N_UE_CELL*N_CELL
 R_CELL = 500/3 # Cell Radius in meters
+N_MA_UE = 2 # number of UE on multiple access
 
 # Channel Model Constants
 ENV = 'urban' # urban or rural

@@ -25,9 +25,14 @@ TODO:
 * throughput 5% CDF UE (cell edge)
 * efficiency bps/Hz
 * single scenario - free interference
+* Fazer README.rst
+* Inserir figuras no README
+* Criar gif com demostração
+* Organizar e excluir notas
 
 Dúvidas [pt_BR]
 
+* Modelo de Interferência para múltiplo acesso no domínio da frequêcia assimétrico
 * Implementar simulação single cell, thr pela sinr média temp, ou média da thr temp
 * revisar array e lista
 * reuso de frequência e interferência
