@@ -4,7 +4,7 @@
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 25/03/2018
 # Last update: 07/05/2018
-# Version: 1.0
+# Version: 0.1
 
 # Performance evaluation Python functios for NOMA communications simulations
 

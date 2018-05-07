@@ -1,0 +1,56 @@
+joel@Eddie:~/.../noma_simulation$ ./main30.py 
+[I 180507 03:14:46 main30:19] NOMA system level simulation starting
+[I 180507 03:14:46 simulator:112] Creating grid with 19 sites
+[I 180507 03:14:46 simulator:114] Deploing base stations on grid
+[I 180507 03:14:46 simulator:116] Starting all base stations
+[I 180507 03:14:46 simulator:118] Create snapshot simulation
+Elapsed time is 0.024013 seconds.
+[I 180507 03:14:46 simulator:123] Running simulation
+ 61%|█████████████████████████▊                | 6135/10000 [9:57:35<6:16:28,  5.84s/ snapshot]
+100%|██████████████████████████████████████████| 10000/10000 [14:31:30<00:00,  5.23s/ snapshot]
+[I 180507 17:46:17 simulator:136] Finished Simulation
+Elapsed time is 52290.773448 seconds.
+joel@Eddie:~/.../noma_simulation$ ./main20.py 
+[I 180507 03:15:07 main20:19] NOMA system level simulation starting
+[I 180507 03:15:07 simulator:112] Creating grid with 19 sites
+[I 180507 03:15:07 simulator:114] Deploing base stations on grid
+[I 180507 03:15:07 simulator:116] Starting all base stations
+[I 180507 03:15:07 simulator:118] Create snapshot simulation
+Elapsed time is 0.031604 seconds.
+[I 180507 03:15:07 simulator:123] Running simulation
+100%|███████████████████████████████████████████| 10000/10000 [11:18:10<00:00,  4.07s/ snapshot]
+[I 180507 14:33:18 simulator:136] Finished Simulation
+joel@Eddie:~/.../noma_simulation$ ./main10.py 
+[I 180507 03:16:06 main10:19] NOMA system level simulation starting
+[I 180507 03:16:06 simulator:112] Creating grid with 19 sites
+[I 180507 03:16:06 simulator:114] Deploing base stations on grid
+[I 180507 03:16:06 simulator:116] Starting all base stations
+[I 180507 03:16:06 simulator:118] Create snapshot simulation
+Elapsed time is 0.044180 seconds.
+[I 180507 03:16:06 simulator:123] Running simulation
+100%|██████████████████████████████████████████| 10000/10000 [5:14:49<00:00,  1.89s/ snapshot]
+[I 180507 08:30:55 simulator:136] Finished Simulation
+Elapsed time is 18889.542187 seconds.
+joel@Eddie:~/.../noma_simulation$ ./main6.py 
+[I 180507 10:20:41 main6:19] NOMA system level simulation starting
+[I 180507 10:20:41 simulator:112] Creating grid with 19 sites
+[I 180507 10:20:41 simulator:114] Deploing base stations on grid
+[I 180507 10:20:41 simulator:116] Starting all base stations
+[I 180507 10:20:41 simulator:118] Create snapshot simulation
+Elapsed time is 0.038427 seconds.
+[I 180507 10:20:41 simulator:123] Running simulation
+100%|██████████████████████████████████████████| 10000/10000 [2:52:02<00:00,  1.03s/ snapshot]
+[I 180507 13:12:44 simulator:136] Finished Simulation
+Elapsed time is 10322.731501 seconds.
+joel@Eddie:~/.../noma_simulation$ ./main2.py 
+[I 180507 13:17:58 main2:19] NOMA system level simulation starting
+[I 180507 13:17:58 simulator:112] Creating grid with 19 sites
+[I 180507 13:17:58 simulator:114] Deploing base stations on grid
+[I 180507 13:17:58 simulator:116] Starting all base stations
+[I 180507 13:17:58 simulator:118] Create snapshot simulation
+Elapsed time is 0.054182 seconds.
+[I 180507 13:17:58 simulator:123] Running simulation
+100%|████████████████████████████████████████████| 10000/10000 [44:13<00:00,  3.77 snapshot/s]
+[I 180507 14:02:12 simulator:136] Finished Simulation
+Elapsed time is 2653.965424 seconds.
+

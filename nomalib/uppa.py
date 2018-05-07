@@ -4,7 +4,7 @@
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 05/05/2018
 # Last update: 07/05/2018
-# Version: 1.0
+# Version: 0.1
 
 # User Pair and Power Allocation for NOMA communications simulations
 

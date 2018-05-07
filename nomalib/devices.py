@@ -4,7 +4,7 @@
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
 # Last update: 07/05/2018
-# Version: 1.1
+# Version: 0.1
 
 # Python module for NOMA communications simulations
 # The devices classes are declared here
