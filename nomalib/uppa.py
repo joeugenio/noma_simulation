@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 05/05/2018
-# Last update: 07/05/2018
+# Last update: 26/06/2018
 # Version: 0.1
 
 # User Pair and Power Allocation for NOMA communications simulations
@@ -20,10 +20,14 @@ class User:
         self.band = oma
 
 class Pair:
-    ''' Pair class for UPPA'''
+    ''' User Pair class for UPPA'''
     def __init__(self, id, users):
         self.id = id
         self.users = users
+
+class Set:
+    ''' User Set class for UPPA '''
+    pass
 
 # User pair function
 def user_pair(ues_sinr, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
@@ -38,7 +42,12 @@ def user_pair(ues_sinr, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
             # sort by SINR
             u.sort(key=lambda x: x.sinr.mean(), reverse=True)
             pairs.append(Pair(id=n, users=u))
-    elif mode == 'max_gain':
+    elif mode == 'fair':
+        # sort users by SINR
+        ues.sort(key=lambda x: x.sinr.mean(), reverse=True)
+        for s in range(n_sb):
+            #pairs.append(Pair(id=n, users=u))
+
         pass
     else:
         pass
