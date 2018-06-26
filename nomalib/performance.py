@@ -121,7 +121,11 @@ def throughput_oma(pair, bw_sb=1, model='shannon_att'):
     for u in pair.users:
         sinr = u.sinr
         beta = u.band
-        t = beta*func[model](sinr*(pwr/beta), bw=bw_sb)
+        try:
+            f = pwr/beta
+        except ZeroDivisionError:
+            f = pwr/0.00001
+        t = beta*func[model](sinr*f, bw=bw_sb)
         thr.append(t.mean())
     return thr
     
@@ -143,12 +147,18 @@ def throughput_noma(pair, bw_sb=1, model='shannon_att'):
     return thr
 
 class Probability:
-    def __init__(self, max=70e6, len_arg=3, size=100):
+    def __init__(self, sim, size=100):
+        try:
+            self.max = sim.thr_target
+        except AttributeError:
+            self.max = const.THR_TARGET
+        try:
+            self.len_arg = sim.n_cdf_arg
+        except AttributeError:
+            self.len_arg = const.N_CDF_ARG
         self.size = size
-        self.max = max
-        self.thr = np.linspace(0, max, size)
-        self.cdf = np.zeros((len_arg, size))
-        self.len_arg = len_arg
+        self.thr = np.linspace(0, self.max, size)
+        self.cdf = np.zeros((self.len_arg, size))
     
     def get_cdf(self, value):
         for i in range(self.size):

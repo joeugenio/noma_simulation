@@ -1,0 +1,2036 @@
+[I 180507 18:38:19 results_analysis:22] NOMA system level simulation starting
+[I 180507 18:38:36 results_analysis:22] NOMA system level simulation starting
+[I 180508 02:28:39 results_analysis:23] Data analysis from simulation results
+[I 180508 02:28:39 results_analysis:25] Load data from files
+[I 180508 02:29:47 results_analysis:23] Data analysis from simulation results
+[I 180508 02:29:47 results_analysis:25] Load data from files
+[I 180508 02:29:47 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:30:48 results_analysis:23] Data analysis from simulation results
+[I 180508 02:30:48 results_analysis:25] Load data from files
+[I 180508 02:30:48 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:31:01 results_analysis:41] Plot graphs: Cell Edge Throughput
+[I 180508 02:31:01 results_analysis:42] Plot graphs: Spectral Efficiency
+[I 180508 02:31:51 results_analysis:23] Data analysis from simulation results
+[I 180508 02:31:51 results_analysis:25] Load data from files
+[I 180508 02:31:51 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:31:59 results_analysis:41] Plot graphs: Cell Edge Throughput
+[I 180508 02:31:59 results_analysis:42] Plot graphs: Spectral Efficiency
+[I 180508 02:34:57 results_analysis:23] Data analysis from simulation results
+[I 180508 02:34:57 results_analysis:25] Load data from files
+[I 180508 02:34:57 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:35:57 results_analysis:40] Plot graphs: Cell Edge Throughput
+[I 180508 02:35:57 results_analysis:41] Plot graphs: Spectral Efficiency
+[I 180508 02:36:51 results_analysis:23] Data analysis from simulation results
+[I 180508 02:36:51 results_analysis:25] Load data from files
+[I 180508 02:36:51 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:37:55 results_analysis:40] Plot graphs: Cell Edge Throughput
+[I 180508 02:37:55 results_analysis:41] Plot graphs: Spectral Efficiency
+[I 180508 02:38:41 results_analysis:23] Data analysis from simulation results
+[I 180508 02:38:41 results_analysis:25] Load data from files
+[I 180508 02:38:41 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:40:12 results_analysis:40] Plot graphs: Cell Edge Throughput
+[I 180508 02:40:12 results_analysis:41] Plot graphs: Spectral Efficiency
+[I 180508 02:40:29 results_analysis:23] Data analysis from simulation results
+[I 180508 02:40:29 results_analysis:25] Load data from files
+[I 180508 02:40:29 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:40:44 results_analysis:40] Plot graphs: Cell Edge Throughput
+[I 180508 02:40:44 results_analysis:41] Plot graphs: Spectral Efficiency
+[I 180508 02:43:07 results_analysis:23] Data analysis from simulation results
+[I 180508 02:43:07 results_analysis:25] Load data from files
+[I 180508 02:43:07 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:43:12 results_analysis:41] Plot graphs: Cell Edge Throughput
+[I 180508 02:43:12 results_analysis:42] Plot graphs: Spectral Efficiency
+[I 180508 02:46:32 results_analysis:23] Data analysis from simulation results
+[I 180508 02:46:32 results_analysis:25] Load data from files
+[I 180508 02:46:32 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:48:00 results_analysis:23] Data analysis from simulation results
+[I 180508 02:48:00 results_analysis:25] Load data from files
+[I 180508 02:48:00 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:48:15 results_analysis:23] Data analysis from simulation results
+[I 180508 02:48:15 results_analysis:25] Load data from files
+[I 180508 02:48:15 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:49:13 results_analysis:23] Data analysis from simulation results
+[I 180508 02:49:13 results_analysis:25] Load data from files
+[I 180508 02:49:13 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:50:54 results_analysis:23] Data analysis from simulation results
+[I 180508 02:50:54 results_analysis:25] Load data from files
+[I 180508 02:50:54 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:56:37 results_analysis:23] Data analysis from simulation results
+[I 180508 02:56:37 results_analysis:25] Load data from files
+[I 180508 02:56:37 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:57:00 results_analysis:23] Data analysis from simulation results
+[I 180508 02:57:00 results_analysis:25] Load data from files
+[I 180508 02:57:00 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:57:33 results_analysis:23] Data analysis from simulation results
+[I 180508 02:57:33 results_analysis:25] Load data from files
+[I 180508 02:57:33 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 02:58:07 results_analysis:23] Data analysis from simulation results
+[I 180508 02:58:07 results_analysis:25] Load data from files
+[I 180508 02:58:07 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:03:05 results_analysis:23] Data analysis from simulation results
+[I 180508 03:03:05 results_analysis:25] Load data from files
+[I 180508 03:03:05 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:03:27 results_analysis:23] Data analysis from simulation results
+[I 180508 03:03:27 results_analysis:25] Load data from files
+[I 180508 03:03:27 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:03:55 results_analysis:23] Data analysis from simulation results
+[I 180508 03:03:55 results_analysis:25] Load data from files
+[I 180508 03:03:55 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:11:00 results_analysis:23] Data analysis from simulation results
+[I 180508 03:11:00 results_analysis:25] Load data from files
+[I 180508 03:11:00 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:11:27 results_analysis:23] Data analysis from simulation results
+[I 180508 03:11:27 results_analysis:25] Load data from files
+[I 180508 03:11:27 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:11:51 results_analysis:23] Data analysis from simulation results
+[I 180508 03:11:51 results_analysis:25] Load data from files
+[I 180508 03:11:51 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:13:13 results_analysis:23] Data analysis from simulation results
+[I 180508 03:13:13 results_analysis:25] Load data from files
+[I 180508 03:13:13 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:13:23 results_analysis:23] Data analysis from simulation results
+[I 180508 03:13:23 results_analysis:25] Load data from files
+[I 180508 03:13:23 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:13:49 results_analysis:23] Data analysis from simulation results
+[I 180508 03:13:49 results_analysis:25] Load data from files
+[I 180508 03:13:49 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:15:51 results_analysis:23] Data analysis from simulation results
+[I 180508 03:15:51 results_analysis:25] Load data from files
+[I 180508 03:15:51 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:16:09 results_analysis:23] Data analysis from simulation results
+[I 180508 03:16:09 results_analysis:25] Load data from files
+[I 180508 03:16:09 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:20:39 results_analysis:23] Data analysis from simulation results
+[I 180508 03:20:39 results_analysis:25] Load data from files
+[I 180508 03:20:39 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:20:53 results_analysis:23] Data analysis from simulation results
+[I 180508 03:20:53 results_analysis:25] Load data from files
+[I 180508 03:20:53 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:21:29 results_analysis:23] Data analysis from simulation results
+[I 180508 03:21:29 results_analysis:25] Load data from files
+[I 180508 03:21:29 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:24:57 results_analysis:23] Data analysis from simulation results
+[I 180508 03:24:57 results_analysis:25] Load data from files
+[I 180508 03:24:57 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:25:43 results_analysis:23] Data analysis from simulation results
+[I 180508 03:25:43 results_analysis:25] Load data from files
+[I 180508 03:25:43 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:25:56 results_analysis:23] Data analysis from simulation results
+[I 180508 03:25:56 results_analysis:25] Load data from files
+[I 180508 03:25:56 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:26:13 results_analysis:23] Data analysis from simulation results
+[I 180508 03:26:13 results_analysis:25] Load data from files
+[I 180508 03:26:13 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:32:12 results_analysis:23] Data analysis from simulation results
+[I 180508 03:32:12 results_analysis:25] Load data from files
+[I 180508 03:32:12 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:32:46 results_analysis:23] Data analysis from simulation results
+[I 180508 03:32:46 results_analysis:25] Load data from files
+[I 180508 03:32:46 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:33:07 results_analysis:23] Data analysis from simulation results
+[I 180508 03:33:07 results_analysis:25] Load data from files
+[I 180508 03:33:07 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 03:33:41 results_analysis:23] Data analysis from simulation results
+[I 180508 03:33:41 results_analysis:25] Load data from files
+[I 180508 03:33:41 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:22:08 results_analysis:23] Data analysis from simulation results
+[I 180508 14:22:08 results_analysis:25] Load data from files
+[I 180508 14:22:08 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:22:15 results_analysis:23] Data analysis from simulation results
+[I 180508 14:22:15 results_analysis:25] Load data from files
+[I 180508 14:22:15 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:22:54 results_analysis:23] Data analysis from simulation results
+[I 180508 14:22:54 results_analysis:25] Load data from files
+[I 180508 14:22:54 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:23:03 results_analysis:23] Data analysis from simulation results
+[I 180508 14:23:03 results_analysis:25] Load data from files
+[I 180508 14:23:03 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:23:44 results_analysis:23] Data analysis from simulation results
+[I 180508 14:23:44 results_analysis:25] Load data from files
+[I 180508 14:23:44 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 14:30:23 results_analysis:23] Data analysis from simulation results
+[I 180508 14:30:23 results_analysis:25] Load data from files
+[I 180508 14:30:23 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 20:38:00 results_analysis:23] Data analysis from simulation results
+[I 180508 20:38:00 results_analysis:25] Load data from files
+[I 180508 20:39:43 results_analysis:23] Data analysis from simulation results
+[I 180508 20:39:43 results_analysis:25] Load data from files
+[I 180508 20:40:16 results_analysis:23] Data analysis from simulation results
+[I 180508 20:40:16 results_analysis:25] Load data from files
+[I 180508 20:40:16 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 20:40:45 results_analysis:23] Data analysis from simulation results
+[I 180508 20:40:45 results_analysis:25] Load data from files
+[I 180508 20:40:45 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 20:42:56 results_analysis:23] Data analysis from simulation results
+[I 180508 20:42:56 results_analysis:25] Load data from files
+[I 180508 20:42:56 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 20:43:21 results_analysis:23] Data analysis from simulation results
+[I 180508 20:43:21 results_analysis:25] Load data from files
+[I 180508 20:43:21 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 20:57:40 results_analysis:23] Data analysis from simulation results
+[I 180508 20:57:40 results_analysis:25] Load data from files
+[I 180508 20:57:40 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 23:41:00 results_analysis:23] Data analysis from simulation results
+[I 180508 23:41:00 results_analysis:25] Load data from files
+[I 180508 23:41:01 results_analysis:34] Plot graphs: Throughout CDF
+[I 180508 23:55:13 results_analysis:23] Data analysis from simulation results
+[I 180508 23:55:13 results_analysis:25] Load data from files
+[I 180508 23:55:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180508 23:56:04 results_analysis:23] Data analysis from simulation results
+[I 180508 23:56:04 results_analysis:25] Load data from files
+[I 180508 23:56:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180508 23:57:52 results_analysis:23] Data analysis from simulation results
+[I 180508 23:57:52 results_analysis:25] Load data from files
+[I 180508 23:57:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180508 23:58:05 results_analysis:23] Data analysis from simulation results
+[I 180508 23:58:05 results_analysis:25] Load data from files
+[I 180508 23:58:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:13:03 results_analysis:23] Data analysis from simulation results
+[I 180509 00:13:03 results_analysis:25] Load data from files
+[I 180509 00:13:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:13:03 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 00:13:26 results_analysis:23] Data analysis from simulation results
+[I 180509 00:13:26 results_analysis:25] Load data from files
+[I 180509 00:13:26 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:13:26 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 00:13:42 results_analysis:23] Data analysis from simulation results
+[I 180509 00:13:42 results_analysis:25] Load data from files
+[I 180509 00:13:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:13:42 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 00:13:56 results_analysis:23] Data analysis from simulation results
+[I 180509 00:13:56 results_analysis:25] Load data from files
+[I 180509 00:13:56 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:13:56 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 00:17:07 results_analysis:23] Data analysis from simulation results
+[I 180509 00:17:07 results_analysis:25] Load data from files
+[I 180509 00:17:07 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:17:07 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:17:52 results_analysis:23] Data analysis from simulation results
+[I 180509 00:17:52 results_analysis:25] Load data from files
+[I 180509 00:17:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:17:52 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:20:58 results_analysis:23] Data analysis from simulation results
+[I 180509 00:20:58 results_analysis:25] Load data from files
+[I 180509 00:20:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:20:58 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:21:12 results_analysis:23] Data analysis from simulation results
+[I 180509 00:21:12 results_analysis:25] Load data from files
+[I 180509 00:21:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:21:12 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:33:18 results_analysis:23] Data analysis from simulation results
+[I 180509 00:33:18 results_analysis:25] Load data from files
+[I 180509 00:33:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:33:18 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:33:54 results_analysis:23] Data analysis from simulation results
+[I 180509 00:33:54 results_analysis:25] Load data from files
+[I 180509 00:33:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:33:54 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:34:17 results_analysis:23] Data analysis from simulation results
+[I 180509 00:34:17 results_analysis:25] Load data from files
+[I 180509 00:34:17 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:34:17 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:34:34 results_analysis:23] Data analysis from simulation results
+[I 180509 00:34:34 results_analysis:25] Load data from files
+[I 180509 00:34:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:34:34 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 00:37:04 results_analysis:23] Data analysis from simulation results
+[I 180509 00:37:04 results_analysis:25] Load data from files
+[I 180509 00:37:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:37:04 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:37:39 results_analysis:23] Data analysis from simulation results
+[I 180509 00:37:39 results_analysis:25] Load data from files
+[I 180509 00:37:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:37:39 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:38:31 results_analysis:23] Data analysis from simulation results
+[I 180509 00:38:31 results_analysis:25] Load data from files
+[I 180509 00:38:31 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:38:31 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:38:49 results_analysis:23] Data analysis from simulation results
+[I 180509 00:38:49 results_analysis:25] Load data from files
+[I 180509 00:38:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:38:49 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:39:09 results_analysis:23] Data analysis from simulation results
+[I 180509 00:39:09 results_analysis:25] Load data from files
+[I 180509 00:39:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:39:10 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:41:03 results_analysis:23] Data analysis from simulation results
+[I 180509 00:41:03 results_analysis:25] Load data from files
+[I 180509 00:41:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:41:03 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 00:41:41 results_analysis:23] Data analysis from simulation results
+[I 180509 00:41:41 results_analysis:25] Load data from files
+[I 180509 00:41:41 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:41:41 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 00:42:37 results_analysis:23] Data analysis from simulation results
+[I 180509 00:42:37 results_analysis:25] Load data from files
+[I 180509 00:42:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:42:37 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 00:43:12 results_analysis:23] Data analysis from simulation results
+[I 180509 00:43:12 results_analysis:25] Load data from files
+[I 180509 00:43:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:43:12 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 00:44:19 results_analysis:23] Data analysis from simulation results
+[I 180509 00:44:19 results_analysis:25] Load data from files
+[I 180509 00:44:19 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:44:19 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:44:36 results_analysis:23] Data analysis from simulation results
+[I 180509 00:44:36 results_analysis:25] Load data from files
+[I 180509 00:44:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:44:36 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:44:50 results_analysis:23] Data analysis from simulation results
+[I 180509 00:44:50 results_analysis:25] Load data from files
+[I 180509 00:44:50 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:44:50 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 00:45:24 results_analysis:23] Data analysis from simulation results
+[I 180509 00:45:24 results_analysis:25] Load data from files
+[I 180509 00:45:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:45:24 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 00:46:48 results_analysis:23] Data analysis from simulation results
+[I 180509 00:46:48 results_analysis:25] Load data from files
+[I 180509 00:46:48 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:46:48 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 00:50:32 results_analysis:23] Data analysis from simulation results
+[I 180509 00:50:32 results_analysis:25] Load data from files
+[I 180509 00:50:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:50:32 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 00:51:00 results_analysis:23] Data analysis from simulation results
+[I 180509 00:51:00 results_analysis:25] Load data from files
+[I 180509 00:51:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:51:00 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 00:51:27 results_analysis:23] Data analysis from simulation results
+[I 180509 00:51:27 results_analysis:25] Load data from files
+[I 180509 00:51:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:51:27 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 00:51:59 results_analysis:23] Data analysis from simulation results
+[I 180509 00:51:59 results_analysis:25] Load data from files
+[I 180509 00:51:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:51:59 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 00:52:23 results_analysis:23] Data analysis from simulation results
+[I 180509 00:52:23 results_analysis:25] Load data from files
+[I 180509 00:52:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:52:23 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 00:55:32 results_analysis:23] Data analysis from simulation results
+[I 180509 00:55:32 results_analysis:25] Load data from files
+[I 180509 00:55:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:55:32 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 00:56:01 results_analysis:23] Data analysis from simulation results
+[I 180509 00:56:01 results_analysis:25] Load data from files
+[I 180509 00:56:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:56:01 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 00:56:23 results_analysis:23] Data analysis from simulation results
+[I 180509 00:56:23 results_analysis:25] Load data from files
+[I 180509 00:56:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:56:23 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 00:57:29 results_analysis:23] Data analysis from simulation results
+[I 180509 00:57:29 results_analysis:25] Load data from files
+[I 180509 00:57:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:57:29 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 00:58:02 results_analysis:23] Data analysis from simulation results
+[I 180509 00:58:03 results_analysis:25] Load data from files
+[I 180509 00:58:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 00:58:03 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:00:10 results_analysis:23] Data analysis from simulation results
+[I 180509 01:00:10 results_analysis:25] Load data from files
+[I 180509 01:00:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:00:10 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 01:00:45 results_analysis:23] Data analysis from simulation results
+[I 180509 01:00:45 results_analysis:25] Load data from files
+[I 180509 01:00:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:00:45 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 01:01:08 results_analysis:23] Data analysis from simulation results
+[I 180509 01:01:08 results_analysis:25] Load data from files
+[I 180509 01:01:08 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:01:08 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 01:01:24 results_analysis:23] Data analysis from simulation results
+[I 180509 01:01:24 results_analysis:25] Load data from files
+[I 180509 01:01:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:01:24 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:02:54 results_analysis:23] Data analysis from simulation results
+[I 180509 01:02:54 results_analysis:25] Load data from files
+[I 180509 01:02:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:02:54 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:03:28 results_analysis:23] Data analysis from simulation results
+[I 180509 01:03:28 results_analysis:25] Load data from files
+[I 180509 01:03:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:03:28 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:03:43 results_analysis:23] Data analysis from simulation results
+[I 180509 01:03:43 results_analysis:25] Load data from files
+[I 180509 01:03:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:03:43 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:04:05 results_analysis:23] Data analysis from simulation results
+[I 180509 01:04:05 results_analysis:25] Load data from files
+[I 180509 01:04:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:04:05 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:07:01 results_analysis:23] Data analysis from simulation results
+[I 180509 01:07:01 results_analysis:25] Load data from files
+[I 180509 01:07:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:07:01 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:07:32 results_analysis:23] Data analysis from simulation results
+[I 180509 01:07:32 results_analysis:25] Load data from files
+[I 180509 01:07:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:07:32 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:07:44 results_analysis:23] Data analysis from simulation results
+[I 180509 01:07:44 results_analysis:25] Load data from files
+[I 180509 01:07:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:07:44 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:08:36 results_analysis:23] Data analysis from simulation results
+[I 180509 01:08:36 results_analysis:25] Load data from files
+[I 180509 01:08:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:08:36 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:09:33 results_analysis:23] Data analysis from simulation results
+[I 180509 01:09:33 results_analysis:25] Load data from files
+[I 180509 01:09:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:13:55 results_analysis:23] Data analysis from simulation results
+[I 180509 01:13:55 results_analysis:25] Load data from files
+[I 180509 01:13:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:13:55 results_analysis:41] Plot Users Throughout CDF (2 UE per cell)
+[I 180509 01:13:55 results_analysis:48] Plot Users Throughout CDF (6 UE per cell)
+[I 180509 01:13:55 results_analysis:55] Plot Users Throughout CDF (10 UE per cell)
+[I 180509 01:13:55 results_analysis:62] Plot Users Throughout CDF (20 UE per cell)
+[I 180509 01:13:55 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 01:13:55 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 01:13:56 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 01:13:56 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 01:13:56 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 01:13:56 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 01:13:56 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 01:13:56 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 01:13:56 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:13:57 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 01:13:57 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:15:49 results_analysis:23] Data analysis from simulation results
+[I 180509 01:15:49 results_analysis:25] Load data from files
+[I 180509 01:15:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:15:49 results_analysis:41] Plot Users Throughout CDF (2 UE per cell)
+[I 180509 01:15:50 results_analysis:48] Plot Users Throughout CDF (6 UE per cell)
+[I 180509 01:15:50 results_analysis:55] Plot Users Throughout CDF (10 UE per cell)
+[I 180509 01:15:50 results_analysis:62] Plot Users Throughout CDF (20 UE per cell)
+[I 180509 01:15:50 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 01:15:50 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 01:15:50 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 01:15:51 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 01:15:51 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 01:15:51 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 01:15:51 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 01:15:51 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 01:15:52 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 01:15:52 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 01:15:52 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 01:23:44 results_analysis:23] Data analysis from simulation results
+[I 180509 01:23:44 results_analysis:25] Load data from files
+[I 180509 01:23:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:24:00 results_analysis:23] Data analysis from simulation results
+[I 180509 01:24:00 results_analysis:25] Load data from files
+[I 180509 01:24:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:31:33 results_analysis:23] Data analysis from simulation results
+[I 180509 01:31:33 results_analysis:25] Load data from files
+[I 180509 01:31:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:48:02 results_analysis:23] Data analysis from simulation results
+[I 180509 01:48:02 results_analysis:25] Load data from files
+[I 180509 01:48:02 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:48:24 results_analysis:23] Data analysis from simulation results
+[I 180509 01:48:24 results_analysis:25] Load data from files
+[I 180509 01:48:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:49:23 results_analysis:23] Data analysis from simulation results
+[I 180509 01:49:23 results_analysis:25] Load data from files
+[I 180509 01:49:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:52:39 results_analysis:23] Data analysis from simulation results
+[I 180509 01:52:39 results_analysis:25] Load data from files
+[I 180509 01:52:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:58:45 results_analysis:23] Data analysis from simulation results
+[I 180509 01:58:45 results_analysis:25] Load data from files
+[I 180509 01:58:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:59:20 results_analysis:23] Data analysis from simulation results
+[I 180509 01:59:20 results_analysis:25] Load data from files
+[I 180509 01:59:20 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:59:40 results_analysis:23] Data analysis from simulation results
+[I 180509 01:59:40 results_analysis:25] Load data from files
+[I 180509 01:59:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 01:59:58 results_analysis:23] Data analysis from simulation results
+[I 180509 01:59:58 results_analysis:25] Load data from files
+[I 180509 01:59:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:00:19 results_analysis:23] Data analysis from simulation results
+[I 180509 02:00:19 results_analysis:25] Load data from files
+[I 180509 02:00:19 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:01:22 results_analysis:23] Data analysis from simulation results
+[I 180509 02:01:22 results_analysis:25] Load data from files
+[I 180509 02:01:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:01:41 results_analysis:23] Data analysis from simulation results
+[I 180509 02:01:41 results_analysis:25] Load data from files
+[I 180509 02:01:41 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:06:30 results_analysis:23] Data analysis from simulation results
+[I 180509 02:06:30 results_analysis:25] Load data from files
+[I 180509 02:06:30 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:16:50 results_analysis:23] Data analysis from simulation results
+[I 180509 02:16:50 results_analysis:25] Load data from files
+[I 180509 02:16:50 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:17:05 results_analysis:23] Data analysis from simulation results
+[I 180509 02:17:05 results_analysis:25] Load data from files
+[I 180509 02:17:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:20:53 results_analysis:23] Data analysis from simulation results
+[I 180509 02:20:53 results_analysis:25] Load data from files
+[I 180509 02:20:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:22:21 results_analysis:23] Data analysis from simulation results
+[I 180509 02:22:21 results_analysis:25] Load data from files
+[I 180509 02:22:21 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:23:18 results_analysis:23] Data analysis from simulation results
+[I 180509 02:23:18 results_analysis:25] Load data from files
+[I 180509 02:23:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:24:46 results_analysis:23] Data analysis from simulation results
+[I 180509 02:24:46 results_analysis:25] Load data from files
+[I 180509 02:24:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:25:27 results_analysis:23] Data analysis from simulation results
+[I 180509 02:25:27 results_analysis:25] Load data from files
+[I 180509 02:25:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:25:39 results_analysis:23] Data analysis from simulation results
+[I 180509 02:25:39 results_analysis:25] Load data from files
+[I 180509 02:25:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:25:56 results_analysis:23] Data analysis from simulation results
+[I 180509 02:25:56 results_analysis:25] Load data from files
+[I 180509 02:25:56 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:26:05 results_analysis:23] Data analysis from simulation results
+[I 180509 02:26:05 results_analysis:25] Load data from files
+[I 180509 02:26:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:26:12 results_analysis:23] Data analysis from simulation results
+[I 180509 02:26:12 results_analysis:25] Load data from files
+[I 180509 02:26:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:26:25 results_analysis:23] Data analysis from simulation results
+[I 180509 02:26:25 results_analysis:25] Load data from files
+[I 180509 02:26:25 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:27:02 results_analysis:23] Data analysis from simulation results
+[I 180509 02:27:02 results_analysis:25] Load data from files
+[I 180509 02:27:02 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:27:17 results_analysis:23] Data analysis from simulation results
+[I 180509 02:27:17 results_analysis:25] Load data from files
+[I 180509 02:27:17 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:27:29 results_analysis:23] Data analysis from simulation results
+[I 180509 02:27:29 results_analysis:25] Load data from files
+[I 180509 02:27:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:36:50 results_analysis:23] Data analysis from simulation results
+[I 180509 02:36:50 results_analysis:25] Load data from files
+[I 180509 02:36:50 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:37:00 results_analysis:23] Data analysis from simulation results
+[I 180509 02:37:00 results_analysis:25] Load data from files
+[I 180509 02:37:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:38:32 results_analysis:23] Data analysis from simulation results
+[I 180509 02:38:32 results_analysis:25] Load data from files
+[I 180509 02:38:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:40:01 results_analysis:23] Data analysis from simulation results
+[I 180509 02:40:01 results_analysis:25] Load data from files
+[I 180509 02:40:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:42:59 results_analysis:23] Data analysis from simulation results
+[I 180509 02:42:59 results_analysis:25] Load data from files
+[I 180509 02:42:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:45:39 results_analysis:23] Data analysis from simulation results
+[I 180509 02:45:39 results_analysis:25] Load data from files
+[I 180509 02:45:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:46:14 results_analysis:23] Data analysis from simulation results
+[I 180509 02:46:14 results_analysis:25] Load data from files
+[I 180509 02:46:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:46:45 results_analysis:23] Data analysis from simulation results
+[I 180509 02:46:45 results_analysis:25] Load data from files
+[I 180509 02:46:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:47:11 results_analysis:23] Data analysis from simulation results
+[I 180509 02:47:11 results_analysis:25] Load data from files
+[I 180509 02:47:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:47:18 results_analysis:23] Data analysis from simulation results
+[I 180509 02:47:18 results_analysis:25] Load data from files
+[I 180509 02:47:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:47:59 results_analysis:23] Data analysis from simulation results
+[I 180509 02:47:59 results_analysis:25] Load data from files
+[I 180509 02:47:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:50:27 results_analysis:23] Data analysis from simulation results
+[I 180509 02:50:27 results_analysis:25] Load data from files
+[I 180509 02:50:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 02:51:31 results_analysis:23] Data analysis from simulation results
+[I 180509 02:51:31 results_analysis:25] Load data from files
+[I 180509 02:51:31 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:03:37 results_analysis:23] Data analysis from simulation results
+[I 180509 09:03:37 results_analysis:25] Load data from files
+[I 180509 09:03:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:03:57 results_analysis:23] Data analysis from simulation results
+[I 180509 09:03:57 results_analysis:25] Load data from files
+[I 180509 09:03:57 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:04:40 results_analysis:23] Data analysis from simulation results
+[I 180509 09:04:40 results_analysis:25] Load data from files
+[I 180509 09:04:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:08:34 results_analysis:23] Data analysis from simulation results
+[I 180509 09:08:34 results_analysis:25] Load data from files
+[I 180509 09:08:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:08:51 results_analysis:23] Data analysis from simulation results
+[I 180509 09:08:51 results_analysis:25] Load data from files
+[I 180509 09:08:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:09:07 results_analysis:23] Data analysis from simulation results
+[I 180509 09:09:07 results_analysis:25] Load data from files
+[I 180509 09:09:07 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:09:46 results_analysis:23] Data analysis from simulation results
+[I 180509 09:09:46 results_analysis:25] Load data from files
+[I 180509 09:09:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:10:39 results_analysis:23] Data analysis from simulation results
+[I 180509 09:10:39 results_analysis:25] Load data from files
+[I 180509 09:10:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:11:10 results_analysis:23] Data analysis from simulation results
+[I 180509 09:11:10 results_analysis:25] Load data from files
+[I 180509 09:11:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:12:11 results_analysis:23] Data analysis from simulation results
+[I 180509 09:12:11 results_analysis:25] Load data from files
+[I 180509 09:12:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:15:56 results_analysis:23] Data analysis from simulation results
+[I 180509 09:15:56 results_analysis:25] Load data from files
+[I 180509 09:15:56 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:16:53 results_analysis:23] Data analysis from simulation results
+[I 180509 09:16:53 results_analysis:25] Load data from files
+[I 180509 09:16:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:17:12 results_analysis:23] Data analysis from simulation results
+[I 180509 09:17:12 results_analysis:25] Load data from files
+[I 180509 09:17:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 09:17:25 results_analysis:23] Data analysis from simulation results
+[I 180509 09:17:25 results_analysis:25] Load data from files
+[I 180509 09:17:26 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:37:44 results_analysis:23] Data analysis from simulation results
+[I 180509 10:37:44 results_analysis:25] Load data from files
+[I 180509 10:37:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:38:22 results_analysis:23] Data analysis from simulation results
+[I 180509 10:38:22 results_analysis:25] Load data from files
+[I 180509 10:38:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:38:49 results_analysis:23] Data analysis from simulation results
+[I 180509 10:38:49 results_analysis:25] Load data from files
+[I 180509 10:38:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:40:11 results_analysis:23] Data analysis from simulation results
+[I 180509 10:40:11 results_analysis:25] Load data from files
+[I 180509 10:40:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:40:21 results_analysis:23] Data analysis from simulation results
+[I 180509 10:40:21 results_analysis:25] Load data from files
+[I 180509 10:40:21 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:44:14 results_analysis:23] Data analysis from simulation results
+[I 180509 10:44:14 results_analysis:25] Load data from files
+[I 180509 10:44:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:44:14 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:44:25 results_analysis:23] Data analysis from simulation results
+[I 180509 10:44:25 results_analysis:25] Load data from files
+[I 180509 10:44:25 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:44:25 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:45:28 results_analysis:23] Data analysis from simulation results
+[I 180509 10:45:28 results_analysis:25] Load data from files
+[I 180509 10:45:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:45:28 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:47:35 results_analysis:23] Data analysis from simulation results
+[I 180509 10:47:35 results_analysis:25] Load data from files
+[I 180509 10:47:35 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:47:35 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:48:01 results_analysis:23] Data analysis from simulation results
+[I 180509 10:48:01 results_analysis:25] Load data from files
+[I 180509 10:48:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:48:01 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:48:33 results_analysis:23] Data analysis from simulation results
+[I 180509 10:48:33 results_analysis:25] Load data from files
+[I 180509 10:48:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:48:33 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:48:55 results_analysis:23] Data analysis from simulation results
+[I 180509 10:48:55 results_analysis:25] Load data from files
+[I 180509 10:48:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:48:55 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:49:49 results_analysis:23] Data analysis from simulation results
+[I 180509 10:49:49 results_analysis:25] Load data from files
+[I 180509 10:49:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:49:49 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:50:14 results_analysis:23] Data analysis from simulation results
+[I 180509 10:50:15 results_analysis:25] Load data from files
+[I 180509 10:50:15 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:50:15 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:50:36 results_analysis:23] Data analysis from simulation results
+[I 180509 10:50:36 results_analysis:25] Load data from files
+[I 180509 10:50:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:50:36 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:50:45 results_analysis:23] Data analysis from simulation results
+[I 180509 10:50:45 results_analysis:25] Load data from files
+[I 180509 10:50:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:50:45 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 10:51:30 results_analysis:23] Data analysis from simulation results
+[I 180509 10:51:30 results_analysis:25] Load data from files
+[I 180509 10:51:30 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 10:51:30 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:04:07 results_analysis:23] Data analysis from simulation results
+[I 180509 11:04:07 results_analysis:25] Load data from files
+[I 180509 11:04:07 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:04:07 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:04:46 results_analysis:23] Data analysis from simulation results
+[I 180509 11:04:46 results_analysis:25] Load data from files
+[I 180509 11:04:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:04:46 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:05:50 results_analysis:23] Data analysis from simulation results
+[I 180509 11:05:50 results_analysis:25] Load data from files
+[I 180509 11:05:50 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:05:50 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:09:29 results_analysis:23] Data analysis from simulation results
+[I 180509 11:09:29 results_analysis:25] Load data from files
+[I 180509 11:09:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:09:29 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:10:00 results_analysis:23] Data analysis from simulation results
+[I 180509 11:10:00 results_analysis:25] Load data from files
+[I 180509 11:10:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:10:00 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:10:44 results_analysis:23] Data analysis from simulation results
+[I 180509 11:10:44 results_analysis:25] Load data from files
+[I 180509 11:10:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:10:44 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:11:00 results_analysis:23] Data analysis from simulation results
+[I 180509 11:11:00 results_analysis:25] Load data from files
+[I 180509 11:11:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:11:00 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:12:44 results_analysis:23] Data analysis from simulation results
+[I 180509 11:12:44 results_analysis:25] Load data from files
+[I 180509 11:12:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:12:44 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:14:22 results_analysis:23] Data analysis from simulation results
+[I 180509 11:14:22 results_analysis:25] Load data from files
+[I 180509 11:14:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:14:22 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:14:32 results_analysis:23] Data analysis from simulation results
+[I 180509 11:14:32 results_analysis:25] Load data from files
+[I 180509 11:14:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:14:32 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:16:07 results_analysis:23] Data analysis from simulation results
+[I 180509 11:16:07 results_analysis:25] Load data from files
+[I 180509 11:16:07 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:16:07 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:17:33 results_analysis:23] Data analysis from simulation results
+[I 180509 11:17:33 results_analysis:25] Load data from files
+[I 180509 11:17:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:17:33 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:19:29 results_analysis:23] Data analysis from simulation results
+[I 180509 11:19:29 results_analysis:25] Load data from files
+[I 180509 11:19:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:19:29 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:19:52 results_analysis:23] Data analysis from simulation results
+[I 180509 11:19:52 results_analysis:25] Load data from files
+[I 180509 11:19:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:19:52 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:20:01 results_analysis:23] Data analysis from simulation results
+[I 180509 11:20:01 results_analysis:25] Load data from files
+[I 180509 11:20:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:20:01 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:20:30 results_analysis:23] Data analysis from simulation results
+[I 180509 11:20:30 results_analysis:25] Load data from files
+[I 180509 11:20:30 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:20:30 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:20:43 results_analysis:23] Data analysis from simulation results
+[I 180509 11:20:43 results_analysis:25] Load data from files
+[I 180509 11:20:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:20:43 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:22:13 results_analysis:23] Data analysis from simulation results
+[I 180509 11:22:13 results_analysis:25] Load data from files
+[I 180509 11:22:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:22:13 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:23:48 results_analysis:23] Data analysis from simulation results
+[I 180509 11:23:48 results_analysis:25] Load data from files
+[I 180509 11:23:48 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:23:48 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:24:11 results_analysis:23] Data analysis from simulation results
+[I 180509 11:24:11 results_analysis:25] Load data from files
+[I 180509 11:24:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:24:11 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:24:54 results_analysis:23] Data analysis from simulation results
+[I 180509 11:24:54 results_analysis:25] Load data from files
+[I 180509 11:24:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:24:54 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:26:43 results_analysis:23] Data analysis from simulation results
+[I 180509 11:26:43 results_analysis:25] Load data from files
+[I 180509 11:26:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:26:43 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:33:09 results_analysis:23] Data analysis from simulation results
+[I 180509 11:33:09 results_analysis:25] Load data from files
+[I 180509 11:33:09 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:33:09 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:34:38 results_analysis:23] Data analysis from simulation results
+[I 180509 11:34:38 results_analysis:25] Load data from files
+[I 180509 11:34:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:34:38 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:42:06 results_analysis:23] Data analysis from simulation results
+[I 180509 11:42:06 results_analysis:25] Load data from files
+[I 180509 11:42:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:42:06 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:42:51 results_analysis:23] Data analysis from simulation results
+[I 180509 11:42:51 results_analysis:25] Load data from files
+[I 180509 11:42:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:42:51 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:43:17 results_analysis:23] Data analysis from simulation results
+[I 180509 11:43:17 results_analysis:25] Load data from files
+[I 180509 11:43:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:43:18 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:43:40 results_analysis:23] Data analysis from simulation results
+[I 180509 11:43:40 results_analysis:25] Load data from files
+[I 180509 11:43:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:43:40 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:44:03 results_analysis:23] Data analysis from simulation results
+[I 180509 11:44:03 results_analysis:25] Load data from files
+[I 180509 11:44:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:44:03 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:44:33 results_analysis:23] Data analysis from simulation results
+[I 180509 11:44:33 results_analysis:25] Load data from files
+[I 180509 11:44:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:44:33 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:44:45 results_analysis:23] Data analysis from simulation results
+[I 180509 11:44:45 results_analysis:25] Load data from files
+[I 180509 11:44:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:44:45 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:47:07 results_analysis:23] Data analysis from simulation results
+[I 180509 11:47:07 results_analysis:25] Load data from files
+[I 180509 11:47:07 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:47:07 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:47:27 results_analysis:23] Data analysis from simulation results
+[I 180509 11:47:27 results_analysis:25] Load data from files
+[I 180509 11:47:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:47:27 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:47:41 results_analysis:23] Data analysis from simulation results
+[I 180509 11:47:41 results_analysis:25] Load data from files
+[I 180509 11:47:41 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:47:41 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:47:58 results_analysis:23] Data analysis from simulation results
+[I 180509 11:47:58 results_analysis:25] Load data from files
+[I 180509 11:47:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:47:58 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:50:43 results_analysis:23] Data analysis from simulation results
+[I 180509 11:50:43 results_analysis:25] Load data from files
+[I 180509 11:50:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:50:43 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:50:56 results_analysis:23] Data analysis from simulation results
+[I 180509 11:50:56 results_analysis:25] Load data from files
+[I 180509 11:50:56 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:50:56 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:53:59 results_analysis:23] Data analysis from simulation results
+[I 180509 11:53:59 results_analysis:25] Load data from files
+[I 180509 11:53:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:54:09 results_analysis:23] Data analysis from simulation results
+[I 180509 11:54:09 results_analysis:25] Load data from files
+[I 180509 11:54:09 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:54:49 results_analysis:23] Data analysis from simulation results
+[I 180509 11:54:49 results_analysis:25] Load data from files
+[I 180509 11:54:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:54:49 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:55:13 results_analysis:23] Data analysis from simulation results
+[I 180509 11:55:13 results_analysis:25] Load data from files
+[I 180509 11:55:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:55:13 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:56:12 results_analysis:23] Data analysis from simulation results
+[I 180509 11:56:12 results_analysis:25] Load data from files
+[I 180509 11:56:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:56:12 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 11:56:17 results_analysis:23] Data analysis from simulation results
+[I 180509 11:56:17 results_analysis:25] Load data from files
+[I 180509 11:56:17 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 11:56:17 results_analysis:148] Plot graphs: Cell Sum Max Throughput
+[I 180509 12:15:48 results_analysis:23] Data analysis from simulation results
+[I 180509 12:15:48 results_analysis:25] Load data from files
+[I 180509 12:15:48 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:15:48 results_analysis:185] Load data from files
+[I 180509 12:15:48 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:17:38 results_analysis:23] Data analysis from simulation results
+[I 180509 12:17:38 results_analysis:25] Load data from files
+[I 180509 12:17:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:17:38 results_analysis:185] Load data from files
+[I 180509 12:17:38 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:18:53 results_analysis:23] Data analysis from simulation results
+[I 180509 12:18:53 results_analysis:25] Load data from files
+[I 180509 12:18:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:18:53 results_analysis:185] Load data from files
+[I 180509 12:18:53 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:19:43 results_analysis:23] Data analysis from simulation results
+[I 180509 12:19:43 results_analysis:25] Load data from files
+[I 180509 12:19:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:19:43 results_analysis:185] Load data from files
+[I 180509 12:19:43 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:20:04 results_analysis:23] Data analysis from simulation results
+[I 180509 12:20:04 results_analysis:25] Load data from files
+[I 180509 12:20:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:20:04 results_analysis:185] Load data from files
+[I 180509 12:20:05 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:20:14 results_analysis:23] Data analysis from simulation results
+[I 180509 12:20:14 results_analysis:25] Load data from files
+[I 180509 12:20:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:20:14 results_analysis:185] Load data from files
+[I 180509 12:20:14 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:21:04 results_analysis:23] Data analysis from simulation results
+[I 180509 12:21:04 results_analysis:25] Load data from files
+[I 180509 12:21:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:21:04 results_analysis:185] Load data from files
+[I 180509 12:21:04 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:21:25 results_analysis:23] Data analysis from simulation results
+[I 180509 12:21:25 results_analysis:25] Load data from files
+[I 180509 12:21:25 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:21:25 results_analysis:185] Load data from files
+[I 180509 12:21:25 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:21:32 results_analysis:23] Data analysis from simulation results
+[I 180509 12:21:32 results_analysis:25] Load data from files
+[I 180509 12:21:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:21:32 results_analysis:185] Load data from files
+[I 180509 12:21:32 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:21:45 results_analysis:23] Data analysis from simulation results
+[I 180509 12:21:45 results_analysis:25] Load data from files
+[I 180509 12:21:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:21:45 results_analysis:185] Load data from files
+[I 180509 12:21:45 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:22:06 results_analysis:23] Data analysis from simulation results
+[I 180509 12:22:06 results_analysis:25] Load data from files
+[I 180509 12:22:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:22:06 results_analysis:185] Load data from files
+[I 180509 12:22:06 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:22:30 results_analysis:23] Data analysis from simulation results
+[I 180509 12:22:30 results_analysis:25] Load data from files
+[I 180509 12:22:30 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:22:30 results_analysis:185] Load data from files
+[I 180509 12:22:30 results_analysis:200] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:25:56 results_analysis:23] Data analysis from simulation results
+[I 180509 12:25:56 results_analysis:25] Load data from files
+[I 180509 12:25:56 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:25:56 results_analysis:185] Load data from files
+[I 180509 12:25:56 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:27:34 results_analysis:23] Data analysis from simulation results
+[I 180509 12:27:34 results_analysis:25] Load data from files
+[I 180509 12:27:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:27:34 results_analysis:185] Load data from files
+[I 180509 12:27:34 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:27:51 results_analysis:23] Data analysis from simulation results
+[I 180509 12:27:51 results_analysis:25] Load data from files
+[I 180509 12:27:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:27:51 results_analysis:185] Load data from files
+[I 180509 12:27:51 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:29:22 results_analysis:23] Data analysis from simulation results
+[I 180509 12:29:22 results_analysis:25] Load data from files
+[I 180509 12:29:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:29:22 results_analysis:185] Load data from files
+[I 180509 12:29:22 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:30:16 results_analysis:23] Data analysis from simulation results
+[I 180509 12:30:16 results_analysis:25] Load data from files
+[I 180509 12:30:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:30:16 results_analysis:185] Load data from files
+[I 180509 12:30:16 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:30:37 results_analysis:23] Data analysis from simulation results
+[I 180509 12:30:37 results_analysis:25] Load data from files
+[I 180509 12:30:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:30:37 results_analysis:185] Load data from files
+[I 180509 12:30:37 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:30:46 results_analysis:23] Data analysis from simulation results
+[I 180509 12:30:46 results_analysis:25] Load data from files
+[I 180509 12:30:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:30:46 results_analysis:185] Load data from files
+[I 180509 12:30:46 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:30:58 results_analysis:23] Data analysis from simulation results
+[I 180509 12:30:58 results_analysis:25] Load data from files
+[I 180509 12:30:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:30:58 results_analysis:185] Load data from files
+[I 180509 12:30:58 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:31:12 results_analysis:23] Data analysis from simulation results
+[I 180509 12:31:12 results_analysis:25] Load data from files
+[I 180509 12:31:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:31:12 results_analysis:185] Load data from files
+[I 180509 12:31:12 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:31:23 results_analysis:23] Data analysis from simulation results
+[I 180509 12:31:23 results_analysis:25] Load data from files
+[I 180509 12:31:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:31:23 results_analysis:185] Load data from files
+[I 180509 12:31:23 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:31:38 results_analysis:23] Data analysis from simulation results
+[I 180509 12:31:38 results_analysis:25] Load data from files
+[I 180509 12:31:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:31:38 results_analysis:185] Load data from files
+[I 180509 12:31:38 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:32:05 results_analysis:23] Data analysis from simulation results
+[I 180509 12:32:05 results_analysis:25] Load data from files
+[I 180509 12:32:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:32:05 results_analysis:185] Load data from files
+[I 180509 12:32:05 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:32:42 results_analysis:23] Data analysis from simulation results
+[I 180509 12:32:42 results_analysis:25] Load data from files
+[I 180509 12:32:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:32:42 results_analysis:185] Load data from files
+[I 180509 12:32:42 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:32:49 results_analysis:23] Data analysis from simulation results
+[I 180509 12:32:49 results_analysis:25] Load data from files
+[I 180509 12:32:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:32:49 results_analysis:185] Load data from files
+[I 180509 12:32:49 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:33:04 results_analysis:23] Data analysis from simulation results
+[I 180509 12:33:04 results_analysis:25] Load data from files
+[I 180509 12:33:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:33:04 results_analysis:185] Load data from files
+[I 180509 12:33:04 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:33:24 results_analysis:23] Data analysis from simulation results
+[I 180509 12:33:24 results_analysis:25] Load data from files
+[I 180509 12:33:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:33:24 results_analysis:185] Load data from files
+[I 180509 12:33:24 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:33:38 results_analysis:23] Data analysis from simulation results
+[I 180509 12:33:38 results_analysis:25] Load data from files
+[I 180509 12:33:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:33:38 results_analysis:185] Load data from files
+[I 180509 12:33:38 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:34:03 results_analysis:23] Data analysis from simulation results
+[I 180509 12:34:03 results_analysis:25] Load data from files
+[I 180509 12:34:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:34:03 results_analysis:185] Load data from files
+[I 180509 12:34:03 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:34:24 results_analysis:23] Data analysis from simulation results
+[I 180509 12:34:24 results_analysis:25] Load data from files
+[I 180509 12:34:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:34:24 results_analysis:185] Load data from files
+[I 180509 12:34:24 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:34:45 results_analysis:23] Data analysis from simulation results
+[I 180509 12:34:45 results_analysis:25] Load data from files
+[I 180509 12:34:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:34:45 results_analysis:185] Load data from files
+[I 180509 12:34:45 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:36:15 results_analysis:23] Data analysis from simulation results
+[I 180509 12:36:15 results_analysis:25] Load data from files
+[I 180509 12:36:15 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:36:15 results_analysis:185] Load data from files
+[I 180509 12:36:15 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:36:28 results_analysis:23] Data analysis from simulation results
+[I 180509 12:36:28 results_analysis:25] Load data from files
+[I 180509 12:36:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:36:28 results_analysis:185] Load data from files
+[I 180509 12:36:28 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:36:44 results_analysis:23] Data analysis from simulation results
+[I 180509 12:36:44 results_analysis:25] Load data from files
+[I 180509 12:36:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:36:44 results_analysis:185] Load data from files
+[I 180509 12:36:44 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:36:55 results_analysis:23] Data analysis from simulation results
+[I 180509 12:36:55 results_analysis:25] Load data from files
+[I 180509 12:36:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:36:55 results_analysis:185] Load data from files
+[I 180509 12:36:55 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:37:22 results_analysis:23] Data analysis from simulation results
+[I 180509 12:37:22 results_analysis:25] Load data from files
+[I 180509 12:37:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:37:22 results_analysis:185] Load data from files
+[I 180509 12:37:22 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:37:37 results_analysis:23] Data analysis from simulation results
+[I 180509 12:37:37 results_analysis:25] Load data from files
+[I 180509 12:37:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:37:37 results_analysis:185] Load data from files
+[I 180509 12:37:37 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:38:05 results_analysis:23] Data analysis from simulation results
+[I 180509 12:38:05 results_analysis:25] Load data from files
+[I 180509 12:38:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:38:05 results_analysis:185] Load data from files
+[I 180509 12:38:05 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:38:18 results_analysis:23] Data analysis from simulation results
+[I 180509 12:38:18 results_analysis:25] Load data from files
+[I 180509 12:38:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:38:18 results_analysis:185] Load data from files
+[I 180509 12:38:18 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:38:38 results_analysis:23] Data analysis from simulation results
+[I 180509 12:38:38 results_analysis:25] Load data from files
+[I 180509 12:38:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:38:38 results_analysis:185] Load data from files
+[I 180509 12:38:38 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:38:48 results_analysis:23] Data analysis from simulation results
+[I 180509 12:38:48 results_analysis:25] Load data from files
+[I 180509 12:38:48 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:38:48 results_analysis:185] Load data from files
+[I 180509 12:38:48 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 12:40:03 results_analysis:23] Data analysis from simulation results
+[I 180509 12:40:03 results_analysis:25] Load data from files
+[I 180509 12:40:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 12:40:03 results_analysis:185] Load data from files
+[I 180509 12:40:03 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:24:06 results_analysis:23] Data analysis from simulation results
+[I 180509 13:24:06 results_analysis:25] Load data from files
+[I 180509 13:24:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:24:06 results_analysis:185] Load data from files
+[I 180509 13:24:06 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:24:18 results_analysis:23] Data analysis from simulation results
+[I 180509 13:24:18 results_analysis:25] Load data from files
+[I 180509 13:24:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:24:18 results_analysis:185] Load data from files
+[I 180509 13:24:18 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:45:34 results_analysis:23] Data analysis from simulation results
+[I 180509 13:45:34 results_analysis:25] Load data from files
+[I 180509 13:45:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:45:34 results_analysis:185] Load data from files
+[I 180509 13:45:34 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:45:42 results_analysis:23] Data analysis from simulation results
+[I 180509 13:45:42 results_analysis:25] Load data from files
+[I 180509 13:45:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:45:42 results_analysis:185] Load data from files
+[I 180509 13:45:42 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:47:18 results_analysis:23] Data analysis from simulation results
+[I 180509 13:47:18 results_analysis:25] Load data from files
+[I 180509 13:47:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:47:18 results_analysis:185] Load data from files
+[I 180509 13:47:18 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:47:33 results_analysis:23] Data analysis from simulation results
+[I 180509 13:47:33 results_analysis:25] Load data from files
+[I 180509 13:47:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:47:33 results_analysis:185] Load data from files
+[I 180509 13:47:33 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:48:08 results_analysis:23] Data analysis from simulation results
+[I 180509 13:48:08 results_analysis:25] Load data from files
+[I 180509 13:48:08 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:48:08 results_analysis:185] Load data from files
+[I 180509 13:48:08 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:48:24 results_analysis:23] Data analysis from simulation results
+[I 180509 13:48:24 results_analysis:25] Load data from files
+[I 180509 13:48:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:48:24 results_analysis:185] Load data from files
+[I 180509 13:48:24 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:49:38 results_analysis:23] Data analysis from simulation results
+[I 180509 13:49:38 results_analysis:25] Load data from files
+[I 180509 13:49:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:49:38 results_analysis:185] Load data from files
+[I 180509 13:49:38 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:49:54 results_analysis:23] Data analysis from simulation results
+[I 180509 13:49:54 results_analysis:25] Load data from files
+[I 180509 13:49:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:49:54 results_analysis:185] Load data from files
+[I 180509 13:49:54 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:50:14 results_analysis:23] Data analysis from simulation results
+[I 180509 13:50:14 results_analysis:25] Load data from files
+[I 180509 13:50:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:50:14 results_analysis:185] Load data from files
+[I 180509 13:50:14 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:50:26 results_analysis:23] Data analysis from simulation results
+[I 180509 13:50:26 results_analysis:25] Load data from files
+[I 180509 13:50:26 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:50:26 results_analysis:185] Load data from files
+[I 180509 13:50:26 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:50:40 results_analysis:23] Data analysis from simulation results
+[I 180509 13:50:40 results_analysis:25] Load data from files
+[I 180509 13:50:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:50:40 results_analysis:185] Load data from files
+[I 180509 13:50:40 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:50:58 results_analysis:23] Data analysis from simulation results
+[I 180509 13:50:58 results_analysis:25] Load data from files
+[I 180509 13:50:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:50:58 results_analysis:185] Load data from files
+[I 180509 13:50:58 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:51:37 results_analysis:23] Data analysis from simulation results
+[I 180509 13:51:37 results_analysis:25] Load data from files
+[I 180509 13:51:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:51:37 results_analysis:185] Load data from files
+[I 180509 13:51:37 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:51:50 results_analysis:23] Data analysis from simulation results
+[I 180509 13:51:50 results_analysis:25] Load data from files
+[I 180509 13:51:50 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:51:50 results_analysis:185] Load data from files
+[I 180509 13:51:50 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:52:12 results_analysis:23] Data analysis from simulation results
+[I 180509 13:52:12 results_analysis:25] Load data from files
+[I 180509 13:52:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:52:12 results_analysis:185] Load data from files
+[I 180509 13:52:12 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:52:35 results_analysis:23] Data analysis from simulation results
+[I 180509 13:52:35 results_analysis:25] Load data from files
+[I 180509 13:52:35 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:52:35 results_analysis:185] Load data from files
+[I 180509 13:52:35 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:52:52 results_analysis:23] Data analysis from simulation results
+[I 180509 13:52:52 results_analysis:25] Load data from files
+[I 180509 13:52:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:52:52 results_analysis:185] Load data from files
+[I 180509 13:52:52 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:53:06 results_analysis:23] Data analysis from simulation results
+[I 180509 13:53:06 results_analysis:25] Load data from files
+[I 180509 13:53:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:53:06 results_analysis:185] Load data from files
+[I 180509 13:53:06 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:53:17 results_analysis:23] Data analysis from simulation results
+[I 180509 13:53:17 results_analysis:25] Load data from files
+[I 180509 13:53:17 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:53:17 results_analysis:185] Load data from files
+[I 180509 13:53:17 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:53:27 results_analysis:23] Data analysis from simulation results
+[I 180509 13:53:27 results_analysis:25] Load data from files
+[I 180509 13:53:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:53:27 results_analysis:185] Load data from files
+[I 180509 13:53:27 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:55:05 results_analysis:23] Data analysis from simulation results
+[I 180509 13:55:05 results_analysis:25] Load data from files
+[I 180509 13:55:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:55:05 results_analysis:185] Load data from files
+[I 180509 13:55:05 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:55:15 results_analysis:23] Data analysis from simulation results
+[I 180509 13:55:15 results_analysis:25] Load data from files
+[I 180509 13:55:15 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:55:15 results_analysis:185] Load data from files
+[I 180509 13:55:15 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:55:27 results_analysis:23] Data analysis from simulation results
+[I 180509 13:55:27 results_analysis:25] Load data from files
+[I 180509 13:55:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:55:27 results_analysis:185] Load data from files
+[I 180509 13:55:27 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:55:37 results_analysis:23] Data analysis from simulation results
+[I 180509 13:55:37 results_analysis:25] Load data from files
+[I 180509 13:55:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:55:37 results_analysis:185] Load data from files
+[I 180509 13:55:37 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:56:04 results_analysis:23] Data analysis from simulation results
+[I 180509 13:56:04 results_analysis:25] Load data from files
+[I 180509 13:56:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:56:04 results_analysis:185] Load data from files
+[I 180509 13:56:04 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:57:38 results_analysis:23] Data analysis from simulation results
+[I 180509 13:57:38 results_analysis:25] Load data from files
+[I 180509 13:57:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:57:38 results_analysis:185] Load data from files
+[I 180509 13:57:38 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:57:53 results_analysis:23] Data analysis from simulation results
+[I 180509 13:57:53 results_analysis:25] Load data from files
+[I 180509 13:57:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:57:53 results_analysis:185] Load data from files
+[I 180509 13:57:53 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:59:10 results_analysis:23] Data analysis from simulation results
+[I 180509 13:59:10 results_analysis:25] Load data from files
+[I 180509 13:59:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:59:10 results_analysis:185] Load data from files
+[I 180509 13:59:10 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 13:59:22 results_analysis:23] Data analysis from simulation results
+[I 180509 13:59:22 results_analysis:25] Load data from files
+[I 180509 13:59:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 13:59:22 results_analysis:185] Load data from files
+[I 180509 13:59:22 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:18:52 results_analysis:23] Data analysis from simulation results
+[I 180509 15:18:52 results_analysis:25] Load data from files
+[I 180509 15:18:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:18:52 results_analysis:185] Load data from files
+[I 180509 15:18:52 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:19:19 results_analysis:23] Data analysis from simulation results
+[I 180509 15:19:19 results_analysis:25] Load data from files
+[I 180509 15:19:19 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:19:19 results_analysis:185] Load data from files
+[I 180509 15:19:19 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:19:43 results_analysis:23] Data analysis from simulation results
+[I 180509 15:19:43 results_analysis:25] Load data from files
+[I 180509 15:19:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:19:43 results_analysis:185] Load data from files
+[I 180509 15:19:43 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:21:31 results_analysis:23] Data analysis from simulation results
+[I 180509 15:21:31 results_analysis:25] Load data from files
+[I 180509 15:21:31 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:21:31 results_analysis:185] Load data from files
+[I 180509 15:21:31 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:24:37 results_analysis:23] Data analysis from simulation results
+[I 180509 15:24:37 results_analysis:25] Load data from files
+[I 180509 15:24:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:24:37 results_analysis:185] Load data from files
+[I 180509 15:24:37 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:26:42 results_analysis:23] Data analysis from simulation results
+[I 180509 15:26:42 results_analysis:25] Load data from files
+[I 180509 15:26:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:26:42 results_analysis:185] Load data from files
+[I 180509 15:26:42 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:27:26 results_analysis:23] Data analysis from simulation results
+[I 180509 15:27:26 results_analysis:25] Load data from files
+[I 180509 15:27:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:27:27 results_analysis:185] Load data from files
+[I 180509 15:27:27 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:28:11 results_analysis:23] Data analysis from simulation results
+[I 180509 15:28:11 results_analysis:25] Load data from files
+[I 180509 15:28:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:28:11 results_analysis:185] Load data from files
+[I 180509 15:28:11 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:28:29 results_analysis:23] Data analysis from simulation results
+[I 180509 15:28:29 results_analysis:25] Load data from files
+[I 180509 15:28:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:28:29 results_analysis:185] Load data from files
+[I 180509 15:28:29 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:30:29 results_analysis:23] Data analysis from simulation results
+[I 180509 15:30:29 results_analysis:25] Load data from files
+[I 180509 15:30:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:30:29 results_analysis:185] Load data from files
+[I 180509 15:30:29 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:30:44 results_analysis:23] Data analysis from simulation results
+[I 180509 15:30:44 results_analysis:25] Load data from files
+[I 180509 15:30:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:30:44 results_analysis:185] Load data from files
+[I 180509 15:30:44 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:31:44 results_analysis:23] Data analysis from simulation results
+[I 180509 15:31:44 results_analysis:25] Load data from files
+[I 180509 15:31:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:31:44 results_analysis:185] Load data from files
+[I 180509 15:31:44 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:32:46 results_analysis:23] Data analysis from simulation results
+[I 180509 15:32:46 results_analysis:25] Load data from files
+[I 180509 15:32:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:32:46 results_analysis:185] Load data from files
+[I 180509 15:32:46 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:32:58 results_analysis:23] Data analysis from simulation results
+[I 180509 15:32:58 results_analysis:25] Load data from files
+[I 180509 15:32:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:32:58 results_analysis:185] Load data from files
+[I 180509 15:32:58 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:33:35 results_analysis:23] Data analysis from simulation results
+[I 180509 15:33:35 results_analysis:25] Load data from files
+[I 180509 15:33:35 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:33:35 results_analysis:185] Load data from files
+[I 180509 15:33:35 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:34:59 results_analysis:23] Data analysis from simulation results
+[I 180509 15:34:59 results_analysis:25] Load data from files
+[I 180509 15:34:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:34:59 results_analysis:185] Load data from files
+[I 180509 15:34:59 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:35:18 results_analysis:23] Data analysis from simulation results
+[I 180509 15:35:18 results_analysis:25] Load data from files
+[I 180509 15:35:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:35:18 results_analysis:185] Load data from files
+[I 180509 15:35:18 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:35:47 results_analysis:23] Data analysis from simulation results
+[I 180509 15:35:47 results_analysis:25] Load data from files
+[I 180509 15:35:47 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:35:47 results_analysis:185] Load data from files
+[I 180509 15:35:47 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:35:58 results_analysis:23] Data analysis from simulation results
+[I 180509 15:35:58 results_analysis:25] Load data from files
+[I 180509 15:35:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:35:58 results_analysis:185] Load data from files
+[I 180509 15:35:58 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:36:10 results_analysis:23] Data analysis from simulation results
+[I 180509 15:36:10 results_analysis:25] Load data from files
+[I 180509 15:36:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:36:10 results_analysis:185] Load data from files
+[I 180509 15:36:10 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:36:43 results_analysis:23] Data analysis from simulation results
+[I 180509 15:36:43 results_analysis:25] Load data from files
+[I 180509 15:36:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:36:43 results_analysis:185] Load data from files
+[I 180509 15:36:43 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:37:16 results_analysis:23] Data analysis from simulation results
+[I 180509 15:37:16 results_analysis:25] Load data from files
+[I 180509 15:37:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:37:16 results_analysis:185] Load data from files
+[I 180509 15:37:16 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:37:44 results_analysis:23] Data analysis from simulation results
+[I 180509 15:37:44 results_analysis:25] Load data from files
+[I 180509 15:37:44 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:37:44 results_analysis:185] Load data from files
+[I 180509 15:37:44 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:37:58 results_analysis:23] Data analysis from simulation results
+[I 180509 15:37:58 results_analysis:25] Load data from files
+[I 180509 15:37:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:37:58 results_analysis:185] Load data from files
+[I 180509 15:37:58 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:38:45 results_analysis:23] Data analysis from simulation results
+[I 180509 15:38:45 results_analysis:25] Load data from files
+[I 180509 15:38:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:38:45 results_analysis:185] Load data from files
+[I 180509 15:38:45 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:39:06 results_analysis:23] Data analysis from simulation results
+[I 180509 15:39:06 results_analysis:25] Load data from files
+[I 180509 15:39:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:39:16 results_analysis:23] Data analysis from simulation results
+[I 180509 15:39:16 results_analysis:25] Load data from files
+[I 180509 15:39:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:44:02 results_analysis:23] Data analysis from simulation results
+[I 180509 15:44:02 results_analysis:25] Load data from files
+[I 180509 15:44:02 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:45:29 results_analysis:23] Data analysis from simulation results
+[I 180509 15:45:29 results_analysis:25] Load data from files
+[I 180509 15:45:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:45:43 results_analysis:23] Data analysis from simulation results
+[I 180509 15:45:43 results_analysis:25] Load data from files
+[I 180509 15:45:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:46:11 results_analysis:23] Data analysis from simulation results
+[I 180509 15:46:11 results_analysis:25] Load data from files
+[I 180509 15:46:11 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:46:43 results_analysis:23] Data analysis from simulation results
+[I 180509 15:46:43 results_analysis:25] Load data from files
+[I 180509 15:46:43 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:46:43 results_analysis:185] Load data from files
+[I 180509 15:46:43 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:47:51 results_analysis:23] Data analysis from simulation results
+[I 180509 15:47:51 results_analysis:25] Load data from files
+[I 180509 15:47:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:47:51 results_analysis:185] Load data from files
+[I 180509 15:47:51 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:50:25 results_analysis:23] Data analysis from simulation results
+[I 180509 15:50:25 results_analysis:25] Load data from files
+[I 180509 15:50:25 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:50:25 results_analysis:185] Load data from files
+[I 180509 15:50:25 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:51:12 results_analysis:23] Data analysis from simulation results
+[I 180509 15:51:12 results_analysis:25] Load data from files
+[I 180509 15:51:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:51:12 results_analysis:185] Load data from files
+[I 180509 15:51:12 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:52:59 results_analysis:23] Data analysis from simulation results
+[I 180509 15:52:59 results_analysis:25] Load data from files
+[I 180509 15:52:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:52:59 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:53:24 results_analysis:23] Data analysis from simulation results
+[I 180509 15:53:24 results_analysis:25] Load data from files
+[I 180509 15:53:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:53:24 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 15:55:53 results_analysis:23] Data analysis from simulation results
+[I 180509 15:55:53 results_analysis:25] Load data from files
+[I 180509 15:55:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:55:53 results_analysis:41] Plot Users Throughout CDF (2 UE per cell)
+[I 180509 15:55:53 results_analysis:48] Plot Users Throughout CDF (6 UE per cell)
+[I 180509 15:55:53 results_analysis:55] Plot Users Throughout CDF (10 UE per cell)
+[I 180509 15:55:54 results_analysis:62] Plot Users Throughout CDF (20 UE per cell)
+[I 180509 15:55:54 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 15:55:54 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 15:56:52 results_analysis:23] Data analysis from simulation results
+[I 180509 15:56:52 results_analysis:25] Load data from files
+[I 180509 15:56:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:56:52 results_analysis:41] Plot Users Throughout CDF (2 UE per cell)
+[I 180509 15:56:53 results_analysis:48] Plot Users Throughout CDF (6 UE per cell)
+[I 180509 15:56:53 results_analysis:55] Plot Users Throughout CDF (10 UE per cell)
+[I 180509 15:56:53 results_analysis:62] Plot Users Throughout CDF (20 UE per cell)
+[I 180509 15:56:53 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 15:56:53 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 15:58:27 results_analysis:23] Data analysis from simulation results
+[I 180509 15:58:27 results_analysis:25] Load data from files
+[I 180509 15:58:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 15:58:27 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 15:58:27 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 15:58:27 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 15:58:28 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 15:58:28 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:00:34 results_analysis:23] Data analysis from simulation results
+[I 180509 16:00:34 results_analysis:25] Load data from files
+[I 180509 16:00:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:00:34 results_analysis:77] Plot Cell Average Throughout CDF (2 UE per cell)
+[I 180509 16:00:34 results_analysis:84] Plot Cell Average Throughout CDF (6 UE per cell)
+[I 180509 16:00:34 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 16:00:35 results_analysis:98] Plot Cell Average Throughout CDF (20 UE per cell)
+[I 180509 16:00:35 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:01:24 results_analysis:23] Data analysis from simulation results
+[I 180509 16:01:24 results_analysis:25] Load data from files
+[I 180509 16:01:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:01:24 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 16:01:24 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 16:01:24 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 16:01:24 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 16:01:24 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 16:02:16 results_analysis:23] Data analysis from simulation results
+[I 180509 16:02:16 results_analysis:25] Load data from files
+[I 180509 16:02:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:02:16 results_analysis:113] Plot Subband Average Throughout CDF (2 UE per cell)
+[I 180509 16:02:16 results_analysis:120] Plot Subband Average Throughout CDF (6 UE per cell)
+[I 180509 16:02:16 results_analysis:127] Plot Subband Average Throughout CDF (10 UE per cell)
+[I 180509 16:02:16 results_analysis:134] Plot Subband Average Throughout CDF (20 UE per cell)
+[I 180509 16:02:16 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 16:08:40 results_analysis:23] Data analysis from simulation results
+[I 180509 16:08:40 results_analysis:25] Load data from files
+[I 180509 16:08:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:08:40 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 16:08:53 results_analysis:23] Data analysis from simulation results
+[I 180509 16:08:53 results_analysis:25] Load data from files
+[I 180509 16:08:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:08:53 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 16:20:46 results_analysis:23] Data analysis from simulation results
+[I 180509 16:20:46 results_analysis:25] Load data from files
+[I 180509 16:20:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:20:46 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 16:20:46 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:20:46 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 16:20:53 results_analysis:23] Data analysis from simulation results
+[I 180509 16:20:53 results_analysis:25] Load data from files
+[I 180509 16:20:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:20:53 results_analysis:69] Plot Users Throughout CDF (30 UE per cell)
+[I 180509 16:20:53 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:20:54 results_analysis:141] Plot Subband Average Throughout CDF (30 UE per cell)
+[I 180509 16:25:05 results_analysis:23] Data analysis from simulation results
+[I 180509 16:25:05 results_analysis:25] Load data from files
+[I 180509 16:25:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:25:05 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:25:15 results_analysis:23] Data analysis from simulation results
+[I 180509 16:25:15 results_analysis:25] Load data from files
+[I 180509 16:25:15 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:25:15 results_analysis:105] Plot Cell Average Throughout CDF (30 UE per cell)
+[I 180509 16:26:41 results_analysis:23] Data analysis from simulation results
+[I 180509 16:26:41 results_analysis:25] Load data from files
+[I 180509 16:26:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:26:42 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 16:26:42 results_analysis:185] Load data from files
+[I 180509 16:26:42 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 16:26:49 results_analysis:23] Data analysis from simulation results
+[I 180509 16:26:49 results_analysis:25] Load data from files
+[I 180509 16:26:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:26:49 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 16:26:50 results_analysis:185] Load data from files
+[I 180509 16:26:50 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180509 16:34:16 results_analysis:23] Data analysis from simulation results
+[I 180509 16:34:16 results_analysis:25] Load data from files
+[I 180509 16:34:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:34:52 results_analysis:23] Data analysis from simulation results
+[I 180509 16:34:52 results_analysis:25] Load data from files
+[I 180509 16:34:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 16:35:55 results_analysis:23] Data analysis from simulation results
+[I 180509 16:35:55 results_analysis:25] Load data from files
+[I 180509 16:35:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:21:55 results_analysis:23] Data analysis from simulation results
+[I 180509 18:21:55 results_analysis:25] Load data from files
+[I 180509 18:21:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:21:55 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:22:04 results_analysis:23] Data analysis from simulation results
+[I 180509 18:22:04 results_analysis:25] Load data from files
+[I 180509 18:22:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:22:04 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:23:36 results_analysis:23] Data analysis from simulation results
+[I 180509 18:23:36 results_analysis:25] Load data from files
+[I 180509 18:23:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:23:36 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:25:03 results_analysis:23] Data analysis from simulation results
+[I 180509 18:25:03 results_analysis:25] Load data from files
+[I 180509 18:25:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:25:03 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:25:03 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:26:33 results_analysis:23] Data analysis from simulation results
+[I 180509 18:26:33 results_analysis:25] Load data from files
+[I 180509 18:26:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:26:33 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:26:33 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:26:39 results_analysis:23] Data analysis from simulation results
+[I 180509 18:26:39 results_analysis:25] Load data from files
+[I 180509 18:26:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:26:39 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:26:39 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:29:08 results_analysis:23] Data analysis from simulation results
+[I 180509 18:29:08 results_analysis:25] Load data from files
+[I 180509 18:29:08 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:29:08 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:30:27 results_analysis:23] Data analysis from simulation results
+[I 180509 18:30:27 results_analysis:25] Load data from files
+[I 180509 18:30:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:30:27 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:30:29 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:31:02 results_analysis:23] Data analysis from simulation results
+[I 180509 18:31:02 results_analysis:25] Load data from files
+[I 180509 18:31:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:31:03 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:31:05 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:31:36 results_analysis:23] Data analysis from simulation results
+[I 180509 18:31:36 results_analysis:25] Load data from files
+[I 180509 18:31:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:31:36 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:31:43 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:33:03 results_analysis:23] Data analysis from simulation results
+[I 180509 18:33:03 results_analysis:25] Load data from files
+[I 180509 18:33:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:33:03 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:33:05 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:35:34 results_analysis:23] Data analysis from simulation results
+[I 180509 18:35:34 results_analysis:25] Load data from files
+[I 180509 18:35:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:35:34 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:35:46 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:36:01 results_analysis:23] Data analysis from simulation results
+[I 180509 18:36:01 results_analysis:25] Load data from files
+[I 180509 18:36:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:36:01 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:36:38 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:36:46 results_analysis:23] Data analysis from simulation results
+[I 180509 18:36:46 results_analysis:25] Load data from files
+[I 180509 18:36:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:36:46 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:37:07 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:38:24 results_analysis:23] Data analysis from simulation results
+[I 180509 18:38:24 results_analysis:25] Load data from files
+[I 180509 18:38:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:38:24 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:38:41 results_analysis:23] Data analysis from simulation results
+[I 180509 18:38:41 results_analysis:25] Load data from files
+[I 180509 18:38:41 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:38:41 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:38:45 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:38:53 results_analysis:23] Data analysis from simulation results
+[I 180509 18:38:53 results_analysis:25] Load data from files
+[I 180509 18:38:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:38:53 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:39:31 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:40:51 results_analysis:23] Data analysis from simulation results
+[I 180509 18:40:51 results_analysis:25] Load data from files
+[I 180509 18:40:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:40:51 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:41:22 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:43:22 results_analysis:23] Data analysis from simulation results
+[I 180509 18:43:22 results_analysis:25] Load data from files
+[I 180509 18:43:22 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:43:22 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:43:32 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:44:42 results_analysis:23] Data analysis from simulation results
+[I 180509 18:44:42 results_analysis:25] Load data from files
+[I 180509 18:44:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:44:42 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:44:48 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:45:33 results_analysis:23] Data analysis from simulation results
+[I 180509 18:45:33 results_analysis:25] Load data from files
+[I 180509 18:45:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:45:33 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:45:43 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:46:05 results_analysis:23] Data analysis from simulation results
+[I 180509 18:46:05 results_analysis:25] Load data from files
+[I 180509 18:46:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:46:05 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:46:11 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:46:33 results_analysis:23] Data analysis from simulation results
+[I 180509 18:46:33 results_analysis:25] Load data from files
+[I 180509 18:46:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:46:33 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:46:48 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:47:54 results_analysis:23] Data analysis from simulation results
+[I 180509 18:47:54 results_analysis:25] Load data from files
+[I 180509 18:47:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:47:54 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:47:59 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:48:58 results_analysis:23] Data analysis from simulation results
+[I 180509 18:48:58 results_analysis:25] Load data from files
+[I 180509 18:48:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:48:58 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:49:07 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:49:33 results_analysis:23] Data analysis from simulation results
+[I 180509 18:49:33 results_analysis:25] Load data from files
+[I 180509 18:49:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:49:33 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:49:52 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:50:41 results_analysis:23] Data analysis from simulation results
+[I 180509 18:50:41 results_analysis:25] Load data from files
+[I 180509 18:50:42 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:50:42 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:51:01 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:52:06 results_analysis:23] Data analysis from simulation results
+[I 180509 18:52:06 results_analysis:25] Load data from files
+[I 180509 18:52:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:52:06 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:52:12 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:52:32 results_analysis:23] Data analysis from simulation results
+[I 180509 18:52:32 results_analysis:25] Load data from files
+[I 180509 18:52:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:52:32 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:52:38 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:53:32 results_analysis:23] Data analysis from simulation results
+[I 180509 18:53:32 results_analysis:25] Load data from files
+[I 180509 18:53:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:53:32 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:54:39 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:55:27 results_analysis:23] Data analysis from simulation results
+[I 180509 18:55:27 results_analysis:25] Load data from files
+[I 180509 18:55:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:55:27 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:55:39 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:56:28 results_analysis:23] Data analysis from simulation results
+[I 180509 18:56:28 results_analysis:25] Load data from files
+[I 180509 18:56:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:56:28 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:56:41 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:56:59 results_analysis:23] Data analysis from simulation results
+[I 180509 18:56:59 results_analysis:25] Load data from files
+[I 180509 18:56:59 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:56:59 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:57:13 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:58:28 results_analysis:23] Data analysis from simulation results
+[I 180509 18:58:28 results_analysis:25] Load data from files
+[I 180509 18:58:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:58:28 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:59:10 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 18:59:26 results_analysis:23] Data analysis from simulation results
+[I 180509 18:59:26 results_analysis:25] Load data from files
+[I 180509 18:59:26 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 18:59:26 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 18:59:39 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:00:03 results_analysis:23] Data analysis from simulation results
+[I 180509 19:00:03 results_analysis:25] Load data from files
+[I 180509 19:00:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:00:03 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:00:09 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:00:18 results_analysis:23] Data analysis from simulation results
+[I 180509 19:00:18 results_analysis:25] Load data from files
+[I 180509 19:00:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:00:18 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:00:41 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:00:52 results_analysis:23] Data analysis from simulation results
+[I 180509 19:00:52 results_analysis:25] Load data from files
+[I 180509 19:00:52 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:00:52 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:00:56 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:01:05 results_analysis:23] Data analysis from simulation results
+[I 180509 19:01:05 results_analysis:25] Load data from files
+[I 180509 19:01:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:01:05 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:01:09 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:02:16 results_analysis:23] Data analysis from simulation results
+[I 180509 19:02:16 results_analysis:25] Load data from files
+[I 180509 19:02:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:02:16 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:02:23 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:02:39 results_analysis:23] Data analysis from simulation results
+[I 180509 19:02:39 results_analysis:25] Load data from files
+[I 180509 19:02:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:02:39 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:03:37 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:03:47 results_analysis:23] Data analysis from simulation results
+[I 180509 19:03:47 results_analysis:25] Load data from files
+[I 180509 19:03:47 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:03:47 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:03:50 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 19:04:09 results_analysis:23] Data analysis from simulation results
+[I 180509 19:04:09 results_analysis:25] Load data from files
+[I 180509 19:04:09 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:04:09 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:04:18 results_analysis:23] Data analysis from simulation results
+[I 180509 19:04:18 results_analysis:25] Load data from files
+[I 180509 19:04:18 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:04:18 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:13:29 results_analysis:23] Data analysis from simulation results
+[I 180509 19:13:29 results_analysis:25] Load data from files
+[I 180509 19:13:29 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:13:29 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 19:13:41 results_analysis:23] Data analysis from simulation results
+[I 180509 19:13:41 results_analysis:25] Load data from files
+[I 180509 19:13:41 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 19:13:41 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180509 21:49:09 results_analysis:23] Data analysis from simulation results
+[I 180509 21:49:09 results_analysis:25] Load data from files
+[I 180509 21:49:09 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 21:49:09 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 21:49:09 results_analysis:240] Load data from files
+[I 180509 21:49:16 results_analysis:23] Data analysis from simulation results
+[I 180509 21:49:16 results_analysis:25] Load data from files
+[I 180509 21:49:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 21:49:16 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 21:49:16 results_analysis:240] Load data from files
+[I 180509 21:57:38 results_analysis:23] Data analysis from simulation results
+[I 180509 21:57:38 results_analysis:25] Load data from files
+[I 180509 21:57:38 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 21:57:38 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 21:57:38 results_analysis:240] Load data from files
+[I 180509 21:57:46 results_analysis:23] Data analysis from simulation results
+[I 180509 21:57:46 results_analysis:25] Load data from files
+[I 180509 21:57:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 21:57:46 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 21:57:46 results_analysis:240] Load data from files
+[I 180509 22:07:36 results_analysis:23] Data analysis from simulation results
+[I 180509 22:07:36 results_analysis:25] Load data from files
+[I 180509 22:07:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:07:36 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:07:36 results_analysis:240] Load data from files
+[I 180509 22:08:20 results_analysis:23] Data analysis from simulation results
+[I 180509 22:08:20 results_analysis:25] Load data from files
+[I 180509 22:08:20 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:08:20 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:08:20 results_analysis:240] Load data from files
+[I 180509 22:17:20 results_analysis:23] Data analysis from simulation results
+[I 180509 22:17:20 results_analysis:25] Load data from files
+[I 180509 22:17:20 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:17:20 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:17:20 results_analysis:240] Load data from files
+[I 180509 22:19:12 results_analysis:23] Data analysis from simulation results
+[I 180509 22:19:12 results_analysis:25] Load data from files
+[I 180509 22:19:12 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:19:12 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:19:12 results_analysis:240] Load data from files
+[I 180509 22:19:33 results_analysis:23] Data analysis from simulation results
+[I 180509 22:19:33 results_analysis:25] Load data from files
+[I 180509 22:19:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:19:33 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:19:33 results_analysis:240] Load data from files
+[I 180509 22:20:45 results_analysis:23] Data analysis from simulation results
+[I 180509 22:20:45 results_analysis:25] Load data from files
+[I 180509 22:20:45 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:20:45 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:20:45 results_analysis:240] Load data from files
+[I 180509 22:21:14 results_analysis:23] Data analysis from simulation results
+[I 180509 22:21:14 results_analysis:25] Load data from files
+[I 180509 22:21:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:21:14 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:21:14 results_analysis:240] Load data from files
+[I 180509 22:21:33 results_analysis:23] Data analysis from simulation results
+[I 180509 22:21:33 results_analysis:25] Load data from files
+[I 180509 22:21:33 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:21:33 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:21:33 results_analysis:240] Load data from files
+[I 180509 22:22:24 results_analysis:23] Data analysis from simulation results
+[I 180509 22:22:24 results_analysis:25] Load data from files
+[I 180509 22:22:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:22:24 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:22:24 results_analysis:240] Load data from files
+[I 180509 22:29:05 results_analysis:23] Data analysis from simulation results
+[I 180509 22:29:05 results_analysis:25] Load data from files
+[I 180509 22:29:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 22:29:05 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 22:29:05 results_analysis:240] Load data from files
+[I 180509 23:27:10 results_analysis:23] Data analysis from simulation results
+[I 180509 23:27:10 results_analysis:25] Load data from files
+[I 180509 23:27:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:27:10 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:27:10 results_analysis:240] Load data from files
+[I 180509 23:27:35 results_analysis:23] Data analysis from simulation results
+[I 180509 23:27:35 results_analysis:25] Load data from files
+[I 180509 23:27:35 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:27:35 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:27:35 results_analysis:240] Load data from files
+[I 180509 23:29:16 results_analysis:23] Data analysis from simulation results
+[I 180509 23:29:16 results_analysis:25] Load data from files
+[I 180509 23:29:16 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:29:16 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 23:29:48 results_analysis:23] Data analysis from simulation results
+[I 180509 23:29:48 results_analysis:25] Load data from files
+[I 180509 23:30:58 results_analysis:23] Data analysis from simulation results
+[I 180509 23:30:58 results_analysis:25] Load data from files
+[I 180509 23:31:50 results_analysis:23] Data analysis from simulation results
+[I 180509 23:31:50 results_analysis:25] Load data from files
+[I 180509 23:33:03 results_analysis:23] Data analysis from simulation results
+[I 180509 23:33:03 results_analysis:25] Load data from files
+[I 180509 23:33:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:33:03 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 23:33:32 results_analysis:23] Data analysis from simulation results
+[I 180509 23:33:32 results_analysis:25] Load data from files
+[I 180509 23:33:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:33:32 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 23:34:03 results_analysis:23] Data analysis from simulation results
+[I 180509 23:34:03 results_analysis:25] Load data from files
+[I 180509 23:34:03 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:34:03 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180509 23:35:27 results_analysis:23] Data analysis from simulation results
+[I 180509 23:35:27 results_analysis:25] Load data from files
+[I 180509 23:35:27 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:35:27 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:35:27 results_analysis:240] Load data from files
+[I 180509 23:36:13 results_analysis:23] Data analysis from simulation results
+[I 180509 23:36:13 results_analysis:25] Load data from files
+[I 180509 23:36:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:36:13 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:36:13 results_analysis:240] Load data from files
+[I 180509 23:36:53 results_analysis:23] Data analysis from simulation results
+[I 180509 23:36:53 results_analysis:25] Load data from files
+[I 180509 23:36:53 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:36:53 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:36:53 results_analysis:240] Load data from files
+[I 180509 23:43:54 results_analysis:23] Data analysis from simulation results
+[I 180509 23:43:54 results_analysis:25] Load data from files
+[I 180509 23:43:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:43:54 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:43:54 results_analysis:240] Load data from files
+[I 180509 23:46:26 results_analysis:23] Data analysis from simulation results
+[I 180509 23:46:26 results_analysis:25] Load data from files
+[I 180509 23:46:26 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:46:26 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:46:26 results_analysis:240] Load data from files
+[I 180509 23:48:19 results_analysis:23] Data analysis from simulation results
+[I 180509 23:48:19 results_analysis:25] Load data from files
+[I 180509 23:48:19 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:48:19 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:48:19 results_analysis:240] Load data from files
+[I 180509 23:50:05 results_analysis:23] Data analysis from simulation results
+[I 180509 23:50:05 results_analysis:25] Load data from files
+[I 180509 23:50:05 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:50:05 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:50:05 results_analysis:240] Load data from files
+[I 180509 23:51:36 results_analysis:23] Data analysis from simulation results
+[I 180509 23:51:36 results_analysis:25] Load data from files
+[I 180509 23:51:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:51:36 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:51:36 results_analysis:240] Load data from files
+[I 180509 23:52:57 results_analysis:23] Data analysis from simulation results
+[I 180509 23:52:57 results_analysis:25] Load data from files
+[I 180509 23:52:57 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:52:57 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:52:57 results_analysis:240] Load data from files
+[I 180509 23:53:21 results_analysis:23] Data analysis from simulation results
+[I 180509 23:53:21 results_analysis:25] Load data from files
+[I 180509 23:53:21 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:53:21 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:53:21 results_analysis:240] Load data from files
+[I 180509 23:55:28 results_analysis:23] Data analysis from simulation results
+[I 180509 23:55:28 results_analysis:25] Load data from files
+[I 180509 23:55:28 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:55:28 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:55:28 results_analysis:240] Load data from files
+[I 180509 23:55:34 results_analysis:23] Data analysis from simulation results
+[I 180509 23:55:34 results_analysis:25] Load data from files
+[I 180509 23:55:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:55:34 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:55:34 results_analysis:240] Load data from files
+[I 180509 23:55:47 results_analysis:23] Data analysis from simulation results
+[I 180509 23:55:47 results_analysis:25] Load data from files
+[I 180509 23:55:47 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:55:47 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:55:47 results_analysis:240] Load data from files
+[I 180509 23:56:01 results_analysis:23] Data analysis from simulation results
+[I 180509 23:56:01 results_analysis:25] Load data from files
+[I 180509 23:56:01 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:56:01 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:56:01 results_analysis:240] Load data from files
+[I 180509 23:56:49 results_analysis:23] Data analysis from simulation results
+[I 180509 23:56:49 results_analysis:25] Load data from files
+[I 180509 23:56:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:56:49 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:56:49 results_analysis:240] Load data from files
+[I 180509 23:57:00 results_analysis:23] Data analysis from simulation results
+[I 180509 23:57:00 results_analysis:25] Load data from files
+[I 180509 23:57:00 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:57:00 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:57:00 results_analysis:240] Load data from files
+[I 180509 23:57:17 results_analysis:23] Data analysis from simulation results
+[I 180509 23:57:17 results_analysis:25] Load data from files
+[I 180509 23:57:17 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:57:17 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180509 23:57:17 results_analysis:240] Load data from files
+[I 180509 23:57:47 results_analysis:23] Data analysis from simulation results
+[I 180509 23:57:47 results_analysis:25] Load data from files
+[I 180509 23:57:47 results_analysis:38] Plot graphs: Throughout CDF
+[I 180509 23:57:47 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:00:34 results_analysis:23] Data analysis from simulation results
+[I 180510 00:00:34 results_analysis:25] Load data from files
+[I 180510 00:00:34 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:00:34 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:01:54 results_analysis:23] Data analysis from simulation results
+[I 180510 00:01:54 results_analysis:25] Load data from files
+[I 180510 00:01:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:01:54 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:02:02 results_analysis:23] Data analysis from simulation results
+[I 180510 00:02:02 results_analysis:25] Load data from files
+[I 180510 00:02:02 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:02:02 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:02:58 results_analysis:23] Data analysis from simulation results
+[I 180510 00:02:58 results_analysis:25] Load data from files
+[I 180510 00:02:58 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:02:58 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:02:58 results_analysis:240] Load data from files
+[I 180510 00:10:25 results_analysis:23] Data analysis from simulation results
+[I 180510 00:10:25 results_analysis:25] Load data from files
+[I 180510 00:10:25 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:10:25 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:10:39 results_analysis:23] Data analysis from simulation results
+[I 180510 00:10:39 results_analysis:25] Load data from files
+[I 180510 00:10:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:10:39 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:13:23 results_analysis:23] Data analysis from simulation results
+[I 180510 00:13:23 results_analysis:25] Load data from files
+[I 180510 00:13:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:13:23 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:15:06 results_analysis:23] Data analysis from simulation results
+[I 180510 00:15:06 results_analysis:25] Load data from files
+[I 180510 00:15:06 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:15:06 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:15:06 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:16:54 results_analysis:23] Data analysis from simulation results
+[I 180510 00:16:54 results_analysis:25] Load data from files
+[I 180510 00:16:54 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:16:54 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:16:54 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:19:55 results_analysis:23] Data analysis from simulation results
+[I 180510 00:19:55 results_analysis:25] Load data from files
+[I 180510 00:19:55 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:19:55 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:19:55 results_analysis:148] Plot graphs: Cell Spectral Efficiency
+[I 180510 00:20:24 results_analysis:23] Data analysis from simulation results
+[I 180510 00:20:24 results_analysis:25] Load data from files
+[I 180510 00:20:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:20:24 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:21:32 results_analysis:23] Data analysis from simulation results
+[I 180510 00:21:32 results_analysis:25] Load data from files
+[I 180510 00:21:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:21:32 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:21:51 results_analysis:23] Data analysis from simulation results
+[I 180510 00:21:51 results_analysis:25] Load data from files
+[I 180510 00:21:51 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:21:51 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:22:14 results_analysis:23] Data analysis from simulation results
+[I 180510 00:22:14 results_analysis:25] Load data from files
+[I 180510 00:22:14 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:22:14 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:22:39 results_analysis:23] Data analysis from simulation results
+[I 180510 00:22:39 results_analysis:25] Load data from files
+[I 180510 00:22:39 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:22:39 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:22:49 results_analysis:23] Data analysis from simulation results
+[I 180510 00:22:49 results_analysis:25] Load data from files
+[I 180510 00:22:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:22:49 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:23:21 results_analysis:23] Data analysis from simulation results
+[I 180510 00:23:21 results_analysis:25] Load data from files
+[I 180510 00:23:21 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:23:21 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:23:49 results_analysis:23] Data analysis from simulation results
+[I 180510 00:23:49 results_analysis:25] Load data from files
+[I 180510 00:23:49 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:23:49 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:24:04 results_analysis:23] Data analysis from simulation results
+[I 180510 00:24:04 results_analysis:25] Load data from files
+[I 180510 00:24:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:24:04 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:25:13 results_analysis:23] Data analysis from simulation results
+[I 180510 00:25:13 results_analysis:25] Load data from files
+[I 180510 00:25:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:25:13 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:25:40 results_analysis:23] Data analysis from simulation results
+[I 180510 00:25:40 results_analysis:25] Load data from files
+[I 180510 00:25:40 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:25:40 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:25:46 results_analysis:23] Data analysis from simulation results
+[I 180510 00:25:46 results_analysis:25] Load data from files
+[I 180510 00:25:46 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:25:46 results_analysis:91] Plot Cell Average Throughout CDF (10 UE per cell)
+[I 180510 00:28:04 results_analysis:23] Data analysis from simulation results
+[I 180510 00:28:04 results_analysis:25] Load data from files
+[I 180510 00:28:04 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:28:04 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:28:04 results_analysis:240] Load data from files
+[I 180510 00:28:13 results_analysis:23] Data analysis from simulation results
+[I 180510 00:28:13 results_analysis:25] Load data from files
+[I 180510 00:28:13 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:28:13 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:28:13 results_analysis:240] Load data from files
+[I 180510 00:28:48 results_analysis:23] Data analysis from simulation results
+[I 180510 00:28:48 results_analysis:25] Load data from files
+[I 180510 00:28:48 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:28:48 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:28:48 results_analysis:240] Load data from files
+[I 180510 00:29:24 results_analysis:23] Data analysis from simulation results
+[I 180510 00:29:24 results_analysis:25] Load data from files
+[I 180510 00:29:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:29:24 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:29:24 results_analysis:240] Load data from files
+[I 180510 00:37:36 results_analysis:23] Data analysis from simulation results
+[I 180510 00:37:36 results_analysis:25] Load data from files
+[I 180510 00:37:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:37:36 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:37:36 results_analysis:240] Load data from files
+[I 180510 00:38:09 results_analysis:23] Data analysis from simulation results
+[I 180510 00:38:09 results_analysis:25] Load data from files
+[I 180510 00:38:09 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:38:09 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:38:09 results_analysis:240] Load data from files
+[I 180510 00:38:22 results_analysis:23] Data analysis from simulation results
+[I 180510 00:38:22 results_analysis:25] Load data from files
+[I 180510 00:38:23 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:38:23 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:38:23 results_analysis:240] Load data from files
+[I 180510 00:39:24 results_analysis:23] Data analysis from simulation results
+[I 180510 00:39:24 results_analysis:25] Load data from files
+[I 180510 00:39:24 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:39:24 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:39:24 results_analysis:240] Load data from files
+[I 180510 00:40:32 results_analysis:23] Data analysis from simulation results
+[I 180510 00:40:32 results_analysis:25] Load data from files
+[I 180510 00:40:32 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:40:32 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:40:32 results_analysis:240] Load data from files
+[I 180510 00:40:37 results_analysis:23] Data analysis from simulation results
+[I 180510 00:40:37 results_analysis:25] Load data from files
+[I 180510 00:40:37 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 00:40:37 results_analysis:239] Plot graphs: Cell-Edge Spectral Efficiency
+[I 180510 00:40:37 results_analysis:240] Load data from files
+[I 180510 08:07:21 results_analysis:23] Data analysis from simulation results
+[I 180510 08:07:21 results_analysis:25] Load data from files
+[I 180510 08:07:21 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 08:07:21 results_analysis:185] Load data from files
+[I 180510 08:07:21 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180510 08:07:31 results_analysis:23] Data analysis from simulation results
+[I 180510 08:07:31 results_analysis:25] Load data from files
+[I 180510 08:07:31 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 08:07:31 results_analysis:185] Load data from files
+[I 180510 08:07:31 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180510 08:08:10 results_analysis:23] Data analysis from simulation results
+[I 180510 08:08:10 results_analysis:25] Load data from files
+[I 180510 08:08:10 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 08:08:10 results_analysis:185] Load data from files
+[I 180510 08:08:10 results_analysis:202] Plot graphs: Cell Spectral Efficiency
+[I 180510 08:08:36 results_analysis:23] Data analysis from simulation results
+[I 180510 08:08:36 results_analysis:25] Load data from files
+[I 180510 08:08:36 results_analysis:38] Plot graphs: Throughout CDF
+[I 180510 08:08:36 results_analysis:185] Load data from files
+[I 180510 08:08:36 results_analysis:202] Plot graphs: Cell Spectral Efficiency

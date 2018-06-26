@@ -1,0 +1,38 @@
+[I 180508 21:44:08 coeff_pw_2:21] NOMA system level simulation starting
+[I 180508 21:44:08 simulator:132] Creating grid with 19 sites
+[I 180508 21:44:08 simulator:134] Deploing base stations on grid
+[I 180508 21:44:08 simulator:136] Starting all base stations
+[I 180508 21:44:08 simulator:138] Create snapshot simulation
+[I 180508 21:44:08 simulator:143] Running simulation
+[I 180508 22:34:31 simulator:156] Saving data file
+[I 180508 22:34:31 simulator:165] Files saved: 
+[I 180508 22:34:31 simulator:166] ./output/dat/noma_2ue_coeff_0.2
+[I 180508 22:34:31 simulator:167] ./output/dat/oma_2ue_coeff_0.2
+[I 180508 22:34:31 simulator:168] Parameters used in simulation:
+[I 180508 22:34:31 simulator:173] coeff_pwr: 0.2
+[I 180508 22:34:31 simulator:173] n_ue_cell: 2
+[I 180508 22:34:31 simulator:173] thr_target: 80000000.0
+[I 180508 22:34:31 simulator:173] n_cdf_arg: 2
+[I 180508 22:34:31 simulator:173] coeff_bw: 0.2
+[I 180508 22:34:31 simulator:173] n_snap: 10000
+[I 180508 22:34:31 simulator:173] filename: 2ue_coeff_0.2
+[I 180508 22:34:31 simulator:174] Finished Simulation
+[I 180508 23:03:45 coeff_pw_2:21] NOMA system level simulation starting
+[I 180508 23:03:45 simulator:132] Creating grid with 19 sites
+[I 180508 23:03:45 simulator:134] Deploing base stations on grid
+[I 180508 23:03:45 simulator:136] Starting all base stations
+[I 180508 23:03:45 simulator:138] Create snapshot simulation
+[I 180508 23:03:45 simulator:143] Running simulation
+[I 180509 00:03:50 simulator:156] Saving data file
+[I 180509 00:03:50 simulator:165] Files saved: 
+[I 180509 00:03:50 simulator:166] ./output/dat/noma_2ue_coeff_0.2
+[I 180509 00:03:50 simulator:167] ./output/dat/oma_2ue_coeff_0.2
+[I 180509 00:03:50 simulator:168] Parameters used in the simulation:
+[I 180509 00:03:50 simulator:173] n_cdf_arg: 2
+[I 180509 00:03:50 simulator:173] filename: 2ue_coeff_0.2
+[I 180509 00:03:50 simulator:173] thr_target: 80000000.0
+[I 180509 00:03:50 simulator:173] n_ue_cell: 2
+[I 180509 00:03:50 simulator:173] coeff_pwr: 0.2
+[I 180509 00:03:50 simulator:173] coeff_bw: 0.2
+[I 180509 00:03:50 simulator:173] n_snap: 10000
+[I 180509 00:03:50 simulator:174] Finished Simulation

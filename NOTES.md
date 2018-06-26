@@ -17,7 +17,14 @@
 * Fazer estudo de caso variando a potência de transmissão
 * Incluir na saída de log as informações sobre os snapshot e o tempo de simulação
 * Seperar casos de estudo
-* Reestruturar modelo do snapshot
+* Reestruturar modelo do snapshot:
+    - passar função do snapshot como parâmetro
+* Renomear Snapshot para Drop
+* Modularizar código, separando conteúdo do snapshot e da análise de performance
+* Revisar os argumentos, criar lista de argumentos mais flexisíveis
+* Revisar TTI: simular eventos discretos, revisar a forma como os TTI são simulados
+* Implementar esquema de blocos de recursos (LTE-A)
+* Reduzir velocidade para 3 km/h (DS)
 
 ### Dúvidas [pt_BR]
 

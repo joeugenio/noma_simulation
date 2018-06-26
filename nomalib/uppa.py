@@ -45,21 +45,25 @@ def user_pair(ues_sinr, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
     return pairs
 
 # Power allocation function for NOMA (power domain)
-def power_allocation(pair, mode='equal'):
+def power_allocation(pair, alpha, mode='equal'):
     if mode == 'equal':
         n = len(pair.users)
         for u in pair.users:
             u.power = np.ones(len(u.sinr))*(1/n)
     elif mode == 'fair':
-        alpha = 1/5
         u1 = pair.users[0]
         u2 = pair.users[1]        
         u1.power = np.ones(len(u1.sinr))*(alpha)
         u2.power = np.ones(len(u2.sinr))*(1-alpha)
 
 # Power allocation function for OMA (frequency domain)
-def band_allocation(pair, mode='equal'):
+def band_allocation(pair, beta, mode='equal'):
     if mode == 'equal':
         n = len(pair.users)        
         for u in pair.users:
             u.band = np.ones(len(u.sinr))*(1/n)
+    elif mode == 'fair':
+        u1 = pair.users[0]
+        u2 = pair.users[1]        
+        u1.band = np.ones(len(u1.sinr))*(beta)
+        u2.band = np.ones(len(u2.sinr))*(1-beta)

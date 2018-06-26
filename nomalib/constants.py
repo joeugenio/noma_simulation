@@ -64,7 +64,6 @@ DAT_PATH = './dat/'
 # Neighbour map for correlation generation
 NB_MAP = [[11, 5, 10, 6, 12],[7, 1, 2, 3, 8],[9, 4, 13]]
 NB = 13
-
 # Plot Figure Constantes
 FORMAT = 'eps'
 DPI = 72
@@ -73,3 +72,5 @@ MAP_D = 5
 
 # Performance Constants
 SHN_ATT = 0.75
+THR_TARGET = 80e6 # Mhz on 10Mhz band width
+N_CDF_ARG = 3

@@ -12,11 +12,12 @@
 import nomalib.simulator as sim
 import logzero
 from logzero import logger
+import __main__ as main
 
 # create log files
 # log level: DEBUG=10, INFO=20, WARN=30, ERROR=40
 logzero.loglevel(logzero.logging.INFO)
-logzero.logfile('./temp/run_case6.log', mode='w', loglevel=logzero.logging.DEBUG)
+logzero.logfile('./temp/'+main.__file__[2:-3:]+'.log', mode='a', loglevel=logzero.logging.DEBUG)
 logger.info('NOMA system level simulation starting')
 
 # create simulation

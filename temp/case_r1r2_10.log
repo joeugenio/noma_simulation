@@ -1,0 +1,21 @@
+[I 180507 20:33:16 case_r1r2_10:21] NOMA system level simulation starting
+[I 180507 20:33:16 simulator:127] Creating grid with 19 sites
+[I 180507 20:33:16 simulator:129] Deploing base stations on grid
+[I 180507 20:33:16 simulator:131] Starting all base stations
+[I 180507 20:33:16 simulator:133] Create snapshot simulation
+[I 180507 20:33:16 simulator:138] Running simulation
+[I 180507 20:35:18 simulator:151] Finished Simulation
+[I 180507 20:42:15 case_r1r2_10:21] NOMA system level simulation starting
+[I 180507 20:42:15 simulator:127] Creating grid with 19 sites
+[I 180507 20:42:15 simulator:129] Deploing base stations on grid
+[I 180507 20:42:15 simulator:131] Starting all base stations
+[I 180507 20:42:15 simulator:133] Create snapshot simulation
+[I 180507 20:42:15 simulator:138] Running simulation
+[I 180507 20:44:17 simulator:151] Finished Simulation
+[I 180507 21:02:44 case_r1r2_10:21] NOMA system level simulation starting
+[I 180507 21:02:44 simulator:127] Creating grid with 19 sites
+[I 180507 21:02:44 simulator:129] Deploing base stations on grid
+[I 180507 21:02:44 simulator:131] Starting all base stations
+[I 180507 21:02:44 simulator:133] Create snapshot simulation
+[I 180507 21:02:44 simulator:138] Running simulation
+[I 180508 00:37:00 simulator:151] Finished Simulation
