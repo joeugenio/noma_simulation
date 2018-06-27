@@ -53,9 +53,11 @@ class Snapshot:
             ue = self.grid.get_ue(ue_id)
             s = perf.sinr(ue, cell, site, self.grid)
             ue_sinr.append(uppa.User(ue.id, s))
+        
+        
 
         # UPPA from SINR values
-        pairs = uppa.user_pair(ue_sinr, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode='fair')
+        # pairs = uppa.user_pair(ue_sinr, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode='fair')
         
         # throughput performance for N0MA
         # thr_user_avg_noma = []

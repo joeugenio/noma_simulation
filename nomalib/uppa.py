@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 05/05/2018
-# Last update: 26/06/2018
+# Last update: 27/06/2018
 # Version: 0.1
 
 # User Pair and Power Allocation for NOMA communications simulations
@@ -13,11 +13,11 @@ import numpy as np
 
 class User:
     ''' User class for User Pair '''
-    def __init__(self, id, sinr, noma=None, oma=None):
+    def __init__(self, id, sinr, pwr_coef=None, bnd_coef=None):
         self.id = id
         self.sinr = sinr
-        self.power = noma
-        self.band = oma
+        self.pwr_coef = pwr_coef
+        self.bnd_coef = bnd_coef
 
 class Pair:
     ''' User Pair class for UPPA'''
@@ -27,13 +27,9 @@ class Pair:
         self.u2 = u2
         self.users = [u1, u2]
 
-class Set:
-    ''' User Set class for UPPA '''
-    pass
-
 # User pair function
-def user_pair(ues_sinr, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
-    ues = ues_sinr[:]
+def user_pair(ues_uppa, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
+    ues = ues_uppa[:]
     pairs = []
     if mode == 'random':
         for n in range(n_sb):
@@ -51,8 +47,6 @@ def user_pair(ues_sinr, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
             u1 = ues[s+n_sb]
             u2 = ues[s]
             pairs.append(Pair(id=s, u1=u1, u2=u2))
-        for p in pairs:
-            print(p.u1.sinr.mean(), p.u2.sinr.mean())
     elif mode == 'search':
         pass
     return pairs
@@ -62,28 +56,29 @@ def power_allocation(pair, alpha=0.2, mode='fix'):
     if mode == 'equal':
         n = len(pair.users)
         for u in pair.users:
-            u.power = np.ones(len(u.sinr))*(1/n)
+            u.pwr_coef = 1/n
     elif mode == 'fix':
-        u1 = pair.users[0]
-        u2 = pair.users[1]
-        u1.power = np.ones(len(u1.sinr))*(alpha)
-        u2.power = np.ones(len(u2.sinr))*(1-alpha)
+        pair.u1.pwr_coef = alpha
+        pair.u2.pwr_coef = (1-alpha)
     elif mode == 'fair':
-        u1 = pair.u1
-        u2 = pair.u2
-        sinr2 = u2.sinr.mean()
+        sinr2 = pair.u2.sinr.mean()
         alpha = (np.sqrt(1+sinr2)-1)/sinr2
-        u1.power = np.ones(len(u1.sinr))*(alpha)
-        u2.power = np.ones(len(u2.sinr))*(1-alpha)
+        pair.u1.power = alpha
+        pair.u2.power = 1-alpha
 
 # Power allocation function for OMA (frequency domain)
-def band_allocation(pair, beta, mode='equal'):
+def band_allocation(pair, beta=0.5, mode='equal'):
     if mode == 'equal':
-        n = len(pair.users)        
+        n = len(pair.users)
         for u in pair.users:
-            u.band = np.ones(len(u.sinr))*(1/n)
+            u.bnd_coef = 1/n
     elif mode == 'fair':
-        u1 = pair.users[0]
-        u2 = pair.users[1]        
-        u1.band = np.ones(len(u1.sinr))*(beta)
-        u2.band = np.ones(len(u2.sinr))*(1-beta)
+        pair.u1.band = beta
+        pair.u2.band = 1-beta
+
+# Run User Pair and Power Allocation functions
+def uppa(ues, cell, mode='fair'):
+    pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=mode)
+    for p in pairs:
+        power_allocation(p, mode=mode)
+    return pairs
