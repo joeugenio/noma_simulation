@@ -55,36 +55,36 @@ class Snapshot:
             ue_sinr.append(uppa.User(ue.id, s))
 
         # UPPA from SINR values
-        pairs = uppa.user_pair(ue_sinr, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue)
+        pairs = uppa.user_pair(ue_sinr, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode='fair')
         
         # throughput performance for N0MA
-        thr_user_avg_noma = []
+        # thr_user_avg_noma = []
         # thr_cell_sum_noma = []
         # thr_r1r2_noma = []
 
         # throughput performance for OMA
-        thr_user_avg_oma = []
+        # thr_user_avg_oma = []
         # thr_cell_sum_oma = []
         # thr_r1r2_oma = []
 
-        for p in pairs:
+        # for p in pairs:
             # Power and band allocation
-            uppa.power_allocation(p, alpha=self.sim.coeff_pwr, mode='fair')
+            # uppa.power_allocation(p, alpha=self.sim.coeff_pwr, mode='fair')
             # Throughput NOMA
-            t_noma = perf.throughput_noma(p, cell.bw_sb)
+            # t_noma = perf.throughput_noma(p, cell.bw_sb)
             # average user throughput per subband
-            thr_user_avg_noma.append(np.mean(t_noma))
+            # thr_user_avg_noma.append(np.mean(t_noma))
             # throughout sum per subband
             # thr_cell_sum_noma.append(np.sum(t_noma))
             # throughput for each user in pair (R1 and R2)
             # thr_r1r2_noma.append(t_noma)
 
             # Power and band allocation
-            uppa.band_allocation(p, beta=self.sim.coeff_bw, mode='fair')
+            # uppa.band_allocation(p, beta=self.sim.coeff_bw, mode='fair')
             # Throughput OMA
-            t_oma = perf.throughput_oma(p, cell.bw_sb)
+            # t_oma = perf.throughput_oma(p, cell.bw_sb)
             # average user throughput per subband
-            thr_user_avg_oma.append(np.mean(t_oma))
+            # thr_user_avg_oma.append(np.mean(t_oma))
             # throughout sum per subband
             # thr_cell_sum_oma.append(np.sum(t_oma))
             # throughput for each user in pair (R1 and R2)
@@ -92,22 +92,22 @@ class Snapshot:
             
 
         # NOMA - average user, subband ecell throughout        
-        thr_user_noma = np.mean(thr_user_avg_noma)
+        # thr_user_noma = np.mean(thr_user_avg_noma)
         # thr_cell_noma = np.sum(thr_cell_sum_noma)
         # thr_sbb_noma = np.mean(thr_cell_sum_noma)
         # r_noma = [thr_user_noma, thr_cell_noma, thr_sbb_noma]
-        r_noma = [thr_user_noma]
+        # r_noma = [thr_user_noma]
         # average user throughput in same subband
         # r1_avg_noma = np.array(thr_r1r2_noma)[:,0].mean()
         # r2_avg_noma = np.array(thr_r1r2_noma)[:,1].mean()
         # r_noma = [r1_avg_noma, r2_avg_noma]
         
         # OMA - average user, subband ecell throughout
-        thr_user_oma = np.mean(thr_user_avg_oma)
+        # thr_user_oma = np.mean(thr_user_avg_oma)
         # thr_cell_oma = np.sum(thr_cell_sum_oma)
         # thr_sbb_oma = np.mean(thr_cell_sum_oma)
         # r_oma = [thr_user_oma, thr_cell_oma, thr_sbb_oma]
-        r_oma = [thr_user_oma]
+        # r_oma = [thr_user_oma]
         # r1_avg_oma = np.array(thr_r1r2_oma)[:,0].mean()
         # r2_avg_oma = np.array(thr_r1r2_oma)[:,1].mean()
         # r_oma = [r1_avg_oma, r2_avg_oma]
@@ -116,7 +116,8 @@ class Snapshot:
         self.grid.disconnect_all_ue()
         self.grid.remove_all_ue()
 
-        return r_noma, r_oma
+        # return r_noma, r_oma
+        return 0, 10
 
 class Simulator:
     ''' System Level Simulator Class ''' 
@@ -126,6 +127,7 @@ class Simulator:
         self.snapshot = None
         for key,value in kwargs.items():
             setattr(self, key, value)
+    
     def scenario_generator(self):
         t.tic()
         ''' Generates mobile communication scenario '''
@@ -144,14 +146,14 @@ class Simulator:
         t.tic()
         prob_noma = perf.Probability(self)
         prob_oma = perf.Probability(self)
-
+        # progress bar
         for i in tqdm(range(self.n_snap), miniters=20, unit=' snapshot'):
             r_noma, r_oma = self.snapshot.run()
-            prob_noma.get_cdf(r_noma)
-            prob_oma.get_cdf(r_oma)
+            # prob_noma.get_cdf(r_noma)
+            # prob_oma.get_cdf(r_oma)
         # normalizes CDF
-        prob_noma.cdf /= self.n_snap
-        prob_oma.cdf /= self.n_snap
+        # prob_noma.cdf /= self.n_snap
+        # prob_oma.cdf /= self.n_snap
 
         logger.info('Saving data file')
         try:
@@ -160,9 +162,9 @@ class Simulator:
             file_desc = str(id(self))
         file1 = const.OUT_PATH+'noma_'+file_desc
         file2 = const.OUT_PATH+'oma_'+file_desc
-        np.save(file1, [prob_noma])
-        np.save(file2, [prob_oma])
-        logger.info('Files saved: ')
+        # np.save(file1, [prob_noma])
+        # np.save(file2, [prob_oma])
+        # logger.info('Files saved: ')
         logger.info(file1)
         logger.info(file2)
         logger.info('Parameters used in the simulation:')

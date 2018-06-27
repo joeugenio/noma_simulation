@@ -25,6 +25,12 @@
 * Revisar TTI: simular eventos discretos, revisar a forma como os TTI são simulados
 * Implementar esquema de blocos de recursos (LTE-A)
 * Reduzir velocidade para 3 km/h (DS)
+* New UPPA algorithm
+* Move all user code for main file
+* Review sim.thr_target for performance.Probability
+* Review n_cdf_arg
+* Review User class on uppa module
+* Review SINR get method
 
 ### Dúvidas [pt_BR]
 

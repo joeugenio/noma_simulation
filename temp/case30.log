@@ -1,8 +1,0 @@
-[I 180508 03:40:08 case30:21] NOMA system level simulation starting
-[I 180508 03:40:08 simulator:129] Creating grid with 19 sites
-[I 180508 03:40:08 simulator:131] Deploing base stations on grid
-[I 180508 03:40:08 simulator:133] Starting all base stations
-[I 180508 03:40:08 simulator:135] Create snapshot simulation
-[I 180508 03:40:08 simulator:140] Running simulation
-[I 180508 15:28:53 simulator:153] Saving data file
-[I 180508 15:28:53 simulator:157] Finished Simulation

@@ -1,0 +1,188 @@
+[I 180626 22:08:21 main:25] NOMA system level simulation starting
+[I 180626 22:34:20 main:24] NOMA system level simulation starting
+[I 180626 22:34:40 main:24] NOMA system level simulation starting
+[I 180626 22:34:40 simulator:144] Running simulation
+[I 180626 22:34:49 main:24] NOMA system level simulation starting
+[I 180626 22:34:49 simulator:133] Creating grid with 19 sites
+[I 180626 22:34:49 simulator:135] Deploing base stations on grid
+[I 180626 22:34:50 simulator:137] Starting all base stations
+[I 180626 22:34:50 simulator:139] Create snapshot simulation
+[I 180626 22:34:50 simulator:144] Running simulation
+[I 180626 22:37:32 main:24] NOMA system level simulation starting
+[I 180626 22:37:32 simulator:133] Creating grid with 19 sites
+[I 180626 22:37:32 simulator:135] Deploing base stations on grid
+[I 180626 22:37:32 simulator:137] Starting all base stations
+[I 180626 22:37:32 simulator:139] Create snapshot simulation
+[I 180626 22:37:32 simulator:144] Running simulation
+[I 180626 22:38:25 main:24] NOMA system level simulation starting
+[I 180626 22:38:25 simulator:134] Creating grid with 19 sites
+[I 180626 22:38:25 simulator:136] Deploing base stations on grid
+[I 180626 22:38:25 simulator:138] Starting all base stations
+[I 180626 22:38:25 simulator:140] Create snapshot simulation
+[I 180626 22:38:25 simulator:145] Running simulation
+[I 180626 22:40:28 main:24] NOMA system level simulation starting
+[I 180626 22:40:28 simulator:134] Creating grid with 19 sites
+[I 180626 22:40:28 simulator:136] Deploing base stations on grid
+[I 180626 22:40:28 simulator:138] Starting all base stations
+[I 180626 22:40:28 simulator:140] Create snapshot simulation
+[I 180626 22:40:28 simulator:145] Running simulation
+[I 180626 22:41:26 main:24] NOMA system level simulation starting
+[I 180626 22:41:26 simulator:134] Creating grid with 19 sites
+[I 180626 22:41:26 simulator:136] Deploing base stations on grid
+[I 180626 22:41:26 simulator:138] Starting all base stations
+[I 180626 22:41:26 simulator:140] Create snapshot simulation
+[I 180626 22:41:26 simulator:145] Running simulation
+[I 180626 22:41:27 simulator:158] Saving data file
+[I 180626 22:41:27 simulator:168] ./output/dat/noma_main
+[I 180626 22:41:27 simulator:169] ./output/dat/oma_main
+[I 180626 22:41:27 simulator:170] Parameters used in the simulation:
+[I 180626 22:41:27 simulator:175] filename: main
+[I 180626 22:41:27 simulator:175] n_ue_cell: 10
+[I 180626 22:41:27 simulator:175] n_snap: 1
+[I 180626 22:41:27 simulator:176] Finished Simulation
+[I 180626 22:42:28 main:24] NOMA system level simulation starting
+[I 180626 22:42:28 simulator:134] Creating grid with 19 sites
+[I 180626 22:42:28 simulator:136] Deploing base stations on grid
+[I 180626 22:42:28 simulator:138] Starting all base stations
+[I 180626 22:42:28 simulator:140] Create snapshot simulation
+[I 180626 22:42:28 simulator:145] Running simulation
+[I 180626 22:42:29 simulator:158] Saving data file
+[I 180626 22:42:29 simulator:168] ./output/dat/noma_main
+[I 180626 22:42:29 simulator:169] ./output/dat/oma_main
+[I 180626 22:42:29 simulator:170] Parameters used in the simulation:
+[I 180626 22:42:29 simulator:175] n_snap: 1
+[I 180626 22:42:29 simulator:175] n_ue_cell: 10
+[I 180626 22:42:29 simulator:175] filename: main
+[I 180626 22:42:29 simulator:176] Finished Simulation
+[I 180626 22:44:01 main:24] NOMA system level simulation starting
+[I 180626 22:44:01 simulator:134] Creating grid with 19 sites
+[I 180626 22:44:01 simulator:136] Deploing base stations on grid
+[I 180626 22:44:01 simulator:138] Starting all base stations
+[I 180626 22:44:01 simulator:140] Create snapshot simulation
+[I 180626 22:44:01 simulator:145] Running simulation
+[I 180626 22:44:03 simulator:158] Saving data file
+[I 180626 22:44:03 simulator:168] ./output/dat/noma_main
+[I 180626 22:44:03 simulator:169] ./output/dat/oma_main
+[I 180626 22:44:03 simulator:170] Parameters used in the simulation:
+[I 180626 22:44:03 simulator:175] n_ue_cell: 10
+[I 180626 22:44:03 simulator:175] filename: main
+[I 180626 22:44:03 simulator:175] n_snap: 1
+[I 180626 22:44:03 simulator:176] Finished Simulation
+[I 180626 22:44:50 main:24] NOMA system level simulation starting
+[I 180626 22:44:50 simulator:134] Creating grid with 19 sites
+[I 180626 22:44:50 simulator:136] Deploing base stations on grid
+[I 180626 22:44:50 simulator:138] Starting all base stations
+[I 180626 22:44:50 simulator:140] Create snapshot simulation
+[I 180626 22:44:50 simulator:145] Running simulation
+[I 180626 22:44:52 simulator:158] Saving data file
+[I 180626 22:44:52 simulator:168] ./output/dat/noma_main
+[I 180626 22:44:52 simulator:169] ./output/dat/oma_main
+[I 180626 22:44:52 simulator:170] Parameters used in the simulation:
+[I 180626 22:44:52 simulator:175] n_snap: 1
+[I 180626 22:44:52 simulator:175] filename: main
+[I 180626 22:44:52 simulator:175] n_ue_cell: 10
+[I 180626 22:44:52 simulator:176] Finished Simulation
+[I 180626 22:45:08 main:24] NOMA system level simulation starting
+[I 180626 22:45:08 simulator:134] Creating grid with 19 sites
+[I 180626 22:45:08 simulator:136] Deploing base stations on grid
+[I 180626 22:45:08 simulator:138] Starting all base stations
+[I 180626 22:45:08 simulator:140] Create snapshot simulation
+[I 180626 22:45:08 simulator:145] Running simulation
+[I 180626 22:45:09 simulator:158] Saving data file
+[I 180626 22:45:09 simulator:168] ./output/dat/noma_main
+[I 180626 22:45:09 simulator:169] ./output/dat/oma_main
+[I 180626 22:45:09 simulator:170] Parameters used in the simulation:
+[I 180626 22:45:09 simulator:175] n_ue_cell: 10
+[I 180626 22:45:09 simulator:175] filename: main
+[I 180626 22:45:09 simulator:175] n_snap: 1
+[I 180626 22:45:09 simulator:176] Finished Simulation
+[I 180626 22:45:31 main:24] NOMA system level simulation starting
+[I 180626 22:45:31 simulator:134] Creating grid with 19 sites
+[I 180626 22:45:31 simulator:136] Deploing base stations on grid
+[I 180626 22:45:31 simulator:138] Starting all base stations
+[I 180626 22:45:31 simulator:140] Create snapshot simulation
+[I 180626 22:45:31 simulator:145] Running simulation
+[I 180626 22:45:33 simulator:158] Saving data file
+[I 180626 22:45:33 simulator:168] ./output/dat/noma_main
+[I 180626 22:45:33 simulator:169] ./output/dat/oma_main
+[I 180626 22:45:33 simulator:170] Parameters used in the simulation:
+[I 180626 22:45:33 simulator:175] n_ue_cell: 10
+[I 180626 22:45:33 simulator:175] filename: main
+[I 180626 22:45:33 simulator:175] n_snap: 1
+[I 180626 22:45:33 simulator:176] Finished Simulation
+[I 180626 22:46:05 main:24] NOMA system level simulation starting
+[I 180626 22:46:05 simulator:134] Creating grid with 19 sites
+[I 180626 22:46:05 simulator:136] Deploing base stations on grid
+[I 180626 22:46:05 simulator:138] Starting all base stations
+[I 180626 22:46:05 simulator:140] Create snapshot simulation
+[I 180626 22:46:05 simulator:145] Running simulation
+[I 180626 22:46:07 simulator:158] Saving data file
+[I 180626 22:46:07 simulator:168] ./output/dat/noma_main
+[I 180626 22:46:07 simulator:169] ./output/dat/oma_main
+[I 180626 22:46:07 simulator:170] Parameters used in the simulation:
+[I 180626 22:46:07 simulator:175] n_ue_cell: 10
+[I 180626 22:46:07 simulator:175] filename: main
+[I 180626 22:46:07 simulator:175] n_snap: 1
+[I 180626 22:46:07 simulator:176] Finished Simulation
+[I 180626 22:46:55 main:24] NOMA system level simulation starting
+[I 180626 22:46:55 simulator:134] Creating grid with 19 sites
+[I 180626 22:46:55 simulator:136] Deploing base stations on grid
+[I 180626 22:46:55 simulator:138] Starting all base stations
+[I 180626 22:46:55 simulator:140] Create snapshot simulation
+[I 180626 22:46:55 simulator:145] Running simulation
+[I 180626 22:46:56 simulator:158] Saving data file
+[I 180626 22:46:56 simulator:168] ./output/dat/noma_main
+[I 180626 22:46:56 simulator:169] ./output/dat/oma_main
+[I 180626 22:46:56 simulator:170] Parameters used in the simulation:
+[I 180626 22:46:56 simulator:175] n_ue_cell: 10
+[I 180626 22:46:56 simulator:175] filename: main
+[I 180626 22:46:56 simulator:175] n_snap: 1
+[I 180626 22:46:56 simulator:176] Finished Simulation
+[I 180626 22:47:19 main:24] NOMA system level simulation starting
+[I 180626 22:47:19 simulator:134] Creating grid with 19 sites
+[I 180626 22:47:19 simulator:136] Deploing base stations on grid
+[I 180626 22:47:19 simulator:138] Starting all base stations
+[I 180626 22:47:19 simulator:140] Create snapshot simulation
+[I 180626 22:47:19 simulator:145] Running simulation
+[I 180626 22:47:21 simulator:158] Saving data file
+[I 180626 22:47:21 simulator:168] ./output/dat/noma_main
+[I 180626 22:47:21 simulator:169] ./output/dat/oma_main
+[I 180626 22:47:21 simulator:170] Parameters used in the simulation:
+[I 180626 22:47:21 simulator:175] n_ue_cell: 10
+[I 180626 22:47:21 simulator:175] n_snap: 1
+[I 180626 22:47:21 simulator:175] filename: main
+[I 180626 22:47:21 simulator:176] Finished Simulation
+[I 180626 22:59:41 main:24] NOMA system level simulation starting
+[I 180626 22:59:41 simulator:134] Creating grid with 19 sites
+[I 180626 22:59:41 simulator:136] Deploing base stations on grid
+[I 180626 22:59:41 simulator:138] Starting all base stations
+[I 180626 22:59:41 simulator:140] Create snapshot simulation
+[I 180626 22:59:41 simulator:145] Running simulation
+[I 180626 22:59:42 simulator:158] Saving data file
+[I 180626 22:59:42 simulator:168] ./output/dat/noma_main
+[I 180626 22:59:42 simulator:169] ./output/dat/oma_main
+[I 180626 22:59:42 simulator:170] Parameters used in the simulation:
+[I 180626 22:59:42 simulator:175] n_snap: 1
+[I 180626 22:59:42 simulator:175] n_ue_cell: 10
+[I 180626 22:59:42 simulator:175] filename: main
+[I 180626 22:59:42 simulator:176] Finished Simulation
+[I 180626 23:22:21 main:24] NOMA system level simulation starting
+[I 180626 23:22:21 simulator:134] Creating grid with 19 sites
+[I 180626 23:22:21 simulator:136] Deploing base stations on grid
+[I 180626 23:22:21 simulator:138] Starting all base stations
+[I 180626 23:22:21 simulator:140] Create snapshot simulation
+[I 180626 23:22:21 simulator:145] Running simulation
+[I 180626 23:22:36 main:24] NOMA system level simulation starting
+[I 180626 23:22:36 simulator:134] Creating grid with 19 sites
+[I 180626 23:22:36 simulator:136] Deploing base stations on grid
+[I 180626 23:22:36 simulator:138] Starting all base stations
+[I 180626 23:22:36 simulator:140] Create snapshot simulation
+[I 180626 23:22:36 simulator:145] Running simulation
+[I 180626 23:22:37 simulator:158] Saving data file
+[I 180626 23:22:37 simulator:168] ./output/dat/noma_main
+[I 180626 23:22:37 simulator:169] ./output/dat/oma_main
+[I 180626 23:22:37 simulator:170] Parameters used in the simulation:
+[I 180626 23:22:37 simulator:175] n_snap: 1
+[I 180626 23:22:37 simulator:175] filename: main
+[I 180626 23:22:37 simulator:175] n_ue_cell: 10
+[I 180626 23:22:37 simulator:176] Finished Simulation
