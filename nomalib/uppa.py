@@ -63,8 +63,8 @@ def power_allocation(pair, alpha=0.2, mode='fix'):
     elif mode == 'fair':
         sinr2 = pair.u2.sinr.mean()
         alpha = (np.sqrt(1+sinr2)-1)/sinr2
-        pair.u1.power = alpha
-        pair.u2.power = 1-alpha
+        pair.u1.pwr_coef = alpha
+        pair.u2.pwr_coef = 1-alpha
 
 # Power allocation function for OMA (frequency domain)
 def band_allocation(pair, beta=0.5, mode='equal'):
@@ -73,12 +73,14 @@ def band_allocation(pair, beta=0.5, mode='equal'):
         for u in pair.users:
             u.bnd_coef = 1/n
     elif mode == 'fair':
-        pair.u1.band = beta
-        pair.u2.band = 1-beta
+        pair.u1.bnd_coef = beta
+        pair.u2.bnd_coef = 1-beta
 
 # Run User Pair and Power Allocation functions
 def uppa(ues, cell, mode='fair'):
     pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=mode)
     for p in pairs:
         power_allocation(p, mode=mode)
+        # band allocation for OMA analysis
+        band_allocation(p)
     return pairs

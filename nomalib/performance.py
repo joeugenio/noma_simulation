@@ -120,7 +120,7 @@ def throughput_oma(pair, bw_sb=1, model='shannon_att'):
     thr = []    
     for u in pair.users:
         sinr = u.sinr
-        beta = u.band
+        beta = u.bnd_coef
         try:
             f = pwr/beta
         except ZeroDivisionError:
@@ -135,10 +135,10 @@ def throughput_noma(pair, bw_sb=1, model='shannon_att'):
             'shannon_trunc':shannon_trunc,
             'shannon_att':shannon_att}
     thr = []
-    a = np.zeros(len(pair.users[0].power))
+    a = 0
     for u in pair.users:
         sinr = u.sinr
-        alpha = u.power
+        alpha = u.pwr_coef
         num = alpha*sinr
         den = a*sinr + 1
         t = func[model]((num/den), bw=bw_sb)
