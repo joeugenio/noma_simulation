@@ -12,6 +12,7 @@
 import nomalib.simulator as sim
 import nomalib.uppa as uppa
 import nomalib.performance as perf
+import numpy as np
 import logzero
 from logzero import logger
 import __main__ as main
@@ -40,27 +41,28 @@ def my_drop(snap):
         
     # UPPA from fair method
     pairs = uppa.uppa(ues_uppa, cell, mode='fair')
-    for p in pairs:
-        thr = perf.throughput_oma(p, cell.bw_sb)
-        print(thr)
-        
+    
     # throughput performance for N0MA
+    thr_noma = []
     # thr_user_noma = []
     # thr_cell_noma = []
     # thr_sub_noma = []
     # thr_r1_noma = []
     # thr_r2_noma = []
 
-
-    # Throughput NOMA
-    # t_noma = perf.throughput_noma(p, cell.bw_sb)
-    # average user throughput per subband
-    # thr_user_avg_noma.append(np.mean(t_noma))
-    # throughout sum per subband
-    # thr_cell_sum_noma.append(np.sum(t_noma))
-    # throughput for each user in pair (R1 and R2)
-    # thr_r1r2_noma.append(t_noma)
-           
+    for p in pairs:
+        # Throughput NOMA for each user
+        thr = perf.throughput_noma(p.users, cell.bw_sb)
+        thr_noma.append(thr)
+    
+    thr_user_noma = np.mean(thr_noma)
+    return thr_user_noma
+        # average user throughput per subband
+        # thr_user_noma.append(np.mean(t_noma))
+        # throughout sum per subband
+        # thr_cell_sum_noma.append(np.sum(t_noma))
+        # throughput for each user in pair (R1 and R2)
+        # thr_r1r2_noma.append(t_noma)
 
     # NOMA - average user, subband ecell throughout        
     # thr_user_noma = np.mean(thr_user_avg_noma)
@@ -73,13 +75,12 @@ def my_drop(snap):
     # r2_avg_noma = np.array(thr_r1r2_noma)[:,1].mean()
     # r_noma = [r1_avg_noma, r2_avg_noma]
 
-# 
-       
-
 # create simulation
 #s = sim.Simulator(n_ue_cell=10, coeff_pwr=0.8, coeff_bw=0.8, thr_target=80e6, n_cdf_arg=2, filename=file_name)
 s = sim.Simulator(n_ue_cell=10, n_snap=2, filename=file_name)
 # create scenario
 s.scenario_generator()
+# create statistics 
+stat = perf.Statistics(thr_target=50)
 # run simulator
 s.run(drop=my_drop)

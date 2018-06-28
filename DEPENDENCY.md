@@ -14,8 +14,8 @@ These modules can be installed via pip
 ``` 
 python3 -m pip install -U logzero
 python3 -m pip install --user numpy scipy matplotlib
-python3 -m pip install tqdm
-python3 -m pip install pytictoc
+
+python3 -m pip install tqdmpython3 -m pip install pytictoc
 ```
 
 or

@@ -110,15 +110,15 @@ def shannon_att(sinr, bw=1, att=const.SHN_ATT, r_max_norm = 948*6/1024, scale='l
         thr = thr if thr <= r_max else r_max
     return thr
 
-def throughput_oma(pair, bw_sb=1, model='shannon_att'):
-    n_ue = len(pair.users)
+def throughput_oma(users, bw_sb=1, model='shannon_att'):
+    n_ue = len(users)
     pwr = 1/n_ue
     func = {'amc':amc_lte,
             'shannon':shannon,
             'shannon_trunc':shannon_trunc,
             'shannon_att':shannon_att}
     thr = []    
-    for u in pair.users:
+    for u in users:
         sinr = u.sinr
         beta = u.bnd_coef
         try:
@@ -129,14 +129,15 @@ def throughput_oma(pair, bw_sb=1, model='shannon_att'):
         thr.append(t.mean())
     return thr
     
-def throughput_noma(pair, bw_sb=1, model='shannon_att'):
+def throughput_noma(users, bw_sb=1, model='shannon_att'):
     func = {'amc':amc_lte,
             'shannon':shannon,
             'shannon_trunc':shannon_trunc,
             'shannon_att':shannon_att}
     thr = []
     a = 0
-    for u in pair.users:
+    # the users should be in increased order
+    for u in users:
         sinr = u.sinr
         alpha = u.pwr_coef
         num = alpha*sinr
@@ -146,22 +147,17 @@ def throughput_noma(pair, bw_sb=1, model='shannon_att'):
         a += alpha
     return thr
 
-class Probability:
-    def __init__(self, sim, size=100):
+class Statistics:
+    def __init__(self, thr_target, size=100):
         try:
-            self.max = sim.thr_target
+            self.max = thr_target
         except AttributeError:
             self.max = const.THR_TARGET
-        try:
-            self.len_arg = sim.n_cdf_arg
-        except AttributeError:
-            self.len_arg = const.N_CDF_ARG
         self.size = size
         self.thr = np.linspace(0, self.max, size)
-        self.cdf = np.zeros((self.len_arg, size))
+        self.cdf = np.zeros(size)
     
-    def get_cdf(self, value):
+    def cdf_calc(self, value):
         for i in range(self.size):
-            for j in range(self.len_arg):
-                if value[j] <= self.thr[i]:
-                    self.cdf[j][i] += 1 
+            if value <= self.thr[i]:
+                self.cdf[i] += 1 

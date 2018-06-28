@@ -10,11 +10,9 @@
 
 import nomalib.constants as const
 import nomalib.network as net
-# import nomalib.uppa as uppa
-# import nomalib.performance as perf
 import numpy as np
-from logzero import logger
 from tqdm import tqdm
+from logzero import logger
 from pytictoc import TicToc
 
 t = TicToc()
@@ -79,39 +77,31 @@ class Simulator:
         self.snapshot = Snapshot(self)
         t.toc()
        
-    def run(self, drop):
-        logger.info('Running simulation')
+    def run(self, drop, stats):
         t.tic()
-        # prob_noma = perf.Probability(self)
-        # prob_oma = perf.Probability(self)
-        # progress bar
-        for i in tqdm(range(self.n_snap), miniters=20, unit=' snapshot'):
-            result = self.snapshot.run(drop)
-            print(result)
-
-            # prob_noma.get_cdf(r_noma)
-            # prob_oma.get_cdf(r_oma)
-        # normalizes CDF
-        # prob_noma.cdf /= self.n_snap
-        # prob_oma.cdf /= self.n_snap
-
-        # logger.info('Saving data file')
-        # try:
-            # file_desc = self.filename
-        # except AttributeError:
-            # file_desc = str(id(self))
-        # file1 = const.OUT_PATH+'noma_'+file_desc
-        # file2 = const.OUT_PATH+'oma_'+file_desc
-        # np.save(file1, [prob_noma])
-        # np.save(file2, [prob_oma])
-        # logger.info('Files saved: ')
-        # logger.info(file1)
-        # logger.info(file2)
         logger.info('Parameters used in the simulation:')
         attr = self.__dict__.copy()
         attr.pop('grid')
         attr.pop('snapshot')
         for k,v in attr.items():
             logger.info(str(k)+': '+str(v))
+        logger.info('Running simulation')
+        # progress bar
+        for i in tqdm(range(self.n_snap), miniters=20, unit=' snapshot'):
+            results = self.snapshot.run(drop)
+            for r in range(len(results)):
+                stats[r].cdf_calc(results[r])
+        # normalizes CDF
+        for s in stats:
+            s.cdf /= self.n_snap 
+        logger.info('Saving data file')
+        try:
+            file_desc = self.filename
+        except AttributeError:
+            file_desc = str(id(self))
+        filename = const.OUT_PATH+'noma_'+file_desc
+        np.save(filename, stats)
+        logger.info('File saved:')
+        logger.info(filename)
         logger.info('Finished Simulation')
         t.toc()
