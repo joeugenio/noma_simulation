@@ -1,0 +1,47 @@
+[I 180629 09:05:49 fair30:27] NOMA system level simulation starting
+[I 180629 09:05:49 simulator:70] Creating grid with 19 sites
+[I 180629 09:05:49 simulator:72] Deploing base stations on grid
+[I 180629 09:05:49 simulator:74] Starting all base stations
+[I 180629 09:05:49 simulator:76] Create snapshot simulation
+[I 180629 09:05:49 simulator:83] Parameters used in the simulation:
+[I 180629 09:05:49 simulator:88] filename: fair30
+[I 180629 09:05:49 simulator:88] n_snap: 100
+[I 180629 09:05:49 simulator:88] n_ue_cell: 30
+[I 180629 09:05:49 simulator:90] Running simulation
+[I 180629 09:14:19 simulator:99] Saving data file
+[I 180629 09:14:19 simulator:106] File saved:
+[I 180629 09:14:19 simulator:107] ./output/dat/simul_fair30
+[I 180629 09:14:19 simulator:108] Finished Simulation
+[I 180629 09:36:17 fair30:27] NOMA system level simulation starting
+[I 180629 09:36:17 simulator:70] Creating grid with 19 sites
+[I 180629 09:36:17 simulator:72] Deploing base stations on grid
+[I 180629 09:36:17 simulator:74] Starting all base stations
+[I 180629 09:36:17 simulator:76] Create snapshot simulation
+[I 180629 09:37:07 fair30:27] NOMA system level simulation starting
+[I 180629 09:37:07 simulator:70] Creating grid with 19 sites
+[I 180629 09:37:07 simulator:72] Deploing base stations on grid
+[I 180629 09:37:07 simulator:74] Starting all base stations
+[I 180629 09:37:07 simulator:76] Create snapshot simulation
+[I 180629 09:37:07 simulator:83] Parameters used in the simulation:
+[I 180629 09:37:07 simulator:88] n_ue_cell: 30
+[I 180629 09:37:07 simulator:88] n_snap: 100
+[I 180629 09:37:07 simulator:88] filename: fair30
+[I 180629 09:37:07 simulator:90] Running simulation
+[I 180629 09:43:47 simulator:99] Saving data file
+[I 180629 09:43:47 simulator:106] File saved:
+[I 180629 09:43:47 simulator:107] ./output/dat/simul_fair30
+[I 180629 09:43:47 simulator:108] Finished Simulation
+[I 180629 09:51:02 fair30:27] NOMA system level simulation starting
+[I 180629 09:51:02 simulator:70] Creating grid with 19 sites
+[I 180629 09:51:02 simulator:72] Deploing base stations on grid
+[I 180629 09:51:02 simulator:74] Starting all base stations
+[I 180629 09:51:02 simulator:76] Create snapshot simulation
+[I 180629 09:51:02 simulator:83] Parameters used in the simulation:
+[I 180629 09:51:02 simulator:88] n_ue_cell: 30
+[I 180629 09:51:02 simulator:88] n_snap: 100
+[I 180629 09:51:02 simulator:88] filename: fair30
+[I 180629 09:51:02 simulator:90] Running simulation
+[I 180629 09:59:50 simulator:99] Saving data file
+[I 180629 09:59:50 simulator:106] File saved:
+[I 180629 09:59:50 simulator:107] ./output/dat/simul_fair30
+[I 180629 09:59:50 simulator:108] Finished Simulation

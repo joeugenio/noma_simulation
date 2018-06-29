@@ -464,7 +464,7 @@ def plot_cdf_noma_oma(n, o, sh=False, save=False, filename='cdf', lab=''):
     # plt.text(3,.44, '50% FCP', fontsize=14)
     # plt.plot([0, 52.32, 52.32],[1-.9533, 1-.9533,0],'--r')
     # plt.plot([40.30, 40.30],[1-.9533,0],'--r')
-    plt.text(3,.9, '5% FCP', fontsize=14)
+    # plt.text(3,.9, '5% FCP', fontsize=14)
     plt.grid(True)
     plt.legend(fontsize=14, loc='upper right')
     plt.xlabel('Taxa de dados [Mbps]', fontsize=17)

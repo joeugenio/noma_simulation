@@ -1,0 +1,14 @@
+[I 180629 06:48:37 fair02:27] NOMA system level simulation starting
+[I 180629 06:48:37 simulator:70] Creating grid with 19 sites
+[I 180629 06:48:37 simulator:72] Deploing base stations on grid
+[I 180629 06:48:37 simulator:74] Starting all base stations
+[I 180629 06:48:37 simulator:76] Create snapshot simulation
+[I 180629 06:48:37 simulator:83] Parameters used in the simulation:
+[I 180629 06:48:37 simulator:88] n_ue_cell: 2
+[I 180629 06:48:37 simulator:88] filename: fair02
+[I 180629 06:48:37 simulator:88] n_snap: 1000
+[I 180629 06:48:37 simulator:90] Running simulation
+[I 180629 06:51:54 simulator:99] Saving data file
+[I 180629 06:51:54 simulator:106] File saved:
+[I 180629 06:51:54 simulator:107] ./output/dat/simul_fair02
+[I 180629 06:51:54 simulator:108] Finished Simulation

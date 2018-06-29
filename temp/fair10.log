@@ -1,0 +1,42 @@
+[I 180629 09:07:39 fair10:27] NOMA system level simulation starting
+[I 180629 09:07:39 simulator:70] Creating grid with 19 sites
+[I 180629 09:07:39 simulator:72] Deploing base stations on grid
+[I 180629 09:07:40 simulator:74] Starting all base stations
+[I 180629 09:07:40 simulator:76] Create snapshot simulation
+[I 180629 09:07:40 simulator:83] Parameters used in the simulation:
+[I 180629 09:07:40 simulator:88] filename: fair10
+[I 180629 09:07:40 simulator:88] n_snap: 100
+[I 180629 09:07:40 simulator:88] n_ue_cell: 10
+[I 180629 09:07:40 simulator:90] Running simulation
+[I 180629 09:11:09 simulator:99] Saving data file
+[I 180629 09:11:09 simulator:106] File saved:
+[I 180629 09:11:09 simulator:107] ./output/dat/simul_fair10
+[I 180629 09:11:09 simulator:108] Finished Simulation
+[I 180629 09:45:21 fair10:27] NOMA system level simulation starting
+[I 180629 09:45:21 simulator:70] Creating grid with 19 sites
+[I 180629 09:45:21 simulator:72] Deploing base stations on grid
+[I 180629 09:45:21 simulator:74] Starting all base stations
+[I 180629 09:45:21 simulator:76] Create snapshot simulation
+[I 180629 09:45:21 simulator:83] Parameters used in the simulation:
+[I 180629 09:45:21 simulator:88] n_snap: 100
+[I 180629 09:45:21 simulator:88] filename: fair10
+[I 180629 09:45:21 simulator:88] n_ue_cell: 10
+[I 180629 09:45:21 simulator:90] Running simulation
+[I 180629 09:47:44 simulator:99] Saving data file
+[I 180629 09:47:44 simulator:106] File saved:
+[I 180629 09:47:44 simulator:107] ./output/dat/simul_fair10
+[I 180629 09:47:44 simulator:108] Finished Simulation
+[I 180629 09:56:33 fair10:27] NOMA system level simulation starting
+[I 180629 09:56:33 simulator:70] Creating grid with 19 sites
+[I 180629 09:56:33 simulator:72] Deploing base stations on grid
+[I 180629 09:56:33 simulator:74] Starting all base stations
+[I 180629 09:56:33 simulator:76] Create snapshot simulation
+[I 180629 09:56:33 simulator:83] Parameters used in the simulation:
+[I 180629 09:56:33 simulator:88] n_ue_cell: 10
+[I 180629 09:56:33 simulator:88] filename: fair10
+[I 180629 09:56:33 simulator:88] n_snap: 100
+[I 180629 09:56:33 simulator:90] Running simulation
+[I 180629 09:59:26 simulator:99] Saving data file
+[I 180629 09:59:26 simulator:106] File saved:
+[I 180629 09:59:26 simulator:107] ./output/dat/simul_fair10
+[I 180629 09:59:26 simulator:108] Finished Simulation

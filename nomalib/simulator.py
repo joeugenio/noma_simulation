@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 25/03/2018
-# Last update: 07/05/2018
+# Last update: 28/06/2018
 # Version: 0.1
 
 # Simulator Python Script for NOMA communications simulations
@@ -79,12 +79,14 @@ class Simulator:
        
     def run(self, drop, stats):
         t.tic()
+        # logger in formation about simulation
         logger.info('Parameters used in the simulation:')
         attr = self.__dict__.copy()
         attr.pop('grid')
         attr.pop('snapshot')
         for k,v in attr.items():
             logger.info(str(k)+': '+str(v))
+        # running simulation drops
         logger.info('Running simulation')
         # progress bar
         for i in tqdm(range(self.n_snap), miniters=20, unit=' snapshot'):
@@ -99,7 +101,7 @@ class Simulator:
             file_desc = self.filename
         except AttributeError:
             file_desc = str(id(self))
-        filename = const.OUT_PATH+'noma_'+file_desc
+        filename = const.OUT_PATH+'simul_'+file_desc
         np.save(filename, stats)
         logger.info('File saved:')
         logger.info(filename)

@@ -77,10 +77,11 @@ def band_allocation(pair, beta=0.5, mode='equal'):
         pair.u2.bnd_coef = 1-beta
 
 # Run User Pair and Power Allocation functions
-def uppa(ues, cell, mode='fair'):
-    pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=mode)
+def uppa(ues, cell, up_mode='fair', pa_mode='fair'):
+    pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=up_mode)
     for p in pairs:
-        power_allocation(p, mode=mode)
+        # power allocation for NOMA analysis
+        power_allocation(p, mode=pa_mode)
         # band allocation for OMA analysis
         band_allocation(p)
     return pairs

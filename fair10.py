@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 07/05/2018
-# Last update: 28/06/2018
+# Last update: 29/06/2018
 # Version: 0.1
 
 # Main Python Script for NOMA communications simulations
@@ -74,12 +74,13 @@ def my_drop(snap):
 
 # create simulation
 #s = sim.Simulator(n_ue_cell=10, coeff_pwr=0.8, coeff_bw=0.8, thr_target=80e6, n_cdf_arg=2, filename=file_name)
-s = sim.Simulator(n_ue_cell=10, n_snap=1, filename=file_name)
+s = sim.Simulator(n_ue_cell=10, filename=file_name)
 # create scenario
 s.scenario_generator()
 # create statistics
 stats = []
+target = [8e6,70e6,16e6,12e6,6e6]*2
 for i in range(10):
-    stats.append(perf.Statistics(thr_target=80e6))
+    stats.append(perf.Statistics(thr_target=target[i]))
 # run simulator
 s.run(my_drop, stats)
