@@ -31,6 +31,8 @@
 * Review n_cdf_arg
 * Review User class on uppa module
 * Review SINR get method
+* Define attribute class on method arguments (for pyrevers)
+* Set __init()__ function
 
 ### Dúvidas [pt_BR]
 
