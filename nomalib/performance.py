@@ -147,6 +147,12 @@ def throughput_noma(users, bw_sb=1, model='shannon_att'):
         a += alpha
     return thr
 
+# Fairness measure
+# Jains's index
+def jain(thr:np.array):
+    j = ((thr.sum())**2)/(thr.size*(thr**2).sum())
+    return j
+
 class Statistics:
     def __init__(self, thr_target, size=100):
         try:
