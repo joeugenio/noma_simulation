@@ -3,7 +3,6 @@
 import numpy as np
 from nomalib.uppa import Pair
 from nomalib.uppa import User
-import nomalib.performance as perf
 
 class BestPair:
     ''' Class for search best pair for exahustive search '''

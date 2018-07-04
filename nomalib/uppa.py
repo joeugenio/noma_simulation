@@ -27,8 +27,55 @@ class Pair:
         self.u2 = u2
         self.users = [u1, u2]
 
+class BestPair:
+    ''' Class for search best pair for exahustive search '''
+    def __init__(self):
+        self.branch = []
+        self.all_pairs = []
+
+    def available_pairs(self, u):
+        u.sort(key=lambda x: x.sinr.mean(), reverse=True)
+        pairs = []
+        k = 0
+        n = len(u)
+        for i in range(n):
+            for j in range(1+i, n):
+                pairs.append(Pair(k, u[i],u[j]))
+                k += 1
+        return pairs
+
+    def all_branchs(self, users):
+        pairs = self.available_pairs(users)
+        for p in pairs:
+            u = users.copy()
+            self.branch.append(p)
+            u.remove(p.u1)
+            u.remove(p.u2)
+            if u != []:
+                self.all_branchs(u)
+            else:
+                self.all_pairs.append(self.branch.copy())
+            self.branch.pop()
+        return
+
+    def search_best_pairs(self, users, thr_func, pa_mode='fair'):
+        ues = users.copy()
+        self.all_branchs(ues)
+        thr_max = 0
+        best_pairs = None
+        for pairs in self.all_pairs:
+            thr = []
+            for p in pairs:
+                power_allocation(p, mode=pa_mode)
+                thr.append(thr_func(p.users, 1))
+            thr_cell = np.sum(thr)
+            if thr_cell > thr_max:
+                thr_max = thr_cell
+                best_pairs = pairs
+        return best_pairs
+
 # User pair function
-def user_pair(ues_uppa, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
+def user_pair(ues_uppa, n_sb, n_ma_ue=const.N_MA_UE, mode='random', func=None):
     ues = ues_uppa[:]
     pairs = []
     if mode == 'random':
@@ -48,7 +95,8 @@ def user_pair(ues_uppa, n_sb, n_ma_ue=const.N_MA_UE, mode='random'):
             u2 = ues[s]
             pairs.append(Pair(id=s, u1=u1, u2=u2))
     elif mode == 'search':
-        pass
+        b = BestPair()
+        pairs = b.search_best_pairs(ues_uppa, func, 'fair')
     return pairs
 
 # Power allocation function for NOMA (power domain)
@@ -77,8 +125,8 @@ def band_allocation(pair, beta=0.5, mode='equal'):
         pair.u2.bnd_coef = 1-beta
 
 # Run User Pair and Power Allocation functions
-def uppa(ues, cell, up_mode='fair', pa_mode='fair'):
-    pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=up_mode)
+def uppa(ues, cell, up_mode='fair', pa_mode='fair', thr_func=None):
+    pairs = user_pair(ues, n_sb=cell.n_sb, n_ma_ue=cell.n_ma_ue, mode=up_mode, func=thr_func)
     for p in pairs:
         # power allocation for NOMA analysis
         power_allocation(p, mode=pa_mode)
