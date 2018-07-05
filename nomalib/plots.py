@@ -453,7 +453,7 @@ def plot_measure(grid, sh=False, save=False, filename='measure'):
     show_fig(sh)
     plt.clf()
 
-def plot_cdf_noma_oma(n, o, sh=False, save=False, filename='cdf', lab=''):
+def plot_cdf_noma_oma(n, o, sh=False, save=False, filename='cdf_noma_oma', lab=''):
     plt.plot(n[0], n[1], '-*', lw=1, label=lab[0])
     plt.plot(o[0], o[1], '--o', lw=1, label=lab[1])
     # plt.plot([0, 14.14, 14.14],[1-.0503, 1-.0503,0],'--r')
@@ -465,6 +465,21 @@ def plot_cdf_noma_oma(n, o, sh=False, save=False, filename='cdf', lab=''):
     # plt.plot([0, 52.32, 52.32],[1-.9533, 1-.9533,0],'--r')
     # plt.plot([40.30, 40.30],[1-.9533,0],'--r')
     # plt.text(3,.9, '5% FCP', fontsize=14)
+    plt.grid(True)
+    plt.legend(fontsize=14, loc='upper right')
+    plt.xlabel('Taxa de dados [Mbps]', fontsize=17)
+    # plt.ylabel('CCDF', fontsize=14)
+    plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    plt.tick_params(labelsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab=''):
+    i = 0
+    for c in cdf:
+        plt.plot(c.event/1, 1-c.cdf, '-*', lw=1, label=lab[i])
+        i +=1
     plt.grid(True)
     plt.legend(fontsize=14, loc='upper right')
     plt.xlabel('Taxa de dados [Mbps]', fontsize=17)

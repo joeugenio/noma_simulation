@@ -150,20 +150,22 @@ def throughput_noma(users, bw_sb=1, model='shannon_att'):
 # Fairness measure
 # Jains's index
 def jain(thr:np.array):
-    j = ((thr.sum())**2)/(thr.size*(thr**2).sum())
-    return j
+    index = ((thr.sum())**2)/(thr.size*(thr**2).sum())
+    return index
 
+# CDF calculator
 class Statistics:
-    def __init__(self, thr_target, size=100):
+    def __init__(self, target, low=0, size=100):
         try:
-            self.max = thr_target
+            self.max = target
+            self.low = low
         except AttributeError:
             self.max = const.THR_TARGET
         self.size = size
-        self.thr = np.linspace(0, self.max, size)
+        self.event = np.linspace(self.low, self.max, size)
         self.cdf = np.zeros(size)
     
     def cdf_calc(self, value):
         for i in range(self.size):
-            if value <= self.thr[i]:
+            if value <= self.event[i]:
                 self.cdf[i] += 1 

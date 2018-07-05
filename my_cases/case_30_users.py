@@ -16,7 +16,6 @@ import numpy as np
 import logzero
 from logzero import logger
 import __main__ as main
-import cProfile as profile
 
 # set file name for logs and outputs files
 file_name = main.__file__[2:-3:]
@@ -41,7 +40,7 @@ def my_drop(snap):
         ues_uppa.append(uppa.User(ue.id, s))
 
     # exhaustive search
-    pairs1 = uppa.uppa(ues_uppa, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
+    # pairs1 = uppa.uppa(ues_uppa, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
     # fair user pair
     pairs2 = uppa.uppa(ues_uppa, cell, up_mode='fair', pa_mode='fair')
     # random user pair
@@ -49,7 +48,7 @@ def my_drop(snap):
     # fair user pair and fix power allocation
     pairs4 = uppa.uppa(ues_uppa, cell, up_mode='fair', pa_mode='fix')
 
-    cases = [pairs1, pairs2, pairs3, pairs4]
+    cases = [pairs2, pairs3, pairs4]
     user_thr = []
     cell_thr = []
     sub_thr = []
@@ -106,25 +105,27 @@ def my_drop(snap):
     gain_jain.append(perf.jain(np.array(j)))
 
     r = []
-    for i in range(5):
+    for i in range(4):
         r+=[user_thr[i], cell_thr[i], sub_thr[i], user_jain[i], pair_jain[i], gain_jain[i]]
     return r
         
 # create simulation
 #s = sim.Simulator(n_ue_cell=10, coeff_pwr=0.8, coeff_bw=0.8, thr_target=80e6, n_cdf_arg=2, filename=file_name)
-s = sim.Simulator(n_ue_cell=2, n_snap=100, filename=file_name)
+s = sim.Simulator(n_ue_cell=30, filename=file_name)
 # create scenario
 s.scenario_generator()
 # create statistics
 stats = []
-tgt = [40e6,80e6,80e6,1,1,1]*5 # 2 users
+# tgt = [40e6,80e6,80e6,1,1,1]*5 # 2 users
+# low = [0, 0, 0, .5, .5, .5]*5
 # tgt = [20e6,80e6,40e6,1,1,1]*5 # 4 users
 # tgt = [16e6,80e6,25e6,1,1,1]*5 # 6 users
 # tgt = [10e6,80e6,20e6,1,1,1]*5 # 8 users
 # tgt = [8e6,70e6,16e6,1,1,1]*5  # 10 users
 # tgt = [4e6,70e6,8e6,1,1,1]*5   # 20 users
-# tgt = [3e6,70e6,6e6,1,1,1]*5   # 30 users
-for i in range(6*5):
-    stats.append(perf.Statistics(target=tgt[i]))
+tgt = [3e6,70e6,6e6,1,1,1]*4   # 30 users
+low = [0, 0, 0, 0, 0, 0]*4
+for i in range(6*4):
+    stats.append(perf.Statistics(target=tgt[i], low=low[i]))
 # run simulator
 s.run(my_drop, stats)
