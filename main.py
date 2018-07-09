@@ -15,12 +15,9 @@ import nomalib.performance as perf
 import numpy as np
 import logzero
 from logzero import logger
-import __main__ as main
-import cProfile as profile
 
 # set file name for logs and outputs files
-file_name = main.__file__[2:-3:]
-
+file_name = __file__[2:-3:]
 # create log files
 # log level: DEBUG=10, INFO=20, WARN=30, ERROR=40
 logzero.loglevel(logzero.logging.INFO)
@@ -48,6 +45,12 @@ def my_drop(snap):
     pairs3 = uppa.uppa(ues_uppa, cell, up_mode='random', pa_mode='fair')
     # fair user pair and fix power allocation
     pairs4 = uppa.uppa(ues_uppa, cell, up_mode='fair', pa_mode='fix')
+
+    # print([(p.u1.pwr_coef, p.u2.pwr_coef) for p in pairs2 ])
+    print([(id(p.u1.pwr_coef), id(p.u2.pwr_coef)) for p in pairs1 ])
+    print([(id(p.u1.pwr_coef), id(p.u2.pwr_coef)) for p in pairs2 ])
+    print([(id(p.u1.pwr_coef), id(p.u2.pwr_coef)) for p in pairs3 ])
+    print([(id(p.u1.pwr_coef), id(p.u2.pwr_coef)) for p in pairs4 ])
 
     cases = [pairs1, pairs2, pairs3, pairs4]
     user_thr = []
@@ -109,22 +112,25 @@ def my_drop(snap):
     for i in range(5):
         r+=[user_thr[i], cell_thr[i], sub_thr[i], user_jain[i], pair_jain[i], gain_jain[i]]
     return r
-        
-# create simulation
-#s = sim.Simulator(n_ue_cell=10, coeff_pwr=0.8, coeff_bw=0.8, thr_target=80e6, n_cdf_arg=2, filename=file_name)
-s = sim.Simulator(n_ue_cell=2, n_snap=100, filename=file_name)
-# create scenario
-s.scenario_generator()
-# create statistics
-stats = []
-tgt = [40e6,80e6,80e6,1,1,1]*5 # 2 users
-# tgt = [20e6,80e6,40e6,1,1,1]*5 # 4 users
-# tgt = [16e6,80e6,25e6,1,1,1]*5 # 6 users
-# tgt = [10e6,80e6,20e6,1,1,1]*5 # 8 users
-# tgt = [8e6,70e6,16e6,1,1,1]*5  # 10 users
-# tgt = [4e6,70e6,8e6,1,1,1]*5   # 20 users
-# tgt = [3e6,70e6,6e6,1,1,1]*5   # 30 users
-for i in range(6*5):
-    stats.append(perf.Statistics(target=tgt[i]))
-# run simulator
-s.run(my_drop, stats)
+
+def main():
+    # create simulation
+    s = sim.Simulator(n_ue_cell=2, n_snap=1, filename=file_name)
+    # create scenario
+    s.scenario_generator()
+    # create statistics
+    stats = []
+    tgt = [40e6,80e6,80e6,1,1,1]*5 # 2 users
+    # tgt = [20e6,80e6,40e6,1,1,1]*5 # 4 users
+    # tgt = [16e6,80e6,25e6,1,1,1]*5 # 6 users
+    # tgt = [10e6,80e6,20e6,1,1,1]*5 # 8 users
+    # tgt = [8e6,70e6,16e6,1,1,1]*5  # 10 users
+    # tgt = [4e6,70e6,8e6,1,1,1]*5   # 20 users
+    # tgt = [3e6,70e6,6e6,1,1,1]*5   # 30 users
+    for i in range(6*5):
+        stats.append(sim.Statistics(high=tgt[i]))
+    # run simulator
+    # s.run(my_drop, stats)
+
+if __name__ == '__main__':
+    main()

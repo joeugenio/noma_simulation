@@ -1,0 +1,14 @@
+digraph "packages" {
+charset="utf-8"
+rankdir=BT
+"0" [label="nomalib/channel.py", shape="box"];
+"1" [label="nomalib/constants.py", shape="box"];
+"2" [label="nomalib/devices.py", shape="box"];
+"3" [label="nomalib/network.py", shape="box"];
+"4" [label="nomalib/performance.py", shape="box"];
+"5" [label="nomalib/plots.py", shape="box"];
+"6" [label="nomalib/simulator.py", shape="box"];
+"7" [label="nomalib/uppa.py", shape="box"];
+"8" [label="nomalib/utils.py", shape="box"];
+"9" [label="main", shape="box"];
+}

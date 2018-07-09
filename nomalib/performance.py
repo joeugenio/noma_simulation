@@ -152,20 +152,3 @@ def throughput_noma(users, bw_sb=1, model='shannon_att'):
 def jain(thr:np.array):
     index = ((thr.sum())**2)/(thr.size*(thr**2).sum())
     return index
-
-# CDF calculator
-class Statistics:
-    def __init__(self, target, low=0, size=100):
-        try:
-            self.max = target
-            self.low = low
-        except AttributeError:
-            self.max = const.THR_TARGET
-        self.size = size
-        self.event = np.linspace(self.low, self.max, size)
-        self.cdf = np.zeros(size)
-    
-    def cdf_calc(self, value):
-        for i in range(self.size):
-            if value <= self.event[i]:
-                self.cdf[i] += 1 

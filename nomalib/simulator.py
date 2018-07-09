@@ -15,7 +15,20 @@ from tqdm import tqdm
 from logzero import logger
 from pytictoc import TicToc
 
-t = TicToc()
+class Statistics:
+    ''' Statistics class for CDF calculation '''
+    def __init__(self, low=0, high=1, size=100):
+        self.high = high
+        self.low = low
+        self.size = size
+        self.rndv = np.linspace(low, high, size)
+        self.cdf = np.zeros(size)
+    
+    def cdf_calc(self, value):
+        for i in range(self.size):
+            if value <= self.rndv[i]:
+                self.cdf[i] += 1 
+
 class Snapshot:
     ''' Snapshot Class '''
     def __init__(self, sim, tti=const.TTI, t_snap=const.T_SNP):
@@ -55,6 +68,7 @@ class Snapshot:
         # return result of snapshot
         return result
 
+t = TicToc()
 class Simulator:
     ''' System Level Simulator Class ''' 
     def __init__(self, n_snap=const.N_SNP, **kwargs):

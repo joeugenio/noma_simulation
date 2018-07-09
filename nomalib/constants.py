@@ -72,5 +72,5 @@ MAP_D = 5
 
 # Performance Constants
 SHN_ATT = 0.75
-THR_TARGET = 80e6 # Mhz on 10Mhz band width
+# THR_TARGET = 80e6 # Mhz on 10Mhz band width # deprecated
 N_CDF_ARG = 3
