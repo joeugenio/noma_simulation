@@ -160,3 +160,115 @@
 [I 180709 00:15:41 simulator:88] Starting all base stations
 [I 180709 00:15:41 simulator:90] Create snapshot simulation
 [I 180709 00:21:56 main:27] NOMA system level simulation starting
+[I 180709 23:36:17 main:25] NOMA system level simulation starting
+[I 180709 23:36:17 simulator:84] Creating grid with 19 sites
+[I 180709 23:36:17 simulator:86] Deploing base stations on grid
+[I 180709 23:36:17 simulator:88] Starting all base stations
+[I 180709 23:36:17 simulator:90] Create snapshot simulation
+[I 180709 23:36:17 simulator:97] Parameters used in the simulation:
+[I 180709 23:36:17 simulator:102] filename: main
+[I 180709 23:36:17 simulator:102] n_ue_cell: 2
+[I 180709 23:36:17 simulator:102] n_snap: 1
+[I 180709 23:36:17 simulator:108] Running simulation
+[I 180709 23:36:18 simulator:117] Saving data file
+[I 180709 23:36:18 simulator:124] File saved:
+[I 180709 23:36:18 simulator:125] ./output/dat/simul_main
+[I 180709 23:36:18 simulator:126] Finished Simulation
+[I 180710 00:04:56 main:25] NOMA system level simulation starting
+[I 180710 00:04:56 simulator:84] Creating grid with 19 sites
+[I 180710 00:04:56 simulator:86] Deploing base stations on grid
+[I 180710 00:04:56 simulator:88] Starting all base stations
+[I 180710 00:04:56 simulator:90] Create snapshot simulation
+[I 180710 00:04:56 simulator:97] Parameters used in the simulation:
+[I 180710 00:04:56 simulator:102] n_snap: 1
+[I 180710 00:04:56 simulator:102] filename: main
+[I 180710 00:04:56 simulator:102] n_ue_cell: 2
+[I 180710 00:04:56 simulator:108] Running simulation
+[I 180710 00:04:56 simulator:117] Saving data file
+[I 180710 00:04:56 simulator:124] File saved:
+[I 180710 00:04:56 simulator:125] ./output/dat/simul_main
+[I 180710 00:04:56 simulator:126] Finished Simulation
+[I 180710 00:05:20 main:25] NOMA system level simulation starting
+[I 180710 00:05:20 simulator:84] Creating grid with 19 sites
+[I 180710 00:05:20 simulator:86] Deploing base stations on grid
+[I 180710 00:05:20 simulator:88] Starting all base stations
+[I 180710 00:05:20 simulator:90] Create snapshot simulation
+[I 180710 00:05:20 simulator:97] Parameters used in the simulation:
+[I 180710 00:05:20 simulator:102] n_ue_cell: 2
+[I 180710 00:05:20 simulator:102] n_snap: 1
+[I 180710 00:05:20 simulator:102] filename: main
+[I 180710 00:05:20 simulator:108] Running simulation
+[I 180710 00:05:20 simulator:117] Saving data file
+[I 180710 00:05:20 simulator:124] File saved:
+[I 180710 00:05:20 simulator:125] ./output/dat/simul_main
+[I 180710 00:05:20 simulator:126] Finished Simulation
+[I 180710 00:07:49 main:25] NOMA system level simulation starting
+[I 180710 00:07:49 simulator:84] Creating grid with 19 sites
+[I 180710 00:07:49 simulator:86] Deploing base stations on grid
+[I 180710 00:07:49 simulator:88] Starting all base stations
+[I 180710 00:07:49 simulator:90] Create snapshot simulation
+[I 180710 00:07:49 simulator:97] Parameters used in the simulation:
+[I 180710 00:07:49 simulator:102] filename: main
+[I 180710 00:07:49 simulator:102] n_snap: 1
+[I 180710 00:07:49 simulator:102] n_ue_cell: 2
+[I 180710 00:07:49 simulator:108] Running simulation
+[I 180710 00:07:49 simulator:117] Saving data file
+[I 180710 00:07:49 simulator:124] File saved:
+[I 180710 00:07:49 simulator:125] ./output/dat/simul_main
+[I 180710 00:07:49 simulator:126] Finished Simulation
+[I 180710 00:16:44 main:25] NOMA system level simulation starting
+[I 180710 00:16:44 simulator:84] Creating grid with 19 sites
+[I 180710 00:16:44 simulator:86] Deploing base stations on grid
+[I 180710 00:16:44 simulator:88] Starting all base stations
+[I 180710 00:16:44 simulator:90] Create snapshot simulation
+[I 180710 00:16:44 simulator:97] Parameters used in the simulation:
+[I 180710 00:16:44 simulator:102] n_snap: 1
+[I 180710 00:16:44 simulator:102] n_ue_cell: 2
+[I 180710 00:16:44 simulator:102] filename: main
+[I 180710 00:16:44 simulator:108] Running simulation
+[I 180710 00:16:44 simulator:117] Saving data file
+[I 180710 00:16:44 simulator:124] File saved:
+[I 180710 00:16:44 simulator:125] ./output/dat/simul_main
+[I 180710 00:16:44 simulator:126] Finished Simulation
+[I 180710 00:17:52 main:25] NOMA system level simulation starting
+[I 180710 00:17:52 simulator:84] Creating grid with 19 sites
+[I 180710 00:17:52 simulator:86] Deploing base stations on grid
+[I 180710 00:17:52 simulator:88] Starting all base stations
+[I 180710 00:17:52 simulator:90] Create snapshot simulation
+[I 180710 00:17:52 simulator:97] Parameters used in the simulation:
+[I 180710 00:17:52 simulator:102] n_ue_cell: 2
+[I 180710 00:17:52 simulator:102] filename: main
+[I 180710 00:17:52 simulator:102] n_snap: 100
+[I 180710 00:17:52 simulator:108] Running simulation
+[I 180710 00:18:13 simulator:117] Saving data file
+[I 180710 00:18:13 simulator:124] File saved:
+[I 180710 00:18:13 simulator:125] ./output/dat/simul_main
+[I 180710 00:18:13 simulator:126] Finished Simulation
+[I 180710 00:19:01 main:25] NOMA system level simulation starting
+[I 180710 00:19:01 simulator:84] Creating grid with 19 sites
+[I 180710 00:19:01 simulator:86] Deploing base stations on grid
+[I 180710 00:19:01 simulator:88] Starting all base stations
+[I 180710 00:19:01 simulator:90] Create snapshot simulation
+[I 180710 00:19:01 simulator:97] Parameters used in the simulation:
+[I 180710 00:19:01 simulator:102] filename: main4
+[I 180710 00:19:01 simulator:102] n_ue_cell: 4
+[I 180710 00:19:01 simulator:102] n_snap: 100
+[I 180710 00:19:01 simulator:108] Running simulation
+[I 180710 00:19:45 simulator:117] Saving data file
+[I 180710 00:19:45 simulator:124] File saved:
+[I 180710 00:19:45 simulator:125] ./output/dat/simul_main4
+[I 180710 00:19:45 simulator:126] Finished Simulation
+[I 180710 00:20:37 main:25] NOMA system level simulation starting
+[I 180710 00:20:37 simulator:84] Creating grid with 19 sites
+[I 180710 00:20:37 simulator:86] Deploing base stations on grid
+[I 180710 00:20:37 simulator:88] Starting all base stations
+[I 180710 00:20:37 simulator:90] Create snapshot simulation
+[I 180710 00:20:37 simulator:97] Parameters used in the simulation:
+[I 180710 00:20:37 simulator:102] n_ue_cell: 6
+[I 180710 00:20:37 simulator:102] n_snap: 100
+[I 180710 00:20:37 simulator:102] filename: main6
+[I 180710 00:20:37 simulator:108] Running simulation
+[I 180710 00:21:56 simulator:117] Saving data file
+[I 180710 00:21:56 simulator:124] File saved:
+[I 180710 00:21:56 simulator:125] ./output/dat/simul_main6
+[I 180710 00:21:56 simulator:126] Finished Simulation

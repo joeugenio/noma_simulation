@@ -23,127 +23,94 @@ logzero.logfile('./temp/'+main.__file__[2:-3:]+'.log', mode='a', loglevel=logzer
 logger.info('Data analysis from simulation results')
 
 logger.info('Load data from files')
-cases_noma = ['cell_sbb/noma2', 'cell_sbb/noma6', 'cell_sbb/noma10', 'cell_sbb/noma20', 'cell_sbb/noma30']
-cases_oma = ['cell_sbb/oma2', 'cell_sbb/oma6', 'cell_sbb/oma10', 'cell_sbb/oma20', 'cell_sbb/oma30']
-noma = []
-oma = []
-for i in range(5):
-    noma.append(np.load(const.OUT_PATH+cases_noma[i]+'.npy')[0])
-    oma.append(np.load(const.OUT_PATH+cases_oma[i]+'.npy')[0])
-noma_20 = np.load(const.OUT_PATH+'users_avg/noma_user_20.npy')[0]
-oma_20 = np.load(const.OUT_PATH+'users_avg/oma_user_20.npy')[0]
-noma_30 = np.load(const.OUT_PATH+'users_avg/noma_user_30.npy')[0]
-oma_30 = np.load(const.OUT_PATH+'users_avg/oma_user_30.npy')[0]
+simul_case02 = np.load(const.OUT_PATH+'simul_main.npy')
+simul_case04 = np.load(const.OUT_PATH+'simul_main4.npy')
+simul_case06 = np.load(const.OUT_PATH+'simul_main6.npy')
+# simul_case08 = np.load(const.OUT_PATH+'simul_case_8_users.npy')
+# simul_case10 = np.load(const.OUT_PATH+'simul_case_10_users.npy')
+# simul_case20 = np.load(const.OUT_PATH+'simul_case_20_users.npy')
+# simul_case30 = np.load(const.OUT_PATH+'simul_case_30_users.npy')
 
 logger.info('Plot graphs: Throughout CDF')
+graph_type = {'user':0, 'cell':1, 'subband':2, 'r1':3, 'r2':4}
+i = graph_type['r1']
 # #==============================================================================
-# # case 2 users, user throughout 
-# logger.info('Plot Users Throughout CDF (2 UE per cell)')
-# n = (noma[0].thr[:70:3]/1e6, 1-noma[0].cdf[0][:70:3]/10000)
-# o = (oma[0].thr[:70:3]/1e6, 1-oma[0].cdf[0][:70:3]/10000)
-# label = ['NOMA 2 EU', 'OMA 2 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_user_2', lab=label)
-
-# # case 6 users, user throughout 
-# logger.info('Plot Users Throughout CDF (6 UE per cell)')
-# n = (noma[1].thr[:50:2]/1e6, 1-noma[1].cdf[0][:50:2]/10000)
-# o = (oma[1].thr[:50:2]/1e6, 1-oma[1].cdf[0][:50:2]/10000)
-# label = ['NOMA 6 EU', 'OMA 6 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_user_6', lab=label)
-
-# # case 10 users, user throughout 
-# logger.info('Plot Users Throughout CDF (10 UE per cell)')
-# n = (noma[2].thr[:15:]/1e6, 1-noma[2].cdf[0][:15:]/10000)
-# o = (oma[2].thr[:15:]/1e6, 1-oma[2].cdf[0][:15:]/10000)
-# label = ['NOMA 10 EU', 'OMA 10 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_user_10', lab=label)
-
-# # case 20 users, user throughout
-# logger.info('Plot Users Throughout CDF (20 UE per cell)')
-# n = (noma_20.thr/1e6, 1-noma_20.cdf[0])
-# o = (oma_20.thr/1e6, 1-oma_20.cdf[0])
-# label = ['NOMA 20 EU', 'OMA 20 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_user_20', lab=label)
-
-# case 30 users, user throughout
+# # case 30 users, user throughout 
+# i = 0
 # logger.info('Plot Users Throughout CDF (30 UE per cell)')
-# n = (noma_30.thr/1e6, 1-noma_30.cdf[0])
-# o = (oma_30.thr/1e6, 1-oma_30.cdf[0])
-# label = ['NOMA 30 EU', 'OMA 30 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_user_30', lab=label)
+# c = []
+# for j in range(4):
+#     c.append(simul_case30[j*6+i])
+# label = ['Fair', 'Random', 'PA fix', 'OMA']
+# plt.plot_cdf(c, sh=True, filename='cdf_30_user', lab=label)
 
 # #==============================================================================
-# # case 2 users, cell throughout 
-# logger.info('Plot Cell Average Throughout CDF (2 UE per cell)')
-# n = (noma[0].thr[::3]/1e6, 1-noma[0].cdf[1][::3]/10000)
-# o = (oma[0].thr[::3]/1e6, 1-oma[0].cdf[1][::3]/10000)
-# label = ['NOMA 2 EU', 'OMA 2 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_cell_2', lab=label)
+# # case 20 users, user throughout 
+# i = 5
+# logger.info('Plot Users Throughout CDF (20 UE per cell)')
+# c = []
+# for j in range(4):
+#     c.append(simul_case20[j*6+i])
+# label = ['Fair', 'Random', 'PA fix', 'OMA']
+# plt.plot_cdf(c, sh=True, filename='cdf_20_user', lab=label)
 
-# # case 6 users, cell throughout 
-# logger.info('Plot Cell Average Throughout CDF (6 UE per cell)')
-# n = (noma[1].thr[::3]/1e6, 1-noma[1].cdf[1][::3]/10000)
-# o = (oma[1].thr[::3]/1e6, 1-oma[1].cdf[1][::3]/10000)
-# label = ['NOMA 6 EU', 'OMA 6 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_cell_6', lab=label)
+# #==============================================================================
+# # case 10 users, user throughout 
+# i = 0
+# logger.info('Plot Users Throughout CDF (10 UE per cell)')
+# c = []
+# for j in range(4):
+#     c.append(simul_case10[j*6+i])
+# label = ['Fair', 'Random', 'PA fix', 'OMA']
+# plt.plot_cdf(c, sh=True, filename='cdf_10_user', lab=label)
 
-# # case 10 users, cell throughout 
-# logger.info('Plot Cell Average Throughout CDF (10 UE per cell)')
-# n = (noma[2].thr[::3]/1e6, 1-noma[2].cdf[1][::3]/10000)
-# o = (oma[2].thr[::3]/1e6, 1-oma[2].cdf[1][::3]/10000)
-# label = ['NOMA 10 EU', 'OMA 10 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_cell_10', lab=label)
+# #==============================================================================
+# # case 8 users, user throughout 
+# i = 5
+# logger.info('Plot Users Throughout CDF (8 UE per cell)')
+# c = []
+# for j in range(5):
+#     c.append(simul_case08[j*6+i])
+# label = ['Exhaustive', 'Fair', 'Random', 'PA fix', 'OMA']
+# plt.plot_cdf(c, sh=True, filename='cdf_8_user', lab=label)
 
-# # case 20 users, cell throughout 
-# logger.info('Plot Cell Average Throughout CDF (20 UE per cell)')
-# n = (noma[3].thr[::3]/1e6, 1-noma[3].cdf[1][::3]/1e4)
-# o = (oma[3].thr[::3]/1e6, 1-oma[3].cdf[1][::3]/1e4)
-# label = ['NOMA 20 EU', 'OMA 20 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_cell_20', lab=label)
+#==============================================================================
+# case 6 users, user throughout 
+i = 5
+logger.info('Plot Users Throughout CDF (6 UE per cell)')
+c = []
+for j in range(5):
+    c.append(simul_case06[j*6+i])
+label = ['Exhaustive', 'Fair', 'Random', 'PA fix', 'OMA']
+xlabel = ['Taxa de dados [Mbps]',"Jain's fairness index"]
+norma = [1e6, 1]
+plt.plot_cdf(c, sh=True, filename='cdf_6_user', lab=label, xlab=xlabel[i//3], norma=norma[i//3])
 
-# # case 30 users, cell throughout 
-# logger.info('Plot Cell Average Throughout CDF (30 UE per cell)')
-# n = (noma[4].thr[::3]/1e6, 1-noma[4].cdf[1][::3]/1e4)
-# o = (oma[4].thr[::3]/1e6, 1-oma[4].cdf[1][::3]/1e4)
-# label = ['NOMA 30 EU', 'OMA 30 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_cell_30', lab=label)
 
-# # ==============================================================================
-# # case 2 users, subband average throughout 
-# logger.info('Plot Subband Average Throughout CDF (2 UE per cell)')
-# n = (noma[0].thr[::3]/1e6, 1-noma[0].cdf[2][::3]/10000)
-# o = (oma[0].thr[::3]/1e6, 1-oma[0].cdf[2][::3]/10000)
-# label = ['NOMA 2 EU', 'OMA 2 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_sbb_2', lab=label)
+#==============================================================================
+# case 4 users, user throughout 
+# i = 0
+logger.info('Plot Users Throughout CDF (04 UE per cell)')
+c = []
+for j in range(5):
+    c.append(simul_case04[j*6+i])
+label = ['Exhaustive', 'Fair', 'Random', 'PA fix', 'OMA']
+xlabel = ['Taxa de dados [Mbps]',"Jain's fairness index"]
+norma = [1e6, 1]
+plt.plot_cdf(c, sh=True, filename='cdf_4_user', lab=label, xlab=xlabel[i//3], norma=norma[i//3])
 
-# # case 6 users, subband average throughout 
-# logger.info('Plot Subband Average Throughout CDF (6 UE per cell)')
-# n = (noma[1].thr[:50:2]/1e6, 1-noma[1].cdf[2][:50:2]/10000)
-# o = (oma[1].thr[:50:2]/1e6, 1-oma[1].cdf[2][:50:2]/10000)
-# label = ['NOMA 6 EU', 'OMA 6 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_sbb_6', lab=label)
+#==============================================================================
+# case 2 users, user throughout 
+# i = 0
+c = []
+for j in range(5):
+    c.append(simul_case02[j*6+i])
+label = ['Exhaustive', 'Fair', 'Random', 'PA fix', 'OMA']
+xlabel = ['Taxa de dados [Mbps]',"Jain's fairness index"]
+norma = [1e6, 1]
+plt.plot_cdf(c, sh=True, filename='cdf_2_user', lab=label, xlab=xlabel[i//3], norma=norma[i//3])
 
-# # case 10 users, subband average throughout 
-# logger.info('Plot Subband Average Throughout CDF (10 UE per cell)')
-# n = (noma[2].thr[:30:]/1e6, 1-noma[2].cdf[2][:30:]/10000)
-# o = (oma[2].thr[:30:]/1e6, 1-oma[2].cdf[2][:30:]/10000)
-# label = ['NOMA 10 EU', 'OMA 10 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_sbb_10', lab=label)
-
-# # case 20 users, subband average throughout 
-# logger.info('Plot Subband Average Throughout CDF (20 UE per cell)')
-# n = (noma_20.thr[::2]/1e6, 1-noma_20.cdf[1][::2])
-# o = (oma_20.thr[::2]/1e6, 1-oma_20.cdf[1][::2])
-# label = ['NOMA 20 EU', 'OMA 20 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_sbb_20', lab=label)
-
-# # case 30 users, subband average throughout 
-# logger.info('Plot Subband Average Throughout CDF (30 UE per cell)')
-# n = (noma_30.thr[::2]/1e6, 1-noma_30.cdf[1][::2])
-# o = (oma_30.thr[::2]/1e6, 1-oma_30.cdf[1][::2])
-# label = ['NOMA 30 EU', 'OMA 30 EU']
-# plt.plot_cdf_noma_oma(n, o, save=True, filename='cdf_sbb_30', lab=label)
-# # ==============================================================================
+#==============================================================================
 
 # logger.info('Plot graphs: Cell Spectral Efficiency')
 # cdf_pn = 95
@@ -182,58 +149,58 @@ logger.info('Plot graphs: Throughout CDF')
 # plt.plot_multi_user_gain(n, o, users, save=True, lab=label, filename='cell_effic')
 
 # # ==============================================================================
-logger.info('Load data from files')
+# logger.info('Load data from files')
 
-coeff_noma = ['power_coefficiet/noma_2ue_coeff_0.0', 'power_coefficiet/noma_2ue_coeff_0.2',
-'power_coefficiet/noma_2ue_coeff_0.4','power_coefficiet/noma_2ue_coeff_0.6',
-'power_coefficiet/noma_2ue_coeff_0.8','power_coefficiet/noma_2ue_coeff_1.0']
+# coeff_noma = ['power_coefficiet/noma_2ue_coeff_0.0', 'power_coefficiet/noma_2ue_coeff_0.2',
+# 'power_coefficiet/noma_2ue_coeff_0.4','power_coefficiet/noma_2ue_coeff_0.6',
+# 'power_coefficiet/noma_2ue_coeff_0.8','power_coefficiet/noma_2ue_coeff_1.0']
 
-coeff_oma = ['power_coefficiet/oma_2ue_coeff_0.0', 'power_coefficiet/oma_2ue_coeff_0.2',
-'power_coefficiet/oma_2ue_coeff_0.4','power_coefficiet/oma_2ue_coeff_0.6',
-'power_coefficiet/oma_2ue_coeff_0.8','power_coefficiet/oma_2ue_coeff_1.0']
-noma = []
-oma = []
-n_point = len(coeff_noma)
+# coeff_oma = ['power_coefficiet/oma_2ue_coeff_0.0', 'power_coefficiet/oma_2ue_coeff_0.2',
+# 'power_coefficiet/oma_2ue_coeff_0.4','power_coefficiet/oma_2ue_coeff_0.6',
+# 'power_coefficiet/oma_2ue_coeff_0.8','power_coefficiet/oma_2ue_coeff_1.0']
+# noma = []
+# oma = []
+# n_point = len(coeff_noma)
 
-for i in range(n_point):
-    noma.append(np.load(const.OUT_PATH+coeff_noma[i]+'.npy')[0])
-    oma.append(np.load(const.OUT_PATH+coeff_oma[i]+'.npy')[0])
+# for i in range(n_point):
+#     noma.append(np.load(const.OUT_PATH+coeff_noma[i]+'.npy')[0])
+#     oma.append(np.load(const.OUT_PATH+coeff_oma[i]+'.npy')[0])
 
-logger.info('Plot graphs: Cell Spectral Efficiency')
-cdf_pn = 95
-cdf_po = 95
-m = 0
-noma_alloc = []
-oma_alloc = []
-for cdf_pn, cdf_po in [(50,50),(95,95)]:
-    noma_effic = []
-    for i in range(n_point):
-        n = noma[i].cdf[m]*1e2
-        for j in range(100):
-            if (n[j]>=cdf_pn):
-                # print(n[j], j)
-                t = noma[i].thr[j]
-                noma_effic.append(t)
-                break
-    oma_effic = []
-    for i in range(n_point):
-        o = oma[i].cdf[m]*1e2
-        for j in range(100):
-            if (o[j]>=cdf_po):
-                # print(o[j], j)
-                t = oma[i].thr[j]
-                oma_effic.append(t)
-                break
-    noma_alloc.append(noma_effic)
-    oma_alloc.append(oma_effic)
+# logger.info('Plot graphs: Cell Spectral Efficiency')
+# cdf_pn = 95
+# cdf_po = 95
+# m = 0
+# noma_alloc = []
+# oma_alloc = []
+# for cdf_pn, cdf_po in [(50,50),(95,95)]:
+#     noma_effic = []
+#     for i in range(n_point):
+#         n = noma[i].cdf[m]*1e2
+#         for j in range(100):
+#             if (n[j]>=cdf_pn):
+#                 # print(n[j], j)
+#                 t = noma[i].thr[j]
+#                 noma_effic.append(t)
+#                 break
+#     oma_effic = []
+#     for i in range(n_point):
+#         o = oma[i].cdf[m]*1e2
+#         for j in range(100):
+#             if (o[j]>=cdf_po):
+#                 # print(o[j], j)
+#                 t = oma[i].thr[j]
+#                 oma_effic.append(t)
+#                 break
+#     noma_alloc.append(noma_effic)
+#     oma_alloc.append(oma_effic)
 
-coeff = np.array([0, 0.2, 0.4, 0.6, 0.8, 1])
-n = np.array(noma_alloc)/10e6
-o = np.array(oma_alloc)/10e6
-n_label = ['NOMA FCP 50%', 'NOMA FCP 95%']
-o_label = ['OMA FCP 50%', 'OMA FCP 95%']
-label = [n_label,o_label]
-plt.plot_coeff_gain(n, o, coeff, sh=True, lab=label, filename='coeff_gain')
+# coeff = np.array([0, 0.2, 0.4, 0.6, 0.8, 1])
+# n = np.array(noma_alloc)/10e6
+# o = np.array(oma_alloc)/10e6
+# n_label = ['NOMA FCP 50%', 'NOMA FCP 95%']
+# o_label = ['OMA FCP 50%', 'OMA FCP 95%']
+# label = [n_label,o_label]
+# plt.plot_coeff_gain(n, o, coeff, sh=True, lab=label, filename='coeff_gain')
 # # ==============================================================================
 
 # logger.info('Plot graphs: Cell-Edge Spectral Efficiency')

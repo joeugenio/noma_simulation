@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 06/02/2018
+# Last update: 10/07/2018
 # Version: 0.1
 
 # Python module for NOMA communications simulations
@@ -475,16 +475,36 @@ def plot_cdf_noma_oma(n, o, sh=False, save=False, filename='cdf_noma_oma', lab='
     show_fig(sh)
     plt.clf()
 
-def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab=''):
+def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab='', xlab='', norma=1):
     i = 0
+    s = ['-*', '-h', '-+', '--*', '-s']
+    # s = ['--*', '-+','->']
     for c in cdf:
-        plt.plot(c.event/1, 1-c.cdf, '-*', lw=1, label=lab[i])
+        plt.plot(c.rndv/norma, 1-c.cdf, s[i], lw=1, label=lab[i])
         i +=1
     plt.grid(True)
     plt.legend(fontsize=14, loc='upper right')
-    plt.xlabel('Taxa de dados [Mbps]', fontsize=17)
+    plt.xlabel(xlab, fontsize=17)
     # plt.ylabel('CCDF', fontsize=14)
-    plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    # plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    plt.ylabel(r'CCDF    $P[X>x]$', fontsize=17)
+    plt.tick_params(labelsize=14)
+    save_fig(filename, save)
+    show_fig(sh)
+    plt.clf()
+
+def plot_uppa(x, data, sh=False, save=False, filename='uppa', lab='', xlab=''):
+    i = 0
+    s = ['-*', '-h', '-+', '--*', '-s']
+    for d in data:
+        plt.plot(x, d/1e6, s[i], lw=1, label=lab[i])
+        i +=1
+    plt.grid(True)
+    plt.legend(fontsize=14, loc='upper right')
+    plt.xlabel(xlab, fontsize=17)
+    # plt.ylabel('CCDF', fontsize=14)
+    # plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    plt.ylabel(r' $P[X>x]$', fontsize=17)
     plt.tick_params(labelsize=14)
     save_fig(filename, save)
     show_fig(sh)

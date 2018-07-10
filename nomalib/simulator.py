@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 25/03/2018
-# Last update: 28/06/2018
+# Last update: 10/07/2018
 # Version: 0.1
 
 # Simulator Python Script for NOMA communications simulations
@@ -27,7 +27,7 @@ class Statistics:
     def cdf_calc(self, value):
         for i in range(self.size):
             if value <= self.rndv[i]:
-                self.cdf[i] += 1 
+                self.cdf[i] += 1
 
 class Snapshot:
     ''' Snapshot Class '''
@@ -91,7 +91,7 @@ class Simulator:
         self.snapshot = Snapshot(self)
         t.toc()
        
-    def run(self, drop, stats):
+    def run(self, drop, values):
         t.tic()
         # logger in formation about simulation
         logger.info('Parameters used in the simulation:')
@@ -100,6 +100,10 @@ class Simulator:
         attr.pop('snapshot')
         for k,v in attr.items():
             logger.info(str(k)+': '+str(v))
+        # create statistics objects
+        stats = []
+        for v in values:
+            stats.append(Statistics(high=v))
         # running simulation drops
         logger.info('Running simulation')
         # progress bar

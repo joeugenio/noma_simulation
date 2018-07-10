@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 07/05/2018
-# Last update: 28/06/2018
+# Last update: 10/07/2018
 # Version: 0.1
 
 # Main Python Script for NOMA communications simulations
@@ -15,11 +15,9 @@ import nomalib.performance as perf
 import numpy as np
 import logzero
 from logzero import logger
-import __main__ as main
 
 # set file name for logs and outputs files
-file_name = main.__file__[2:-3:]
-
+file_name = __file__[2:-3:]
 # create log files
 # log level: DEBUG=10, INFO=20, WARN=30, ERROR=40
 logzero.loglevel(logzero.logging.INFO)
@@ -33,20 +31,26 @@ def my_drop(snap):
     grid = snap.grid
     site = snap.site
     cell = snap.cell
-    ues_uppa = []        
+    ues_uppa1 = []        
+    ues_uppa2 = []        
+    ues_uppa3 = []        
+    ues_uppa4 = []        
     for ue_id in cell.ue_ids:
         ue = grid.get_ue(ue_id)
         s = perf.sinr(ue, cell, site, grid)
-        ues_uppa.append(uppa.User(ue.id, s))
+        ues_uppa1.append(uppa.User(ue.id, s))
+        ues_uppa2.append(uppa.User(ue.id, s))
+        ues_uppa3.append(uppa.User(ue.id, s))
+        ues_uppa4.append(uppa.User(ue.id, s))
 
     # exhaustive search
-    pairs1 = uppa.uppa(ues_uppa, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
+    pairs1 = uppa.uppa(ues_uppa1, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
     # fair user pair
-    pairs2 = uppa.uppa(ues_uppa, cell, up_mode='fair', pa_mode='fair')
+    pairs2 = uppa.uppa(ues_uppa2, cell, up_mode='fair', pa_mode='fair')
     # random user pair
-    pairs3 = uppa.uppa(ues_uppa, cell, up_mode='random', pa_mode='fair')
+    pairs3 = uppa.uppa(ues_uppa3, cell, up_mode='random', pa_mode='fair')
     # fair user pair and fix power allocation
-    pairs4 = uppa.uppa(ues_uppa, cell, up_mode='fair', pa_mode='fix')
+    pairs4 = uppa.uppa(ues_uppa4, cell, up_mode='fair', pa_mode='fix')
 
     cases = [pairs1, pairs2, pairs3, pairs4]
     user_thr = []
@@ -105,27 +109,27 @@ def my_drop(snap):
     gain_jain.append(perf.jain(np.array(j)))
 
     r = []
-    for i in range(5):
+    for i in range(4):
         r+=[user_thr[i], cell_thr[i], sub_thr[i], user_jain[i], pair_jain[i], gain_jain[i]]
     return r
-        
-# create simulation
-#s = sim.Simulator(n_ue_cell=10, coeff_pwr=0.8, coeff_bw=0.8, thr_target=80e6, n_cdf_arg=2, filename=file_name)
-s = sim.Simulator(n_ue_cell=4, filename=file_name)
-# create scenario
-s.scenario_generator()
-# create statistics
-stats = []
-# tgt = [40e6,80e6,80e6,1,1,1]*5 # 2 users
-# low = [0, 0, 0, .5, .5, .5]*5
-tgt = [20e6,80e6,40e6,1,1,1]*5 # 4 users
-low = [0, 0, 0, .25, .25, .25]*5
-# tgt = [16e6,80e6,25e6,1,1,1]*5 # 6 users
-# tgt = [10e6,80e6,20e6,1,1,1]*5 # 8 users
-# tgt = [8e6,70e6,16e6,1,1,1]*5  # 10 users
-# tgt = [4e6,70e6,8e6,1,1,1]*5   # 20 users
-# tgt = [3e6,70e6,6e6,1,1,1]*5   # 30 users
-for i in range(6*5):
-    stats.append(perf.Statistics(target=tgt[i], low=low[i]))
-# run simulator
-s.run(my_drop, stats)
+
+def main():
+    # define user number
+    N = 10
+    # create simulation
+    s = sim.Simulator(n_ue_cell=N, filename=file_name)
+    # create scenario
+    s.scenario_generator()
+    # create dictionary with highest values for CDF statistics calculator
+    # dic = {users_numbers, list_of_high_values_for_cdf}
+    values_max = {2:[40e6,80e6,80e6,1,1,1], 4:[20e6,80e6,40e6,1,1,1],
+    6:[16e6,80e6,25e6,1,1,1], 8:[10e6,80e6,20e6,1,1,1],
+    10:[8e6,70e6,16e6,1,1,1], 20:[4e6,70e6,8e6,1,1,1],
+    30:[3e6,70e6,6e6,1,1,1]}
+    # mapping number of users to highest values
+    v_max = values_max[N]*4
+    # run simulator
+    s.run(my_drop, v_max)
+
+if __name__ == '__main__':
+    main()

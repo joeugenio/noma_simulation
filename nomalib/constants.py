@@ -3,7 +3,7 @@
 # Federal University of Campina Grande (UFCG)
 # Author: Joel Eugênio Cordeiro Junior
 # Date: 28/08/2017
-# Last update: 07/05/2018
+# Last update: 08/07/2018
 # Version: 0.1
 
 # Python module for NOMA communications simulations
