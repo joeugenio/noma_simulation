@@ -38,13 +38,13 @@ def my_drop(snap):
     for ue_id in cell.ue_ids:
         ue = grid.get_ue(ue_id)
         s = perf.sinr(ue, cell, site, grid)
-        ues_uppa1.append(uppa.User(ue.id, s))
+        # ues_uppa1.append(uppa.User(ue.id, s))
         ues_uppa2.append(uppa.User(ue.id, s))
         ues_uppa3.append(uppa.User(ue.id, s))
         ues_uppa4.append(uppa.User(ue.id, s))
 
     # exhaustive search
-    pairs1 = uppa.uppa(ues_uppa1, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
+    # pairs1 = uppa.uppa(ues_uppa1, cell, up_mode='search', pa_mode='fair', thr_func=perf.throughput_noma)
     # fair user pair
     pairs2 = uppa.uppa(ues_uppa2, cell, up_mode='fair', pa_mode='fair')
     # random user pair
@@ -52,7 +52,7 @@ def my_drop(snap):
     # fair user pair and fix power allocation
     pairs4 = uppa.uppa(ues_uppa4, cell, up_mode='fair', pa_mode='fix')
 
-    cases = [pairs1, pairs2, pairs3, pairs4]
+    cases = [pairs2, pairs3, pairs4]
     user_thr = []
     cell_thr = []
     sub_thr = []
