@@ -69,7 +69,7 @@ def plot_coordinates(coord, style='ok', size=10):
     plt.plot(x, y, style, ms=size)
 
 # plot user equipments
-def plot_user_equipments(ue, style='sw', size=3):
+def plot_user_equipments(ue, style='sw', size=4):
     x = np.array([])
     y = np.array([])
     for u in ue:
@@ -137,7 +137,8 @@ def plot_bs_connections(grid):
 
 # show connections from cell view
 def plot_cell_connections(grid):
-    colors = 'cmy'
+    # colors = 'cmy'
+    colors = 'rgb'
     i = 0
     for s in grid.sites:
         for c in s.cells:
@@ -191,11 +192,11 @@ def plot_cell_attenuation(site, sector=1, sh=False, save=False, filename='cell_a
         plt.axis('on')
         plt.grid(True)
         plt.tick_params(labelsize=14)
-        plt.xlabel('Posição x [m]', fontsize=14)
-        plt.ylabel('Posição y [m]', fontsize=14)
+        plt.xlabel('Posição x [m]', fontsize=20)
+        plt.ylabel('Posição y [m]', fontsize=20)
         cbar = plt.colorbar()
-        cbar.ax.set_ylabel('[dB]', fontsize=14)
-        cbar.ax.tick_params(labelsize=14)
+        cbar.ax.set_ylabel('[dB]', fontsize=20)
+        cbar.ax.tick_params(labelsize=20)
         save_fig(filename, save)
         show_fig(sh)
         plt.clf()
@@ -480,31 +481,29 @@ def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab='', xlab='', norma=1
     s = ['-*', '-h', '-+', '--*', '-s']
     # s = ['--*', '-+','->']
     for c in cdf:
-        plt.plot(c.rndv/norma, 1-c.cdf, s[i], lw=1, label=lab[i])
+        plt.plot(c.rndv/norma, 1-c.cdf, lw=1, label=lab[i])
+        # plt.plot(c.rndv/norma, 1-c.cdf, s[i], lw=1, label=lab[i])
         i +=1
     plt.grid(True)
-    plt.legend(fontsize=14, loc='upper right')
+    plt.legend(fontsize=14, loc='lower left')
     plt.xlabel(xlab, fontsize=17)
-    # plt.ylabel('CCDF', fontsize=14)
-    # plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
-    plt.ylabel(r'CCDF    $P[X>x]$', fontsize=17)
+    plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    # plt.ylabel(r'CCDF    $P[X>x]$', fontsize=17)
     plt.tick_params(labelsize=14)
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
 
-def plot_uppa(x, data, sh=False, save=False, filename='uppa', lab='', xlab=''):
+def plot_uppa(curves, sh=False, save=False, filename='uppa', lab='', ylab='', xlab='', xscale=1, lpos='upper right'):
     i = 0
     s = ['-*', '-h', '-+', '--*', '-s']
-    for d in data:
-        plt.plot(x, d/1e6, s[i], lw=1, label=lab[i])
+    for c in curves:
+        plt.plot(c[0], c[1]/xscale, s[i], lw=1, label=lab[i])
         i +=1
     plt.grid(True)
-    plt.legend(fontsize=14, loc='upper right')
-    plt.xlabel(xlab, fontsize=17)
-    # plt.ylabel('CCDF', fontsize=14)
-    # plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
-    plt.ylabel(r' $P[X>x]$', fontsize=17)
+    plt.legend(fontsize=14, loc=lpos, ncol=2)
+    plt.xlabel(xlab, fontsize=15)
+    plt.ylabel(ylab, fontsize=15)
     plt.tick_params(labelsize=14)
     save_fig(filename, save)
     show_fig(sh)
