@@ -50,9 +50,9 @@ class Cell:
 
 class Site:
     ''' Site with Radius = R, Inter-Site Distance = 3R e Cell Range = 2R '''
-    def __init__(self, id, coord, n_sec=const.N_SEC):
+    def __init__(self, id, coord, n_sec=const.N_SEC, pwr=const.PW_BS_MAX):
         self.n_sec = n_sec
-        self.bs = dev.BaseStation(id, coord)
+        self.bs = dev.BaseStation(id, coord, pwr_max=pwr)
         self.channel = ch.LargeScaleEffect(id)
         self.noise = ch.Noise()        
         self.cells = []
@@ -111,10 +111,10 @@ class Grid:
         for i in range(n_ue):
             self.user_equipments.append(dev.UserEquipment(i+1001, coords[i]))
 
-    def deploy_base_station(self):
+    def deploy_base_station(self, pwr_tx):
         ''' Deploy base stations with fix grid coordinates'''
         for i in range(self.n_bs):
-            self.sites.append(Site(i+101, self.coordinates[i]))
+            self.sites.append(Site(i+101, self.coordinates[i], pwr=pwr_tx))
 
     def start_all_base_stations(self):
         ''' Start all base station '''
