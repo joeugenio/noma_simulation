@@ -84,7 +84,11 @@ class Simulator:
         logger.info('Creating grid with 19 sites')
         self.grid = net.Grid()
         logger.info('Deploing base stations on grid')
-        self.grid.deploy_base_station()
+        try:
+            pwr = self.pwr_tx
+        except AttributeError:
+            pwr = const.PW_BS_MAX
+        self.grid.deploy_base_station(pwr_tx=pwr)
         logger.info('Starting all base stations')
         self.grid.start_all_base_stations()
         logger.info('Create snapshot simulation')
