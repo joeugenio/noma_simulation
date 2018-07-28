@@ -496,9 +496,9 @@ def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab='', xlab='', norma=1
 
 def plot_uppa(curves, sh=False, save=False, filename='uppa', lab='', ylab='', xlab='', xscale=1, lpos='upper right'):
     i = 0
-    s = ['-*', '-h', '-+', '--*', '-s']
+    s = ['-*', '-^', '-x', '-o', '-s']
     for c in curves:
-        plt.plot(c[0], c[1]/xscale, s[i], lw=1, label=lab[i])
+        plt.plot(c[0], c[1]/xscale, s[i], lw=1.5, ms=10, label=lab[i])
         i +=1
     plt.grid(True)
     plt.legend(fontsize=20, loc=lpos, ncol=2)
