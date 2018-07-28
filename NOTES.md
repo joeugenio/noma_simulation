@@ -33,6 +33,8 @@
 * Review SINR get method
 * Define attribute class on method arguments (for pyrevers)
 * Set __init()__ function
+* Change CDF calcute form for users and subband
+* Keep parcial data in memory and calculate CDF at simulation ends
 
 ### Dúvidas [pt_BR]
 
