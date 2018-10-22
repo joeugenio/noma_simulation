@@ -481,15 +481,15 @@ def plot_cdf(cdf, sh=False, save=False, filename='cdf', lab='', xlab='', norma=1
     s = ['-*', '-h', '-+', '--*', '-s']
     # s = ['--*', '-+','->']
     for c in cdf:
-        plt.plot(c.rndv/norma, 1-c.cdf, lw=1, label=lab[i])
+        plt.plot(c.rndv/norma, 1-c.cdf, lw=1.5, label=lab[i])
         # plt.plot(c.rndv/norma, 1-c.cdf, s[i], lw=1, label=lab[i])
         i +=1
     plt.grid(True)
-    plt.legend(fontsize=14, loc='lower left')
-    plt.xlabel(xlab, fontsize=17)
-    plt.ylabel(r'FCPC    $P[X>x]$', fontsize=17)
+    plt.legend(fontsize=19, loc='upper right')
+    plt.xlabel(xlab, fontsize=19)
+    plt.ylabel(r'FCPC    $P[X>x]$', fontsize=19)
     # plt.ylabel(r'CCDF    $P[X>x]$', fontsize=17)
-    plt.tick_params(labelsize=14)
+    plt.tick_params(labelsize=19)
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
@@ -501,10 +501,10 @@ def plot_uppa(curves, sh=False, save=False, filename='uppa', lab='', ylab='', xl
         plt.plot(c[0], c[1]/xscale, s[i], lw=1.5, ms=10, label=lab[i])
         i +=1
     plt.grid(True)
-    plt.legend(fontsize=20, loc=lpos, ncol=2)
-    plt.xlabel(xlab, fontsize=20)
-    plt.ylabel(ylab, fontsize=20)
-    plt.tick_params(labelsize=20)
+    plt.legend(fontsize=19, loc=lpos, ncol=2)
+    plt.xlabel(xlab, fontsize=19)
+    plt.ylabel(ylab, fontsize=19)
+    plt.tick_params(labelsize=19)
     save_fig(filename, save)
     show_fig(sh)
     plt.clf()
