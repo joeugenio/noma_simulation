@@ -198,7 +198,7 @@ class RayleighChannel:
         pwr_h = (abs(r)**2)
         self.gain = pwr_h/pwr_h.std()
         self.gain_db = 10*np.log10(self.gain)
-        self.f = f
+        self.f = f+ self.fc*1e-6
         self.s = s
         self.t = np.linspace(0, time, nt)
 
